@@ -1,390 +1,208 @@
-# src/data_loader.py
+# src/preprocess.py
 from __future__ import annotations
 """
-Data loader para fichas clínicas (JSON → DataFrame tabular).
-- Extrae episodios (tratamiento / seguimiento)
-- Estandariza columnas
-- Genera etiqueta binaria: progresión / no progresión
+Preprocesamiento tabular:
+- Split estratificado en train/val/test
+- Imputación (num: mediana, cat: "unknown")
+- Escalado numérico (z-score)
+- One-hot en categóricas (handle_unknown="ignore")
+- Guardado/carga del preprocesador con joblib
 """
 
-import json
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional
+from typing import List, Tuple
 
+import joblib
 import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
-# ---------------------------------------------------------------------
-# Utilidades de acceso / normalización
-# ---------------------------------------------------------------------
-
-def _to_path(p: str | Path) -> Path:
-    return p if isinstance(p, Path) else Path(p)
-
-
-def _norm_str(x: Any) -> Optional[str]:
-    if x is None:
-        return None
-    s = str(x).strip()
-    return s if s != "" else None
+@dataclass
+class SplitData:
+    X_train: pd.DataFrame
+    y_train: pd.Series
+    X_val: pd.DataFrame
+    y_val: pd.Series
+    X_test: pd.DataFrame
+    y_test: pd.Series
 
 
-def _norm_yesno(v: Any) -> Optional[str]:
-    """Normaliza valores tipo Yes/No en {'yes','no'}."""
-    if v is None:
-        return None
-    s = str(v).strip().lower()
-    if s in {"yes", "y", "true", "1"}:
-        return "yes"
-    if s in {"no", "n", "false", "0"}:
-        return "no"
-    return None
+def stratified_split(
+    df: pd.DataFrame,
+    target: str,
+    val_size: float = 0.15,
+    test_size: float = 0.15,
+    random_state: int = 42,
+) -> SplitData:
+    """Hace split estratificado en train/val/test manteniendo proporciones."""
+    y = df[target]
+    X = df.drop(columns=[target])
+
+    X_train, X_tmp, y_train, y_tmp = train_test_split(
+        X,
+        y,
+        test_size=val_size + test_size,
+        stratify=y,
+        random_state=random_state,
+    )
+    rel_test = test_size / (val_size + test_size)
+    X_val, X_test, y_val, y_test = train_test_split(
+        X_tmp,
+        y_tmp,
+        test_size=rel_test,
+        stratify=y_tmp,
+        random_state=random_state,
+    )
+    return SplitData(X_train, y_train, X_val, y_val, X_test, y_test)
 
 
-def _norm_sex(v: Any) -> Optional[str]:
-    if v is None:
-        return None
-    s = str(v).strip().lower()
-    if s in {"m", "male", "hombre"}:
-        return "male"
-    if s in {"f", "female", "mujer"}:
-        return "female"
-    return None
-
-
-def _to_float(v: Any) -> Optional[float]:
-    if v is None or v == "":
-        return None
-    try:
-        return float(v)
-    except Exception:
-        return None
-
-
-def _to_int(v: Any) -> Optional[int]:
-    if v is None or v == "":
-        return None
-    try:
-        return int(v)
-    except Exception:
-        # A veces viene "1036 days" → extrae dígitos
-        import re
-        m = re.search(r"-?\d+", str(v))
-        return int(m.group()) if m else None
-
-
-def _get_first(d: Dict[str, Any], keys: Iterable[str], default=None):
-    """Retorna la primera clave presente de 'keys' (búsqueda plana)."""
-    for k in keys:
-        if k in d and d[k] not in (None, ""):
-            return d[k]
-    return default
-
-
-# ---------------------------------------------------------------------
-# Carga y flatten de episodios
-# ---------------------------------------------------------------------
-
-def load_raw_records(paths: List[str | Path]) -> List[Dict[str, Any]]:
+def infer_columns(
+    df: pd.DataFrame,
+    target: str,
+    numeric_hint: List[str] | None = None,
+    categorical_hint: List[str] | None = None,
+) -> Tuple[List[str], List[str]]:
     """
-    Lee una lista de JSON clínicos. Devuelve una lista de pacientes
-    (diccionarios). Acepta JSON con un paciente o con una lista.
+    Infiera columnas numéricas y categóricas.
+    Puedes forzar con *_hint*. El target se excluye siempre.
     """
-    out: List[Dict[str, Any]] = []
-    for p in paths:
-        pth = _to_path(p)
-        if not pth.exists():
-            raise FileNotFoundError(f"No existe: {pth}")
-        with open(pth, "r", encoding="utf-8") as f:
-            obj = json.load(f)
-        if isinstance(obj, list):
-            out.extend([o for o in obj if isinstance(o, dict)])
-        elif isinstance(obj, dict):
-            out.append(obj)
-        else:
-            raise ValueError("Estructura JSON inesperada")
-    return out
+    cols = [c for c in df.columns if c != target]
+    if numeric_hint is not None or categorical_hint is not None:
+        num = [c for c in (numeric_hint or []) if c in cols]
+        cat = [c for c in (categorical_hint or []) if c in cols]
+        rest = [c for c in cols if c not in num and c not in cat]
+        # resto: asume categórico
+        cat.extend(rest)
+        return num, cat
+
+    # inferencia simple por dtype
+    num = [c for c in cols if pd.api.types.is_numeric_dtype(df[c])]
+    cat = [c for c in cols if c not in num]
+    return num, cat
 
 
-def _enumerate_episodes(patient: Dict[str, Any]) -> List[Dict[str, Any]]:
+def make_preprocessor(
+    numeric_cols: List[str],
+    categorical_cols: List[str],
+) -> ColumnTransformer:
+    """Crea el ColumnTransformer con imputación + escalado/one-hot."""
+    num_pipe = make_numeric_pipeline()
+    cat_pipe = make_categorical_pipeline()
+    pre = ColumnTransformer(
+        transformers=[
+            ("num", num_pipe, numeric_cols),
+            ("cat", cat_pipe, categorical_cols),
+        ]
+    )
+    return pre
+
+
+def make_numeric_pipeline():
+    """Imputación mediana + escalado estándar."""
+    from sklearn.pipeline import Pipeline
+    return Pipeline(
+        steps=[
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scaler", StandardScaler()),
+        ]
+    )
+
+
+def make_categorical_pipeline():
+    """Imputación 'unknown' + one-hot (ignora categorías nuevas)."""
+    from sklearn.pipeline import Pipeline
+    return Pipeline(
+        steps=[
+            ("imputer", SimpleImputer(strategy="constant", fill_value="unknown")),
+            ("ohe", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
+        ]
+    )
+
+
+def fit_transform_all(
+    split: SplitData,
+    numeric_cols: List[str],
+    categorical_cols: List[str],
+    preprocessor_path: str | Path = "results/preprocessor.joblib",
+) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """
-    Extrae episodios de tratamiento/seguimiento desde varias claves.
-    Si no encuentra, crea un episodio baseline vacío.
+    Ajusta el preprocesador en train y transforma train/val/test.
+    Guarda el preprocesador en disco para inferencia posterior.
     """
-    cands: List[Dict[str, Any]] = []
+    pre = make_preprocessor(numeric_cols, categorical_cols)
 
-    # Tratamientos
-    for k in ["treatments", "treatment", "therapies", "regimens"]:
-        v = patient.get(k)
-        if isinstance(v, list):
-            cands.extend([x for x in v if isinstance(x, dict)])
-        elif isinstance(v, dict):
-            cands.append(v)
+    Xtr = pre.fit_transform(split.X_train)
+    Xva = pre.transform(split.X_val)
+    Xte = pre.transform(split.X_test)
 
-    # Seguimientos / eventos
-    for k in ["follow_up", "visits", "clinical_events", "responses"]:
-        v = patient.get(k)
-        if isinstance(v, list):
-            cands.extend([x for x in v if isinstance(x, dict)])
-        elif isinstance(v, dict):
-            cands.append(v)
+    # nombres de columnas resultantes
+    ohe = pre.named_transformers_["cat"]["ohe"]  # type: ignore[index]
+    cat_names = list(ohe.get_feature_names_out(categorical_cols))
+    num_names = numeric_cols
+    out_cols = num_names + cat_names
 
-    if not cands:
-        cands = [{}]
+    Xtr = pd.DataFrame(Xtr, columns=out_cols, index=split.X_train.index)
+    Xva = pd.DataFrame(Xva, columns=out_cols, index=split.X_val.index)
+    Xte = pd.DataFrame(Xte, columns=out_cols, index=split.X_test.index)
 
-    return [{"_patient": patient, "_episode": ep} for ep in cands]
+    Path(preprocessor_path).parent.mkdir(parents=True, exist_ok=True)
+    joblib.dump(pre, preprocessor_path)
+
+    return Xtr, Xva, Xte
 
 
-# ---------------------------------------------------------------------
-# Mapeo a esquema tabular
-# ---------------------------------------------------------------------
-
-SCHEMA_COLS = [
-    # Demografía / basal
-    "patient_id", "age", "sex", "bmi", "karnofsky", "ecog", "pack_years",
-    # Tumorales
-    "site", "histology", "grade_who", "stage", "tnm_t", "tnm_n", "tnm_m",
-    "metastasis_brain", "metastasis_liver", "metastasis_peritoneum",
-    # Biomarcadores
-    "mgmt", "idh1", "idh2", "mmr", "pdl1", "msi",
-    # Tratamiento / línea
-    "regimen", "line_intent", "line_number",
-    # Tiempos (días)
-    "days_dx_to_tx", "days_to_followup", "days_to_progression",
-    # Respuesta/estado
-    "disease_response", "progression_or_recurrence", "disease_status",
-    # Etiqueta binaria
-    "label",
-]
+def load_preprocessor(preprocessor_path: str | Path):
+    """Carga el preprocesador guardado en disco."""
+    return joblib.load(preprocessor_path)
 
 
-def _extract_patient_level(p: Dict[str, Any]) -> Dict[str, Any]:
-    """Extrae variables al nivel paciente."""
-    pid = _get_first(p, ["patient_id", "id", "case_id", "subject_id"])
-
-    age = _to_int(_get_first(p, ["age", "Age", "patient_age"]))
-    sex = _norm_sex(_get_first(p, ["sex", "Sex", "gender"]))
-    bmi = _to_float(_get_first(p, ["bmi", "BMI"]))
-    kps = _to_int(_get_first(p, ["karnofsky", "kps", "KPS"]))
-    ecog = _to_int(_get_first(p, ["ecog", "ECOG", "performance_status"]))
-    pack = _to_int(_get_first(p, ["pack_years", "pack-years", "packYears"]))
-
-    site = _norm_str(_get_first(p, ["site", "primary_site", "PrimarySite"]))
-    hist = _norm_str(_get_first(p, ["histology", "morphology",
-                                    "icdo_morphology"]))
-    grade = _norm_str(_get_first(p, ["grade", "who_grade"]))
-    stage = _norm_str(_get_first(p, ["ajcc_stage", "stage"]))
-    tnm_t = _norm_str(_get_first(p, ["T", "tnm_t"]))
-    tnm_n = _norm_str(_get_first(p, ["N", "tnm_n"]))
-    tnm_m = _norm_str(_get_first(p, ["M", "tnm_m"]))
-
-    meta_brain = _norm_yesno(_get_first(p, ["metastasis_brain", "brain_met"]))
-    meta_liver = _norm_yesno(_get_first(p, ["metastasis_liver", "liver_met"]))
-    meta_peri = _norm_yesno(
-        _get_first(p, ["metastasis_peritoneum", "peritoneal_met"])
-    )
-
-    mgmt = _norm_str(_get_first(p, ["mgmt", "MGMT", "MGMT_status"]))
-    idh1 = _norm_str(_get_first(p, ["idh1", "IDH1"]))
-    idh2 = _norm_str(_get_first(p, ["idh2", "IDH2"]))
-    mmr = _norm_str(_get_first(p, ["mmr", "MMR", "mismatch_repair"]))
-    pdl1 = _norm_str(_get_first(p, ["pdl1", "PDL1", "PD-L1"]))
-    msi = _norm_str(_get_first(p, ["msi", "MSI"]))
-
-    return {
-        "patient_id": pid,
-        "age": age,
-        "sex": sex,
-        "bmi": bmi,
-        "karnofsky": kps,
-        "ecog": ecog,
-        "pack_years": pack,
-        "site": site,
-        "histology": hist,
-        "grade_who": grade,
-        "stage": stage,
-        "tnm_t": tnm_t,
-        "tnm_n": tnm_n,
-        "tnm_m": tnm_m,
-        "metastasis_brain": meta_brain,
-        "metastasis_liver": meta_liver,
-        "metastasis_peritoneum": meta_peri,
-        "mgmt": mgmt,
-        "idh1": idh1,
-        "idh2": idh2,
-        "mmr": mmr,
-        "pdl1": pdl1,
-        "msi": msi,
-    }
-
-
-def _extract_episode_level(
-    patient: Dict[str, Any],
-    ep: Dict[str, Any],
-) -> Dict[str, Any]:
-    """Extrae variables del episodio (tratamiento / seguimiento)."""
-    regimen = _norm_str(
-        _get_first(ep, ["regimen", "treatment", "therapy",
-                        "schema", "drug_regimen"])
-    )
-    line_intent = _norm_str(
-        _get_first(ep, ["intent", "line_intent", "treatment_intent"])
-    )
-    line_number = _to_int(
-        _get_first(ep, ["line", "line_number", "treatment_line"])
-    )
-
-    dxtx = _to_int(
-        _get_first(ep, ["days_dx_to_tx",
-                        "days_from_diagnosis_to_treatment",
-                        "days_diagnosis_to_tx"])
-    )
-    d_follow = _to_int(
-        _get_first(ep, ["days_to_followup", "days_to_last_contact"])
-    )
-    d_prog = _to_int(
-        _get_first(ep, ["days_to_progression", "days_to_recurrence"])
-    )
-
-    resp = _norm_str(
-        _get_first(ep, ["disease_response", "response", "best_response"])
-    )
-    prog_rec = _norm_yesno(
-        _get_first(ep, ["progression_or_recurrence",
-                        "progression", "recurrence"])
-    )
-    status = _norm_str(_get_first(ep, ["disease_status", "status"]))
-
-    # Fallbacks a nivel paciente
-    if regimen is None:
-        regimen = _norm_str(
-            _get_first(patient, ["maintenance_therapy", "current_therapy"])
-        )
-    if resp is None:
-        resp = _norm_str(_get_first(patient, ["disease_response",
-                                              "best_response"]))
-    if prog_rec is None:
-        prog_rec = _norm_yesno(
-            _get_first(patient, ["progression_or_recurrence"])
-        )
-
-    return {
-        "regimen": regimen,
-        "line_intent": line_intent,
-        "line_number": line_number,
-        "days_dx_to_tx": dxtx,
-        "days_to_followup": d_follow,
-        "days_to_progression": d_prog,
-        "disease_response": resp,
-        "progression_or_recurrence": prog_rec,
-        "disease_status": status,
-    }
-
-
-def _make_label(row: Dict[str, Any]) -> Optional[int]:
-    """
-    Etiqueta binaria:
-      1 si progresión/recurrencia = yes, o respuesta PD
-      0 si CR/PR/SD y sin progresión
-      None si no hay información suficiente
-    """
-    resp = (_norm_str(row.get("disease_response")) or "").lower()
-    prog = _norm_yesno(row.get("progression_or_recurrence"))
-
-    if prog == "yes":
-        return 1
-    if resp in {"pd", "progressive disease", "progression"}:
-        return 1
-    if resp in {"cr", "complete response", "pr", "partial response",
-                "sd", "stable disease"}:
-        return 0
-
-    status = (_norm_str(row.get("disease_status")) or "").lower()
-    if status in {"progressive", "relapsed"}:
-        return 1
-    if status in {"stable", "no evidence of disease",
-                  "ned", "complete response"}:
-        return 0
-    return None
-
-
-# ---------------------------------------------------------------------
-# API principal del módulo
-# ---------------------------------------------------------------------
-
-def build_dataframe(raw_patients: List[Dict[str, Any]]) -> pd.DataFrame:
-    """
-    Convierte pacientes crudos → DataFrame con una fila por episodio.
-    Mantiene el orden de SCHEMA_COLS y tipos adecuados.
-    """
-    rows: List[Dict[str, Any]] = []
-
-    for patient in raw_patients:
-        base = _extract_patient_level(patient)
-        episodes = _enumerate_episodes(patient)
-        for item in episodes:
-            ep = item.get("_episode", {})
-            ep_info = _extract_episode_level(patient, ep)
-            row = {**base, **ep_info}
-            row["label"] = _make_label(row)
-            for col in SCHEMA_COLS:
-                row.setdefault(col, None)
-            rows.append(row)
-
-    df = pd.DataFrame(rows, columns=SCHEMA_COLS)
-
-    numeric_cols = [
-        "age", "bmi", "karnofsky", "ecog", "pack_years",
-        "days_dx_to_tx", "days_to_followup", "days_to_progression",
-        "line_number",
-    ]
-    for c in numeric_cols:
-        if c in df.columns:
-            df[c] = pd.to_numeric(df[c], errors="coerce")
-
-    yn_cols = [
-        "metastasis_brain", "metastasis_liver",
-        "metastasis_peritoneum", "progression_or_recurrence",
-    ]
-    for c in yn_cols:
-        if c in df.columns:
-            df[c] = df[c].map(_norm_yesno)
-
-    if "label" in df.columns:
-        df["label"] = df["label"].astype("Int64")
-
-    return df
-
-
-def load_and_build(paths: List[str | Path]) -> pd.DataFrame:
-    """Conveniencia: carga JSONs y construye el DataFrame final."""
-    raw = load_raw_records(paths)
-    return build_dataframe(raw)
+def transform_with_loaded(
+    preprocessor,
+    X: pd.DataFrame,
+    numeric_cols: List[str],
+    categorical_cols: List[str],
+) -> pd.DataFrame:
+    """Transforma un DataFrame con un preprocesador ya cargado."""
+    Xt = preprocessor.transform(X)
+    ohe = preprocessor.named_transformers_["cat"]["ohe"]  # type: ignore[index]
+    cat_names = list(ohe.get_feature_names_out(categorical_cols))
+    out_cols = list(numeric_cols) + cat_names
+    return pd.DataFrame(Xt, columns=out_cols, index=X.index)
 
 
 if __name__ == "__main__":
     import argparse
 
     ap = argparse.ArgumentParser(
-        description="Convierte fichas clínicas JSON en CSV tabular."
+        description="Preprocesa CSV tabular (split + transform) y guarda artefactos.",
     )
+    ap.add_argument("--csv", required=True, help="Ruta al CSV de entrada.")
+    ap.add_argument("--target", default="label", help="Nombre de la columna objetivo.")
     ap.add_argument(
-        "--inputs",
-        nargs="+",
-        required=True,
-        help="Rutas a JSON(s) clínicos.",
-    )
-    ap.add_argument(
-        "--out",
-        default="data/ready.csv",
-        help="Salida CSV (default: data/ready.csv).",
+        "--outdir",
+        default="data/processed",
+        help="Carpeta de salida para CSVs y preprocesador.",
     )
     args = ap.parse_args()
 
-    df_out = load_and_build(args.inputs)
-    outp = Path(args.out)
-    outp.parent.mkdir(parents=True, exist_ok=True)
-    df_out.to_csv(outp, index=False)
+    df_in = pd.read_csv(args.csv)
+    num_cols, cat_cols = infer_columns(df_in, target=args.target)
 
-    print("CSV generado:", outp)
-    print("Filas:", len(df_out), "Columnas:", len(df_out.columns))
+    split = stratified_split(df_in, target=args.target)
+    Xtr, Xva, Xte = fit_transform_all(
+        split, num_cols, cat_cols, preprocessor_path=Path(args.outdir) / "preprocessor.joblib"
+    )
+
+    outdir = Path(args.outdir)
+    outdir.mkdir(parents=True, exist_ok=True)
+
+    pd.concat([Xtr, split.y_train], axis=1).to_csv(outdir / "train.csv", index=False)
+    pd.concat([Xva, split.y_val], axis=1).to_csv(outdir / "val.csv", index=False)
+    pd.concat([Xte, split.y_test], axis=1).to_csv(outdir / "test.csv", index=False)
+
+    print("✔ Guardado preprocesador en:", outdir / "preprocessor.joblib")
+    print("✔ train/val/test en:", outdir)
