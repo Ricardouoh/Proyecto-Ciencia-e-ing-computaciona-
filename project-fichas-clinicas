@@ -388,4 +388,3 @@ if __name__ == "__main__":
 
     print("CSV generado:", outp)
     print("Filas:", len(df_out), "Columnas:", len(df_out.columns))
-
