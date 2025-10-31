@@ -1,1 +1,390 @@
+# src/data_loader.py
+from __future__ import annotations
+"""
+Data loader para fichas clínicas (JSON → DataFrame tabular).
+- Extrae episodios (tratamiento / seguimiento)
+- Estandariza columnas
+- Genera etiqueta binaria: progresión / no progresión
+"""
 
+import json
+from pathlib import Path
+from typing import Any, Dict, Iterable, List, Optional
+
+import pandas as pd
+
+
+# ---------------------------------------------------------------------
+# Utilidades de acceso / normalización
+# ---------------------------------------------------------------------
+
+def _to_path(p: str | Path) -> Path:
+    return p if isinstance(p, Path) else Path(p)
+
+
+def _norm_str(x: Any) -> Optional[str]:
+    if x is None:
+        return None
+    s = str(x).strip()
+    return s if s != "" else None
+
+
+def _norm_yesno(v: Any) -> Optional[str]:
+    """Normaliza valores tipo Yes/No en {'yes','no'}."""
+    if v is None:
+        return None
+    s = str(v).strip().lower()
+    if s in {"yes", "y", "true", "1"}:
+        return "yes"
+    if s in {"no", "n", "false", "0"}:
+        return "no"
+    return None
+
+
+def _norm_sex(v: Any) -> Optional[str]:
+    if v is None:
+        return None
+    s = str(v).strip().lower()
+    if s in {"m", "male", "hombre"}:
+        return "male"
+    if s in {"f", "female", "mujer"}:
+        return "female"
+    return None
+
+
+def _to_float(v: Any) -> Optional[float]:
+    if v is None or v == "":
+        return None
+    try:
+        return float(v)
+    except Exception:
+        return None
+
+
+def _to_int(v: Any) -> Optional[int]:
+    if v is None or v == "":
+        return None
+    try:
+        return int(v)
+    except Exception:
+        # A veces viene "1036 days" → extrae dígitos
+        import re
+        m = re.search(r"-?\d+", str(v))
+        return int(m.group()) if m else None
+
+
+def _get_first(d: Dict[str, Any], keys: Iterable[str], default=None):
+    """Retorna la primera clave presente de 'keys' (búsqueda plana)."""
+    for k in keys:
+        if k in d and d[k] not in (None, ""):
+            return d[k]
+    return default
+
+
+# ---------------------------------------------------------------------
+# Carga y flatten de episodios
+# ---------------------------------------------------------------------
+
+def load_raw_records(paths: List[str | Path]) -> List[Dict[str, Any]]:
+    """
+    Lee una lista de JSON clínicos. Devuelve una lista de pacientes
+    (diccionarios). Acepta JSON con un paciente o con una lista.
+    """
+    out: List[Dict[str, Any]] = []
+    for p in paths:
+        pth = _to_path(p)
+        if not pth.exists():
+            raise FileNotFoundError(f"No existe: {pth}")
+        with open(pth, "r", encoding="utf-8") as f:
+            obj = json.load(f)
+        if isinstance(obj, list):
+            out.extend([o for o in obj if isinstance(o, dict)])
+        elif isinstance(obj, dict):
+            out.append(obj)
+        else:
+            raise ValueError("Estructura JSON inesperada")
+    return out
+
+
+def _enumerate_episodes(patient: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """
+    Extrae episodios de tratamiento/seguimiento desde varias claves.
+    Si no encuentra, crea un episodio baseline vacío.
+    """
+    cands: List[Dict[str, Any]] = []
+
+    # Tratamientos
+    for k in ["treatments", "treatment", "therapies", "regimens"]:
+        v = patient.get(k)
+        if isinstance(v, list):
+            cands.extend([x for x in v if isinstance(x, dict)])
+        elif isinstance(v, dict):
+            cands.append(v)
+
+    # Seguimientos / eventos
+    for k in ["follow_up", "visits", "clinical_events", "responses"]:
+        v = patient.get(k)
+        if isinstance(v, list):
+            cands.extend([x for x in v if isinstance(x, dict)])
+        elif isinstance(v, dict):
+            cands.append(v)
+
+    if not cands:
+        cands = [{}]
+
+    return [{"_patient": patient, "_episode": ep} for ep in cands]
+
+
+# ---------------------------------------------------------------------
+# Mapeo a esquema tabular
+# ---------------------------------------------------------------------
+
+SCHEMA_COLS = [
+    # Demografía / basal
+    "patient_id", "age", "sex", "bmi", "karnofsky", "ecog", "pack_years",
+    # Tumorales
+    "site", "histology", "grade_who", "stage", "tnm_t", "tnm_n", "tnm_m",
+    "metastasis_brain", "metastasis_liver", "metastasis_peritoneum",
+    # Biomarcadores
+    "mgmt", "idh1", "idh2", "mmr", "pdl1", "msi",
+    # Tratamiento / línea
+    "regimen", "line_intent", "line_number",
+    # Tiempos (días)
+    "days_dx_to_tx", "days_to_followup", "days_to_progression",
+    # Respuesta/estado
+    "disease_response", "progression_or_recurrence", "disease_status",
+    # Etiqueta binaria
+    "label",
+]
+
+
+def _extract_patient_level(p: Dict[str, Any]) -> Dict[str, Any]:
+    """Extrae variables al nivel paciente."""
+    pid = _get_first(p, ["patient_id", "id", "case_id", "subject_id"])
+
+    age = _to_int(_get_first(p, ["age", "Age", "patient_age"]))
+    sex = _norm_sex(_get_first(p, ["sex", "Sex", "gender"]))
+    bmi = _to_float(_get_first(p, ["bmi", "BMI"]))
+    kps = _to_int(_get_first(p, ["karnofsky", "kps", "KPS"]))
+    ecog = _to_int(_get_first(p, ["ecog", "ECOG", "performance_status"]))
+    pack = _to_int(_get_first(p, ["pack_years", "pack-years", "packYears"]))
+
+    site = _norm_str(_get_first(p, ["site", "primary_site", "PrimarySite"]))
+    hist = _norm_str(_get_first(p, ["histology", "morphology",
+                                    "icdo_morphology"]))
+    grade = _norm_str(_get_first(p, ["grade", "who_grade"]))
+    stage = _norm_str(_get_first(p, ["ajcc_stage", "stage"]))
+    tnm_t = _norm_str(_get_first(p, ["T", "tnm_t"]))
+    tnm_n = _norm_str(_get_first(p, ["N", "tnm_n"]))
+    tnm_m = _norm_str(_get_first(p, ["M", "tnm_m"]))
+
+    meta_brain = _norm_yesno(_get_first(p, ["metastasis_brain", "brain_met"]))
+    meta_liver = _norm_yesno(_get_first(p, ["metastasis_liver", "liver_met"]))
+    meta_peri = _norm_yesno(
+        _get_first(p, ["metastasis_peritoneum", "peritoneal_met"])
+    )
+
+    mgmt = _norm_str(_get_first(p, ["mgmt", "MGMT", "MGMT_status"]))
+    idh1 = _norm_str(_get_first(p, ["idh1", "IDH1"]))
+    idh2 = _norm_str(_get_first(p, ["idh2", "IDH2"]))
+    mmr = _norm_str(_get_first(p, ["mmr", "MMR", "mismatch_repair"]))
+    pdl1 = _norm_str(_get_first(p, ["pdl1", "PDL1", "PD-L1"]))
+    msi = _norm_str(_get_first(p, ["msi", "MSI"]))
+
+    return {
+        "patient_id": pid,
+        "age": age,
+        "sex": sex,
+        "bmi": bmi,
+        "karnofsky": kps,
+        "ecog": ecog,
+        "pack_years": pack,
+        "site": site,
+        "histology": hist,
+        "grade_who": grade,
+        "stage": stage,
+        "tnm_t": tnm_t,
+        "tnm_n": tnm_n,
+        "tnm_m": tnm_m,
+        "metastasis_brain": meta_brain,
+        "metastasis_liver": meta_liver,
+        "metastasis_peritoneum": meta_peri,
+        "mgmt": mgmt,
+        "idh1": idh1,
+        "idh2": idh2,
+        "mmr": mmr,
+        "pdl1": pdl1,
+        "msi": msi,
+    }
+
+
+def _extract_episode_level(
+    patient: Dict[str, Any],
+    ep: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Extrae variables del episodio (tratamiento / seguimiento)."""
+    regimen = _norm_str(
+        _get_first(ep, ["regimen", "treatment", "therapy",
+                        "schema", "drug_regimen"])
+    )
+    line_intent = _norm_str(
+        _get_first(ep, ["intent", "line_intent", "treatment_intent"])
+    )
+    line_number = _to_int(
+        _get_first(ep, ["line", "line_number", "treatment_line"])
+    )
+
+    dxtx = _to_int(
+        _get_first(ep, ["days_dx_to_tx",
+                        "days_from_diagnosis_to_treatment",
+                        "days_diagnosis_to_tx"])
+    )
+    d_follow = _to_int(
+        _get_first(ep, ["days_to_followup", "days_to_last_contact"])
+    )
+    d_prog = _to_int(
+        _get_first(ep, ["days_to_progression", "days_to_recurrence"])
+    )
+
+    resp = _norm_str(
+        _get_first(ep, ["disease_response", "response", "best_response"])
+    )
+    prog_rec = _norm_yesno(
+        _get_first(ep, ["progression_or_recurrence",
+                        "progression", "recurrence"])
+    )
+    status = _norm_str(_get_first(ep, ["disease_status", "status"]))
+
+    # Fallbacks a nivel paciente
+    if regimen is None:
+        regimen = _norm_str(
+            _get_first(patient, ["maintenance_therapy", "current_therapy"])
+        )
+    if resp is None:
+        resp = _norm_str(_get_first(patient, ["disease_response",
+                                              "best_response"]))
+    if prog_rec is None:
+        prog_rec = _norm_yesno(
+            _get_first(patient, ["progression_or_recurrence"])
+        )
+
+    return {
+        "regimen": regimen,
+        "line_intent": line_intent,
+        "line_number": line_number,
+        "days_dx_to_tx": dxtx,
+        "days_to_followup": d_follow,
+        "days_to_progression": d_prog,
+        "disease_response": resp,
+        "progression_or_recurrence": prog_rec,
+        "disease_status": status,
+    }
+
+
+def _make_label(row: Dict[str, Any]) -> Optional[int]:
+    """
+    Etiqueta binaria:
+      1 si progresión/recurrencia = yes, o respuesta PD
+      0 si CR/PR/SD y sin progresión
+      None si no hay información suficiente
+    """
+    resp = (_norm_str(row.get("disease_response")) or "").lower()
+    prog = _norm_yesno(row.get("progression_or_recurrence"))
+
+    if prog == "yes":
+        return 1
+    if resp in {"pd", "progressive disease", "progression"}:
+        return 1
+    if resp in {"cr", "complete response", "pr", "partial response",
+                "sd", "stable disease"}:
+        return 0
+
+    status = (_norm_str(row.get("disease_status")) or "").lower()
+    if status in {"progressive", "relapsed"}:
+        return 1
+    if status in {"stable", "no evidence of disease",
+                  "ned", "complete response"}:
+        return 0
+    return None
+
+
+# ---------------------------------------------------------------------
+# API principal del módulo
+# ---------------------------------------------------------------------
+
+def build_dataframe(raw_patients: List[Dict[str, Any]]) -> pd.DataFrame:
+    """
+    Convierte pacientes crudos → DataFrame con una fila por episodio.
+    Mantiene el orden de SCHEMA_COLS y tipos adecuados.
+    """
+    rows: List[Dict[str, Any]] = []
+
+    for patient in raw_patients:
+        base = _extract_patient_level(patient)
+        episodes = _enumerate_episodes(patient)
+        for item in episodes:
+            ep = item.get("_episode", {})
+            ep_info = _extract_episode_level(patient, ep)
+            row = {**base, **ep_info}
+            row["label"] = _make_label(row)
+            for col in SCHEMA_COLS:
+                row.setdefault(col, None)
+            rows.append(row)
+
+    df = pd.DataFrame(rows, columns=SCHEMA_COLS)
+
+    numeric_cols = [
+        "age", "bmi", "karnofsky", "ecog", "pack_years",
+        "days_dx_to_tx", "days_to_followup", "days_to_progression",
+        "line_number",
+    ]
+    for c in numeric_cols:
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors="coerce")
+
+    yn_cols = [
+        "metastasis_brain", "metastasis_liver",
+        "metastasis_peritoneum", "progression_or_recurrence",
+    ]
+    for c in yn_cols:
+        if c in df.columns:
+            df[c] = df[c].map(_norm_yesno)
+
+    if "label" in df.columns:
+        df["label"] = df["label"].astype("Int64")
+
+    return df
+
+
+def load_and_build(paths: List[str | Path]) -> pd.DataFrame:
+    """Conveniencia: carga JSONs y construye el DataFrame final."""
+    raw = load_raw_records(paths)
+    return build_dataframe(raw)
+
+
+if __name__ == "__main__":
+    import argparse
+
+    ap = argparse.ArgumentParser(
+        description="Convierte fichas clínicas JSON en CSV tabular."
+    )
+    ap.add_argument(
+        "--inputs",
+        nargs="+",
+        required=True,
+        help="Rutas a JSON(s) clínicos.",
+    )
+    ap.add_argument(
+        "--out",
+        default="data/ready.csv",
+        help="Salida CSV (default: data/ready.csv).",
+    )
+    args = ap.parse_args()
+
+    df_out = load_and_build(args.inputs)
+    outp = Path(args.out)
+    outp.parent.mkdir(parents=True, exist_ok=True)
+    df_out.to_csv(outp, index=False)
+
+    print("CSV generado:", outp)
+    print("Filas:", len(df_out), "Columnas:", len(df_out.columns))
