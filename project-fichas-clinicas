@@ -3,6 +3,7 @@ from __future__ import annotations
 """
 Entrenamiento supervisado con validación y early stopping.
 
+
 - Carga train/val desde data/processed (CSV)
 - Crea el modelo vía src.model.make_model(cfg)
 - LOGREG: fit único + evaluación en val
@@ -196,6 +197,301 @@ def _load_json(path: Optional[str]) -> Dict[str, Any]:
     p = Path(path)
     with open(p, "r", encoding="utf-8") as f:
         return json.load(f)
+=======
+# src/model.py
+from __future__ import annotations
+"""
+Definición de modelos:
+- Regresión Logística (baseline)
+- MLPClassifier (red densa con backprop)
+Uso:
+    from src.model import make_model, default_config
+    cfg = default_config(model="mlp")  # o "logreg"
+    model = make_model(cfg)
+    model.fit(X_train, y_train)
+    y_proba = model.predict_proba(X_val)[:, 1]
+"""
+
+from typing import Any, Dict
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.neural_network import MLPClassifier
+
+
+def default_config(model: str = "mlp") -> Dict[str, Any]:
+    """
+    Config por defecto para cada modelo.
+    - model: "logreg" | "mlp"
+    """
+    if model == "logreg":
+        return {
+            "model": "logreg",
+            "logreg": {
+                "max_iter": 200,
+                "class_weight": "balanced",
+                "solver": "lbfgs",
+                "n_jobs": None,  # usa todos si None y solver lo permite
+                "random_state": 42,
+            },
+        }
+    if model == "mlp":
+        return {
+            "model": "mlp",
+            "mlp": {
+                "hidden_layer_sizes": [128, 64],
+                "activation": "relu",
+                "solver": "adam",
+                "alpha": 1e-4,               # L2
+                "batch_size": "auto",
+                "learning_rate": "adaptive",  # adapta LR si se estanca
+                "learning_rate_init": 1e-3,
+                "max_iter": 100,
+                "early_stopping": True,
+                "n_iter_no_change": 10,       # paciencia (val)
+                "validation_fraction": 0.1,   # solo lo usa internamente el MLP
+                "shuffle": True,
+                "random_state": 42,
+                "verbose": False,
+            },
+        }
+    raise ValueError("Modelo no soportado. Usa 'logreg' o 'mlp'.")
+
+
+def make_model(cfg: Dict[str, Any]):
+    """
+    Crea el estimador sklearn según cfg.
+    cfg ejemplo:
+    {
+        "model": "mlp",
+        "mlp": {
+            "hidden_layer_sizes": [128, 64],
+            "max_iter": 100,
+            "early_stopping": True,
+            ...
+        }
+    }
+    """
+    model_name = cfg.get("model", "mlp").lower()
+
+    if model_name == "logreg":
+        p = (cfg.get("logreg") or {}).copy()
+        # Defaults seguros si faltan
+        p.setdefault("max_iter", 200)
+        p.setdefault("class_weight", "balanced")
+        p.setdefault("solver", "lbfgs")
+        p.setdefault("n_jobs", None)
+        p.setdefault("random_state", 42)
+        return LogisticRegression(**p)
+
+    if model_name == "mlp":
+        p = (cfg.get("mlp") or {}).copy()
+        # Defaults seguros si faltan
+        p.setdefault("hidden_layer_sizes", [128, 64])
+        p.setdefault("activation", "relu")
+        p.setdefault("solver", "adam")
+        p.setdefault("alpha", 1e-4)
+        p.setdefault("batch_size", "auto")
+        p.setdefault("learning_rate", "adaptive")
+        p.setdefault("learning_rate_init", 1e-3)
+        p.setdefault("max_iter", 100)
+        p.setdefault("early_stopping", True)
+        p.setdefault("n_iter_no_change", 10)
+        p.setdefault("validation_fraction", 0.1)
+        p.setdefault("shuffle", True)
+        p.setdefault("random_state", 42)
+        p.setdefault("verbose", False)
+
+        # Acepta listas para hidden_layer_sizes
+        if isinstance(p.get("hidden_layer_sizes"), list):
+            p["hidden_layer_sizes"] = tuple(p["hidden_layer_sizes"])
+
+        return MLPClassifier(**p)
+
+    raise ValueError("Modelo no soportado. Usa 'logreg' o 'mlp'.")
+
+
+def get_supported_models() -> Dict[str, str]:
+    """Devuelve un mapa simple de modelos soportados."""
+    return {
+        "logreg": "LogisticRegression (baseline, lineal)",
+        "mlp": "MLPClassifier (red densa con backprop, no lineal)",
+    }
+=======
+# src/preprocess.py
+from __future__ import annotations
+"""
+Preprocesamiento tabular:
+- Split estratificado en train/val/test
+- Imputación (num: mediana, cat: "unknown")
+- Escalado numérico (z-score)
+- One-hot en categóricas (handle_unknown="ignore")
+- Guardado/carga del preprocesador con joblib
+"""
+
+from dataclasses import dataclass
+from pathlib import Path
+from typing import List, Tuple
+
+import joblib
+import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+
+
+@dataclass
+class SplitData:
+    X_train: pd.DataFrame
+    y_train: pd.Series
+    X_val: pd.DataFrame
+    y_val: pd.Series
+    X_test: pd.DataFrame
+    y_test: pd.Series
+
+
+def stratified_split(
+    df: pd.DataFrame,
+    target: str,
+    val_size: float = 0.15,
+    test_size: float = 0.15,
+    random_state: int = 42,
+) -> SplitData:
+    """Hace split estratificado en train/val/test manteniendo proporciones."""
+    y = df[target]
+    X = df.drop(columns=[target])
+
+    X_train, X_tmp, y_train, y_tmp = train_test_split(
+        X,
+        y,
+        test_size=val_size + test_size,
+        stratify=y,
+        random_state=random_state,
+    )
+    rel_test = test_size / (val_size + test_size)
+    X_val, X_test, y_val, y_test = train_test_split(
+        X_tmp,
+        y_tmp,
+        test_size=rel_test,
+        stratify=y_tmp,
+        random_state=random_state,
+    )
+    return SplitData(X_train, y_train, X_val, y_val, X_test, y_test)
+
+
+def infer_columns(
+    df: pd.DataFrame,
+    target: str,
+    numeric_hint: List[str] | None = None,
+    categorical_hint: List[str] | None = None,
+) -> Tuple[List[str], List[str]]:
+    """
+    Infiera columnas numéricas y categóricas.
+    Puedes forzar con *_hint*. El target se excluye siempre.
+    """
+    cols = [c for c in df.columns if c != target]
+    if numeric_hint is not None or categorical_hint is not None:
+        num = [c for c in (numeric_hint or []) if c in cols]
+        cat = [c for c in (categorical_hint or []) if c in cols]
+        rest = [c for c in cols if c not in num and c not in cat]
+        # resto: asume categórico
+        cat.extend(rest)
+        return num, cat
+
+    # inferencia simple por dtype
+    num = [c for c in cols if pd.api.types.is_numeric_dtype(df[c])]
+    cat = [c for c in cols if c not in num]
+    return num, cat
+
+
+def make_preprocessor(
+    numeric_cols: List[str],
+    categorical_cols: List[str],
+) -> ColumnTransformer:
+    """Crea el ColumnTransformer con imputación + escalado/one-hot."""
+    num_pipe = make_numeric_pipeline()
+    cat_pipe = make_categorical_pipeline()
+    pre = ColumnTransformer(
+        transformers=[
+            ("num", num_pipe, numeric_cols),
+            ("cat", cat_pipe, categorical_cols),
+        ]
+    )
+    return pre
+
+
+def make_numeric_pipeline():
+    """Imputación mediana + escalado estándar."""
+    from sklearn.pipeline import Pipeline
+    return Pipeline(
+        steps=[
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scaler", StandardScaler()),
+        ]
+    )
+
+
+def make_categorical_pipeline():
+    """Imputación 'unknown' + one-hot (ignora categorías nuevas)."""
+    from sklearn.pipeline import Pipeline
+    return Pipeline(
+        steps=[
+            ("imputer", SimpleImputer(strategy="constant", fill_value="unknown")),
+            ("ohe", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
+        ]
+    )
+
+
+def fit_transform_all(
+    split: SplitData,
+    numeric_cols: List[str],
+    categorical_cols: List[str],
+    preprocessor_path: str | Path = "results/preprocessor.joblib",
+) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """
+    Ajusta el preprocesador en train y transforma train/val/test.
+    Guarda el preprocesador en disco para inferencia posterior.
+    """
+    pre = make_preprocessor(numeric_cols, categorical_cols)
+
+    Xtr = pre.fit_transform(split.X_train)
+    Xva = pre.transform(split.X_val)
+    Xte = pre.transform(split.X_test)
+
+    # nombres de columnas resultantes
+    ohe = pre.named_transformers_["cat"]["ohe"]  # type: ignore[index]
+    cat_names = list(ohe.get_feature_names_out(categorical_cols))
+    num_names = numeric_cols
+    out_cols = num_names + cat_names
+
+    Xtr = pd.DataFrame(Xtr, columns=out_cols, index=split.X_train.index)
+    Xva = pd.DataFrame(Xva, columns=out_cols, index=split.X_val.index)
+    Xte = pd.DataFrame(Xte, columns=out_cols, index=split.X_test.index)
+
+    Path(preprocessor_path).parent.mkdir(parents=True, exist_ok=True)
+    joblib.dump(pre, preprocessor_path)
+
+    return Xtr, Xva, Xte
+
+
+def load_preprocessor(preprocessor_path: str | Path):
+    """Carga el preprocesador guardado en disco."""
+    return joblib.load(preprocessor_path)
+
+
+def transform_with_loaded(
+    preprocessor,
+    X: pd.DataFrame,
+    numeric_cols: List[str],
+    categorical_cols: List[str],
+) -> pd.DataFrame:
+    """Transforma un DataFrame con un preprocesador ya cargado."""
+    Xt = preprocessor.transform(X)
+    ohe = preprocessor.named_transformers_["cat"]["ohe"]  # type: ignore[index]
+    cat_names = list(ohe.get_feature_names_out(categorical_cols))
+    out_cols = list(numeric_cols) + cat_names
+    return pd.DataFrame(Xt, columns=out_cols, index=X.index)
+
 
 
 if __name__ == "__main__":
@@ -254,3 +550,31 @@ if __name__ == "__main__":
     )
 
     train_and_validate(train_cfg, Path(args.data_dir))
+        description="Preprocesa CSV tabular (split + transform) y guarda artefactos.",
+    )
+    ap.add_argument("--csv", required=True, help="Ruta al CSV de entrada.")
+    ap.add_argument("--target", default="label", help="Nombre de la columna objetivo.")
+    ap.add_argument(
+        "--outdir",
+        default="data/processed",
+        help="Carpeta de salida para CSVs y preprocesador.",
+    )
+    args = ap.parse_args()
+
+    df_in = pd.read_csv(args.csv)
+    num_cols, cat_cols = infer_columns(df_in, target=args.target)
+
+    split = stratified_split(df_in, target=args.target)
+    Xtr, Xva, Xte = fit_transform_all(
+        split, num_cols, cat_cols, preprocessor_path=Path(args.outdir) / "preprocessor.joblib"
+    )
+
+    outdir = Path(args.outdir)
+    outdir.mkdir(parents=True, exist_ok=True)
+
+    pd.concat([Xtr, split.y_train], axis=1).to_csv(outdir / "train.csv", index=False)
+    pd.concat([Xva, split.y_val], axis=1).to_csv(outdir / "val.csv", index=False)
+    pd.concat([Xte, split.y_test], axis=1).to_csv(outdir / "test.csv", index=False)
+
+    print("✔ Guardado preprocesador en:", outdir / "preprocessor.joblib")
+    print("✔ train/val/test en:", outdir)
