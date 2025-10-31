@@ -1,3 +1,20 @@
+# src/api.py
+from __future__ import annotations
+"""
+API de inferencia con FastAPI.
+
+Endpoints:
+- GET  /health        -> estado del servicio
+- GET  /schema        -> columnas crudas esperadas por el preprocesador
+- POST /predict       -> probabilidad y clase (umbral configurable)
+
+Requisitos (artefactos entrenados):
+- results/model.joblib
+- results/preprocessor.joblib
+"""
+
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 # src/evaluate.py
 from __future__ import annotations
 """
@@ -178,6 +195,140 @@ from typing import Any, Dict, Optional, Tuple
 import joblib
 import numpy as np
 import pandas as pd
+from fastapi import FastAPI, HTTPException, Query
+from pydantic import BaseModel, Field
+
+MODEL_PATH = Path("results/model.joblib")
+PREPROC_PATH = Path("results/preprocessor.joblib")
+
+app = FastAPI(title="Clinical ML Inference API", version="1.0.0")
+
+
+class PredictRequest(BaseModel):
+    features: Dict[str, Any] = Field(..., description="Mapa columna -> valor")
+
+
+class PredictResponse(BaseModel):
+    ok: bool
+    proba: float
+    label: int
+    threshold: float
+    missing: List[str] = []
+    extra: List[str] = []
+
+
+def _load_artifacts():
+    if not MODEL_PATH.exists():
+        raise FileNotFoundError(f"No se encontró el modelo en {MODEL_PATH}")
+    if not PREPROC_PATH.exists():
+        raise FileNotFoundError(f"No se encontró el preprocesador en {PREPROC_PATH}")
+    model = joblib.load(MODEL_PATH)
+    pre = joblib.load(PREPROC_PATH)
+    return model, pre
+
+
+def _infer_raw_columns_from_preprocessor(pre) -> Dict[str, List[str]]:
+    numeric_cols: List[str] = []
+    categorical_cols: List[str] = []
+    for name, _trans, cols in pre.transformers_:
+        if name == "remainder":
+            continue
+        if not isinstance(cols, list):
+            try:
+                if hasattr(pre, "feature_names_in_"):
+                    cols = list(pre.feature_names_in_)
+                else:
+                    cols = []
+            except Exception:
+                cols = []
+        if name == "num":
+            numeric_cols.extend([str(c) for c in cols])
+        elif name == "cat":
+            categorical_cols.extend([str(c) for c in cols])
+    return {"numeric": numeric_cols, "categorical": categorical_cols}
+
+
+try:
+    _MODEL, _PREPROC = _load_artifacts()
+    _RAW_SCHEMA = _infer_raw_columns_from_preprocessor(_PREPROC)
+    _ALIVE = True
+except Exception as e:  # noqa: BLE001
+    _MODEL, _PREPROC, _RAW_SCHEMA = None, None, {"numeric": [], "categorical": []}
+    _ALIVE = False
+    _STARTUP_ERROR = str(e)
+
+
+@app.get("/health")
+def health():
+    return {
+        "ok": _ALIVE,
+        "model_path": str(MODEL_PATH),
+        "preprocessor_path": str(PREPROC_PATH),
+        "error": None if _ALIVE else _STARTUP_ERROR,
+    }
+
+
+@app.get("/schema")
+def schema():
+    if not _ALIVE:
+        raise HTTPException(status_code=503, detail=_STARTUP_ERROR)
+    return _RAW_SCHEMA
+
+
+def _dataframe_from_features(
+    features: Dict[str, Any],
+    raw_schema: Dict[str, List[str]],
+) -> pd.DataFrame:
+    """
+    Construye un DataFrame de UNA fila con las columnas crudas esperadas.
+    Llena faltantes con None; deja extras para reportarlas.
+    """
+    cols = list(raw_schema["numeric"]) + list(raw_schema["categorical"])
+    data: Dict[str, List[Any]] = {}
+    for c in cols:
+        data[c] = [features.get(c, None)]
+    df = pd.DataFrame(data)
+    return df
+
+
+@app.post("/predict", response_model=PredictResponse)
+def predict(
+    req: PredictRequest,
+    threshold: float = Query(0.5, ge=0.0, le=1.0, description="Umbral para clasificar"),
+):
+    if not _ALIVE:
+        raise HTTPException(status_code=503, detail=_STARTUP_ERROR)
+
+    # Construye DF crudo
+    df_raw = _dataframe_from_features(req.features, _RAW_SCHEMA)
+
+    # Detecta faltantes y extras (solo informativo)
+    expected = set(_RAW_SCHEMA["numeric"] + _RAW_SCHEMA["categorical"])
+    got = set(req.features.keys())
+    missing = sorted(list(expected - got))
+    extra = sorted(list(got - expected))
+
+    # Transforma
+    try:
+        X = _PREPROC.transform(df_raw)
+    except Exception as e:  # noqa: BLE001
+        raise HTTPException(status_code=400, detail=f"Error en preprocesamiento: {e}")
+
+    # Predice
+    try:
+        proba = float(_MODEL.predict_proba(X)[:, 1][0])
+    except Exception as e:  # noqa: BLE001
+        raise HTTPException(status_code=500, detail=f"Error en predicción: {e}")
+
+    label = int(proba >= float(threshold))
+    return PredictResponse(
+        ok=True,
+        proba=proba,
+        label=label,
+        threshold=float(threshold),
+        missing=missing,
+        extra=extra,
+    )
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 from src.model import default_config, make_model
