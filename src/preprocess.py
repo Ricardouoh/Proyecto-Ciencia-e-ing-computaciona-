@@ -1,10 +1,14 @@
 ﻿from __future__ import annotations
 """
-Preprocesamiento tabular:
+Preprocesamiento tabular mejorado:
+- Limpieza previa:
+    * Elimina columnas tipo ID (_id, submitter_id, etc.)
+    * Elimina columnas con >95% de NaN
+    * (Opcional) Elimina categóricas con cardinalidad muy alta
 - Split estratificado en train/val/test
 - Imputación (num: mediana, cat: "unknown")
 - Escalado numérico (z-score)
-- One-hot en categóricas (handle_unknown="ignore")
+- One-hot en categóricas (handle_unknown="ignore", min_frequency)
 - Guarda preprocesador (joblib) y CSVs procesados
 """
 
@@ -19,6 +23,68 @@ from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+
+# ------------------------- helpers de limpieza ------------------------- #
+
+def drop_id_like_columns(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Elimina columnas tipo ID que generarán cardinalidad absurda:
+    - columnas que terminan en '_id'
+    - columnas explícitas como 'submitter_id', 'case_submitter_id'
+    """
+    to_drop: List[str] = []
+    for c in df.columns:
+        if c == target:
+            continue
+        if c.endswith("_id") or c in ("submitter_id", "case_submitter_id"):
+            to_drop.append(c)
+    df2 = df.drop(columns=to_drop, errors="ignore")
+    return df2, to_drop
+
+
+def drop_high_nan_columns(df: pd.DataFrame, target: str, threshold: float = 0.95) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Elimina columnas donde la proporción de NaN sea > threshold (por defecto 95%).
+    No toca la columna target.
+    """
+    to_drop: List[str] = []
+    for c in df.columns:
+        if c == target:
+            continue
+        if df[c].isna().mean() > threshold:
+            to_drop.append(c)
+    df2 = df.drop(columns=to_drop, errors="ignore")
+    return df2, to_drop
+
+
+def drop_high_cardinality_categoricals(
+    df: pd.DataFrame,
+    target: str,
+    max_unique: int = 500,
+) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Elimina columnas categóricas con demasiadas categorías distintas
+    (por defecto >500). Esto evita explosión de one-hot en columnas locas
+    que no sean IDs pero sí tengan cardinalidad extrema.
+
+    Si quieres desactivar esto, sube max_unique a un número ridículamente alto.
+    """
+    to_drop: List[str] = []
+    for c in df.columns:
+        if c == target:
+            continue
+        if not pd.api.types.is_numeric_dtype(df[c]):
+            try:
+                nunique = df[c].nunique(dropna=True)
+            except TypeError:
+                continue
+            if nunique > max_unique:
+                to_drop.append(c)
+    df2 = df.drop(columns=to_drop, errors="ignore")
+    return df2, to_drop
+
+
+# ------------------------- split & columnas ------------------------- #
 
 @dataclass
 class SplitData:
@@ -85,6 +151,8 @@ def infer_columns(
     return num, cat
 
 
+# ------------------------- pipelines ------------------------- #
+
 def make_numeric_pipeline():
     """Imputación mediana + escalado estándar."""
     from sklearn.pipeline import Pipeline
@@ -95,17 +163,26 @@ def make_numeric_pipeline():
 
 
 def make_categorical_pipeline():
-    """Imputación 'unknown' + one-hot (ignora categorías nuevas).
-
-    Compatible con distintas versiones de scikit-learn:
-    - >=1.2 usa `sparse_output=False`
-    - < 1.2 usa `sparse=False`
-    """
+    """Imputación 'unknown' + one-hot (ignora categorías nuevas, agrupa raras)."""
     from sklearn.pipeline import Pipeline
-    try:
-        ohe = OneHotEncoder(handle_unknown="ignore", sparse_output=False)
-    except TypeError:
-        ohe = OneHotEncoder(handle_unknown="ignore", sparse=False)
+
+    # Intentar usar min_frequency si la versión de sklearn lo soporta
+    # (agrupa categorías raras y reduce columnas).
+    ohe = None
+    for kwargs in (
+        dict(handle_unknown="ignore", sparse_output=False, min_frequency=0.01),
+        dict(handle_unknown="ignore", sparse=False, min_frequency=0.01),
+        dict(handle_unknown="ignore", sparse_output=False),
+        dict(handle_unknown="ignore", sparse=False),
+    ):
+        try:
+            ohe = OneHotEncoder(**kwargs)
+            break
+        except TypeError:
+            continue
+    if ohe is None:
+        # último fallback (muy improbable)
+        ohe = OneHotEncoder(handle_unknown="ignore")
 
     return Pipeline(steps=[
         ("imputer", SimpleImputer(strategy="constant", fill_value="unknown")),
@@ -130,6 +207,8 @@ def make_preprocessor(
     )
     return pre
 
+
+# ------------------------- ajuste & transformación ------------------------- #
 
 def fit_transform_all(
     split: SplitData,
@@ -179,11 +258,13 @@ def transform_with_loaded(
     return pd.DataFrame(Xt, columns=out_cols, index=X.index)
 
 
+# ------------------------- CLI ------------------------- #
+
 if __name__ == "__main__":
     import argparse
 
     ap = argparse.ArgumentParser(
-        description="Preprocesa CSV tabular (split + imputación + escala + OHE) y guarda artefactos."
+        description="Preprocesa CSV tabular (limpieza + split + imputación + escala + OHE) y guarda artefactos."
     )
     ap.add_argument("--csv", required=True, help="Ruta al CSV de entrada (features + target).")
     ap.add_argument("--target", default="label", help="Nombre de la columna objetivo (binaria).")
@@ -194,6 +275,18 @@ if __name__ == "__main__":
     ap.add_argument("--numeric", default="", help="Lista de columnas numéricas separadas por coma (opcional).")
     ap.add_argument("--categorical", default="", help="Lista de columnas categóricas separadas por coma (opcional).")
     ap.add_argument("--parse-dates", default="", help="Columnas de fecha a parsear (coma, opcional).")
+    ap.add_argument(
+        "--nan-threshold",
+        type=float,
+        default=0.95,
+        help="Umbral para eliminar columnas con proporción de NaN > threshold (default=0.95).",
+    )
+    ap.add_argument(
+        "--max-unique-cat",
+        type=int,
+        default=500,
+        help="Máximo de categorías únicas permitido antes de eliminar una columna categórica (default=500).",
+    )
 
     args = ap.parse_args()
 
@@ -204,37 +297,76 @@ if __name__ == "__main__":
         read_kwargs["parse_dates"] = date_cols
 
     df_in = pd.read_csv(args.csv, **read_kwargs)
+    target_col = args.target
 
-    # Inferencia (o hints) de columnas
+    # ---------------- Limpieza previa antes de inferir columnas ---------------- #
+
+    dropped_ids: List[str] = []
+    dropped_nan: List[str] = []
+    dropped_card: List[str] = []
+
+    # 1) Drop columnas ID-like
+    df_in, dropped = drop_id_like_columns(df_in, target_col)
+    dropped_ids.extend(dropped)
+
+    # 2) Drop columnas con demasiados NaN
+    df_in, dropped = drop_high_nan_columns(df_in, target_col, threshold=float(args.nan_threshold))
+    dropped_nan.extend(dropped)
+
+    # 3) Drop categóricas con cardinalidad muy alta
+    df_in, dropped = drop_high_cardinality_categoricals(
+        df_in,
+        target_col,
+        max_unique=int(args.max_unique_cat),
+    )
+    dropped_card.extend(dropped)
+
+    if dropped_ids:
+        print("ℹ️ Columnas tipo ID eliminadas:", ", ".join(dropped_ids))
+    if dropped_nan:
+        print("ℹ️ Columnas con alta proporción de NaN eliminadas:", ", ".join(dropped_nan))
+    if dropped_card:
+        print("ℹ️ Columnas categóricas de cardinalidad muy alta eliminadas:", ", ".join(dropped_card))
+
+    # ---------------- Inferencia (o hints) de columnas ---------------- #
+
     num_hint = [c.strip() for c in args.numeric.split(",") if c.strip()]
     cat_hint = [c.strip() for c in args.categorical.split(",") if c.strip()]
     numeric_cols, categorical_cols = infer_columns(
-        df_in, target=args.target,
+        df_in, target=target_col,
         numeric_hint=num_hint or None,
         categorical_hint=cat_hint or None,
     )
 
-    # Split
+    # ---------------- Split ---------------- #
+
     split = stratified_split(
-        df_in, target=args.target,
+        df_in, target=target_col,
         val_size=float(args.val_size),
         test_size=float(args.test_size),
         random_state=int(args.seed),
     )
 
-    # Transform
-    Xtr, Xva, Xte = fit_transform_all(
-        split, numeric_cols, categorical_cols,
-        preprocessor_path=Path(args.outdir) / "preprocessor.joblib",
-    )
+    # ---------------- Transform ---------------- #
 
     outdir = Path(args.outdir)
+    Xtr, Xva, Xte = fit_transform_all(
+        split, numeric_cols, categorical_cols,
+        preprocessor_path=outdir / "preprocessor.joblib",
+    )
+
     outdir.mkdir(parents=True, exist_ok=True)
 
     # Guardar CSVs con target al final
-    pd.concat([Xtr, split.y_train.reset_index(drop=True)], axis=1).to_csv(outdir / "train.csv", index=False)
-    pd.concat([Xva, split.y_val.reset_index(drop=True)], axis=1).to_csv(outdir / "val.csv", index=False)
-    pd.concat([Xte, split.y_test.reset_index(drop=True)], axis=1).to_csv(outdir / "test.csv", index=False)
+    pd.concat([Xtr.reset_index(drop=True), split.y_train.reset_index(drop=True)], axis=1).to_csv(
+        outdir / "train.csv", index=False
+    )
+    pd.concat([Xva.reset_index(drop=True), split.y_val.reset_index(drop=True)], axis=1).to_csv(
+        outdir / "val.csv", index=False
+    )
+    pd.concat([Xte.reset_index(drop=True), split.y_test.reset_index(drop=True)], axis=1).to_csv(
+        outdir / "test.csv", index=False
+    )
 
     print("✔ Guardado preprocesador en:", outdir / "preprocessor.joblib")
     print("✔ train/val/test en:", outdir)
