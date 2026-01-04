@@ -129,4 +129,4 @@ def save_json(data: Dict, out_path: Path) -> None:
 
 def table_from_metrics(d: Dict[str, float]) -> pd.DataFrame:
     """Convierte el dict de métricas a DataFrame de una fila (útil para logs)."""
-    return pd.D
+    return pd.DataFrame([d])

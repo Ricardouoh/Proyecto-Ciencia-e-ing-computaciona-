@@ -170,15 +170,42 @@ def load_hcmi(source: str | Path) -> List[Dict[str, Any]]:
     return all_records
 
 
-def save_tables(tables: Dict[str, pd.DataFrame], outdir: str | Path) -> None:
+def _merge_with_existing(path: Path, new_df: pd.DataFrame, append: bool) -> pd.DataFrame:
+    """Concatena con el CSV existente (si se solicita) y deduplica filas."""
+    if not append:
+        return new_df
+
+    if path.exists():
+        try:
+            existing = pd.read_csv(path)
+        except Exception:
+            existing = pd.DataFrame()
+    else:
+        existing = pd.DataFrame()
+
+    if new_df is None or new_df.empty:
+        return existing
+    if existing is None or existing.empty:
+        return new_df
+
+    all_cols = list(dict.fromkeys(existing.columns.tolist() + [c for c in new_df.columns if c not in existing.columns]))
+    existing_aligned = existing.reindex(columns=all_cols)
+    new_aligned = new_df.reindex(columns=all_cols)
+
+    combined = pd.concat([existing_aligned, new_aligned], ignore_index=True)
+    return combined.drop_duplicates()
+
+
+def save_tables(tables: Dict[str, pd.DataFrame], outdir: str | Path, *, append: bool = False) -> None:
     out = Path(outdir)
     out.mkdir(parents=True, exist_ok=True)
     for name, df in tables.items():
         path = out / f"{name}.csv"
-        if df is None or df.empty:
+        merged = _merge_with_existing(path, df, append)
+        if merged is None or merged.empty:
             path.write_text("", encoding="utf-8")
         else:
-            df.to_csv(path, index=False)
+            merged.to_csv(path, index=False)
 
 
 if __name__ == "__main__":
@@ -187,13 +214,14 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Convierte JSON HCMI/CMDC a tablas CSV normalizadas.")
     ap.add_argument("--in", dest="inp", required=True, help="Archivo .json/.jsonl o carpeta con varios.")
     ap.add_argument("--outdir", required=True, help="Carpeta de salida (CSV por tabla).")
+    ap.add_argument("--append", action="store_true", help="Anexar a los CSV existentes en vez de reemplazar.")
     args = ap.parse_args()
 
     records = load_hcmi(args.inp)
     tables = flatten_hcmi(records)
-    save_tables(tables, args.outdir)
+    save_tables(tables, args.outdir, append=args.append)
 
-    print(f"✔ Registros procesados: {len(records)}")
+    print(f"Registros procesados: {len(records)}")
     for k, df in tables.items():
         n = 0 if df is None else len(df)
         print(f"  - {k}.csv: {n} filas")

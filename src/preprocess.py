@@ -26,6 +26,183 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 # ------------------------- helpers de limpieza ------------------------- #
 
+def clean_binary_target(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, int]:
+    """
+    Fuerza el target a binario 0/1 y elimina filas no mapeables.
+    Retorna el DF limpio y cuantas filas se eliminaron.
+    """
+    if target not in df.columns:
+        raise ValueError(f"No se encontro la columna target '{target}'")
+
+    def _map(v):
+        if pd.isna(v):
+            return None
+        if isinstance(v, (int, float)) and v in (0, 1):
+            return int(v)
+        s = str(v).strip().lower()
+        if s in {"1", "true", "yes", "si", "y", "positivo", "positive", "pos"}:
+            return 1
+        if s in {"0", "false", "no", "neg", "negative", "n"}:
+            return 0
+        return None
+
+    df2 = df.copy()
+    df2[target] = df2[target].map(_map)
+    before = len(df2)
+    df2 = df2.dropna(subset=[target])
+    df2[target] = df2[target].astype(int)
+    dropped = before - len(df2)
+    return df2, dropped
+
+
+def drop_duplicate_rows(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, int]:
+    """
+    Elimina filas duplicadas para evitar fuga de informacion entre splits.
+    Prioriza case_key si existe; si no, deduplica por todas las features.
+    """
+    if "case_key" in df.columns:
+        subset = ["case_key", target]
+    else:
+        subset = list(df.columns)
+    before = len(df)
+    df2 = df.drop_duplicates(subset=subset)
+    return df2, before - len(df2)
+
+
+def drop_leakage_columns(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Elimina columnas que contienen informacion directa del target (fuga).
+    Ajusta la lista si agregas nuevos derivados del target.
+    """
+    leak_cols = [
+        "dem_vital_status",
+        "dem_cause_of_death",
+        "dem_days_to_death",
+        "any_progression",
+    ]
+    keep_cols = [c for c in df.columns if c not in leak_cols or c == target]
+    dropped = [c for c in df.columns if c not in keep_cols and c != target]
+    return df[keep_cols].copy(), dropped
+
+
+def coerce_boolean_like(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Detecta columnas booleanas (texto/objetos) y las convierte a 0/1.
+    Solo convierte si >70% de los valores son mapeables.
+    """
+    bool_map = {
+        "1": 1, "true": 1, "yes": 1, "si": 1, "y": 1, "positivo": 1, "positive": 1, "pos": 1,
+        "0": 0, "false": 0, "no": 0, "n": 0, "neg": 0, "negative": 0,
+    }
+    converted: List[str] = []
+    df2 = df.copy()
+
+    for c in df.columns:
+        if c == target or pd.api.types.is_numeric_dtype(df2[c]):
+            continue
+        if pd.api.types.is_bool_dtype(df2[c]):
+            df2[c] = df2[c].astype(int)
+            converted.append(c)
+            continue
+
+        s = df2[c].astype(str).str.lower().str.strip()
+        mapped = s.map(bool_map)
+        mappable_ratio = mapped.notna().mean()
+        if mappable_ratio >= 0.7:
+            df2[c] = mapped.astype("Int64").astype(float)
+            converted.append(c)
+
+    return df2, converted
+
+
+def convert_datetime_columns(
+    df: pd.DataFrame,
+    target: str,
+    explicit_date_cols: Optional[List[str]] = None,
+) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Convierte columnas de fecha a un valor numerico (dias desde epoch) para el MLP.
+    Detecta: columnas datetime64 o que contengan 'date'/'time' en el nombre.
+    """
+    df2 = df.copy()
+    converted: List[str] = []
+
+    candidates: List[str] = []
+    if explicit_date_cols:
+        candidates.extend([c for c in explicit_date_cols if c in df2.columns and c != target])
+    for c in df2.columns:
+        if c == target:
+            continue
+        name = c.lower()
+        if pd.api.types.is_datetime64_any_dtype(df2[c]) or ("date" in name) or ("time" in name):
+            candidates.append(c)
+
+    for c in candidates:
+        try:
+            dt = pd.to_datetime(
+                df2[c],
+                errors="coerce",
+                utc=True,
+                format="mixed",
+            )
+        except Exception:
+            continue
+        if dt.notna().mean() < 0.3:
+            continue
+        df2[c] = dt.astype("int64") / 86_400_000_000_000  # dias
+        converted.append(c)
+
+    return df2, converted
+
+
+def add_age_from_days(df: pd.DataFrame, source_col: str = "mean_age_at_dx") -> Tuple[pd.DataFrame, Optional[str]]:
+    """
+    Si existe source_col (edad en dias), crea una columna en años y elimina la original.
+    """
+    if source_col not in df.columns:
+        return df, None
+    df2 = df.copy()
+    df2[source_col] = pd.to_numeric(df2[source_col], errors="coerce")
+    new_col = f"{source_col}_years"
+    df2[new_col] = df2[source_col] / 365.25
+    df2 = df2.drop(columns=[source_col])
+    return df2, new_col
+
+
+def add_ajcc_stage_ordinal(df: pd.DataFrame, col: str = "last_ajcc_stage") -> Tuple[pd.DataFrame, Optional[str]]:
+    """
+    Mapea la etapa AJCC a un valor ordinal creciente (0 < I < II < III < IV).
+    """
+    if col not in df.columns:
+        return df, None
+    order = [
+        "stage 0", "stage i", "stage ia", "stage ib", "stage ic",
+        "stage ii", "stage iia", "stage iib", "stage iic",
+        "stage iii", "stage iiia", "stage iiib", "stage iiic",
+        "stage iv", "stage iva", "stage ivb", "stage ivc",
+    ]
+    mapping = {name: idx for idx, name in enumerate(order)}
+    df2 = df.copy()
+    stage_norm = df2[col].astype(str).str.lower().str.strip()
+    df2[f"{col}_ord"] = stage_norm.map(mapping)
+    df2 = df2.drop(columns=[col])
+    return df2, f"{col}_ord"
+
+
+def drop_constant_columns(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Elimina columnas con un solo valor (incluyendo NaN) para reducir ruido.
+    """
+    to_drop: List[str] = []
+    for c in df.columns:
+        if c == target:
+            continue
+        if df[c].nunique(dropna=False) <= 1:
+            to_drop.append(c)
+    df2 = df.drop(columns=to_drop, errors="ignore")
+    return df2, to_drop
+
+
 def drop_id_like_columns(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, List[str]]:
     """
     Elimina columnas tipo ID que generarán cardinalidad absurda:
@@ -299,11 +476,45 @@ if __name__ == "__main__":
     df_in = pd.read_csv(args.csv, **read_kwargs)
     target_col = args.target
 
+    # ---------------- Sanitizacion del target y duplicados ---------------- #
+
+    df_in, dropped_target = clean_binary_target(df_in, target_col)
+    if dropped_target:
+        print("!! Filas eliminadas por target invalido:", dropped_target)
+
+    df_in, dropped_dups = drop_duplicate_rows(df_in, target_col)
+    if dropped_dups:
+        print("!! Filas duplicadas eliminadas:", dropped_dups)
+
+    # Booleanos a 0/1 para vectorizacion densa
+    df_in, bool_cols = coerce_boolean_like(df_in, target_col)
+    if bool_cols:
+        print("✔ Columnas convertidas a booleano (0/1):", ", ".join(bool_cols))
+
+    # Fechas a numerico (dias)
+    df_in, conv_dates = convert_datetime_columns(df_in, target_col, explicit_date_cols=date_cols)
+    if conv_dates:
+        print("✔ Columnas de fecha convertidas a dias:", ", ".join(conv_dates))
+
+    df_in, dropped_leaks = drop_leakage_columns(df_in, target_col)
+    if dropped_leaks:
+        print("!! Columnas eliminadas por fuga de target:", ", ".join(dropped_leaks))
+
+    # Features derivadas: edad en años y etapa AJCC ordinal
+    df_in, age_col = add_age_from_days(df_in, source_col="mean_age_at_dx")
+    if age_col:
+        print("✔ Columna derivada de edad (años):", age_col)
+
+    df_in, stage_col = add_ajcc_stage_ordinal(df_in, col="last_ajcc_stage")
+    if stage_col:
+        print("✔ Columna ordinal creada para etapa AJCC:", stage_col)
+
     # ---------------- Limpieza previa antes de inferir columnas ---------------- #
 
     dropped_ids: List[str] = []
     dropped_nan: List[str] = []
     dropped_card: List[str] = []
+    dropped_const: List[str] = []
 
     # 1) Drop columnas ID-like
     df_in, dropped = drop_id_like_columns(df_in, target_col)
@@ -321,12 +532,18 @@ if __name__ == "__main__":
     )
     dropped_card.extend(dropped)
 
+    # 4) Drop columnas constantes
+    df_in, dropped = drop_constant_columns(df_in, target_col)
+    dropped_const.extend(dropped)
+
     if dropped_ids:
         print("ℹ️ Columnas tipo ID eliminadas:", ", ".join(dropped_ids))
     if dropped_nan:
         print("ℹ️ Columnas con alta proporción de NaN eliminadas:", ", ".join(dropped_nan))
     if dropped_card:
         print("ℹ️ Columnas categóricas de cardinalidad muy alta eliminadas:", ", ".join(dropped_card))
+    if dropped_const:
+        print("ℹ️ Columnas constantes eliminadas:", ", ".join(dropped_const))
 
     # ---------------- Inferencia (o hints) de columnas ---------------- #
 

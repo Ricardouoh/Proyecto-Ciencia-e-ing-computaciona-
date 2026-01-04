@@ -37,13 +37,14 @@ def default_config(model: str = "mlp") -> Dict[str, Any]:
         return {
             "model": "mlp",
             "mlp": {
-                "hidden_layer_sizes": [128, 64],
+                # Arquitectura aún más ligera para mayor estabilidad en este dataset
+                "hidden_layer_sizes": [32, 16],
                 "activation": "relu",
                 "solver": "adam",
                 "alpha": 1e-4,               # L2
                 "batch_size": "auto",
                 "learning_rate": "adaptive",  # adapta LR si se estanca
-                "learning_rate_init": 1e-3,
+                "learning_rate_init": 3e-4,
                 "max_iter": 100,
                 "early_stopping": True,
                 "n_iter_no_change": 10,       # paciencia (val)

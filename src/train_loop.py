@@ -53,6 +53,7 @@ import pandas as pd
 from sklearn.metrics import roc_auc_score, average_precision_score
 
 from src.model import make_model, default_config
+from src import metrics as mt
 
 
 # =========================
@@ -152,6 +153,11 @@ def train_and_validate(cfg: TrainConfig, data_dir: Path, target: str = "label") 
         _save_log(log_rows, log_path)
         _save_model(model, model_path)
 
+        full_metrics = mt.compute_classification_metrics(yva.values, proba_va)
+        mt.save_json(full_metrics, cfg.outdir / "metrics_val.json")
+        mt.plot_roc(yva.values, proba_va, cfg.outdir / "roc_val.png")
+        mt.plot_pr(yva.values, proba_va, cfg.outdir / "pr_val.png")
+
         print("✔ Modelo guardado:", model_path)
         print(f"✔ Métricas validación: AUROC={metrics['auroc']:.4f} | AUPRC={metrics['auprc']:.4f}")
         return
@@ -210,14 +216,18 @@ def train_and_validate(cfg: TrainConfig, data_dir: Path, target: str = "label") 
     _save_log(log_rows, log_path)
 
     # Guardar mejor modelo
-    if best_model is not None:
-        _save_model(best_model, model_path)
-    else:
-        # Por si nunca mejoró, guardamos el último
-        _save_model(model, model_path)
+    final_model = best_model if best_model is not None else model
+    _save_model(final_model, model_path)
+
+    proba_va = final_model.predict_proba(Xva)[:, 1]
+    final_metrics = mt.compute_classification_metrics(yva.values, proba_va)
+    mt.save_json(final_metrics, cfg.outdir / "metrics_val.json")
+    mt.plot_roc(yva.values, proba_va, cfg.outdir / "roc_val.png")
+    mt.plot_pr(yva.values, proba_va, cfg.outdir / "pr_val.png")
 
     print("✔ Mejor modelo guardado en:", model_path)
     print("📄 Log de entrenamiento:", log_path)
+    print(f"✔ Métricas validación (mejor modelo): AUROC={final_metrics['auroc']:.4f} | AUPRC={final_metrics['auprc']:.4f}")
 
 
 # =========================
