@@ -1,0 +1,2 @@
+n,auroc,auprc,accuracy,precision,recall,f1,n_features,dropped_id_like,dropped_high_missing,dropped_constant,dropped_high_cardinality,focus_colon,colon_input_rows,colon_output_rows
+122,1.0,0.9999999999999999,1.0,1.0,1.0,1.0,167,7,2,10,1,1,629,122

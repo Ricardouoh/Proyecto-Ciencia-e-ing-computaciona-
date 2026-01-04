@@ -1,0 +1,48 @@
+{
+  "rows": 122,
+  "cols": 53,
+  "num_cols": 29,
+  "cat_cols": 24,
+  "missing_top10": [
+    {
+      "column": "pack_years_smoked_max",
+      "missing_rate": 1.0
+    },
+    {
+      "column": "lost_to_followup",
+      "missing_rate": 0.9836065573770492
+    },
+    {
+      "column": "dem_days_to_death",
+      "missing_rate": 0.9262295081967213
+    },
+    {
+      "column": "dem_cause_of_death",
+      "missing_rate": 0.9262295081967213
+    },
+    {
+      "column": "last_ajcc_stage",
+      "missing_rate": 0.6229508196721312
+    },
+    {
+      "column": "mean_age_at_dx_years",
+      "missing_rate": 0.45901639344262296
+    },
+    {
+      "column": "height_last",
+      "missing_rate": 0.4098360655737705
+    },
+    {
+      "column": "bmi_last",
+      "missing_rate": 0.4098360655737705
+    },
+    {
+      "column": "dem_year_of_birth",
+      "missing_rate": 0.4016393442622951
+    },
+    {
+      "column": "weight_last",
+      "missing_rate": 0.4016393442622951
+    }
+  ]
+}

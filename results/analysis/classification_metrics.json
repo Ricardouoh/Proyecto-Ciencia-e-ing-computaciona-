@@ -1,0 +1,17 @@
+{
+  "n": 122,
+  "auroc": 1.0,
+  "auprc": 0.9999999999999999,
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "n_features": 167,
+  "dropped_id_like": 7,
+  "dropped_high_missing": 2,
+  "dropped_constant": 10,
+  "dropped_high_cardinality": 1,
+  "focus_colon": 1,
+  "colon_input_rows": 629,
+  "colon_output_rows": 122
+}
