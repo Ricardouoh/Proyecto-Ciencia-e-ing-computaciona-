@@ -28,6 +28,7 @@ from sklearn.metrics import (
     roc_curve,
 )
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 def compute_classification_metrics(
@@ -71,6 +72,29 @@ def confusion_counts(
     """Retorna TP, FP, TN, FN en un dict."""
     tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
     return {"tp": int(tp), "fp": int(fp), "tn": int(tn), "fn": int(fn)}
+
+
+def plot_confusion_matrix(
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    out_path: Path,
+    labels: Tuple[str, str] = ("0", "1"),
+) -> None:
+    """Guarda matriz de confusión (PNG)."""
+    try:
+        cm = confusion_matrix(y_true, y_pred)
+    except Exception:
+        return
+    plt.figure(figsize=(4.5, 4))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", cbar=False,
+                xticklabels=labels, yticklabels=labels)
+    plt.xlabel("Predicted")
+    plt.ylabel("Actual")
+    plt.title("Confusion matrix")
+    plt.tight_layout()
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    plt.savefig(out_path, dpi=150, bbox_inches="tight")
+    plt.close()
 
 
 def plot_roc(
