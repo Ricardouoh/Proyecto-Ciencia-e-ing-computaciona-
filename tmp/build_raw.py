@@ -187,6 +187,6 @@ out = r"data\raw.csv"
 os.makedirs(os.path.dirname(out), exist_ok=True)
 df.to_csv(out, index=False)
 
-print("✔ Tabla plana guardada en:", out)
+print("OK Tabla plana guardada en:", out)
 print("   Filas:", len(df), " Columnas:", len(df.columns))
 print("   Tiene 'label':", "label" in df.columns)

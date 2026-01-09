@@ -489,12 +489,12 @@ if __name__ == "__main__":
     # Booleanos a 0/1 para vectorizacion densa
     df_in, bool_cols = coerce_boolean_like(df_in, target_col)
     if bool_cols:
-        print("✔ Columnas convertidas a booleano (0/1):", ", ".join(bool_cols))
+        print("OK Columnas convertidas a booleano (0/1):", ", ".join(bool_cols))
 
     # Fechas a numerico (dias)
     df_in, conv_dates = convert_datetime_columns(df_in, target_col, explicit_date_cols=date_cols)
     if conv_dates:
-        print("✔ Columnas de fecha convertidas a dias:", ", ".join(conv_dates))
+        print("OK Columnas de fecha convertidas a dias:", ", ".join(conv_dates))
 
     df_in, dropped_leaks = drop_leakage_columns(df_in, target_col)
     if dropped_leaks:
@@ -503,11 +503,11 @@ if __name__ == "__main__":
     # Features derivadas: edad en años y etapa AJCC ordinal
     df_in, age_col = add_age_from_days(df_in, source_col="mean_age_at_dx")
     if age_col:
-        print("✔ Columna derivada de edad (años):", age_col)
+        print("OK Columna derivada de edad (años):", age_col)
 
     df_in, stage_col = add_ajcc_stage_ordinal(df_in, col="last_ajcc_stage")
     if stage_col:
-        print("✔ Columna ordinal creada para etapa AJCC:", stage_col)
+        print("OK Columna ordinal creada para etapa AJCC:", stage_col)
 
     # ---------------- Limpieza previa antes de inferir columnas ---------------- #
 
@@ -537,13 +537,13 @@ if __name__ == "__main__":
     dropped_const.extend(dropped)
 
     if dropped_ids:
-        print("ℹ️ Columnas tipo ID eliminadas:", ", ".join(dropped_ids))
+        print("INFO Columnas tipo ID eliminadas:", ", ".join(dropped_ids))
     if dropped_nan:
-        print("ℹ️ Columnas con alta proporción de NaN eliminadas:", ", ".join(dropped_nan))
+        print("INFO Columnas con alta proporción de NaN eliminadas:", ", ".join(dropped_nan))
     if dropped_card:
-        print("ℹ️ Columnas categóricas de cardinalidad muy alta eliminadas:", ", ".join(dropped_card))
+        print("INFO Columnas categóricas de cardinalidad muy alta eliminadas:", ", ".join(dropped_card))
     if dropped_const:
-        print("ℹ️ Columnas constantes eliminadas:", ", ".join(dropped_const))
+        print("INFO Columnas constantes eliminadas:", ", ".join(dropped_const))
 
     # ---------------- Inferencia (o hints) de columnas ---------------- #
 
@@ -585,8 +585,8 @@ if __name__ == "__main__":
         outdir / "test.csv", index=False
     )
 
-    print("✔ Guardado preprocesador en:", outdir / "preprocessor.joblib")
-    print("✔ train/val/test en:", outdir)
+    print("OK Guardado preprocesador en:", outdir / "preprocessor.joblib")
+    print("OK train/val/test en:", outdir)
     print(f"   - train.csv: {len(split.y_train)} filas, {len(Xtr.columns)} cols")
     print(f"   - val.csv:   {len(split.y_val)} filas, {len(Xva.columns)} cols")
     print(f"   - test.csv:  {len(split.y_test)} filas, {len(Xte.columns)} cols")

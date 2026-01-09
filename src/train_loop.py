@@ -160,8 +160,8 @@ def train_and_validate(cfg: TrainConfig, data_dir: Path, target: str = "label") 
         preds_va = (proba_va >= 0.5).astype(int)
         mt.plot_confusion_matrix(yva.values, preds_va, cfg.outdir / "confusion_matrix_val.png")
 
-        print("✔ Modelo guardado:", model_path)
-        print(f"✔ Métricas validación: AUROC={metrics['auroc']:.4f} | AUPRC={metrics['auprc']:.4f}")
+        print("OK Modelo guardado:", model_path)
+        print(f"OK Metricas validacion: AUROC={metrics['auroc']:.4f} | AUPRC={metrics['auprc']:.4f}")
         return
 
     # ===== MLP con entrenamiento por épocas + early stopping =====
@@ -211,7 +211,7 @@ def train_and_validate(cfg: TrainConfig, data_dir: Path, target: str = "label") 
             no_improve += 1
 
         if no_improve >= cfg.patience:
-            print("⏹ Early stopping activado")
+            print("STOP Early stopping activado")
             break
 
     # Guardar log
@@ -229,9 +229,9 @@ def train_and_validate(cfg: TrainConfig, data_dir: Path, target: str = "label") 
     preds_va = (proba_va >= 0.5).astype(int)
     mt.plot_confusion_matrix(yva.values, preds_va, cfg.outdir / "confusion_matrix_val.png")
 
-    print("✔ Mejor modelo guardado en:", model_path)
-    print("📄 Log de entrenamiento:", log_path)
-    print(f"✔ Métricas validación (mejor modelo): AUROC={final_metrics['auroc']:.4f} | AUPRC={final_metrics['auprc']:.4f}")
+    print("OK Mejor modelo guardado en:", model_path)
+    print("LOG Log de entrenamiento:", log_path)
+    print(f"OK Metricas validacion (mejor modelo): AUROC={final_metrics['auroc']:.4f} | AUPRC={final_metrics['auprc']:.4f}")
 
 
 # =========================

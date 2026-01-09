@@ -76,5 +76,5 @@ if __name__ == "__main__":
         threshold=float(args.threshold),
     )
 
-    print("✔ Métricas de test guardadas en:", Path(args.outdir) / "test_metrics.json")
+    print("OK Metricas de test guardadas en:", Path(args.outdir) / "test_metrics.json")
     print(f"   AUROC={metrics.get('auroc'):.4f} | AUPRC={metrics.get('auprc'):.4f} | Acc={metrics.get('accuracy'):.4f}")
