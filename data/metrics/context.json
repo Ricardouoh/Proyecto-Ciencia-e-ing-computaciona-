@@ -1,0 +1,18 @@
+{
+  "rows_before_dedupe": 42363,
+  "rows_after_dedupe": 24096,
+  "num_features": [
+    "age_years",
+    "height_last",
+    "weight_last",
+    "bmi_last",
+    "tobacco_smoking_status_any"
+  ],
+  "cat_features": [
+    "sex",
+    "ethnicity",
+    "race"
+  ],
+  "split_random_state": 1337,
+  "cv_folds": 5
+}

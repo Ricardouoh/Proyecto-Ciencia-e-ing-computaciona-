@@ -13,10 +13,10 @@ Soporta: CSV, JSONL/NDJSON, Parquet, Excel (XLS/XLSX), SAS XPT.
 
 Uso CLI (ejemplos):
   # Un archivo CSV -> CSV unificado
-  python -m src.data_loader --in data/raw/pacientes.csv --out data/raw.csv --target label
+  python -m src.data_loader --in data/raw/pacientes.csv --out data/training/raw.csv --target label
 
   # Carpeta con varios archivos mezclados
-  python -m src.data_loader --in data/raw_folder --out data/raw.csv --target label --drop-const --drop-dup-rows
+  python -m src.data_loader --in data/raw_folder --out data/training/raw.csv --target label --drop-const --drop-dup-rows
 """
 
 from pathlib import Path
@@ -265,7 +265,7 @@ if __name__ == "__main__":
         description="Carga uno o varios archivos tabulares y genera un CSV unificado."
     )
     ap.add_argument("--in", dest="inp", required=True, help="Ruta a archivo o carpeta.")
-    ap.add_argument("--out", dest="out", required=True, help="CSV de salida (p.ej. data/raw.csv).")
+    ap.add_argument("--out", dest="out", required=True, help="CSV de salida (p.ej. data/training/raw.csv).")
     ap.add_argument("--target", default=None, help="Nombre de la columna objetivo (opcional).")
     ap.add_argument(
         "--date-cols",

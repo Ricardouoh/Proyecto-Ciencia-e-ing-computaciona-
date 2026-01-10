@@ -1,66 +1,46 @@
 from __future__ import annotations
 """
-EDA básico del dataset clínico (RAW) + gráfico tipo pirámide (Edad vs Sexo).
+Basic EDA for clinical datasets with an age/sex pyramid plot.
 
-OBJETIVO:
-- Validar cuántos pacientes reales se extrajeron desde el JSON (raw.csv)
-- Revisar coherencia clínica básica:
-    * Edad (en HCMI suele venir en días → se convierte a años)
-    * Sexo
-    * Distribución de label
-- Generar un gráfico tipo pirámide:
-    results/eda/age_sex_pyramid.png
+Defaults:
+- input: data/training/raw.csv
+- output: results/eda/age_sex_pyramid.png
 
-USO:
-python -m src.eda_basic
-
-REQUISITOS:
-- data/raw.csv debe existir
+Use --only-cancer to filter label == 1.
 """
 
 from pathlib import Path
 import pandas as pd
-
 import matplotlib.pyplot as plt
 
 
-DATA_PATH = Path("data/raw.csv")
-OUTDIR = Path("results/eda")
-OUT_PNG = OUTDIR / "age_sex_pyramid.png"
+DEFAULT_DATA_PATH = Path("data/training/raw.csv")
+DEFAULT_OUTDIR = Path("results/eda")
+DEFAULT_OUT_PNG = DEFAULT_OUTDIR / "age_sex_pyramid.png"
 
 
 def _find_age_column(df: pd.DataFrame) -> str | None:
-    # Preferimos explícitamente mean_age_at_dx
     for c in df.columns:
         if c.lower() == "mean_age_at_dx":
             return c
-    # fallback: cualquier columna con "age" (si no existe la anterior)
     age_cols = [c for c in df.columns if "age" in c.lower()]
     return age_cols[0] if age_cols else None
 
 
 def _find_sex_column(df: pd.DataFrame) -> str | None:
-    # lista típica de columnas
     candidates = ["sex", "gender", "dem_gender", "demographic_gender", "patient_gender"]
     for name in candidates:
         for c in df.columns:
             if c.lower() == name:
                 return c
-
-    # fallback: cualquier columna que contenga sex o gender
     sex_cols = [c for c in df.columns if ("sex" in c.lower()) or ("gender" in c.lower())]
     return sex_cols[0] if sex_cols else None
 
 
 def _normalize_sex(series: pd.Series) -> pd.Series:
-    """
-    Normaliza valores de sexo a: 'Male' / 'Female' / 'Unknown'
-    """
     s = series.astype(str).str.strip().str.lower()
-
     male_set = {"m", "male", "masculino", "man"}
     female_set = {"f", "female", "femenino", "woman"}
-
     out = []
     for v in s.tolist():
         if v in male_set:
@@ -70,28 +50,34 @@ def _normalize_sex(series: pd.Series) -> pd.Series:
         elif v in ("nan", "none", "", "unknown", "not reported", "na"):
             out.append("Unknown")
         else:
-            # valores raros los marcamos como Unknown para no romper
             out.append("Unknown")
     return pd.Series(out, index=series.index)
 
 
-def plot_age_sex_pyramid(df: pd.DataFrame, age_years_col: str, sex_norm_col: str) -> None:
-    """
-    Crea una pirámide poblacional (edad vs sexo) y guarda un PNG.
-    """
-    OUTDIR.mkdir(parents=True, exist_ok=True)
+def plot_age_sex_pyramid(
+    df: pd.DataFrame,
+    age_years_col: str,
+    sex_norm_col: str,
+    out_png: Path,
+) -> None:
+    out_png.parent.mkdir(parents=True, exist_ok=True)
 
-    # Definir bins como el ejemplo (<20, 20-29, ..., 80+)
     bins = [0, 20, 30, 40, 50, 60, 70, 80, 200]
-    labels = ["Menos de 20", "Entre 20-29", "Entre 30-39", "Entre 40-49",
-              "Entre 50-59", "Entre 60-69", "Entre 70-79", "80 y más"]
+    labels = [
+        "Menos de 20",
+        "Entre 20-29",
+        "Entre 30-39",
+        "Entre 40-49",
+        "Entre 50-59",
+        "Entre 60-69",
+        "Entre 70-79",
+        "80 y mas",
+    ]
 
     df2 = df[[age_years_col, sex_norm_col]].dropna().copy()
-    df2 = df2[df2[age_years_col].between(0, 120, inclusive="both")]  # filtro razonable
-
+    df2 = df2[df2[age_years_col].between(0, 120, inclusive="both")]
     df2["age_group"] = pd.cut(df2[age_years_col], bins=bins, labels=labels, right=False)
 
-    # Conteos por sexo y grupo
     male_counts = (
         df2[df2[sex_norm_col] == "Male"]["age_group"]
         .value_counts()
@@ -103,7 +89,6 @@ def plot_age_sex_pyramid(df: pd.DataFrame, age_years_col: str, sex_norm_col: str
         .reindex(labels, fill_value=0)
     )
 
-    # Para pirámide: masculino negativo
     male_values = -male_counts.values
     female_values = female_counts.values
     y_pos = range(len(labels))
@@ -115,58 +100,82 @@ def plot_age_sex_pyramid(df: pd.DataFrame, age_years_col: str, sex_norm_col: str
     plt.yticks(y_pos, labels)
     plt.axvline(0)
 
-    # Ejes y títulos
     plt.xlabel("Recuento")
-    plt.title("Distribución de pacientes según edad y sexo")
+    plt.title("Distribucion de pacientes segun edad y sexo")
     plt.text(0.25, 1.02, "Masculino", transform=plt.gca().transAxes, ha="center")
     plt.text(0.75, 1.02, "Femenino", transform=plt.gca().transAxes, ha="center")
 
-    # Ajustar ticks para mostrar valores positivos (aunque a la izquierda sean negativos)
     xlim = max(female_counts.max(), male_counts.max())
     plt.xlim(-xlim * 1.2, xlim * 1.2)
 
     plt.tight_layout()
-    plt.savefig(OUT_PNG, dpi=200)
+    plt.savefig(out_png, dpi=200)
     plt.close()
 
 
-def main():
-    if not DATA_PATH.exists():
-        raise FileNotFoundError(f"No se encontró {DATA_PATH}")
+def main() -> None:
+    import argparse
 
-    df = pd.read_csv(DATA_PATH)
+    ap = argparse.ArgumentParser(description="EDA basico: piramide edad vs sexo.")
+    ap.add_argument("--csv", default=str(DEFAULT_DATA_PATH), help="CSV de entrada.")
+    ap.add_argument("--out", default=str(DEFAULT_OUT_PNG), help="PNG de salida.")
+    ap.add_argument("--only-cancer", action="store_true", help="Filtra solo label == 1.")
+    ap.add_argument("--only-noncancer", action="store_true", help="Filtra solo label == 0.")
+    ap.add_argument("--label-value", type=int, default=None, help="Filtra por valor de label (0/1).")
+    ap.add_argument("--label-col", default="label", help="Columna label para filtrar.")
+    args = ap.parse_args()
 
-    print("===== EDA BÁSICO =====")
+    data_path = Path(args.csv)
+    out_png = Path(args.out)
+
+    if not data_path.exists():
+        raise FileNotFoundError(f"No se encontro {data_path}")
+
+    df = pd.read_csv(data_path)
+
+    label_value = args.label_value
+    if label_value is None:
+        if args.only_cancer and args.only_noncancer:
+            raise ValueError("No se puede usar --only-cancer y --only-noncancer al mismo tiempo")
+        if args.only_cancer:
+            label_value = 1
+        elif args.only_noncancer:
+            label_value = 0
+
+    if label_value is not None:
+        if args.label_col not in df.columns:
+            raise ValueError(f"No se encontro la columna label '{args.label_col}' para filtrar")
+        df = df[df[args.label_col] == label_value].copy()
+
+    print("===== EDA BASICO =====")
     print(f"\nPacientes totales: {len(df)}")
 
-    # -------------------------
-    # Edad (días → años)
-    # -------------------------
     age_col = _find_age_column(df)
     if age_col is None:
-        print("\n⚠️ No se encontró columna de edad")
+        print("\nNo se encontro columna de edad")
         return
 
-    # Si es mean_age_at_dx, asumimos días (HCMI); si no, igual convertimos si parece grande
     age_raw = pd.to_numeric(df[age_col], errors="coerce")
-    age_years = age_raw / 365.25  # conversión correcta
+    median_age = age_raw.dropna().median()
+    treat_as_days = str(age_col).lower() == "mean_age_at_dx" or (median_age is not None and median_age > 200)
+    age_years = age_raw / 365.25 if treat_as_days else age_raw
 
     df["age_years"] = age_years
 
-    print("\n=== EDAD (CORREGIDA) ===")
+    print("\n=== EDAD ===")
     print(f"Columna usada (raw): {age_col}")
-    print("⚠️ Interpretando como DÍAS y convirtiendo a AÑOS para el EDA.\n")
-    print(f"Media (años):   {df['age_years'].mean():.2f}")
-    print(f"Mediana (años): {df['age_years'].median():.2f}")
-    print(f"Mín (años):     {df['age_years'].min():.1f}")
-    print(f"Máx (años):     {df['age_years'].max():.1f}")
+    if treat_as_days:
+        print("Interpretando como DIAS y convirtiendo a ANOS para el EDA.\n")
+    else:
+        print("Interpretando como ANOS para el EDA.\n")
+    print(f"Media (anos):   {df['age_years'].mean():.2f}")
+    print(f"Mediana (anos): {df['age_years'].median():.2f}")
+    print(f"Min (anos):     {df['age_years'].min():.1f}")
+    print(f"Max (anos):     {df['age_years'].max():.1f}")
 
-    # -------------------------
-    # Sexo
-    # -------------------------
     sex_col = _find_sex_column(df)
     if sex_col is None:
-        print("\n⚠️ No se encontró columna de sexo; no se puede graficar la pirámide.")
+        print("\nNo se encontro columna de sexo; no se puede graficar la piramide.")
         return
 
     df["sex_norm"] = _normalize_sex(df[sex_col])
@@ -175,21 +184,12 @@ def main():
     print(f"Columna usada: {sex_col}")
     print(df["sex_norm"].value_counts(dropna=False))
 
-    # -------------------------
-    # Label
-    # -------------------------
-    if "label" in df.columns:
+    if args.label_col in df.columns:
         print("\n=== LABEL ===")
-        print(df["label"].value_counts(normalize=True))
-    else:
-        print("\n⚠️ No se encontró columna label")
+        print(df[args.label_col].value_counts(normalize=True))
 
-    # -------------------------
-    # Gráfico pirámide
-    # -------------------------
-    plot_age_sex_pyramid(df, age_years_col="age_years", sex_norm_col="sex_norm")
-    print("\n📊 Pirámide guardada en:", OUT_PNG)
-
+    plot_age_sex_pyramid(df, age_years_col="age_years", sex_norm_col="sex_norm", out_png=out_png)
+    print("\nPiramide guardada en:", out_png)
     print("\n=======================")
 
 

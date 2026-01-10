@@ -1,0 +1,24 @@
+{
+  "baseline": {
+    "brier_score": 0.02413841903820455,
+    "max_abs_error": 0.34043515257069235,
+    "mean_abs_error": 0.11002970149646107,
+    "mean_signed_error": 0.08213682508878596,
+    "n_bins_present": 10,
+    "n_bins_requested": 10,
+    "n_test": 3615,
+    "over_bins": 7,
+    "under_bins": 3
+  },
+  "calibrated_reweighted": {
+    "brier_score": 0.023373596912875733,
+    "max_abs_error": 0.3030013855537639,
+    "mean_abs_error": 0.07300679896070734,
+    "mean_signed_error": 0.05696031994342618,
+    "n_bins_present": 6,
+    "n_bins_requested": 10,
+    "n_test": 3615,
+    "over_bins": 4,
+    "under_bins": 2
+  }
+}

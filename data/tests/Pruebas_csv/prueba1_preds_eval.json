@@ -1,0 +1,21 @@
+{
+  "threshold_used":0.04,
+  "metrics_at_threshold":{
+    "threshold":0.04,
+    "accuracy":0.8352941176,
+    "precision":0.7692307692,
+    "recall":0.8571428571,
+    "f1":0.8108108108,
+    "pred_pos":78
+  },
+  "metric":"f1",
+  "best_threshold":0.03,
+  "best_metrics":{
+    "threshold":0.03,
+    "accuracy":0.8470588235,
+    "precision":0.75,
+    "recall":0.9428571429,
+    "f1":0.835443038,
+    "pred_pos":88
+  }
+}

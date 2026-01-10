@@ -70,7 +70,8 @@ def confusion_counts(
     y_pred: np.ndarray,
 ) -> Dict[str, int]:
     """Retorna TP, FP, TN, FN en un dict."""
-    tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()
+    cm = confusion_matrix(y_true, y_pred, labels=[0, 1])
+    tn, fp, fn, tp = cm.ravel()
     return {"tp": int(tp), "fp": int(fp), "tn": int(tn), "fn": int(fn)}
 
 

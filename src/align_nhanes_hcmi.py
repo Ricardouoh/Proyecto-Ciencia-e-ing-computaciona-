@@ -69,13 +69,19 @@ def build_nhanes_aligned(
 
 
 def _age_from_hcmi(df: pd.DataFrame) -> pd.Series:
+    age = pd.Series(float("nan"), index=df.index, dtype="float")
+
     if "dem_days_to_birth" in df.columns:
         s = _to_numeric(df["dem_days_to_birth"])
-        return (-s / 365.25).round(1)
+        birth_years = (-s / 365.25).round(1)
+        age.loc[birth_years.notna()] = birth_years.loc[birth_years.notna()]
+
     if "mean_age_at_dx" in df.columns:
         s = _to_numeric(df["mean_age_at_dx"])
-        return (s / 365.25).round(1)
-    return pd.Series(pd.NA, index=df.index, dtype="float")
+        dx_years = (s / 365.25).round(1)
+        age.loc[age.isna() & dx_years.notna()] = dx_years.loc[age.isna() & dx_years.notna()]
+
+    return age
 
 
 def build_hcmi_aligned(hcmi_csv: str | Path) -> pd.DataFrame:
@@ -110,11 +116,11 @@ if __name__ == "__main__":
     import argparse
 
     ap = argparse.ArgumentParser(description="Align NHANES and HCMI into a common feature set.")
-    ap.add_argument("--nhanes", default="data/nhanes_merged.csv", help="NHANES merged CSV.")
-    ap.add_argument("--hcmi", default="data/raw.csv", help="HCMI flat CSV (from build_raw).")
-    ap.add_argument("--out-nhanes", default="data/nhanes_aligned.csv", help="NHANES aligned output.")
-    ap.add_argument("--out-hcmi", default="data/hcmi_aligned.csv", help="HCMI aligned output.")
-    ap.add_argument("--out-combined", default="data/combined_aligned.csv", help="Combined output.")
+    ap.add_argument("--nhanes", default="data/nhanes/nhanes_merged.csv", help="NHANES merged CSV.")
+    ap.add_argument("--hcmi", default="data/training/raw.csv", help="HCMI flat CSV (from build_raw).")
+    ap.add_argument("--out-nhanes", default="data/aligned/nhanes_aligned.csv", help="NHANES aligned output.")
+    ap.add_argument("--out-hcmi", default="data/aligned/hcmi_aligned.csv", help="HCMI aligned output.")
+    ap.add_argument("--out-combined", default="data/aligned/combined_aligned.csv", help="Combined output.")
     ap.add_argument(
         "--row-nan-threshold",
         type=float,

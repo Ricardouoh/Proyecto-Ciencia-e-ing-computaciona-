@@ -1,0 +1,13 @@
+{
+  "n": 20,
+  "accuracy": 0.45,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "confusion_matrix": {
+    "tn": 9,
+    "fp": 2,
+    "fn": 9,
+    "tp": 0
+  }
+}

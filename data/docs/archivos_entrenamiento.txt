@@ -1,0 +1,16 @@
+﻿Archivos ocupados para entrenar el modelo
+
+Fuentes base:
+data/training/raw.csv
+data/training/raw_labeled.csv
+data/aligned/hcmi_aligned_clean_v2.csv
+data/aligned/nhanes_aligned_clean.csv
+
+Datos alineados y splits:
+data/processed/A_aligned.csv
+data/processed/B_aligned.csv
+data/processed/combined_aligned.csv
+data/processed/aligned_train.csv
+data/processed/aligned_val.csv
+data/processed/aligned_test.csv
+data/processed/schema.json

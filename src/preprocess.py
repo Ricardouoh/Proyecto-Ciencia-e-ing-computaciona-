@@ -23,6 +23,8 @@ from sklearn.impute import SimpleImputer
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+from src.feature_transforms import AgeWeightAdder
+
 
 # ------------------------- helpers de limpieza ------------------------- #
 
@@ -55,6 +57,21 @@ def clean_binary_target(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, in
     return df2, dropped
 
 
+def clean_regression_target(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, int]:
+    """
+    Fuerza el target a numerico y elimina filas no mapeables.
+    Retorna el DF limpio y cuantas filas se eliminaron.
+    """
+    if target not in df.columns:
+        raise ValueError(f"No se encontro la columna target '{target}'")
+    df2 = df.copy()
+    df2[target] = pd.to_numeric(df2[target], errors="coerce")
+    before = len(df2)
+    df2 = df2.dropna(subset=[target])
+    dropped = before - len(df2)
+    return df2, dropped
+
+
 def drop_duplicate_rows(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, int]:
     """
     Elimina filas duplicadas para evitar fuga de informacion entre splits.
@@ -79,6 +96,8 @@ def drop_leakage_columns(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, L
         "dem_cause_of_death",
         "dem_days_to_death",
         "any_progression",
+        "lost_to_followup",
+        "last_days_to_follow_up",
     ]
     keep_cols = [c for c in df.columns if c not in leak_cols or c == target]
     dropped = [c for c in df.columns if c not in keep_cols and c != target]
@@ -164,9 +183,63 @@ def add_age_from_days(df: pd.DataFrame, source_col: str = "mean_age_at_dx") -> T
     df2 = df.copy()
     df2[source_col] = pd.to_numeric(df2[source_col], errors="coerce")
     new_col = f"{source_col}_years"
-    df2[new_col] = df2[source_col] / 365.25
+    df2[new_col] = (df2[source_col] / 365.25).round(1)
     df2 = df2.drop(columns=[source_col])
     return df2, new_col
+
+
+def add_age_from_birth_days(
+    df: pd.DataFrame,
+    source_col: str = "dem_days_to_birth",
+    new_col: str = "age_years",
+) -> Tuple[pd.DataFrame, Optional[str]]:
+    """
+    Convierte dias desde nacimiento (negativo) a edad en a¤os y elimina la original.
+    """
+    if source_col not in df.columns:
+        return df, None
+    df2 = df.copy()
+    df2[source_col] = pd.to_numeric(df2[source_col], errors="coerce")
+    df2[new_col] = (-df2[source_col] / 365.25).round(1)
+    df2 = df2.drop(columns=[source_col])
+    return df2, new_col
+
+
+def filter_colon_cases(
+    df: pd.DataFrame,
+    disease_cols: Optional[List[str]] = None,
+) -> Tuple[pd.DataFrame, bool]:
+    """
+    Filtra a casos de cancer de colon usando disease_type o primary_site.
+    """
+    cols = disease_cols or ["disease_type", "primary_site"]
+    mask = pd.Series(False, index=df.index)
+    for col in cols:
+        if col not in df.columns:
+            continue
+        text = df[col].astype(str).str.lower().str.strip()
+        mask = mask | text.str.contains(r"colon|colorect", regex=True, na=False)
+    if mask.any():
+        return df[mask].copy(), True
+    return df, False
+
+
+def drop_target_related_features(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Elimina columnas que hacen trivial la regresion del target.
+    """
+    to_drop: List[str] = []
+    if target == "bmi_last":
+        to_drop.extend(["weight_last", "height_last"])
+    elif target == "weight_last":
+        to_drop.append("bmi_last")
+    elif target == "mean_age_at_dx_years":
+        to_drop.append("age_years")
+    if not to_drop:
+        return df, []
+    df2 = df.drop(columns=to_drop, errors="ignore")
+    dropped = [c for c in to_drop if c in df.columns]
+    return df2, dropped
 
 
 def add_ajcc_stage_ordinal(df: pd.DataFrame, col: str = "last_ajcc_stage") -> Tuple[pd.DataFrame, Optional[str]]:
@@ -213,7 +286,7 @@ def drop_id_like_columns(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, L
     for c in df.columns:
         if c == target:
             continue
-        if c.endswith("_id") or c in ("submitter_id", "case_submitter_id"):
+        if c.endswith("_id") or c in ("submitter_id", "case_submitter_id", "case_key"):
             to_drop.append(c)
     df2 = df.drop(columns=to_drop, errors="ignore")
     return df2, to_drop
@@ -302,6 +375,33 @@ def stratified_split(
     return SplitData(X_train, y_train, X_val, y_val, X_test, y_test)
 
 
+def simple_split(
+    df: pd.DataFrame,
+    target: str,
+    val_size: float = 0.15,
+    test_size: float = 0.15,
+    random_state: int = 42,
+) -> SplitData:
+    """Hace split train/val/test sin estratificar (regresion)."""
+    if target not in df.columns:
+        raise ValueError(f"No encuentro la columna objetivo '{target}' en el CSV de entrada.")
+    y = pd.to_numeric(df[target], errors="coerce")
+    X = df.drop(columns=[target])
+
+    X_train, X_tmp, y_train, y_tmp = train_test_split(
+        X, y,
+        test_size=val_size + test_size,
+        random_state=random_state,
+    )
+    rel_test = test_size / (val_size + test_size)
+    X_val, X_test, y_val, y_test = train_test_split(
+        X_tmp, y_tmp,
+        test_size=rel_test,
+        random_state=random_state,
+    )
+    return SplitData(X_train, y_train, X_val, y_val, X_test, y_test)
+
+
 def infer_columns(
     df: pd.DataFrame,
     target: str,
@@ -330,13 +430,16 @@ def infer_columns(
 
 # ------------------------- pipelines ------------------------- #
 
-def make_numeric_pipeline():
-    """Imputación mediana + escalado estándar."""
+def make_numeric_pipeline(age_index: Optional[int], age_weight: float):
+    """Imputación mediana + escalado estándar (opcional: peso de age)."""
     from sklearn.pipeline import Pipeline
-    return Pipeline(steps=[
+    steps = [
         ("imputer", SimpleImputer(strategy="median")),
         ("scaler", StandardScaler()),
-    ])
+    ]
+    if age_weight != 1.0 and age_index is not None:
+        steps.append(("age_weight", AgeWeightAdder(age_index=age_index, weight=age_weight)))
+    return Pipeline(steps=steps)
 
 
 def make_categorical_pipeline():
@@ -370,9 +473,11 @@ def make_categorical_pipeline():
 def make_preprocessor(
     numeric_cols: List[str],
     categorical_cols: List[str],
+    age_weight: float = 1.0,
 ) -> ColumnTransformer:
     """ColumnTransformer con pipelines numéricos y categóricos."""
-    num_pipe = make_numeric_pipeline()
+    age_index = numeric_cols.index("age_years") if "age_years" in numeric_cols else None
+    num_pipe = make_numeric_pipeline(age_index=age_index, age_weight=age_weight)
     cat_pipe = make_categorical_pipeline()
     pre = ColumnTransformer(
         transformers=[
@@ -392,9 +497,10 @@ def fit_transform_all(
     numeric_cols: List[str],
     categorical_cols: List[str],
     preprocessor_path: str | Path = "results/preprocessor.joblib",
+    age_weight: float = 1.0,
 ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Ajusta el preprocesador en train y transforma train/val/test."""
-    pre = make_preprocessor(numeric_cols, categorical_cols)
+    pre = make_preprocessor(numeric_cols, categorical_cols, age_weight=age_weight)
 
     Xtr = pre.fit_transform(split.X_train)
     Xva = pre.transform(split.X_val)
@@ -404,6 +510,8 @@ def fit_transform_all(
     ohe = pre.named_transformers_["cat"]["ohe"]  # type: ignore[index]
     cat_names = list(ohe.get_feature_names_out(categorical_cols))
     num_names = list(numeric_cols)
+    if age_weight != 1.0 and "age_years" in numeric_cols:
+        num_names.append("age_years_weighted")
     out_cols = num_names + cat_names
 
     Xtr = pd.DataFrame(Xtr, columns=out_cols, index=split.X_train.index)
@@ -431,7 +539,13 @@ def transform_with_loaded(
     Xt = preprocessor.transform(X)
     ohe = preprocessor.named_transformers_["cat"]["ohe"]  # type: ignore[index]
     cat_names = list(ohe.get_feature_names_out(categorical_cols))
-    out_cols = list(numeric_cols) + cat_names
+    num_names = list(numeric_cols)
+    num_pipe = preprocessor.named_transformers_.get("num")
+    if hasattr(num_pipe, "named_steps") and "age_weight" in num_pipe.named_steps:
+        age_weight = getattr(num_pipe.named_steps["age_weight"], "weight", 1.0)
+        if age_weight != 1.0 and "age_years" in numeric_cols:
+            num_names.append("age_years_weighted")
+    out_cols = num_names + cat_names
     return pd.DataFrame(Xt, columns=out_cols, index=X.index)
 
 
@@ -444,7 +558,13 @@ if __name__ == "__main__":
         description="Preprocesa CSV tabular (limpieza + split + imputación + escala + OHE) y guarda artefactos."
     )
     ap.add_argument("--csv", required=True, help="Ruta al CSV de entrada (features + target).")
-    ap.add_argument("--target", default="label", help="Nombre de la columna objetivo (binaria).")
+    ap.add_argument("--target", default="label", help="Nombre de la columna objetivo.")
+    ap.add_argument(
+        "--task",
+        choices=["classification", "regression"],
+        default="classification",
+        help="Tipo de tarea (clasificacion o regresion).",
+    )
     ap.add_argument("--outdir", default="data/processed", help="Carpeta de salida para CSVs y preprocesador.")
     ap.add_argument("--val-size", type=float, default=0.15, help="Proporción de validación (default=0.15).")
     ap.add_argument("--test-size", type=float, default=0.15, help="Proporción de test (default=0.15).")
@@ -452,6 +572,7 @@ if __name__ == "__main__":
     ap.add_argument("--numeric", default="", help="Lista de columnas numéricas separadas por coma (opcional).")
     ap.add_argument("--categorical", default="", help="Lista de columnas categóricas separadas por coma (opcional).")
     ap.add_argument("--parse-dates", default="", help="Columnas de fecha a parsear (coma, opcional).")
+    ap.add_argument("--no-focus-colon", action="store_true", help="No filtrar a cancer de colon.")
     ap.add_argument(
         "--nan-threshold",
         type=float,
@@ -463,6 +584,12 @@ if __name__ == "__main__":
         type=int,
         default=500,
         help="Máximo de categorías únicas permitido antes de eliminar una columna categórica (default=500).",
+    )
+    ap.add_argument(
+        "--age-weight",
+        type=float,
+        default=1.0,
+        help="Peso extra para age_years (default=1.0).",
     )
 
     args = ap.parse_args()
@@ -476,15 +603,34 @@ if __name__ == "__main__":
     df_in = pd.read_csv(args.csv, **read_kwargs)
     target_col = args.target
 
+    # Crear targets derivados si corresponde (regresion)
+    if args.task == "regression" and target_col == "mean_age_at_dx_years":
+        if target_col not in df_in.columns:
+            df_in, _ = add_age_from_days(df_in, source_col="mean_age_at_dx")
+
     # ---------------- Sanitizacion del target y duplicados ---------------- #
 
-    df_in, dropped_target = clean_binary_target(df_in, target_col)
-    if dropped_target:
-        print("!! Filas eliminadas por target invalido:", dropped_target)
+    if args.task == "classification":
+        df_in, dropped_target = clean_binary_target(df_in, target_col)
+        if dropped_target:
+            print("!! Filas eliminadas por target invalido:", dropped_target)
+    else:
+        df_in, dropped_target = clean_regression_target(df_in, target_col)
+        if dropped_target:
+            print("!! Filas eliminadas por target invalido:", dropped_target)
 
     df_in, dropped_dups = drop_duplicate_rows(df_in, target_col)
     if dropped_dups:
         print("!! Filas duplicadas eliminadas:", dropped_dups)
+
+    # Filtrar colon si aplica
+    if not bool(args.no_focus_colon):
+        before = len(df_in)
+        df_in, applied = filter_colon_cases(df_in)
+        if applied:
+            print(f"?? Filtrado a cancer de colon: {before} -> {len(df_in)} filas")
+        else:
+            print("?? Filtro colon no aplicado (sin coincidencias)")
 
     # Booleanos a 0/1 para vectorizacion densa
     df_in, bool_cols = coerce_boolean_like(df_in, target_col)
@@ -503,7 +649,27 @@ if __name__ == "__main__":
     # Features derivadas: edad en años y etapa AJCC ordinal
     df_in, age_col = add_age_from_days(df_in, source_col="mean_age_at_dx")
     if age_col:
-        print("OK Columna derivada de edad (años):", age_col)
+<<<<<<< HEAD
+        print("OK Columna derivada de edad (anios):", age_col)
+
+    df_in, birth_age_col = add_age_from_birth_days(df_in, source_col="dem_days_to_birth", new_col="age_years")
+    if birth_age_col:
+        print("OK Columna derivada de edad (anios):", birth_age_col)
+
+    df_in, dropped_target_features = drop_target_related_features(df_in, target_col)
+    if dropped_target_features:
+        print("OK Columnas eliminadas por relacion con target:", ", ".join(dropped_target_features))
+=======
+        print("? Columna derivada de edad (anios):", age_col)
+
+    df_in, birth_age_col = add_age_from_birth_days(df_in, source_col="dem_days_to_birth", new_col="age_years")
+    if birth_age_col:
+        print("? Columna derivada de edad (anios):", birth_age_col)
+
+    df_in, dropped_target_features = drop_target_related_features(df_in, target_col)
+    if dropped_target_features:
+        print("? Columnas eliminadas por relacion con target:", ", ".join(dropped_target_features))
+>>>>>>> 56aae0ceea2bf5a2765e2543d64f0e22b032b50e
 
     df_in, stage_col = add_ajcc_stage_ordinal(df_in, col="last_ajcc_stage")
     if stage_col:
@@ -557,12 +723,20 @@ if __name__ == "__main__":
 
     # ---------------- Split ---------------- #
 
-    split = stratified_split(
-        df_in, target=target_col,
-        val_size=float(args.val_size),
-        test_size=float(args.test_size),
-        random_state=int(args.seed),
-    )
+    if args.task == "classification":
+        split = stratified_split(
+            df_in, target=target_col,
+            val_size=float(args.val_size),
+            test_size=float(args.test_size),
+            random_state=int(args.seed),
+        )
+    else:
+        split = simple_split(
+            df_in, target=target_col,
+            val_size=float(args.val_size),
+            test_size=float(args.test_size),
+            random_state=int(args.seed),
+        )
 
     # ---------------- Transform ---------------- #
 
@@ -570,6 +744,7 @@ if __name__ == "__main__":
     Xtr, Xva, Xte = fit_transform_all(
         split, numeric_cols, categorical_cols,
         preprocessor_path=outdir / "preprocessor.joblib",
+        age_weight=float(args.age_weight),
     )
 
     outdir.mkdir(parents=True, exist_ok=True)

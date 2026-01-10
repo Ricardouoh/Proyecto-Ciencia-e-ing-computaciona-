@@ -1,0 +1,107 @@
+{
+  "columns": [
+    "age_years",
+    "height_last",
+    "weight_last",
+    "bmi_last",
+    "tobacco_smoking_status_any",
+    "pack_years_smoked_max",
+    "sex",
+    "ethnicity",
+    "race",
+    "label",
+    "domain"
+  ],
+  "numeric": [
+    "age_years",
+    "height_last",
+    "weight_last",
+    "bmi_last",
+    "tobacco_smoking_status_any",
+    "pack_years_smoked_max"
+  ],
+  "categorical": [
+    "sex",
+    "ethnicity",
+    "race"
+  ],
+  "domain_col": "domain",
+  "label_col": "label",
+  "mappings": {
+    "hcmi_tcga": {
+      "age_years": [
+        "age_years"
+      ],
+      "sex": [
+        "sex"
+      ],
+      "ethnicity": [
+        "ethnicity"
+      ],
+      "race": [
+        "race"
+      ],
+      "height_last": [
+        "height_last"
+      ],
+      "weight_last": [
+        "weight_last"
+      ],
+      "bmi_last": [
+        "bmi_last"
+      ],
+      "tobacco_smoking_status_any": [
+        "tobacco_smoking_status_any"
+      ],
+      "pack_years_smoked_max": [
+        "pack_years_smoked_max"
+      ],
+      "label": [
+        "label"
+      ]
+    },
+    "nhanes": {
+      "age_years": [
+        "age_years"
+      ],
+      "sex": [
+        "sex"
+      ],
+      "ethnicity": [
+        "ethnicity"
+      ],
+      "race": [
+        "race"
+      ],
+      "height_last": [
+        "height_last"
+      ],
+      "weight_last": [
+        "weight_last"
+      ],
+      "bmi_last": [
+        "bmi_last"
+      ],
+      "tobacco_smoking_status_any": [
+        "tobacco_smoking_status_any"
+      ],
+      "pack_years_smoked_max": [
+        "created_nan"
+      ],
+      "label": [
+        "label"
+      ]
+    }
+  },
+  "created_columns": {
+    "hcmi_tcga": [],
+    "nhanes": [
+      "pack_years_smoked_max"
+    ]
+  },
+  "common_columns_count": 11,
+  "created_columns_count": {
+    "hcmi_tcga": 0,
+    "nhanes": 1
+  }
+}
