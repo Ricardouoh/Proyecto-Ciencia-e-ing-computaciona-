@@ -10,12 +10,15 @@ Salida:
 """
 
 import argparse
+import hashlib
+import sys
 from pathlib import Path
 from typing import List, Tuple
 
 import joblib
 import numpy as np
 import pandas as pd
+import sklearn
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
 # Needed for loading preprocessors pickled when AgeWeightAdder existed in __main__.
@@ -23,6 +26,7 @@ from src.feature_transforms import AgeWeightAdder  # noqa: F401
 
 
 DEFAULT_BUNDLE = "results_calibrated_reweighted/model_bundle.joblib"
+DEFAULT_THRESHOLD = 0.5
 
 
 def _resolve_model(bundle_path: str, model_path: str | None, pre_path: str | None):
@@ -163,7 +167,11 @@ def run_inference(
         if X.shape[1] == len(feature_names):
             X = pd.DataFrame(X, columns=feature_names)
 
-    proba = model.predict_proba(X)[:, 1]
+    if isinstance(X, pd.DataFrame) and not hasattr(model, "feature_names_in_"):
+        X_infer = X.to_numpy()
+    else:
+        X_infer = X
+    proba = model.predict_proba(X_infer)[:, 1]
 
     eval_rows = None
     best_threshold = None
@@ -242,12 +250,36 @@ def run_inference(
         if eval_rows:
             used_row = min(eval_rows, key=lambda r: abs(r["threshold"] - threshold))
 
+        def _sha256_file(path: str | None) -> str | None:
+            if not path:
+                return None
+            p = Path(path)
+            if not p.exists():
+                return None
+            h = hashlib.sha256()
+            with p.open("rb") as f:
+                for chunk in iter(lambda: f.read(1024 * 1024), b""):
+                    h.update(chunk)
+            return h.hexdigest()
+
         summary = {
             "threshold_used": threshold,
             "metrics_at_threshold": used_row,
             "metric": metric,
             "best_threshold": best_threshold,
             "best_metrics": best_metrics,
+            "input_path": str(Path(input_path)),
+            "input_sha256": _sha256_file(input_path),
+            "bundle_path": bundle_path,
+            "bundle_sha256": _sha256_file(bundle_path),
+            "model_path": model_path,
+            "model_sha256": _sha256_file(model_path) if model_path else None,
+            "preprocessor_path": pre_path,
+            "preprocessor_sha256": _sha256_file(pre_path) if pre_path else None,
+            "python": sys.version.split()[0],
+            "sklearn": sklearn.__version__,
+            "numpy": np.__version__,
+            "pandas": pd.__version__,
         }
         summary_path = out_path.with_name(f"{out_path.stem}_eval.json")
         pd.Series(summary).to_json(summary_path, indent=2)
@@ -255,6 +287,25 @@ def run_inference(
     positives = int((preds == 1).sum())
     negatives = int((preds == 0).sum())
     return out_path, positives, negatives
+
+
+def _load_threshold_from_json(path: str | Path) -> float | None:
+    p = Path(path)
+    if not p.exists():
+        return None
+    try:
+        data = pd.read_json(p, typ="series")
+    except ValueError:
+        try:
+            data = pd.read_json(p, typ="series", orient="index")
+        except ValueError:
+            return None
+    if isinstance(data, pd.Series) and "threshold" in data:
+        try:
+            return float(data["threshold"])
+        except (TypeError, ValueError):
+            return None
+    return None
 
 
 def main() -> None:
@@ -283,8 +334,13 @@ def main() -> None:
     ap.add_argument(
         "--threshold",
         type=float,
-        default=0.5,
+        default=DEFAULT_THRESHOLD,
         help="Umbral para clasificar label=1.",
+    )
+    ap.add_argument(
+        "--threshold-from",
+        default=None,
+        help="Ruta a threshold.json (usa el valor si no hay labels).",
     )
     ap.add_argument(
         "--labels",
@@ -293,7 +349,7 @@ def main() -> None:
     )
     ap.add_argument(
         "--metric",
-        default="f1",
+        default="recall",
         choices=["f1", "recall", "precision", "accuracy"],
         help="Metrica para elegir umbral cuando hay labels.",
     )
@@ -310,6 +366,21 @@ def main() -> None:
     )
 
     args = ap.parse_args()
+    if args.labels and not args.optimize_threshold:
+        print("INFO Auto optimize threshold enabled (labels provided).")
+        args.optimize_threshold = True
+    if not args.labels:
+        if args.threshold_from:
+            th = _load_threshold_from_json(args.threshold_from)
+            if th is not None:
+                print(f"INFO Threshold loaded from {args.threshold_from}: {th}")
+                args.threshold = th
+        else:
+            default_th = args.threshold == DEFAULT_THRESHOLD
+            th = _load_threshold_from_json("results/threshold.json")
+            if default_th and th is not None:
+                print(f"INFO Threshold loaded from results/threshold.json: {th}")
+                args.threshold = th
     out_path, positives, negatives = run_inference(
         input_path=args.input,
         output_path=args.output,

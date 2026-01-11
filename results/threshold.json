@@ -1,15 +1,29 @@
 {
-  "threshold": 0.06,
-  "metric": "recall",
-  "min_precision": 0.2,
+  "threshold": 0.15,
+  "metric": "f1",
+  "min_precision": null,
   "best_val": {
-    "auroc": 0.9486247500786488,
-    "auprc": 0.6131269130649185,
-    "accuracy": 0.8843076923076924,
-    "precision": 0.22795698924731184,
-    "recall": 0.8617886178861789,
-    "f1": 0.36054421768707484,
-    "threshold": 0.06,
-    "pred_pos": 465.0
-  }
+    "auroc": 0.9915108050755707,
+    "auprc": 0.9956544390585689,
+    "accuracy": 0.947357926221336,
+    "precision": 0.937112488928255,
+    "recall": 0.9841860465116279,
+    "f1": 0.9600725952813067,
+    "threshold": 0.15,
+    "pred_pos": 3387.0,
+    "domain_pos_rate_gap": 0.8651916331038066,
+    "domain_pos_rate_min": 0.11899441340782123,
+    "domain_pos_rate_max": 0.9841860465116279,
+    "target_domain_pos_rate": 0.11899441340782123
+  },
+  "domain_penalty_weight": 0.3,
+  "min_threshold": 0.1,
+  "max_threshold": 0.5,
+  "min_recall": 0.8,
+  "pu_label_smoothing": 0.05,
+  "pu_unlabeled_domain": "nhanes",
+  "pu_target_pos_rate": 0.12,
+  "pu_target_weight": 0.5,
+  "calibrated": true,
+  "calibration_method": "sigmoid"
 }

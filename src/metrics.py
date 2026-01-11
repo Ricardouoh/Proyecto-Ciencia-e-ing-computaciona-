@@ -46,16 +46,21 @@ def compute_classification_metrics(
     # Métricas umbraladas
     y_pred = (y_proba >= float(threshold)).astype(int)
 
-    # Métricas robustas (maneja excepciones si solo hay una clase)
-    try:
-        out["auroc"] = roc_auc_score(y_true, y_proba)
-    except Exception:
+    # Métricas robustas (evita warnings si solo hay una clase)
+    unique = np.unique(y_true)
+    if len(unique) < 2:
         out["auroc"] = float("nan")
-
-    try:
-        out["auprc"] = average_precision_score(y_true, y_proba)
-    except Exception:
         out["auprc"] = float("nan")
+    else:
+        try:
+            out["auroc"] = roc_auc_score(y_true, y_proba)
+        except Exception:
+            out["auroc"] = float("nan")
+
+        try:
+            out["auprc"] = average_precision_score(y_true, y_proba)
+        except Exception:
+            out["auprc"] = float("nan")
 
     out["accuracy"] = accuracy_score(y_true, y_pred)
     out["precision"] = precision_score(y_true, y_pred, zero_division=0)

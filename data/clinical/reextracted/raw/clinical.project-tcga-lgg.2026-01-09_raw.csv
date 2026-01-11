@@ -1,0 +1,517 @@
+case_id,case_submitter_id,source_project,age_years,sex,ethnicity,race,height_last,weight_last,bmi_last,tobacco_smoking_status_any,pack_years_smoked_max,label,domain
+001ad307-4ad3-4f1d-b2fc-efc032871c7e,TCGA-HT-A614,clinical.project-tcga-lgg.2026-01-09,47.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0061e9ef-df6a-414e-af64-c88f8192e2d3,TCGA-E1-5311,clinical.project-tcga-lgg.2026-01-09,31.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0073a136-d5f4-4fd6-88f9-711768f2abc6,TCGA-VM-A8CF,clinical.project-tcga-lgg.2026-01-09,44.0,female,,white,,,,,,1,hcmi_tcga
+00b18ad6-ff70-41fe-8f4d-0763ac8f28b9,TCGA-HT-7677,clinical.project-tcga-lgg.2026-01-09,53.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+010aac75-3bfe-4bf2-b866-af0f2d92f125,TCGA-DB-5278,clinical.project-tcga-lgg.2026-01-09,17.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0167cf11-74be-4701-ab9a-4e057d4bb545,TCGA-DU-A5TY,clinical.project-tcga-lgg.2026-01-09,46.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+019c5de9-74fd-48b7-95a3-227532e16c5a,TCGA-HT-7604,clinical.project-tcga-lgg.2026-01-09,50.0,male,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+01a13aba-74a4-4895-a5ad-e5119925c202,TCGA-S9-A7IZ,clinical.project-tcga-lgg.2026-01-09,48.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+01c4ca12-ac08-41dd-9e4f-bfb0971688a2,TCGA-DU-7009,clinical.project-tcga-lgg.2026-01-09,32.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+02194c0c-e2c1-4ea7-994a-07b61b2575e2,TCGA-HT-7902,clinical.project-tcga-lgg.2026-01-09,30.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+029b33b1-7ea9-4b77-a615-7eb0e3ebd5e7,TCGA-FG-8191,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+032096a6-1923-44b9-a1cb-181bed041c8e,TCGA-S9-A7J3,clinical.project-tcga-lgg.2026-01-09,52.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+033c1f48-9225-4159-b23b-7042272877da,TCGA-TM-A7CF,clinical.project-tcga-lgg.2026-01-09,41.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+048056cd-39dd-4134-a58b-70bebb3dd2ff,TCGA-S9-A6TV,clinical.project-tcga-lgg.2026-01-09,50.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+04d56bed-98fb-45eb-8c90-95e69264dfe2,TCGA-HT-A5RB,clinical.project-tcga-lgg.2026-01-09,24.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+04e6e843-7f31-43da-b111-280ce2bd1949,TCGA-DU-A7T8,clinical.project-tcga-lgg.2026-01-09,35.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0536f465-1650-4411-823c-c660bc7f3adc,TCGA-DB-A64O,clinical.project-tcga-lgg.2026-01-09,59.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0557b788-5aed-4919-85eb-a503ad893d75,TCGA-P5-A5F4,clinical.project-tcga-lgg.2026-01-09,35.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0611f5bc-89b5-44bd-b301-751faaadb561,TCGA-P5-A5F1,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0639b753-4099-4ca4-adb9-763069a614ef,TCGA-HW-A5KL,clinical.project-tcga-lgg.2026-01-09,42.0,female,,white,,,,,,1,hcmi_tcga
+0709dbcc-0828-4066-aa01-96f059e5fa97,TCGA-DB-A75M,clinical.project-tcga-lgg.2026-01-09,47.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+081b6532-0ed4-445a-becb-cb2290f4854d,TCGA-S9-A6WP,clinical.project-tcga-lgg.2026-01-09,42.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+083c0b78-88c2-4ec1-8a81-a0792b16e2cc,TCGA-DH-5144,clinical.project-tcga-lgg.2026-01-09,56.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0906ddde-02fa-417d-927b-1c400b189cac,TCGA-HT-8114,clinical.project-tcga-lgg.2026-01-09,36.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+09552b53-4393-4811-a671-a9ef6eff4790,TCGA-WY-A85A,clinical.project-tcga-lgg.2026-01-09,20.0,male,,white,,,,,,1,hcmi_tcga
+0b283f95-dbd4-4c36-9201-2198a90ee0d6,TCGA-S9-A6WI,clinical.project-tcga-lgg.2026-01-09,56.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0b54cda4-7568-481e-b0c6-2c5c6de0026c,TCGA-DB-5274,clinical.project-tcga-lgg.2026-01-09,37.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0bde34dd-dae9-4533-98ef-f5a61a11e7c4,TCGA-S9-A6WH,clinical.project-tcga-lgg.2026-01-09,73.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0c52a842-c220-486e-88de-8a4fec5d6a58,TCGA-DB-A75O,clinical.project-tcga-lgg.2026-01-09,29.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0ce8d92b-54e2-45d4-a551-0faf94a27d46,TCGA-HT-7611,clinical.project-tcga-lgg.2026-01-09,36.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0d5a4c63-c3fb-4295-a433-d90cdbfc4ed6,TCGA-WY-A85D,clinical.project-tcga-lgg.2026-01-09,60.0,male,,white,,,,,,1,hcmi_tcga
+0d61bdbd-24b1-4885-a099-9e42ca7eedcd,TCGA-HT-7620,clinical.project-tcga-lgg.2026-01-09,40.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0db80dff-5586-4d9f-b253-df82e6fd6901,TCGA-HW-A5KM,clinical.project-tcga-lgg.2026-01-09,35.0,male,,white,,,,,,1,hcmi_tcga
+0df37550-9421-4571-9844-51b457d7cb2b,TCGA-FG-8187,clinical.project-tcga-lgg.2026-01-09,31.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0efaf8f9-177c-4ffb-b03f-f0316adf5dc1,TCGA-DU-A7TI,clinical.project-tcga-lgg.2026-01-09,32.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+0f0d9a7f-dd85-48aa-b5b2-deff5bb6bdeb,TCGA-FG-7641,clinical.project-tcga-lgg.2026-01-09,31.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+106709ec-72df-44f0-8c71-87b7c755f8f0,TCGA-FG-8188,clinical.project-tcga-lgg.2026-01-09,41.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+10887e42-444d-49fc-aee5-dd0e9fc4ea54,TCGA-VV-A829,clinical.project-tcga-lgg.2026-01-09,44.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+114902c7-77b2-42ca-926b-6895e6db5e36,TCGA-HT-8010,clinical.project-tcga-lgg.2026-01-09,64.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+1159c88c-39d0-4c03-9c66-36af5340a67a,TCGA-FG-8181,clinical.project-tcga-lgg.2026-01-09,23.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+11dffe71-b516-41e8-9987-e0ff5d2356d1,TCGA-DU-8165,clinical.project-tcga-lgg.2026-01-09,60.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+12f02422-585d-4068-bbde-bc279c6a89ab,TCGA-DB-A64P,clinical.project-tcga-lgg.2026-01-09,40.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+135a149a-d153-465e-aa58-06d47bb18e00,TCGA-TQ-A8XE,clinical.project-tcga-lgg.2026-01-09,42.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+141f0546-f6f2-408f-ac86-07ca4aadf3d0,TCGA-P5-A72Z,clinical.project-tcga-lgg.2026-01-09,64.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+14375753-a69f-41e0-b910-2bb8e84cc43a,TCGA-DU-6408,clinical.project-tcga-lgg.2026-01-09,23.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+145c3685-f6de-4669-8ec4-6c3431a90532,TCGA-RY-A83Z,clinical.project-tcga-lgg.2026-01-09,54.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+145f87a3-5e86-4a87-8e49-b166a2271d02,TCGA-DU-7292,clinical.project-tcga-lgg.2026-01-09,69.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+14e6c57d-d78e-4660-a21f-4f90a4503080,TCGA-S9-A6WQ,clinical.project-tcga-lgg.2026-01-09,57.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+152eaa99-05f5-4d30-bfb1-494a9a900e49,TCGA-DU-6396,clinical.project-tcga-lgg.2026-01-09,31.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+152f028e-ee29-40e0-8e75-5cafffacbd45,TCGA-DU-6402,clinical.project-tcga-lgg.2026-01-09,52.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+15a6ad18-a81c-4f5b-80ae-ef56ccf722f9,TCGA-DB-5281,clinical.project-tcga-lgg.2026-01-09,61.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1701f4ad-58c5-40d8-90c4-99e3acac0104,TCGA-DB-A4XE,clinical.project-tcga-lgg.2026-01-09,27.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+172701cf-709b-4e8f-b2fa-e2690a9e272d,TCGA-RY-A83Y,clinical.project-tcga-lgg.2026-01-09,45.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+176d89d7-f8f1-4a72-b45a-31cbe1632a30,TCGA-DB-A64V,clinical.project-tcga-lgg.2026-01-09,54.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+178ab87c-0582-4b02-bf6b-3a4c59a5ee1b,TCGA-DU-6400,clinical.project-tcga-lgg.2026-01-09,66.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+183dd089-e932-4be2-b252-0e8572e7da4e,TCGA-HT-7483,clinical.project-tcga-lgg.2026-01-09,14.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1937318f-a1bb-4f48-b8ec-4aadd406e52a,TCGA-DU-6393,clinical.project-tcga-lgg.2026-01-09,66.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+194e8231-e8d4-477f-8c62-e11f2484ecce,TCGA-S9-A7J2,clinical.project-tcga-lgg.2026-01-09,25.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1a20f675-d9bb-48b0-a49f-d52270bd8973,TCGA-HT-A74J,clinical.project-tcga-lgg.2026-01-09,33.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1aa6b9ff-7c97-47d9-923f-2bd83f20e531,TCGA-P5-A5EU,clinical.project-tcga-lgg.2026-01-09,35.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1b43ff0c-cf13-4620-b5c7-7abd9129612f,TCGA-DU-7019,clinical.project-tcga-lgg.2026-01-09,39.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1b77d1e8-0a02-41de-a408-dcf33a43407a,TCGA-P5-A737,clinical.project-tcga-lgg.2026-01-09,47.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1bff1e07-4923-43d5-b2d3-cb46b6568eed,TCGA-DB-A4XD,clinical.project-tcga-lgg.2026-01-09,32.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1c095c4a-df97-402e-902c-fc83bcf8ef88,TCGA-DU-A5TU,clinical.project-tcga-lgg.2026-01-09,62.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1ca2e1b3-e3eb-4740-a69a-800e3eb60787,TCGA-QH-A6X9,clinical.project-tcga-lgg.2026-01-09,73.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1cc53ade-73c0-492b-a7dc-328269fd0e66,TCGA-DU-5874,clinical.project-tcga-lgg.2026-01-09,62.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1e713e76-064d-46dc-a53c-20a17eb68341,TCGA-DU-A6S3,clinical.project-tcga-lgg.2026-01-09,60.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1ebdabea-8931-47af-a1cf-de1bd1de2a5b,TCGA-R8-A6MO,clinical.project-tcga-lgg.2026-01-09,53.0,female,not hispanic or latino,asian,,,,,,1,hcmi_tcga
+1f13065a-40f7-455d-b8eb-f9a128722eac,TCGA-P5-A5EX,clinical.project-tcga-lgg.2026-01-09,41.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1f2f3bf6-acdd-4a72-8c33-230de40910eb,TCGA-RY-A843,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1f33aebc-edc1-42c5-baa9-e4b0a06fcb26,TCGA-P5-A5EY,clinical.project-tcga-lgg.2026-01-09,21.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1f54d21e-752f-496d-8453-4b9b8738cbce,TCGA-FG-7638,clinical.project-tcga-lgg.2026-01-09,31.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+1f5b6b07-45f5-4da4-932a-df9665f6c538,TCGA-FG-A711,clinical.project-tcga-lgg.2026-01-09,33.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+215e117c-4d76-463c-8f8a-fd6a28d23929,TCGA-DU-7006,clinical.project-tcga-lgg.2026-01-09,60.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+21bbe030-8dbb-47eb-a670-13eb57c12159,TCGA-TM-A84R,clinical.project-tcga-lgg.2026-01-09,46.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+2272dff7-a509-496f-b500-467c1bce2f79,TCGA-WY-A85E,clinical.project-tcga-lgg.2026-01-09,48.0,female,,white,,,,,,1,hcmi_tcga
+230f5fa7-aa36-41ea-b40b-08f520767bd5,TCGA-CS-4942,clinical.project-tcga-lgg.2026-01-09,44.0,female,,black or african american,,,,,,1,hcmi_tcga
+23c335f6-5749-4443-8ae8-61cccbb137cb,TCGA-E1-A7YV,clinical.project-tcga-lgg.2026-01-09,26.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+24ebd152-f8d7-44eb-af7f-8ee7f2e458e4,TCGA-HT-7607,clinical.project-tcga-lgg.2026-01-09,61.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+274496d6-0a9b-45ca-876f-b91f7277963c,TCGA-HT-A4DV,clinical.project-tcga-lgg.2026-01-09,51.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+275cb949-2f61-48c9-84f0-ba8ae4fa35c4,TCGA-HT-7881,clinical.project-tcga-lgg.2026-01-09,38.0,male,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+27d0d3cb-16c0-4ba8-9662-95917f665004,TCGA-HT-7476,clinical.project-tcga-lgg.2026-01-09,26.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+284680b2-f961-402d-8740-e5f9e4fb4a98,TCGA-VV-A86M,clinical.project-tcga-lgg.2026-01-09,36.0,female,hispanic or latino,,,,,,,1,hcmi_tcga
+288f6c7e-d96f-4be1-8312-77c67f75c467,TCGA-TM-A7CA,clinical.project-tcga-lgg.2026-01-09,44.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+292cf158-dd47-44a1-912b-73626095a0f7,TCGA-DU-7298,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+29e95c77-f55b-42e1-b81e-eab4bb3cf803,TCGA-QH-A6CV,clinical.project-tcga-lgg.2026-01-09,51.0,male,not hispanic or latino,asian,,,,,,1,hcmi_tcga
+2c03e8b9-8856-43a7-853d-5ec51a6e5330,TCGA-DH-5140,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+2c982cfb-4112-4e27-8293-25aa9e01faae,TCGA-VW-A7QS,clinical.project-tcga-lgg.2026-01-09,35.0,female,not hispanic or latino,asian,,,,,,1,hcmi_tcga
+2cf49bac-dea1-45ff-9e1d-09f5a2ac5215,TCGA-DH-5141,clinical.project-tcga-lgg.2026-01-09,32.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+2cfc07f3-a31c-41a2-a9e3-b708d2421a78,TCGA-FG-5965,clinical.project-tcga-lgg.2026-01-09,39.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+2d42dd0e-be3a-46ae-a635-c6f9c52f9fa2,TCGA-DU-5853,clinical.project-tcga-lgg.2026-01-09,29.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+2d860614-b772-46e2-b1cd-43bb3ead7255,TCGA-FG-7634,clinical.project-tcga-lgg.2026-01-09,28.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+2e3b9f32-304e-454b-ac2c-fc72d2ccaa19,TCGA-P5-A5F6,clinical.project-tcga-lgg.2026-01-09,26.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+2f8c789e-bbd8-4753-a48b-6894c21162f8,TCGA-TQ-A7RK,clinical.project-tcga-lgg.2026-01-09,29.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+2fb951f1-00a0-4caf-ac93-096056e77b1f,TCGA-P5-A72X,clinical.project-tcga-lgg.2026-01-09,21.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+30bf5895-0671-4fb1-a96d-857847fcf7b0,TCGA-DU-A76K,clinical.project-tcga-lgg.2026-01-09,86.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+325138ab-2947-4131-b40e-971f024723cc,TCGA-HT-7480,clinical.project-tcga-lgg.2026-01-09,33.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+334f715e-08dc-4a29-b8e4-b010b829c478,TCGA-CS-4938,clinical.project-tcga-lgg.2026-01-09,31.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+335bc811-8bdc-4f66-bdd0-703b7cc7464b,TCGA-P5-A731,clinical.project-tcga-lgg.2026-01-09,59.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+33600812-1894-4471-a365-75ae4d990b72,TCGA-VM-A8CB,clinical.project-tcga-lgg.2026-01-09,33.0,male,,,,,,,,1,hcmi_tcga
+33615113-791b-4286-a23a-ad3d1f8d4b09,TCGA-DB-A4XC,clinical.project-tcga-lgg.2026-01-09,26.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+33bedfb7-33fb-479d-b997-50c3284c0ac9,TCGA-S9-A7J1,clinical.project-tcga-lgg.2026-01-09,43.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3431a71c-fabf-440c-b11c-8acfee04724f,TCGA-TQ-A7RM,clinical.project-tcga-lgg.2026-01-09,41.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+345d975c-e666-4614-81eb-5ccbb5bd2cf7,TCGA-QH-A870,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+36615695-921c-4c8a-93d6-6c788079beae,TCGA-RY-A845,clinical.project-tcga-lgg.2026-01-09,40.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+36cf458b-3c8e-48e7-92ab-aea1c698e417,TCGA-HW-8321,clinical.project-tcga-lgg.2026-01-09,31.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+38eca720-ad68-43a7-8a1c-f79f838d5d03,TCGA-S9-A6U9,clinical.project-tcga-lgg.2026-01-09,36.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+38f4b9f3-6709-40ff-9a81-5fa2111b1ce6,TCGA-HT-7477,clinical.project-tcga-lgg.2026-01-09,62.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+395798c5-3136-4a30-8557-a67a3abdecaf,TCGA-DU-A76L,clinical.project-tcga-lgg.2026-01-09,54.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3ac41cc6-5dfb-40a1-bd13-5dc7ca2bb6f3,TCGA-E1-A7Z3,clinical.project-tcga-lgg.2026-01-09,31.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+3b19b5d1-13af-4669-a082-1bd546048185,TCGA-DH-A7UV,clinical.project-tcga-lgg.2026-01-09,49.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3b68b6ff-7efb-4d53-8bd8-c76cd68ab7c0,TCGA-TM-A84F,clinical.project-tcga-lgg.2026-01-09,48.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3baa0015-885c-487a-9076-236f404feb3e,TCGA-DU-A6S6,clinical.project-tcga-lgg.2026-01-09,35.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3c6dc0eb-e94b-4293-b665-f3cba04fc8de,TCGA-P5-A781,clinical.project-tcga-lgg.2026-01-09,34.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3d58ded1-b7cf-420c-ba59-5b424683f0df,TCGA-HT-7686,clinical.project-tcga-lgg.2026-01-09,29.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3e4851ca-4d69-4035-a2dd-8ed6e70f1ffb,TCGA-S9-A6WD,clinical.project-tcga-lgg.2026-01-09,58.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3f36cd97-eb22-47de-b447-5c96378e4a2b,TCGA-HT-7687,clinical.project-tcga-lgg.2026-01-09,74.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3f6ffb08-32a9-4555-bfd1-243b7f526105,TCGA-DU-7294,clinical.project-tcga-lgg.2026-01-09,53.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+3f70c3e3-0131-466f-92aa-0a63ab3d4258,TCGA-CS-6188,clinical.project-tcga-lgg.2026-01-09,48.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+400b2fa3-baf7-4baa-99b4-88b9f25b5049,TCGA-E1-5318,clinical.project-tcga-lgg.2026-01-09,42.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+40343ebd-0d62-401e-83a4-6cdb57662ec0,TCGA-HT-7855,clinical.project-tcga-lgg.2026-01-09,39.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+40587b69-0f62-4a2a-88cb-1bd711377f19,TCGA-DB-A4XF,clinical.project-tcga-lgg.2026-01-09,41.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+40ae8507-c08a-45d5-9bbb-65d236c82319,TCGA-HT-7875,clinical.project-tcga-lgg.2026-01-09,56.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+41456932-436e-4cdb-bfe8-97d089656786,TCGA-HT-7475,clinical.project-tcga-lgg.2026-01-09,67.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+41e4dc71-7767-44c2-9d38-110dcd37b451,TCGA-S9-A6TS,clinical.project-tcga-lgg.2026-01-09,48.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+41fbb9f1-4a13-48ab-8649-0608c89cdd9f,TCGA-S9-A6U2,clinical.project-tcga-lgg.2026-01-09,48.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+42156c6a-416e-4832-9c95-cee6084b0910,TCGA-WH-A86K,clinical.project-tcga-lgg.2026-01-09,65.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+42251e02-b687-4bf1-a1b6-e3dd978542e4,TCGA-HW-7487,clinical.project-tcga-lgg.2026-01-09,39.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4240c137-ee3a-474c-9426-470380cb41a2,TCGA-HT-7880,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4250ac3c-c8b0-46ce-b9c8-7963bc386041,TCGA-E1-A7YM,clinical.project-tcga-lgg.2026-01-09,63.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+427c40f6-d1bd-49f2-b303-a975793b937e,TCGA-DU-7008,clinical.project-tcga-lgg.2026-01-09,41.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+427f4d23-2b76-4a2a-a498-0c3473f57169,TCGA-S9-A7QX,clinical.project-tcga-lgg.2026-01-09,36.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4289a50b-c6be-495e-9826-53aeb67b6a22,TCGA-QH-A6XA,clinical.project-tcga-lgg.2026-01-09,23.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+42cc9620-98fb-4164-a3b2-28d084ca5a03,TCGA-DU-6394,clinical.project-tcga-lgg.2026-01-09,53.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+42fe260f-520b-4fac-8c09-d2b31aed59fb,TCGA-CS-6290,clinical.project-tcga-lgg.2026-01-09,31.0,male,,,,,,,,1,hcmi_tcga
+432fe4a9-2cdc-4323-aff0-59e2fdeda194,TCGA-S9-A6TX,clinical.project-tcga-lgg.2026-01-09,46.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+442df188-b678-45bb-bd9d-7071ed8aaa5a,TCGA-KT-A74X,clinical.project-tcga-lgg.2026-01-09,26.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+44553e34-5111-40a8-b76a-254751be3f87,TCGA-TQ-A7RS,clinical.project-tcga-lgg.2026-01-09,25.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+446d76df-3e78-4272-a942-ced0de27c794,TCGA-P5-A730,clinical.project-tcga-lgg.2026-01-09,22.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+448d3e3b-622c-4e79-bb1d-b5f2e92970e8,TCGA-HT-7482,clinical.project-tcga-lgg.2026-01-09,18.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+44a5c3b4-62a7-407b-b492-7069e1a43a26,TCGA-E1-5303,clinical.project-tcga-lgg.2026-01-09,38.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+451bad4f-6d72-4526-9978-38e090fc479f,TCGA-QH-A65X,clinical.project-tcga-lgg.2026-01-09,28.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+457ec7f6-8612-4641-aaef-8a7f2c44c30c,TCGA-E1-A7YD,clinical.project-tcga-lgg.2026-01-09,57.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+45b6d41b-3a1b-47e9-80e4-59355170aee7,TCGA-HT-7608,clinical.project-tcga-lgg.2026-01-09,61.0,male,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+467a7e6a-8cba-4ef1-8afd-6c8eaccbc3df,TCGA-DU-6410,clinical.project-tcga-lgg.2026-01-09,56.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4797c600-f024-42fe-b287-d919b24dcb79,TCGA-DB-5280,clinical.project-tcga-lgg.2026-01-09,43.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+482d4078-7576-48cf-bf7c-29014935fd47,TCGA-HT-7472,clinical.project-tcga-lgg.2026-01-09,38.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+48314732-5d1c-43e6-9878-5b58dfaeb06a,TCGA-HT-7471,clinical.project-tcga-lgg.2026-01-09,37.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4839a058-fbca-44c7-bd61-81943b4d45d5,TCGA-HT-7610,clinical.project-tcga-lgg.2026-01-09,25.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+484dd45b-a16c-4650-bac9-832fbe4d96eb,TCGA-VM-A8CH,clinical.project-tcga-lgg.2026-01-09,24.0,female,,white,,,,,,1,hcmi_tcga
+48607130-c09a-491d-882f-7d2591d13182,TCGA-DU-5872,clinical.project-tcga-lgg.2026-01-09,43.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+491ea65b-86c8-4686-99cf-f09505e20183,TCGA-HT-7693,clinical.project-tcga-lgg.2026-01-09,51.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+49967a57-7c12-46bb-8d71-cebbb17c9935,TCGA-HW-7495,clinical.project-tcga-lgg.2026-01-09,45.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+49a87025-d0a4-44b3-b6ad-563bf9651093,TCGA-HT-7694,clinical.project-tcga-lgg.2026-01-09,60.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+49d5acbb-d75c-4485-b456-6b50667fef99,TCGA-P5-A72U,clinical.project-tcga-lgg.2026-01-09,71.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4a7d4805-09e3-4044-9800-73239f4d66d4,TCGA-HT-7854,clinical.project-tcga-lgg.2026-01-09,62.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4bd8ebc1-6f6e-44a2-8544-106901a7bae5,TCGA-DU-A5TR,clinical.project-tcga-lgg.2026-01-09,51.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4c167f09-d664-425f-bd84-6ff8c21b272b,TCGA-DU-A5TW,clinical.project-tcga-lgg.2026-01-09,33.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+4c3e709a-fd52-431c-8be5-3d9b1f80ecd2,TCGA-HT-7478,clinical.project-tcga-lgg.2026-01-09,36.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4e1606e5-f4c1-41a2-9f2c-ad0d02650070,TCGA-HT-7857,clinical.project-tcga-lgg.2026-01-09,24.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4ef429be-c345-4258-9b42-b56e215e1a2c,TCGA-DU-6399,clinical.project-tcga-lgg.2026-01-09,54.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+4fb16aee-df08-441a-846b-558e0efe8342,TCGA-VW-A8FI,clinical.project-tcga-lgg.2026-01-09,66.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5017c115-39b8-4c5c-8be6-2cb298d7c641,TCGA-HT-7695,clinical.project-tcga-lgg.2026-01-09,29.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+505e9812-d13e-42d3-aee2-55a85d6f4551,TCGA-QH-A65R,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+50975570-c0d5-4ee7-9226-40b3db1bde84,TCGA-VM-A8C9,clinical.project-tcga-lgg.2026-01-09,37.0,female,,,,,,,,1,hcmi_tcga
+5119aceb-ad95-4904-b6c0-a0a4b42c17d0,TCGA-R8-A6ML,clinical.project-tcga-lgg.2026-01-09,52.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+5469c0e8-0c58-4870-b897-8fa0704599a7,TCGA-FG-8189,clinical.project-tcga-lgg.2026-01-09,33.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+559a8f6f-dd60-43b7-ae09-16cc4206064c,TCGA-HT-A74L,clinical.project-tcga-lgg.2026-01-09,22.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+55a67639-ed05-4143-af96-a377bc5489ee,TCGA-HW-7486,clinical.project-tcga-lgg.2026-01-09,37.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+55c78413-d102-4113-930e-6d842862fe75,TCGA-DU-5851,clinical.project-tcga-lgg.2026-01-09,40.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5795a884-b62a-46a9-81d6-f24058424660,TCGA-E1-A7YI,clinical.project-tcga-lgg.2026-01-09,33.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+58650d08-7685-41de-9ae0-21665f8f449f,TCGA-S9-A7R4,clinical.project-tcga-lgg.2026-01-09,46.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+58c82c76-9198-4c95-80f8-c043d1cea5eb,TCGA-DU-8167,clinical.project-tcga-lgg.2026-01-09,69.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+58de25d5-8a32-4412-866b-acac2e321bfa,TCGA-HT-8011,clinical.project-tcga-lgg.2026-01-09,55.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+59012b43-ab0b-42c3-aed3-94e224a3dfa7,TCGA-P5-A72W,clinical.project-tcga-lgg.2026-01-09,35.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5a2d3bfa-4bdd-417d-9796-e3699760114c,TCGA-HT-A5RA,clinical.project-tcga-lgg.2026-01-09,65.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5a3edeb6-133e-4116-9f80-2485bd70754d,TCGA-TQ-A7RV,clinical.project-tcga-lgg.2026-01-09,27.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+5a3ef1cb-c98e-473a-b097-20307b04bc1b,TCGA-DU-A7TC,clinical.project-tcga-lgg.2026-01-09,32.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5a769292-c3ce-4e18-b821-2bfe0e24978c,TCGA-DU-7302,clinical.project-tcga-lgg.2026-01-09,48.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5af8ada5-86b5-4832-8a8e-e975ecca5515,TCGA-DU-5849,clinical.project-tcga-lgg.2026-01-09,48.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5b199e7e-cc23-4065-88ad-fdfe3d0683d6,TCGA-FG-A710,clinical.project-tcga-lgg.2026-01-09,50.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5b744051-7355-4e15-b035-0621e709a5d7,TCGA-DH-5142,clinical.project-tcga-lgg.2026-01-09,29.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5b9d7565-a933-449d-8ffa-ec5f82db2e77,TCGA-FN-7833,clinical.project-tcga-lgg.2026-01-09,25.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5ccd86ab-2587-4f35-b96a-4f4320b10fb9,TCGA-DB-A4XH,clinical.project-tcga-lgg.2026-01-09,53.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5de6fd84-ed02-4c27-9947-db57f05faf6d,TCGA-HT-8104,clinical.project-tcga-lgg.2026-01-09,51.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5e0748f1-990b-43a9-9ff1-6a667cc228a8,TCGA-DB-A4X9,clinical.project-tcga-lgg.2026-01-09,33.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5e2539e0-2088-43df-ad2a-f854d8bb6d30,TCGA-E1-A7YS,clinical.project-tcga-lgg.2026-01-09,71.0,male,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+5ea230a6-77aa-4aa5-867c-09651d481d8b,TCGA-E1-5322,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5eef573e-6a44-4dc7-8aa7-b136863ce910,TCGA-E1-A7YW,clinical.project-tcga-lgg.2026-01-09,28.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5f10cd91-1e03-4016-b35a-8629a1a8fcc9,TCGA-FG-6692,clinical.project-tcga-lgg.2026-01-09,63.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+5f853a88-811d-4eb4-914e-d90862c5d2a2,TCGA-DB-A75K,clinical.project-tcga-lgg.2026-01-09,55.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+607b1f22-b744-43c5-91f7-fc69142ba30e,TCGA-TQ-A7RR,clinical.project-tcga-lgg.2026-01-09,38.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+60b30a95-3e4c-413a-9de6-16a5bca163c4,TCGA-CS-6670,clinical.project-tcga-lgg.2026-01-09,43.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6105c037-90f1-42d9-ac38-6e2252999a64,TCGA-HW-8322,clinical.project-tcga-lgg.2026-01-09,39.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+618f2aa7-d1b6-430d-a157-d3d956edefbe,TCGA-HT-A5R5,clinical.project-tcga-lgg.2026-01-09,33.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+619e18c1-09b9-468c-816d-6789c0bef0a8,TCGA-TQ-A7RG,clinical.project-tcga-lgg.2026-01-09,36.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+61ff31a4-4fdc-476c-b456-2a2fed4bae6b,TCGA-TM-A84M,clinical.project-tcga-lgg.2026-01-09,40.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+62088274-a45b-4616-b086-b0ddd64895f0,TCGA-QH-A6XC,clinical.project-tcga-lgg.2026-01-09,48.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+621424ec-67bc-4c42-b0ad-64c5654b5ad9,TCGA-S9-A6U5,clinical.project-tcga-lgg.2026-01-09,33.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+62e27075-7ddc-4f15-ac21-0a8244abb12d,TCGA-HT-7680,clinical.project-tcga-lgg.2026-01-09,32.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+62ec50e7-636e-46c6-afed-66bf217b59c1,TCGA-DU-A7TG,clinical.project-tcga-lgg.2026-01-09,40.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6355cade-7b3a-43a8-9f1f-8e7bc45755a8,TCGA-DU-6395,clinical.project-tcga-lgg.2026-01-09,31.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+63f4aa26-dec0-4309-8b75-6446a7241527,TCGA-TM-A84G,clinical.project-tcga-lgg.2026-01-09,54.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+648252da-dd86-48d1-ae75-4257e3142b0b,TCGA-FG-5964,clinical.project-tcga-lgg.2026-01-09,62.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+64cd17eb-c778-45e9-b994-02b68182e51b,TCGA-CS-4944,clinical.project-tcga-lgg.2026-01-09,50.0,male,,white,,,,,,1,hcmi_tcga
+65836b59-b469-4b89-adf5-e65735e494f5,TCGA-R8-A6MK,clinical.project-tcga-lgg.2026-01-09,40.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+669605f6-39a1-4f8c-81dc-39430ff5f892,TCGA-DU-A5TP,clinical.project-tcga-lgg.2026-01-09,33.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+66990a9d-8c40-4c56-b931-5c3826c3bc27,TCGA-DB-A64S,clinical.project-tcga-lgg.2026-01-09,20.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+66c52a31-6503-40b5-a55e-fa476eaf0567,TCGA-VM-A8CE,clinical.project-tcga-lgg.2026-01-09,25.0,male,,white,,,,,,1,hcmi_tcga
+67e9b426-72eb-4475-9689-eb75b22c4fd5,TCGA-DB-A64R,clinical.project-tcga-lgg.2026-01-09,24.0,female,hispanic or latino,,,,,,,1,hcmi_tcga
+688fc346-a14d-4859-8727-057cd0a0b880,TCGA-S9-A6TU,clinical.project-tcga-lgg.2026-01-09,38.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+68f550ca-3a33-45e4-b1c9-14f99e543263,TCGA-FG-5963,clinical.project-tcga-lgg.2026-01-09,23.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+691d5202-90cc-4e08-83a3-0620a89d3a4b,TCGA-E1-5304,clinical.project-tcga-lgg.2026-01-09,42.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6957d45e-7ccb-457d-800d-c2a2037f4f01,TCGA-HW-7489,clinical.project-tcga-lgg.2026-01-09,38.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+699d3ba1-94c8-409f-90c3-e7fe2f1cf825,TCGA-DU-A5TT,clinical.project-tcga-lgg.2026-01-09,70.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6a0b306b-f73d-45b2-93a6-b9bd625644a3,TCGA-HT-7692,clinical.project-tcga-lgg.2026-01-09,43.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6a0bcf0c-fa4c-4119-99d2-f722b781d20f,TCGA-FG-8182,clinical.project-tcga-lgg.2026-01-09,35.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6a3e577a-4e07-4468-857a-79edbe6833cd,TCGA-HT-7691,clinical.project-tcga-lgg.2026-01-09,31.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6a8241a8-d9ee-414b-89fd-4c3b9f181cc7,TCGA-S9-A7J0,clinical.project-tcga-lgg.2026-01-09,30.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6b225409-09c0-4a51-8f42-8fefe3855c4d,TCGA-HT-7605,clinical.project-tcga-lgg.2026-01-09,38.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6d020185-bdde-4c43-9e38-71c6ed0c13d1,TCGA-HT-A4DS,clinical.project-tcga-lgg.2026-01-09,55.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6d02e00c-56a5-4433-9930-f036e2aa39aa,TCGA-P5-A5EW,clinical.project-tcga-lgg.2026-01-09,20.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6d17c327-435a-4cba-9626-3b5b7b7375bb,TCGA-QH-A6CS,clinical.project-tcga-lgg.2026-01-09,41.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6d2c49c3-0721-4bd2-b39f-7872f2de996d,TCGA-S9-A6WE,clinical.project-tcga-lgg.2026-01-09,34.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+6ef2d9ab-f72e-48cf-92b8-f3159d28160c,TCGA-TQ-A7RH,clinical.project-tcga-lgg.2026-01-09,39.0,male,hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+6fab9c30-354b-4f99-9b60-6823c12b9b0a,TCGA-DU-8162,clinical.project-tcga-lgg.2026-01-09,61.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+70939245-41e0-4845-a473-5fef719b9828,TCGA-DU-6407,clinical.project-tcga-lgg.2026-01-09,35.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+7116ce06-d730-40e4-92d7-aef1f869b1d5,TCGA-TQ-A7RP,clinical.project-tcga-lgg.2026-01-09,66.0,male,hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+71ec4c84-4aef-4c1f-ab07-dc264c5c0602,TCGA-TM-A84I,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+722c172f-46e6-47a1-82e5-3207278df89b,TCGA-E1-A7YY,clinical.project-tcga-lgg.2026-01-09,27.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+723cad09-aa2d-4492-b19d-661b310e1c58,TCGA-HT-A74O,clinical.project-tcga-lgg.2026-01-09,34.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+72aa812d-5daa-4bd7-9028-ec541b1f25bd,TCGA-HT-7474,clinical.project-tcga-lgg.2026-01-09,52.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+732df38e-d32c-4d63-ac97-ad655e2e5732,TCGA-W9-A837,clinical.project-tcga-lgg.2026-01-09,47.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+735b1100-07f6-43d4-b29c-46d0f025573f,TCGA-F6-A8O4,clinical.project-tcga-lgg.2026-01-09,44.0,male,not hispanic or latino,asian,,,,,,1,hcmi_tcga
+738143b3-2d82-42f0-9fd4-8cbabc9c9b4f,TCGA-RY-A840,clinical.project-tcga-lgg.2026-01-09,47.0,male,,,,,,,,1,hcmi_tcga
+738f5c96-ee44-4fd7-bb8c-e2b86f8053c8,TCGA-FG-A60L,clinical.project-tcga-lgg.2026-01-09,34.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+739cc9f1-71be-4f81-a5d1-eda673903e45,TCGA-RY-A83X,clinical.project-tcga-lgg.2026-01-09,46.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+75dbc8fb-4db8-4764-824c-eccf3a223884,TCGA-E1-A7YQ,clinical.project-tcga-lgg.2026-01-09,58.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+765588aa-075f-477f-9c18-099d018d3a1b,TCGA-S9-A7QW,clinical.project-tcga-lgg.2026-01-09,54.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+7662940a-22de-44d8-b59a-2f2b090ea6d5,TCGA-FG-A4MU,clinical.project-tcga-lgg.2026-01-09,58.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+76cb16f9-37be-450e-b60a-5f0d0f1ec2bc,TCGA-QH-A6CU,clinical.project-tcga-lgg.2026-01-09,52.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+76e54ef6-1799-4fd9-bec3-0ea960e8461e,TCGA-DH-A669,clinical.project-tcga-lgg.2026-01-09,70.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+7704e4a8-c7aa-4288-b1ed-68c23abbe924,TCGA-DB-A4XG,clinical.project-tcga-lgg.2026-01-09,34.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+77396ae6-3838-47bf-aaae-f9a0f401ec7f,TCGA-HT-A61C,clinical.project-tcga-lgg.2026-01-09,66.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+7740824e-905f-47a0-b235-54561ef58ba3,TCGA-HT-7688,clinical.project-tcga-lgg.2026-01-09,59.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+77472095-030d-4679-921d-8e8e217956c5,TCGA-KT-A7W1,clinical.project-tcga-lgg.2026-01-09,45.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+775c04e6-a02d-44a4-86f7-496056edd249,TCGA-HT-7874,clinical.project-tcga-lgg.2026-01-09,41.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+784ecaa5-7fb8-402a-8240-396aad96be83,TCGA-F6-A8O3,clinical.project-tcga-lgg.2026-01-09,34.0,male,not hispanic or latino,asian,,,,,,1,hcmi_tcga
+7883e417-a793-4614-9528-6c2e9e44379f,TCGA-S9-A7R8,clinical.project-tcga-lgg.2026-01-09,44.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+78a212bc-a740-46bf-a10d-0b9809a5bb3f,TCGA-S9-A7R1,clinical.project-tcga-lgg.2026-01-09,35.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+79627774-078d-4056-84b3-f1f370f643e0,TCGA-S9-A7QZ,clinical.project-tcga-lgg.2026-01-09,41.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+7989b7fb-b9d9-4d3f-9352-cd0c1f28d828,TCGA-TQ-A7RI,clinical.project-tcga-lgg.2026-01-09,37.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+799e9106-e62e-4681-8861-137f474ee8b8,TCGA-HT-7602,clinical.project-tcga-lgg.2026-01-09,21.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+7e17e6fd-ed83-471f-91e3-5934885c8e87,TCGA-FG-A87Q,clinical.project-tcga-lgg.2026-01-09,61.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+7e41baba-7ef6-4030-b595-d95cd96336b5,TCGA-HT-A5R7,clinical.project-tcga-lgg.2026-01-09,33.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+7eb5d055-e1c8-4b93-9205-a49a6e79dfd4,TCGA-P5-A5F0,clinical.project-tcga-lgg.2026-01-09,33.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+80db28ec-ab3d-42a7-af88-b60fe8acb5b5,TCGA-HT-8018,clinical.project-tcga-lgg.2026-01-09,40.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+81076cfb-f9d7-4add-b696-6eab0bad7945,TCGA-HT-8015,clinical.project-tcga-lgg.2026-01-09,21.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+81622da8-9f36-4ea3-b223-d831d8c10f87,TCGA-DU-7299,clinical.project-tcga-lgg.2026-01-09,33.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+81fb338f-1023-49aa-ac0f-ba763a6cd68c,TCGA-HT-8108,clinical.project-tcga-lgg.2026-01-09,26.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+823f571a-3cfd-465d-95fd-187a398ccf6f,TCGA-DU-A76R,clinical.project-tcga-lgg.2026-01-09,51.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+82fd02ab-d628-469f-8853-4c603cf04964,TCGA-DH-A7US,clinical.project-tcga-lgg.2026-01-09,50.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+82ff7a48-ea97-476e-9f4e-aacdeb6659bd,TCGA-P5-A5EZ,clinical.project-tcga-lgg.2026-01-09,39.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+834e560a-a506-456d-baf2-a206ca058153,TCGA-DU-7010,clinical.project-tcga-lgg.2026-01-09,58.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+837b51d0-e6b7-431b-a5f3-7615bdf12b67,TCGA-E1-5302,clinical.project-tcga-lgg.2026-01-09,41.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+84569c1a-6baa-4380-ae3c-707df1be4618,TCGA-E1-5319,clinical.project-tcga-lgg.2026-01-09,48.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+84ae73e4-3b39-4444-9bfb-3fc6057eab32,TCGA-DU-7301,clinical.project-tcga-lgg.2026-01-09,53.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+84d80bcf-da24-4b93-bfe3-3d2d53b8b07d,TCGA-TM-A7C5,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+85f77526-791e-47cd-904d-d1dbb49eaeab,TCGA-DB-5279,clinical.project-tcga-lgg.2026-01-09,59.0,male,,,,,,,,1,hcmi_tcga
+8643437f-cd1b-47c8-86bd-87b6c2f80747,TCGA-TM-A84C,clinical.project-tcga-lgg.2026-01-09,32.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+8655fa51-d784-4f8d-9bc8-f1da7303d22f,TCGA-HT-A5RC,clinical.project-tcga-lgg.2026-01-09,70.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+86aa5790-9afd-4653-926a-625516df1f56,TCGA-HT-7884,clinical.project-tcga-lgg.2026-01-09,44.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+872a12b4-8cbd-49d2-ac98-d846587f5794,TCGA-FG-A87N,clinical.project-tcga-lgg.2026-01-09,37.0,female,not hispanic or latino,asian,,,,,,1,hcmi_tcga
+878ced76-3144-4141-896f-50e3e863df36,TCGA-P5-A77X,clinical.project-tcga-lgg.2026-01-09,55.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+8839f236-bc04-416f-84d4-50f67fb338dc,TCGA-TM-A84O,clinical.project-tcga-lgg.2026-01-09,61.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+887def39-e212-490d-8849-2bc932fceff0,TCGA-DB-A64Q,clinical.project-tcga-lgg.2026-01-09,31.0,female,,,,,,,,1,hcmi_tcga
+8996dc64-8c5e-4e07-8ed8-2eb11c03626b,TCGA-HW-A5KJ,clinical.project-tcga-lgg.2026-01-09,68.0,male,,white,,,,,,1,hcmi_tcga
+8a94ff28-a74d-4fe2-b9c0-06c01f0a3fb6,TCGA-HW-A5KK,clinical.project-tcga-lgg.2026-01-09,64.0,male,,white,,,,,,1,hcmi_tcga
+8b10f00f-fde6-423d-bc36-027931359a5a,TCGA-E1-A7Z6,clinical.project-tcga-lgg.2026-01-09,41.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+8cba230b-46db-4d35-8123-3879eba32402,TCGA-CS-6666,clinical.project-tcga-lgg.2026-01-09,22.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+8d06226e-500b-4172-ae96-c674913909e6,TCGA-HT-7485,clinical.project-tcga-lgg.2026-01-09,42.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+8d07b1e8-5d1d-4a43-b616-d29dd58ce5fe,TCGA-FG-6689,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+8daa29c0-f652-4130-a004-5183bbe30c63,TCGA-DU-6403,clinical.project-tcga-lgg.2026-01-09,60.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+8e2dcc00-9f7e-4dee-b24d-43c8b30294c5,TCGA-DU-7007,clinical.project-tcga-lgg.2026-01-09,33.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+8e44fb97-c649-4056-80ac-257cef61d226,TCGA-S9-A7R2,clinical.project-tcga-lgg.2026-01-09,69.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+8ed09a8a-3284-4a1b-b369-e25d2fab0f61,TCGA-S9-A6U6,clinical.project-tcga-lgg.2026-01-09,28.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+904371b0-1e2c-4cd7-a69d-29ae8c5fec8b,TCGA-DB-A75P,clinical.project-tcga-lgg.2026-01-09,25.0,female,,,,,,,,1,hcmi_tcga
+912d6455-0a50-4fde-b785-f6c09b00b7e4,TCGA-HT-7882,clinical.project-tcga-lgg.2026-01-09,66.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+9239a22e-80b1-49a2-b0d5-cbab7e415254,TCGA-DU-6405,clinical.project-tcga-lgg.2026-01-09,51.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+92a7c445-2217-400a-bdcd-df41502416b6,TCGA-DU-5847,clinical.project-tcga-lgg.2026-01-09,34.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+92ebe72e-508d-4547-b14b-b8e02e6233ca,TCGA-QH-A65S,clinical.project-tcga-lgg.2026-01-09,32.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9351b1ae-89e6-4091-934f-d50da06cd01d,TCGA-HT-8012,clinical.project-tcga-lgg.2026-01-09,30.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+94a2ff09-f7ac-4aea-a2b2-0dc1b82ae635,TCGA-S9-A7QY,clinical.project-tcga-lgg.2026-01-09,35.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+94b95c07-5f70-4a1b-b40f-dc13f6a160d5,TCGA-S9-A7IY,clinical.project-tcga-lgg.2026-01-09,39.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+952dfd5d-e65a-4307-b6a9-2ed2b0d2d9ce,TCGA-CS-4943,clinical.project-tcga-lgg.2026-01-09,37.0,male,,white,,,,,,1,hcmi_tcga
+96d9249e-501c-49e0-9559-01da978a9ca6,TCGA-E1-A7YL,clinical.project-tcga-lgg.2026-01-09,46.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+975c76cd-f88a-4d88-93a4-fbf2cb9e2e3b,TCGA-HT-8111,clinical.project-tcga-lgg.2026-01-09,32.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+975e17c2-b93c-4d45-8a85-786f365e4a93,TCGA-E1-A7Z4,clinical.project-tcga-lgg.2026-01-09,35.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+976d067b-9d7f-4920-a04d-e831edc6c2c2,TCGA-QH-A6X4,clinical.project-tcga-lgg.2026-01-09,47.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+977118c8-b446-4696-aa6e-9f1a1055e241,TCGA-DH-A7UU,clinical.project-tcga-lgg.2026-01-09,43.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+97bf8065-3e7d-4702-a426-24908f4d66a4,TCGA-CS-5394,clinical.project-tcga-lgg.2026-01-09,40.0,male,,white,,,,,,1,hcmi_tcga
+97cb8701-7d63-4142-b404-006fbb3ecb0b,TCGA-DU-6401,clinical.project-tcga-lgg.2026-01-09,31.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+97ffbe14-9070-4a5a-8760-225a88834b40,TCGA-E1-A7Z2,clinical.project-tcga-lgg.2026-01-09,58.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+98e82e98-341a-4bca-92c0-23c65c1bf94f,TCGA-FG-A70Z,clinical.project-tcga-lgg.2026-01-09,53.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+9922de10-9280-44c0-b86f-6d1ca7e55bf2,TCGA-DB-A64X,clinical.project-tcga-lgg.2026-01-09,56.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+992452ee-8d9f-406b-9708-7bcb60062743,TCGA-E1-A7YO,clinical.project-tcga-lgg.2026-01-09,45.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+99d396bb-5f51-4ee4-a149-244e8fcaf522,TCGA-DB-A64U,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9b161c41-4f76-4ed1-b60f-2b093bc70edb,TCGA-TM-A84L,clinical.project-tcga-lgg.2026-01-09,31.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9b288f0e-5155-4736-bc22-e0e801d8b738,TCGA-HT-8558,clinical.project-tcga-lgg.2026-01-09,29.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9cd3b3c6-2268-4e43-964b-b7a4daf6fc6f,TCGA-DU-A6S8,clinical.project-tcga-lgg.2026-01-09,74.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9d0c1552-00a7-4f0a-a04a-a82e721ee4e3,TCGA-DB-5276,clinical.project-tcga-lgg.2026-01-09,32.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9d93834a-3bf0-41fd-8c74-5ac49a6e78cd,TCGA-HT-8019,clinical.project-tcga-lgg.2026-01-09,34.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9e621541-d603-4d2d-b86e-2834d3b9f9a5,TCGA-HT-8113,clinical.project-tcga-lgg.2026-01-09,49.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+9ed5af0e-c87f-46ff-81e7-9d3041b4034e,TCGA-DU-5852,clinical.project-tcga-lgg.2026-01-09,61.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9ee268a7-fa71-4f3f-919f-cf4ee1de2658,TCGA-HT-7676,clinical.project-tcga-lgg.2026-01-09,26.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9ee6e821-3af2-42d7-9d14-f0ca455f338c,TCGA-CS-6186,clinical.project-tcga-lgg.2026-01-09,58.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+9f469edb-6b12-4eab-bd6f-9c10034d4cb7,TCGA-E1-A7YH,clinical.project-tcga-lgg.2026-01-09,47.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a0672f6f-6406-4d49-96d0-6afd571bbd00,TCGA-DU-A7T6,clinical.project-tcga-lgg.2026-01-09,73.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a0b7c7c8-a6f2-41ba-9e61-9b7f8fbbbe1f,TCGA-IK-8125,clinical.project-tcga-lgg.2026-01-09,62.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a0bc5147-d9b4-41fd-8df3-a241d23722e8,TCGA-E1-5305,clinical.project-tcga-lgg.2026-01-09,34.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a1192df3-7667-4d1e-a1a0-79f6cc827dcf,TCGA-S9-A6WG,clinical.project-tcga-lgg.2026-01-09,31.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a144e4e4-2877-4340-a2bf-524adbde8bc8,TCGA-DU-7300,clinical.project-tcga-lgg.2026-01-09,53.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a2202233-4a83-4163-9532-b6edb9941453,TCGA-S9-A6WO,clinical.project-tcga-lgg.2026-01-09,29.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a343fbe3-147a-4656-9e90-5408298ca12c,TCGA-S9-A6U0,clinical.project-tcga-lgg.2026-01-09,46.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a3822b5e-d794-4126-b31f-c70e1cc47f22,TCGA-P5-A735,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a3be4e6f-c845-4d64-8111-d63fdf8cc8f1,TCGA-HT-A74K,clinical.project-tcga-lgg.2026-01-09,58.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a418fe65-dfdd-4c84-b27c-b4567b50f457,TCGA-S9-A6WN,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a4e2e507-7ddf-43df-b959-fe451971af1e,TCGA-HT-A618,clinical.project-tcga-lgg.2026-01-09,37.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a56c2083-33d5-4c98-b85f-3b68a3d80add,TCGA-DU-A6S7,clinical.project-tcga-lgg.2026-01-09,27.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a5d3f3fb-6541-419d-b47e-720d438f1bff,TCGA-CS-6668,clinical.project-tcga-lgg.2026-01-09,57.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a5e10e2e-5157-487b-88dc-6c70ad5e244a,TCGA-S9-A6U1,clinical.project-tcga-lgg.2026-01-09,22.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a5f851c5-6130-4ea1-9f86-be59331a92f7,TCGA-IK-7675,clinical.project-tcga-lgg.2026-01-09,43.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+a66a3847-7570-4486-8845-86b6125104a2,TCGA-VM-A8C8,clinical.project-tcga-lgg.2026-01-09,50.0,female,,white,,,,,,1,hcmi_tcga
+a6975eb0-cfa6-4b7a-bbe4-72bbdd3d3b6f,TCGA-S9-A7R7,clinical.project-tcga-lgg.2026-01-09,27.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a6ee311c-0a7b-4f47-86f1-f2164b128f9c,TCGA-E1-5307,clinical.project-tcga-lgg.2026-01-09,62.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a776cfd0-db9f-450a-943c-5a9a80a75fb7,TCGA-DU-7014,clinical.project-tcga-lgg.2026-01-09,59.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a80b0fab-6189-497f-997f-77234b69179c,TCGA-S9-A7IX,clinical.project-tcga-lgg.2026-01-09,57.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a85aebda-b182-41ba-815a-3ff055e22829,TCGA-FG-A60K,clinical.project-tcga-lgg.2026-01-09,34.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a85fdb41-24c1-420d-8905-ec297f018bd9,TCGA-HW-7491,clinical.project-tcga-lgg.2026-01-09,35.0,male,,white,,,,,,1,hcmi_tcga
+a96bca45-ecc7-44f6-acb6-48b0cec3de4d,TCGA-QH-A86X,clinical.project-tcga-lgg.2026-01-09,33.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+a96fabfa-e830-476a-b2a1-899689570bd9,TCGA-HT-7479,clinical.project-tcga-lgg.2026-01-09,44.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ab24cdc3-74a1-443f-831f-b7fb3821de6a,TCGA-HT-7616,clinical.project-tcga-lgg.2026-01-09,75.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ac3779f6-cc8b-428b-9531-03562a614515,TCGA-P5-A736,clinical.project-tcga-lgg.2026-01-09,44.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ad1c5951-ca93-4102-889b-e28e2bcfea76,TCGA-HT-8110,clinical.project-tcga-lgg.2026-01-09,57.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ad202887-88b3-4e0f-a4c3-7e135d4cb258,TCGA-FG-6690,clinical.project-tcga-lgg.2026-01-09,70.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ad72e61e-51e3-4992-ac77-65e895935736,TCGA-QH-A65V,clinical.project-tcga-lgg.2026-01-09,43.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ad80a042-c4b4-445c-9678-1c2614422684,TCGA-FG-A4MX,clinical.project-tcga-lgg.2026-01-09,47.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ae081e4a-efa9-4b52-b15e-29085c0612d3,TCGA-CS-6667,clinical.project-tcga-lgg.2026-01-09,39.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ae2db022-eb4f-4b65-89b6-9fd4439ddeef,TCGA-DB-5273,clinical.project-tcga-lgg.2026-01-09,33.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ae4f0714-3b74-46c0-9c1b-f028c7cf2e62,TCGA-FG-A6J3,clinical.project-tcga-lgg.2026-01-09,52.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ae61a71e-53a1-4884-a4a6-729744d1c309,TCGA-DB-A4XA,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b027ab77-70eb-4877-91a3-702064d9cc8b,TCGA-HT-7684,clinical.project-tcga-lgg.2026-01-09,58.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b10a9314-fd40-459e-97ea-affc636dceea,TCGA-S9-A6U8,clinical.project-tcga-lgg.2026-01-09,24.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b19dcbc2-b0d4-4759-9213-1a5b99df7e76,TCGA-TQ-A7RU,clinical.project-tcga-lgg.2026-01-09,51.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+b297c4dc-ec58-4392-908a-586e81d57ef0,TCGA-S9-A6TZ,clinical.project-tcga-lgg.2026-01-09,39.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b2b57e93-2722-4546-9a0b-20155b86edef,TCGA-DH-A7UT,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b342e980-8383-4f1b-bf57-4098c37a536c,TCGA-FG-7636,clinical.project-tcga-lgg.2026-01-09,48.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b3720405-ce3f-49c7-a5d9-bbffd06f6aef,TCGA-TM-A84J,clinical.project-tcga-lgg.2026-01-09,63.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b37abdc8-b9e3-4f1a-b16d-2e59442db335,TCGA-DH-A7UR,clinical.project-tcga-lgg.2026-01-09,59.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b3f0dece-94e8-4eaf-91bc-4b3f4dae12d2,TCGA-VM-A8CD,clinical.project-tcga-lgg.2026-01-09,58.0,male,,white,,,,,,1,hcmi_tcga
+b435e88b-f105-4c65-b725-126e5a299113,TCGA-HT-7603,clinical.project-tcga-lgg.2026-01-09,29.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b4f4c9b5-bc50-4f35-a7da-fd011c3b2c02,TCGA-QH-A6CZ,clinical.project-tcga-lgg.2026-01-09,38.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b60fce04-9779-42c0-8161-d29d8a1d7c64,TCGA-QH-A6X3,clinical.project-tcga-lgg.2026-01-09,27.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b6951c37-377e-49b9-862c-968082e8682f,TCGA-HT-7858,clinical.project-tcga-lgg.2026-01-09,28.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b6c2c9bd-625b-4a98-830c-49c344f6cb5f,TCGA-CS-5396,clinical.project-tcga-lgg.2026-01-09,53.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b6f13250-31b3-46ad-b514-5a684f1094a9,TCGA-FG-7643,clinical.project-tcga-lgg.2026-01-09,49.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b7395082-415b-4ab3-bf1e-59d0f4e4b488,TCGA-S9-A7R3,clinical.project-tcga-lgg.2026-01-09,28.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b7cd3b44-ef6a-4207-a44f-14f5b3b56ed4,TCGA-DB-5270,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b8df1577-2a75-4eb7-ab27-f2dd76160730,TCGA-DU-8158,clinical.project-tcga-lgg.2026-01-09,57.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b95afb1a-a1df-4d85-ad34-191928e28a77,TCGA-DU-5854,clinical.project-tcga-lgg.2026-01-09,57.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b9a3b647-61b3-4d98-90ca-e307ab50984a,TCGA-DU-8161,clinical.project-tcga-lgg.2026-01-09,63.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+b9e2f4d1-866c-4c62-a9c8-8de7eb364a6e,TCGA-HT-7469,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ba62b5eb-e169-4b41-b949-e004d66e98a1,TCGA-DB-A75L,clinical.project-tcga-lgg.2026-01-09,36.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ba910760-ebb5-41ba-81a1-c5355e3d3087,TCGA-DU-A7TJ,clinical.project-tcga-lgg.2026-01-09,55.0,male,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+baaddd76-277f-4c90-9cc2-0fece30c9735,TCGA-DU-A6S2,clinical.project-tcga-lgg.2026-01-09,37.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+bae316e3-1fa4-4fa7-8ad6-a458857a85d4,TCGA-HT-8106,clinical.project-tcga-lgg.2026-01-09,53.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+bb4a30d5-4eba-45db-b05a-bd843044d508,TCGA-E1-A7YK,clinical.project-tcga-lgg.2026-01-09,52.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+bbfb5399-8d43-4b75-bf90-23ec142697d7,TCGA-DB-5275,clinical.project-tcga-lgg.2026-01-09,36.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+bc3b4816-df1d-44ed-a8c6-f32c8e011a1f,TCGA-HW-8319,clinical.project-tcga-lgg.2026-01-09,34.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+bc66f21c-7ae6-4312-b6c1-ea3e19f90485,TCGA-R8-A6YH,clinical.project-tcga-lgg.2026-01-09,,,,,,,,,,1,hcmi_tcga
+bc6fbb3c-870d-40b5-983b-7c88705e020d,TCGA-E1-A7YJ,clinical.project-tcga-lgg.2026-01-09,55.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+bcc17e9a-6fe3-44ff-963c-d2d850a431f1,TCGA-E1-A7YN,clinical.project-tcga-lgg.2026-01-09,63.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+bdfade49-9059-4665-beea-c55117ba6564,TCGA-CS-5397,clinical.project-tcga-lgg.2026-01-09,54.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+bfbc0d1e-2a0b-4c60-8a37-91e3ce4b79ee,TCGA-HT-7609,clinical.project-tcga-lgg.2026-01-09,34.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+bff37de3-dc68-4e69-bdfc-8b524dd7774f,TCGA-HT-7481,clinical.project-tcga-lgg.2026-01-09,39.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c031f2a5-a563-4d5b-bd62-49d4fa5eca78,TCGA-FG-A60J,clinical.project-tcga-lgg.2026-01-09,47.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c05f9e21-b8fa-4537-9ae7-39d6fc9d7933,TCGA-TQ-A7RN,clinical.project-tcga-lgg.2026-01-09,32.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+c0d47e0f-4918-4e06-9db6-201671b1259c,TCGA-DU-6404,clinical.project-tcga-lgg.2026-01-09,24.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c13a429c-99ea-478c-ae95-fa499b9ea9fa,TCGA-DU-6406,clinical.project-tcga-lgg.2026-01-09,59.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c13bac88-c85b-4ee3-a51c-fd503cd7e726,TCGA-HT-A619,clinical.project-tcga-lgg.2026-01-09,51.0,female,not hispanic or latino,asian,,,,,,1,hcmi_tcga
+c16d9f69-26f9-4ec7-b2d5-ff9f7dacfe0f,TCGA-CS-6665,clinical.project-tcga-lgg.2026-01-09,51.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c2c16878-b615-496c-8fcb-d49c97e15551,TCGA-HT-7856,clinical.project-tcga-lgg.2026-01-09,35.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c2f9dff7-751b-4704-8e6e-f4f800297030,TCGA-QH-A65Z,clinical.project-tcga-lgg.2026-01-09,54.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c35f36b1-ba3d-4eea-bf5a-c95480202176,TCGA-DU-7306,clinical.project-tcga-lgg.2026-01-09,67.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c371e2b4-209f-40f3-a30c-51df8270b5de,TCGA-HT-7873,clinical.project-tcga-lgg.2026-01-09,29.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c3c41fd2-f0d7-4f46-9e18-cce4626538c2,TCGA-HW-7490,clinical.project-tcga-lgg.2026-01-09,41.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c40ab957-fe46-43b1-992d-b4e2040a3f57,TCGA-FG-7637,clinical.project-tcga-lgg.2026-01-09,49.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c45e02e5-7e3c-4f36-8b8d-f54617e8a436,TCGA-S9-A6TW,clinical.project-tcga-lgg.2026-01-09,40.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c4f522c9-bff5-4899-8d27-c105dab795a9,TCGA-S9-A89V,clinical.project-tcga-lgg.2026-01-09,70.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c50c984f-316a-4f24-968d-618691c54c3d,TCGA-DU-7012,clinical.project-tcga-lgg.2026-01-09,74.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+c56fa247-ad97-4dce-a2d3-9bdfc5dc7b1b,TCGA-DU-A76O,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c6ceb220-282e-4eef-8d36-4ce0a625cf7e,TCGA-FG-A70Y,clinical.project-tcga-lgg.2026-01-09,20.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c6cf2b8e-40ed-4c9f-8419-d868bd5afe11,TCGA-CS-5390,clinical.project-tcga-lgg.2026-01-09,47.0,female,,white,,,,,,1,hcmi_tcga
+c7b2833a-9fe8-49f6-b888-2d27b0516f5c,TCGA-HT-8109,clinical.project-tcga-lgg.2026-01-09,64.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+c81d4681-c02f-4b33-abe0-b6ad7d61194d,TCGA-DU-8163,clinical.project-tcga-lgg.2026-01-09,29.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c85fa637-941a-4a9a-8029-f5b44f3da430,TCGA-P5-A5F2,clinical.project-tcga-lgg.2026-01-09,36.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+c8700ca3-8c0b-4b2a-9e87-79d244a0f892,TCGA-WY-A858,clinical.project-tcga-lgg.2026-01-09,32.0,female,,white,,,,,,1,hcmi_tcga
+c916b9a4-008e-4d79-a50c-f15c3549fcf6,TCGA-HT-7879,clinical.project-tcga-lgg.2026-01-09,31.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ca427acb-034e-42e2-961a-b9d5dc30b741,TCGA-DU-7309,clinical.project-tcga-lgg.2026-01-09,41.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+cb041720-0efa-4eb6-a9a5-b6e138bb1a99,TCGA-WY-A85B,clinical.project-tcga-lgg.2026-01-09,24.0,male,,white,,,,,,1,hcmi_tcga
+cb1e9916-c03f-405a-a797-15823df09c8e,TCGA-DH-A66B,clinical.project-tcga-lgg.2026-01-09,52.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+cb598780-9e42-4167-b487-eec90ad4f36f,TCGA-DU-7011,clinical.project-tcga-lgg.2026-01-09,25.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+cc451e2a-fa85-42d7-b7af-9fc0166945fa,TCGA-S9-A7IQ,clinical.project-tcga-lgg.2026-01-09,45.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+cc8614c4-d535-4ad9-82f0-f4dc7ad11d0f,TCGA-S9-A89Z,clinical.project-tcga-lgg.2026-01-09,40.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+cd50aea8-a5db-48d3-ad28-cbe9f9e75ae3,TCGA-TM-A84S,clinical.project-tcga-lgg.2026-01-09,36.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+cd69d509-a652-4257-a8d3-767296bbb4ec,TCGA-DU-6542,clinical.project-tcga-lgg.2026-01-09,25.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+cdd1fd4c-3427-496c-8391-4aeb6730d3cc,TCGA-VM-A8CA,clinical.project-tcga-lgg.2026-01-09,54.0,male,,,,,,,,1,hcmi_tcga
+cf29547a-305b-4e6e-8342-36aac0850065,TCGA-QH-A6CX,clinical.project-tcga-lgg.2026-01-09,66.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+cf2a1b98-5693-4c04-9167-f85e69a88a4a,TCGA-HT-A61B,clinical.project-tcga-lgg.2026-01-09,22.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+cfcd3835-bb09-400e-b7eb-55ac139d01f8,TCGA-DH-A66F,clinical.project-tcga-lgg.2026-01-09,49.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d05079f2-9883-46e6-ad06-9e561f08d819,TCGA-DB-5277,clinical.project-tcga-lgg.2026-01-09,34.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d13ac936-87a9-4164-bdab-02ccf3908cfe,TCGA-TM-A7C3,clinical.project-tcga-lgg.2026-01-09,43.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d209cffc-fe21-4ae7-b610-e5668ea84a3b,TCGA-QH-A6X8,clinical.project-tcga-lgg.2026-01-09,56.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d3d8987d-0a54-45f8-b9c9-17ec89fa864e,TCGA-DU-A7TB,clinical.project-tcga-lgg.2026-01-09,56.0,male,not hispanic or latino,asian,,,,,,1,hcmi_tcga
+d43581a5-3d49-4263-862b-ca99d15ec03d,TCGA-HT-A616,clinical.project-tcga-lgg.2026-01-09,36.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d50e944a-3ce4-4632-a878-118499e143e3,TCGA-P5-A5EV,clinical.project-tcga-lgg.2026-01-09,39.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d58b535a-6c95-43bb-ad88-0600e6447537,TCGA-HT-7689,clinical.project-tcga-lgg.2026-01-09,58.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d61710c1-8ac3-44e3-b567-66288a6ab731,TCGA-DU-7304,clinical.project-tcga-lgg.2026-01-09,43.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d61b5d20-4d6d-4fdc-afe8-4b100b686eda,TCGA-DU-7013,clinical.project-tcga-lgg.2026-01-09,59.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d62d871b-4612-4bf4-b53c-9dd431e507a0,TCGA-S9-A6WL,clinical.project-tcga-lgg.2026-01-09,52.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d698946e-57dd-4ff2-b5fa-7a1d15c828be,TCGA-TQ-A7RO,clinical.project-tcga-lgg.2026-01-09,29.0,male,hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+d766c3af-f0b3-4791-a754-d6546d370f8f,TCGA-HT-8105,clinical.project-tcga-lgg.2026-01-09,54.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d81b9957-8c82-4006-b111-449fa9fb95ed,TCGA-P5-A733,clinical.project-tcga-lgg.2026-01-09,52.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+d87742fd-ff94-4ef0-bbf4-5dd5a185a0e7,TCGA-P5-A5ET,clinical.project-tcga-lgg.2026-01-09,27.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+da13446a-c4dc-4d02-80c8-410273925ac4,TCGA-FG-A6IZ,clinical.project-tcga-lgg.2026-01-09,60.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+da40e6d3-a2a9-4517-aaa2-aef6c3892ebf,TCGA-DH-A66G,clinical.project-tcga-lgg.2026-01-09,49.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+da735a88-d811-49f1-9091-a097c59ed68e,TCGA-DB-A64L,clinical.project-tcga-lgg.2026-01-09,67.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+dadd7428-9e4d-4652-9469-ab521b88d529,TCGA-FG-6688,clinical.project-tcga-lgg.2026-01-09,59.0,female,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+dbfaccb0-e8c0-48e8-9aef-570267574822,TCGA-HT-7473,clinical.project-tcga-lgg.2026-01-09,28.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+dc5bdd21-b23f-400e-bbe2-4c98a517fc9e,TCGA-CS-6669,clinical.project-tcga-lgg.2026-01-09,26.0,female,,white,,,,,,1,hcmi_tcga
+dc7ec60b-5ea5-48a4-8908-55caf9214272,TCGA-R8-A73M,clinical.project-tcga-lgg.2026-01-09,48.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+dcbbaca6-a24b-4bed-95de-314cff71e436,TCGA-S9-A6TY,clinical.project-tcga-lgg.2026-01-09,50.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+dcd0856d-423a-40d7-8070-4c0988d61416,TCGA-DH-5143,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+dcd45077-f068-490b-bdcc-4d4a62285116,TCGA-FG-8186,clinical.project-tcga-lgg.2026-01-09,42.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+dce168b1-d2a9-4409-8437-ab382f6d7d31,TCGA-FG-A4MW,clinical.project-tcga-lgg.2026-01-09,63.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+dd163547-43ad-4fe4-873e-83c4c6be4465,TCGA-DU-A5TS,clinical.project-tcga-lgg.2026-01-09,42.0,male,not hispanic or latino,black or african american,,,,,,1,hcmi_tcga
+dd7b23a7-b41b-4670-9fc8-78895fb00cff,TCGA-HT-8563,clinical.project-tcga-lgg.2026-01-09,30.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+dd85dbb2-31c3-4bc2-9dff-3bd27c79a9ad,TCGA-S9-A6UB,clinical.project-tcga-lgg.2026-01-09,52.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ddfd76dc-15d6-4efc-85ea-31674161ebf3,TCGA-DU-5871,clinical.project-tcga-lgg.2026-01-09,37.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+de6f01bf-2de9-4d07-a956-e6a4c0acb371,TCGA-WY-A859,clinical.project-tcga-lgg.2026-01-09,34.0,female,,white,,,,,,1,hcmi_tcga
+debe24c5-e4df-4e80-82f6-8f40395aa9e6,TCGA-HW-7493,clinical.project-tcga-lgg.2026-01-09,40.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+df22bc30-96e2-42de-9a39-2954db49841d,TCGA-DB-A64W,clinical.project-tcga-lgg.2026-01-09,65.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+df78e63d-4387-4177-b24f-f0e2c6c7ac32,TCGA-TQ-A7RJ,clinical.project-tcga-lgg.2026-01-09,25.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+e00a9855-c15e-46ef-988f-25ca64ec4717,TCGA-DU-7290,clinical.project-tcga-lgg.2026-01-09,45.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e09f93e1-1649-48fa-9e2e-d13ac6d50b97,TCGA-FG-5962,clinical.project-tcga-lgg.2026-01-09,54.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e0f8e70a-ac91-4d3c-806c-ba9c14ed43ab,TCGA-HT-A617,clinical.project-tcga-lgg.2026-01-09,47.0,male,,american indian or alaska native,,,,,,1,hcmi_tcga
+e117fcf4-2c01-4b4d-8faf-5de7d0e839f1,TCGA-HT-A5R9,clinical.project-tcga-lgg.2026-01-09,48.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e1758d75-b2a0-4386-bd72-6b2421d4da6b,TCGA-QH-A6CY,clinical.project-tcga-lgg.2026-01-09,38.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e2b1d161-d8cc-4eba-87ac-9449c6cd2977,TCGA-TQ-A7RQ,clinical.project-tcga-lgg.2026-01-09,38.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+e30f1994-3622-43d0-bec2-6d7e2d9881d2,TCGA-FG-A4MT,clinical.project-tcga-lgg.2026-01-09,27.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e326c1dd-2ef8-431b-a657-440aa3f35ff3,TCGA-DU-5855,clinical.project-tcga-lgg.2026-01-09,49.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e349d8aa-bb82-4ce8-b14c-61216289f25b,TCGA-DU-A7TD,clinical.project-tcga-lgg.2026-01-09,52.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e3ed0c19-6acc-4be1-aae2-73fe73cc9f24,TCGA-HW-8320,clinical.project-tcga-lgg.2026-01-09,36.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e488f613-f155-4e11-87d4-8c789ea81691,TCGA-DU-8166,clinical.project-tcga-lgg.2026-01-09,29.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e4d9b696-3311-44e7-9191-fde56c080a00,TCGA-FG-6691,clinical.project-tcga-lgg.2026-01-09,23.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e661e157-c6bc-4024-9905-97954759aad6,TCGA-P5-A780,clinical.project-tcga-lgg.2026-01-09,44.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e669a4b7-a494-490a-b78c-e664c59d0697,TCGA-HT-8013,clinical.project-tcga-lgg.2026-01-09,37.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e695b780-17f4-4e71-9120-7c6bcafaa3a7,TCGA-DU-6397,clinical.project-tcga-lgg.2026-01-09,45.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e6b7420f-4315-46a8-aed5-5c47cce5ded3,TCGA-S9-A6UA,clinical.project-tcga-lgg.2026-01-09,66.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e6c55ba6-4c8a-4ea4-8dde-74d01915db02,TCGA-HT-7468,clinical.project-tcga-lgg.2026-01-09,30.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e78e8845-9fba-48ba-8cf3-418429ea5f56,TCGA-HT-7690,clinical.project-tcga-lgg.2026-01-09,29.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e7fdf164-a85d-4ff5-9676-d2215ca35403,TCGA-HT-7601,clinical.project-tcga-lgg.2026-01-09,30.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e89f7631-fdac-4be9-9997-70e400efdc04,TCGA-HT-A615,clinical.project-tcga-lgg.2026-01-09,38.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+e8d3d888-e5fc-4469-ad0b-2c1df6e04790,TCGA-CS-5393,clinical.project-tcga-lgg.2026-01-09,39.0,male,,white,,,,,,1,hcmi_tcga
+ea31c705-4cf8-48f5-8d13-e43563213c91,TCGA-FG-A6J1,clinical.project-tcga-lgg.2026-01-09,44.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ea7f3ed6-e44b-49a1-8b5c-ce35539e7bdf,TCGA-HT-7877,clinical.project-tcga-lgg.2026-01-09,20.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+eb42625e-fbbb-4bee-bbe9-315b3ca2138a,TCGA-DU-5870,clinical.project-tcga-lgg.2026-01-09,34.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ec82a00f-3909-4781-8ae2-e54cbc1ac7ac,TCGA-DU-7015,clinical.project-tcga-lgg.2026-01-09,41.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ed833be3-0e9b-4c9b-b6d5-1098f08265a0,TCGA-QH-A6X5,clinical.project-tcga-lgg.2026-01-09,58.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+edbf86e5-3f55-4ddf-a97f-3e9dc607e53d,TCGA-TM-A84H,clinical.project-tcga-lgg.2026-01-09,44.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ee6bf12f-8a73-49e2-b566-368b2b42165b,TCGA-TM-A84B,clinical.project-tcga-lgg.2026-01-09,40.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+eef15b5c-5fbe-482a-b3b0-dd091888a6a2,TCGA-P5-A77W,clinical.project-tcga-lgg.2026-01-09,37.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ef12bfb7-4147-407f-84e9-586dbb10d583,TCGA-DU-A7TA,clinical.project-tcga-lgg.2026-01-09,32.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+effb5839-24a2-4b8c-8b6d-08cb66503d16,TCGA-HT-A61A,clinical.project-tcga-lgg.2026-01-09,20.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f005fa99-7e4e-4308-b11c-83b25683b1fd,TCGA-DH-A66D,clinical.project-tcga-lgg.2026-01-09,43.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f18dab99-26b0-4727-89a9-7f16bd382356,TCGA-DU-7018,clinical.project-tcga-lgg.2026-01-09,57.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f2d3fea5-0d20-42d3-b918-adad715be4ee,TCGA-HT-8107,clinical.project-tcga-lgg.2026-01-09,62.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f4a1fc14-0d32-4e77-a8a3-fd8fea82188a,TCGA-HT-7467,clinical.project-tcga-lgg.2026-01-09,54.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f5268956-789d-4b22-8f19-a3ac9353d33d,TCGA-TQ-A7RF,clinical.project-tcga-lgg.2026-01-09,27.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f5416dc4-d161-4776-9827-e4ceaf42d19f,TCGA-TM-A7C4,clinical.project-tcga-lgg.2026-01-09,39.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f625e522-226b-450f-af94-dd2f5adb605e,TCGA-HT-8564,clinical.project-tcga-lgg.2026-01-09,47.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+f62be2b8-88c4-4a7e-8c80-8176fb5f6c56,TCGA-WY-A85C,clinical.project-tcga-lgg.2026-01-09,36.0,male,,white,,,,,,1,hcmi_tcga
+f6a81d81-7df4-4273-8a86-e0cd3b8b1df5,TCGA-S9-A7IS,clinical.project-tcga-lgg.2026-01-09,33.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f79420ca-b0ae-417c-95f7-d28c35760202,TCGA-S9-A6WM,clinical.project-tcga-lgg.2026-01-09,59.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f842f756-ce78-4c99-bcf8-3bce18a4d9ef,TCGA-E1-A7YE,clinical.project-tcga-lgg.2026-01-09,32.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f86fa219-34e9-4812-8edf-2b66d7219779,TCGA-CS-5395,clinical.project-tcga-lgg.2026-01-09,43.0,male,,black or african american,,,,,,1,hcmi_tcga
+f878bf8d-70eb-4b74-bf74-bdf63cb9bfae,TCGA-TQ-A7RW,clinical.project-tcga-lgg.2026-01-09,32.0,male,hispanic or latino,white,,,,,,1,hcmi_tcga
+f9052682-b689-4696-9ab9-3f55976b43ee,TCGA-TM-A84T,clinical.project-tcga-lgg.2026-01-09,19.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+f97a9afe-e54a-4ef0-b458-0c77f938552e,TCGA-DU-8164,clinical.project-tcga-lgg.2026-01-09,51.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fa878a23-cd20-44ef-b438-33033b5fb1fe,TCGA-FG-A713,clinical.project-tcga-lgg.2026-01-09,74.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fb3884df-3680-4c5b-8092-981007aeba03,TCGA-FG-8185,clinical.project-tcga-lgg.2026-01-09,37.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fb6437f9-ade8-4c33-a0d0-ceacb2bf784d,TCGA-DB-A4XB,clinical.project-tcga-lgg.2026-01-09,38.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fbe32b94-b3ba-4a56-aeba-4cffe8de2da4,TCGA-HT-7681,clinical.project-tcga-lgg.2026-01-09,29.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fc222f23-b3b2-4ac0-bc61-e8e8fa5cc160,TCGA-CS-4941,clinical.project-tcga-lgg.2026-01-09,67.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fc3948fb-df27-4149-bbfb-04443dfecc19,TCGA-E1-A7YU,clinical.project-tcga-lgg.2026-01-09,42.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fc3b7596-f515-446f-81db-fed0154ca2c5,TCGA-EZ-7264,clinical.project-tcga-lgg.2026-01-09,47.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fc8828ae-484d-4fc8-a168-f8bc58ad65b9,TCGA-DU-8168,clinical.project-tcga-lgg.2026-01-09,55.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fcd9e1c4-bddb-4856-844c-03df48fba499,TCGA-DU-6392,clinical.project-tcga-lgg.2026-01-09,35.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fcf14e9d-4671-453d-b8e0-5008e916f56d,TCGA-TM-A84Q,clinical.project-tcga-lgg.2026-01-09,31.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fdff46a7-f92a-45cf-8756-6c73a406c923,TCGA-HT-A74H,clinical.project-tcga-lgg.2026-01-09,62.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fe5c5c11-ef39-4907-9a70-67f37bb62fd7,TCGA-QH-A6CW,clinical.project-tcga-lgg.2026-01-09,43.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fea46eef-6b7f-44c3-93bf-2dec16bdeb79,TCGA-HT-7860,clinical.project-tcga-lgg.2026-01-09,60.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+febe2ce5-737b-43b8-bc70-4194fe3ed5fb,TCGA-FG-A4MY,clinical.project-tcga-lgg.2026-01-09,44.0,female,hispanic or latino,white,,,,,,1,hcmi_tcga
+fee2114e-f723-4374-91f8-f1dcc6b3eaee,TCGA-HT-7470,clinical.project-tcga-lgg.2026-01-09,37.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+ffcec8e5-9fd3-4b42-a7cb-74761f713cf4,TCGA-HT-7606,clinical.project-tcga-lgg.2026-01-09,30.0,female,not hispanic or latino,white,,,,,,1,hcmi_tcga
+fff304a2-113f-499d-a88c-9d3660c348d9,TCGA-RY-A847,clinical.project-tcga-lgg.2026-01-09,45.0,male,not hispanic or latino,white,,,,,,1,hcmi_tcga

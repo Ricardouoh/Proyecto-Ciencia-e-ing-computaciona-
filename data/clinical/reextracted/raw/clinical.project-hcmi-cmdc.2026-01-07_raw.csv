@@ -1,0 +1,806 @@
+case_id,case_submitter_id,source_project,age_years,sex,ethnicity,race,height_last,weight_last,bmi_last,tobacco_smoking_status_any,pack_years_smoked_max,label,domain
+00432ef4-23b6-49ff-8393-b030cfa9a65d,HCM-BROD-0924-C34,clinical.project-hcmi-cmdc.2026-01-07,55.3,male,not hispanic or latino,white,178.0,70.0,22.0,1.0,70.0,1,hcmi_tcga
+00adbff7-f496-48fe-b859-819bdf673a30,HCM-EXPT-1207-C19,clinical.project-hcmi-cmdc.2026-01-07,57.5,male,,,,,,1.0,,1,hcmi_tcga
+00d751af-4f77-488b-aa56-b67d38091c86,HCM-SANG-0522-C18,clinical.project-hcmi-cmdc.2026-01-07,85.5,female,,,,,,1.0,,1,hcmi_tcga
+00dc3ba8-5a10-4120-bdad-c1c17b4b1ae7,HCM-CSHL-0161-C18,clinical.project-hcmi-cmdc.2026-01-07,74.5,male,not hispanic or latino,white,182.8,86.18,26.0,1.0,,1,hcmi_tcga
+00ee2954-76fb-4157-bcb8-9ff3b7d94707,HCM-CSHL-0867-C18,clinical.project-hcmi-cmdc.2026-01-07,68.4,female,not hispanic or latino,black or african american,157.4,77.0,31.0,1.0,,1,hcmi_tcga
+01c25a0f-5335-4fbd-870c-e533c4f7c7e1,HCM-SANG-0537-C18,clinical.project-hcmi-cmdc.2026-01-07,80.5,male,,,,,,1.0,,1,hcmi_tcga
+01c29556-6af2-4ff8-b03b-911dfb5195fd,HCM-SANG-0293-C15,clinical.project-hcmi-cmdc.2026-01-07,57.5,male,,,,,,1.0,,1,hcmi_tcga
+01f8a139-a027-4578-8cc0-3d931743f8d5,HCM-EXPT-0998-C25,clinical.project-hcmi-cmdc.2026-01-07,60.8,female,,,,,,,,1,hcmi_tcga
+02187bfb-54f4-4bed-a056-06c9f10e3335,HCM-BROD-0759-C15,clinical.project-hcmi-cmdc.2026-01-07,70.5,male,not hispanic or latino,,,,38.0,1.0,8.0,1,hcmi_tcga
+0249b26e-7928-4d28-a0e7-68a31d49ca33,HCM-WCMC-0946-C34,clinical.project-hcmi-cmdc.2026-01-07,79.9,female,,white,162.6,82.1,31.0,1.0,,1,hcmi_tcga
+0251b915-6bf6-43a3-b3a3-aadbac0be13f,HCM-BROD-0204-C25,clinical.project-hcmi-cmdc.2026-01-07,74.5,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+0286c31b-a704-4d7d-99e3-0bc4e8975b8b,HCM-CSHL-0084-C25,clinical.project-hcmi-cmdc.2026-01-07,73.2,female,,,163.0,68.0,26.0,1.0,,1,hcmi_tcga
+028fb179-0872-4477-ab89-cf39f1ed9420,HCM-CSHL-0670-C18,clinical.project-hcmi-cmdc.2026-01-07,54.2,female,not hispanic or latino,white,170.0,77.2,26.7,1.0,,1,hcmi_tcga
+029399ba-21fa-4e49-8ddf-f73e4704858a,HCM-SANG-1337-C18,clinical.project-hcmi-cmdc.2026-01-07,74.5,male,,,,,,1.0,,1,hcmi_tcga
+02b9db75-894d-4f2c-908d-8b37b65668b9,HCM-EXPT-1224-C15,clinical.project-hcmi-cmdc.2026-01-07,78.5,male,,,,,,1.0,,1,hcmi_tcga
+02f6d684-b6b5-419a-b0e1-b74d0a384a30,HCM-BROD-0408-C71,clinical.project-hcmi-cmdc.2026-01-07,69.3,female,not hispanic or latino,white,151.0,54.0,23.7,1.0,,1,hcmi_tcga
+031b40e7-2e1d-43e9-83a1-a4fae1e1e6a4,HCM-WCMC-0504-C18,clinical.project-hcmi-cmdc.2026-01-07,58.6,female,hispanic or latino,,,59.0,,1.0,,1,hcmi_tcga
+035fa980-159e-4c0d-87da-d13d3dd7c17c,HCM-BROD-0108-C25,clinical.project-hcmi-cmdc.2026-01-07,66.7,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+03974dc9-0162-4de8-9897-09f88693681a,HCM-BROD-0334-C43,clinical.project-hcmi-cmdc.2026-01-07,70.8,male,not hispanic or latino,white,175.0,91.0,29.0,1.0,,1,hcmi_tcga
+03bfeb7c-cecf-4691-8263-33cdfe391ea9,HCM-BROD-0124-C25,clinical.project-hcmi-cmdc.2026-01-07,60.5,male,,white,,,,1.0,,1,hcmi_tcga
+0418bb63-85f4-4799-9c35-109426c837db,HCM-EXPT-0976-C50,clinical.project-hcmi-cmdc.2026-01-07,60.8,female,,,,,,,,1,hcmi_tcga
+043a7275-04cd-414d-bd57-05e3e5926129,HCM-SANG-0272-C20,clinical.project-hcmi-cmdc.2026-01-07,66.5,female,,,,,,1.0,,1,hcmi_tcga
+04ab7e95-8c7f-466b-9209-11e36c95dbfe,HCM-BROD-0219-C15,clinical.project-hcmi-cmdc.2026-01-07,68.1,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+04b88744-7738-4bc2-ab67-14545f5b761f,HCM-STAN-0841-C18,clinical.project-hcmi-cmdc.2026-01-07,62.2,female,not hispanic or latino,white,157.0,62.4,25.3,1.0,,1,hcmi_tcga
+04ba3395-30c3-4e6e-964a-fe9f82dd8a97,HCM-BROD-0761-C71,clinical.project-hcmi-cmdc.2026-01-07,62.4,male,not hispanic or latino,white,169.0,76.0,26.6,1.0,,1,hcmi_tcga
+04c73a4a-8dec-4727-979a-6bc041e5a2f6,HCM-BROD-0719-C43,clinical.project-hcmi-cmdc.2026-01-07,66.3,male,not hispanic or latino,white,173.0,88.0,29.4,1.0,,1,hcmi_tcga
+04cbceab-f945-482b-956b-840756a17a4a,HCM-BROD-0421-C71,clinical.project-hcmi-cmdc.2026-01-07,49.7,female,,white,170.0,60.0,20.8,1.0,,1,hcmi_tcga
+05c89194-bca7-43e4-8bb4-feffd9efdb99,HCM-EXPT-1031-C50,clinical.project-hcmi-cmdc.2026-01-07,76.6,female,,,,,,,,1,hcmi_tcga
+05cbd57f-0c12-486e-8ced-edb9ed3cbbb0,HCM-BROD-0650-C56,clinical.project-hcmi-cmdc.2026-01-07,67.2,female,not hispanic or latino,white,,,20.0,1.0,,1,hcmi_tcga
+05f41641-ee22-4d41-bb87-2bfa47cd983f,HCM-BROD-0095-C15,clinical.project-hcmi-cmdc.2026-01-07,51.5,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+0600672e-3077-4545-bc1d-974ebc60b25c,HCM-EXPT-1253-C18,clinical.project-hcmi-cmdc.2026-01-07,55.5,male,,,,,,1.0,,1,hcmi_tcga
+0608526c-70d5-4740-a9eb-1cce282ddd15,HCM-SANG-1332-C18,clinical.project-hcmi-cmdc.2026-01-07,78.5,male,,,,,,1.0,,1,hcmi_tcga
+0693e8b4-9a8d-4356-9f3f-7da3bf1d202d,HCM-CSHL-0511-C24,clinical.project-hcmi-cmdc.2026-01-07,47.4,female,,,175.0,89.0,29.0,1.0,,1,hcmi_tcga
+06a0e127-713b-484d-8617-83f4be109792,HCM-CSHL-0811-C55,clinical.project-hcmi-cmdc.2026-01-07,82.4,female,not hispanic or latino,white,152.4,72.0,31.0,1.0,,1,hcmi_tcga
+06d42c21-4c97-4171-ac00-3979a51a59d9,HCM-CSHL-0160-C18,clinical.project-hcmi-cmdc.2026-01-07,83.9,female,not hispanic or latino,white,152.4,55.33,24.0,1.0,,1,hcmi_tcga
+076613eb-16ec-4a9f-9697-8c04661615ad,HCM-EXPT-1254-C25,clinical.project-hcmi-cmdc.2026-01-07,60.5,male,,,,,,1.0,,1,hcmi_tcga
+0766560b-53a8-4cc9-8f84-4cbe651a86b9,HCM-SANG-0523-C15,clinical.project-hcmi-cmdc.2026-01-07,82.5,male,,,,,,1.0,,1,hcmi_tcga
+0798bf7a-53f3-4d88-a863-b4fc186bb5b6,HCM-BROD-0417-C71,clinical.project-hcmi-cmdc.2026-01-07,50.0,female,not hispanic or latino,white,171.0,105.0,35.9,1.0,,1,hcmi_tcga
+07a067d0-7dfc-4817-b4c5-9200da20a59f,HCM-SANG-0268-C18,clinical.project-hcmi-cmdc.2026-01-07,80.5,male,,,,,,1.0,,1,hcmi_tcga
+07c0dad3-becc-4b8b-a8a3-f9180171911a,HCM-EXPT-1028-C50,clinical.project-hcmi-cmdc.2026-01-07,81.5,female,,,,,,,,1,hcmi_tcga
+082faf22-1925-4478-94da-f124da62cd7e,HCM-BROD-0351-C49,clinical.project-hcmi-cmdc.2026-01-07,42.9,female,not hispanic or latino,white,158.0,48.0,19.0,1.0,,1,hcmi_tcga
+08b22310-e8dd-4638-8c5b-dea48328450e,HCM-BROD-0213-C71,clinical.project-hcmi-cmdc.2026-01-07,58.3,female,not hispanic or latino,white,162.5,79.5,30.1,1.0,,1,hcmi_tcga
+08fcc52a-8c11-45bd-bff4-9a3fa5ed7d82,HCM-BROD-1124-C16,clinical.project-hcmi-cmdc.2026-01-07,62.6,male,not hispanic or latino,black or african american,162.0,51.0,19.0,1.0,,1,hcmi_tcga
+098d387f-beb5-48e2-ad69-537db301dff4,HCM-WCMC-0789-C34,clinical.project-hcmi-cmdc.2026-01-07,83.6,male,not hispanic or latino,,175.3,74.4,24.0,1.0,75.0,1,hcmi_tcga
+0992e3ff-b15d-4985-988d-8f0a05e717a7,HCM-WCMC-0786-C34,clinical.project-hcmi-cmdc.2026-01-07,76.8,male,not hispanic or latino,black or african american,167.6,131.5,44.0,1.0,,1,hcmi_tcga
+0a5b4efe-4ebe-492f-bee0-4a09e8da44c0,HCM-EXPT-0941-C50,clinical.project-hcmi-cmdc.2026-01-07,55.1,female,,,,,,,,1,hcmi_tcga
+0a66800c-c5e6-4fc9-ba09-a147107b721c,HCM-WCMC-0505-C16,clinical.project-hcmi-cmdc.2026-01-07,75.9,female,not hispanic or latino,asian,,45.8,,1.0,,1,hcmi_tcga
+0a6a14db-ca5c-4bf9-9125-611d672bc67b,HCM-SANG-0271-D12,clinical.project-hcmi-cmdc.2026-01-07,45.5,male,,,,,,1.0,,1,hcmi_tcga
+0ae6526b-17fa-4a08-b79c-916942feb7a1,HCM-CSHL-1266-C20,clinical.project-hcmi-cmdc.2026-01-07,34.7,male,,,178.0,79.0,25.0,1.0,,1,hcmi_tcga
+0bbe1b04-f582-453c-9070-7aafc07912fe,HCM-CSHL-0366-C50,clinical.project-hcmi-cmdc.2026-01-07,46.9,female,not hispanic or latino,white,170.2,58.1,20.0,1.0,,1,hcmi_tcga
+0bc32bb1-1770-41cc-8b98-71498a3d7c21,HCM-CSHL-0835-C20,clinical.project-hcmi-cmdc.2026-01-07,61.2,male,not hispanic or latino,asian,175.3,64.4,21.0,1.0,,1,hcmi_tcga
+0bcbe03e-51c9-45d8-bc88-34ebada85d3e,HCM-SANG-0552-C25,clinical.project-hcmi-cmdc.2026-01-07,81.5,female,,,,,,1.0,,1,hcmi_tcga
+0bcca666-3c62-4eb9-a47c-93bb7c020ad6,HCM-WCMC-0673-C56,clinical.project-hcmi-cmdc.2026-01-07,32.9,female,not hispanic or latino,asian,152.4,64.0,28.0,1.0,,1,hcmi_tcga
+0cafd069-029f-449d-97ce-b69009a80d80,HCM-CSHL-0512-C24,clinical.project-hcmi-cmdc.2026-01-07,76.0,female,,,165.0,88.0,32.0,1.0,,1,hcmi_tcga
+0cd60ea0-92de-44fa-86be-c75842b4123e,HCM-BROD-0555-C15,clinical.project-hcmi-cmdc.2026-01-07,48.2,male,not hispanic or latino,white,,,23.0,1.0,,1,hcmi_tcga
+0cf7d1fe-e9c7-4e84-9497-df13ca2ed2c9,HCM-SANG-0287-C20,clinical.project-hcmi-cmdc.2026-01-07,55.5,male,,,,,,1.0,,1,hcmi_tcga
+0d98ced3-0c8e-4431-93e5-74f458b80797,HCM-EXPT-0990-C50,clinical.project-hcmi-cmdc.2026-01-07,79.0,female,,,,,,,,1,hcmi_tcga
+0dc9723e-f5ff-4fe3-98a4-325a23e61b5f,HCM-WCMC-1285-C54,clinical.project-hcmi-cmdc.2026-01-07,34.0,female,,,156.2,51.3,21.0,1.0,,1,hcmi_tcga
+0df0db7a-b473-4643-9caf-a7c272c54c29,HCM-CSHL-0248-C19,clinical.project-hcmi-cmdc.2026-01-07,53.4,female,hispanic or latino,,167.6,117.5,42.0,1.0,,1,hcmi_tcga
+0e791e67-655b-4d32-93fe-caccae0fd673,HCM-CSHL-0507-C20,clinical.project-hcmi-cmdc.2026-01-07,61.5,male,,,170.0,75.0,26.0,1.0,,1,hcmi_tcga
+0e9262d1-5aa8-4528-9aee-2815afcd23cd,HCM-WCMC-0950-C67,clinical.project-hcmi-cmdc.2026-01-07,63.0,male,not hispanic or latino,black or african american,188.0,114.1,32.0,1.0,,1,hcmi_tcga
+0e9a9e97-f0bf-4f4a-84cc-73eccfc627b1,HCM-CSHL-0376-D37,clinical.project-hcmi-cmdc.2026-01-07,75.4,male,not hispanic or latino,white,177.8,106.14,34.0,1.0,,1,hcmi_tcga
+0e9b2366-3f29-4263-957c-05dc443a0911,HCM-EXPT-0983-C18,clinical.project-hcmi-cmdc.2026-01-07,73.4,female,,,,,,,,1,hcmi_tcga
+0ee53efd-b992-4aeb-a091-8dd1bd32da6e,HCM-BROD-0682-C64,clinical.project-hcmi-cmdc.2026-01-07,61.1,male,not hispanic or latino,asian,163.0,65.0,25.0,1.0,,1,hcmi_tcga
+0f1a10df-5962-40d1-b15c-bb998d0934c9,HCM-BROD-0960-C16,clinical.project-hcmi-cmdc.2026-01-07,64.5,male,not hispanic or latino,white,178.0,89.0,28.0,1.0,,1,hcmi_tcga
+0f28235c-b4bb-451b-8b89-6092a231f0f9,HCM-EXPT-1073-C18,clinical.project-hcmi-cmdc.2026-01-07,76.4,female,,,,,,,,1,hcmi_tcga
+0f89e089-4a1d-4e66-8537-502a788cfe75,HCM-BROD-0012-C71,clinical.project-hcmi-cmdc.2026-01-07,56.8,female,not hispanic or latino,white,158.8,80.29,31.8,1.0,,1,hcmi_tcga
+10bd5d19-7a67-41c2-bb24-898e9078fd04,HCM-BROD-0568-C15,clinical.project-hcmi-cmdc.2026-01-07,63.8,male,not hispanic or latino,white,182.0,71.0,21.0,1.0,,1,hcmi_tcga
+10e69494-3ce2-4c13-ab1b-6fc0e6b14853,HCM-SANG-0312-C15,clinical.project-hcmi-cmdc.2026-01-07,63.5,male,,,,,,1.0,,1,hcmi_tcga
+110de1cc-65ce-4fc5-9d03-63cc0fe904cc,HCM-EXPT-1204-C20,clinical.project-hcmi-cmdc.2026-01-07,73.5,male,,,,,,1.0,,1,hcmi_tcga
+118bf677-caed-4f7f-a837-dd966dce5ca7,HCM-CSHL-0061-C18,clinical.project-hcmi-cmdc.2026-01-07,61.0,female,not hispanic or latino,white,165.1,88.45,32.0,1.0,,1,hcmi_tcga
+11c42dc9-6c86-4471-8659-f9f9fced374f,HCM-EXPT-1029-C34,clinical.project-hcmi-cmdc.2026-01-07,83.4,female,,,,,,,,1,hcmi_tcga
+12603388-e5f0-45ac-ab7b-3a839de7a9e8,HCM-SANG-1335-C18,clinical.project-hcmi-cmdc.2026-01-07,64.5,male,,,,,,1.0,,1,hcmi_tcga
+1312ba61-8d33-4b61-89cf-0c6e5c6d06a7,HCM-SANG-1322-C15,clinical.project-hcmi-cmdc.2026-01-07,73.5,male,,,,,,1.0,,1,hcmi_tcga
+13cacc39-4a3d-440e-87da-75772dc0a3fe,HCM-SANG-1317-C20,clinical.project-hcmi-cmdc.2026-01-07,68.5,male,,,,,,1.0,,1,hcmi_tcga
+13f33795-7d8b-411d-8b33-998e66e484ea,HCM-CSHL-0621-C18,clinical.project-hcmi-cmdc.2026-01-07,72.0,male,,,174.0,77.0,25.0,1.0,,1,hcmi_tcga
+13f667da-a66b-4622-9e6a-b3e861e96961,HCM-BROD-0232-C25,clinical.project-hcmi-cmdc.2026-01-07,74.8,female,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+147d66fc-1d48-47a9-b9c8-4b96be0bf152,HCM-SANG-1304-C20,clinical.project-hcmi-cmdc.2026-01-07,65.5,male,,,,,,1.0,,1,hcmi_tcga
+149a8565-e0c5-4474-a693-d44f1b445c0c,HCM-BROD-0199-C71,clinical.project-hcmi-cmdc.2026-01-07,49.1,male,not hispanic or latino,asian,177.0,76.0,24.3,1.0,,1,hcmi_tcga
+149eef24-418a-4f5e-b32e-060a8baa8322,HCM-BROD-1105-C73,clinical.project-hcmi-cmdc.2026-01-07,54.2,female,not hispanic or latino,white,160.0,46.0,18.0,1.0,,1,hcmi_tcga
+149f1630-7134-4ac2-a350-6bee91ef8386,HCM-EXPT-1195-C18,clinical.project-hcmi-cmdc.2026-01-07,80.5,female,,,,,,1.0,,1,hcmi_tcga
+14d24b35-141b-4743-b4a9-321e2393bb54,HCM-CSHL-0625-C18,clinical.project-hcmi-cmdc.2026-01-07,66.6,male,,,178.0,79.0,25.0,1.0,,1,hcmi_tcga
+14f78f65-92c2-4811-b714-513dccee6022,HCM-EXPT-0944-C50,clinical.project-hcmi-cmdc.2026-01-07,69.6,female,,,,,,,,1,hcmi_tcga
+150dfaa3-1eb3-427a-a82f-560d706cabc2,HCM-WCMC-1287-C67,clinical.project-hcmi-cmdc.2026-01-07,74.8,male,not hispanic or latino,white,170.2,77.1,27.0,1.0,,1,hcmi_tcga
+157d4813-8461-4593-8232-863c7ace4b35,HCM-CSHL-0860-C18,clinical.project-hcmi-cmdc.2026-01-07,70.3,male,,,183.0,55.0,16.0,1.0,,1,hcmi_tcga
+159b2484-d704-4b1f-85a7-4e88155c8223,HCM-EXPT-0885-C25,clinical.project-hcmi-cmdc.2026-01-07,76.0,female,,,,,,,,1,hcmi_tcga
+15fda26e-ea06-4ead-be90-9af1d94473aa,HCM-BROD-0489-C15,clinical.project-hcmi-cmdc.2026-01-07,63.9,male,not hispanic or latino,,177.0,85.0,27.1,1.0,,1,hcmi_tcga
+164eeaa7-4229-493f-ae77-0843f36af6b8,HCM-BROD-0111-C25,clinical.project-hcmi-cmdc.2026-01-07,67.5,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+165c2263-819e-46f2-9ccf-4f7ea4d83300,HCM-WCMC-0951-C67,clinical.project-hcmi-cmdc.2026-01-07,90.0,female,,asian,149.9,49.9,22.0,1.0,,1,hcmi_tcga
+17264882-995a-4d9f-91dc-00de991f3ea0,HCM-EXPT-0401-C50,clinical.project-hcmi-cmdc.2026-01-07,66.0,female,,,,,,,,1,hcmi_tcga
+17f4b889-d7b9-42d1-adb8-cbad65a56547,HCM-CSHL-0176-C25,clinical.project-hcmi-cmdc.2026-01-07,60.0,female,,,165.0,48.0,18.0,1.0,,1,hcmi_tcga
+18909e2d-a178-49b3-9a70-998f944af8a3,HCM-BROD-0009-C25,clinical.project-hcmi-cmdc.2026-01-07,49.4,female,not hispanic or latino,white,155.8,58.2,24.0,1.0,,1,hcmi_tcga
+18d012fb-77b9-4a9f-b3c7-986f9a0592d1,HCM-WCMC-0502-C15,clinical.project-hcmi-cmdc.2026-01-07,42.9,male,hispanic or latino,white,175.3,103.4,34.0,1.0,,1,hcmi_tcga
+18eab58c-ac14-4f6a-a30a-2c05134a2a46,HCM-BROD-0829-C71,clinical.project-hcmi-cmdc.2026-01-07,66.5,male,not hispanic or latino,white,180.0,87.0,27.0,1.0,,1,hcmi_tcga
+19252fcc-76e8-4072-aebe-ce8845771090,HCM-BROD-0564-C71,clinical.project-hcmi-cmdc.2026-01-07,65.5,female,not hispanic or latino,white,160.0,54.0,21.1,1.0,,1,hcmi_tcga
+1970ecdd-154f-4591-9dc5-6b668fecde7d,HCM-EXPT-1246-C25,clinical.project-hcmi-cmdc.2026-01-07,56.5,female,,,,,,1.0,,1,hcmi_tcga
+19b1e69a-355a-4dd7-9c56-d701f6c2c5a0,HCM-SANG-0299-C15,clinical.project-hcmi-cmdc.2026-01-07,69.5,male,,,,,,1.0,,1,hcmi_tcga
+19f1d344-4c14-4733-abbd-c2db6737e210,HCM-CSHL-0081-C25,clinical.project-hcmi-cmdc.2026-01-07,57.9,male,,,175.0,62.0,20.0,1.0,,1,hcmi_tcga
+1aad065b-567d-4f08-9cf0-bcc57e8ef496,HCM-BROD-0103-C71,clinical.project-hcmi-cmdc.2026-01-07,11.8,female,not hispanic or latino,white,152.3,51.2,22.1,1.0,,1,hcmi_tcga
+1ae8657f-477f-4e1a-aef2-dd1c1ab5f26a,HCM-BROD-0231-C25,clinical.project-hcmi-cmdc.2026-01-07,68.9,female,not hispanic or latino,white,154.0,72.0,30.4,1.0,,1,hcmi_tcga
+1afc9344-bb0c-4074-a7d8-dc941a47266d,HCM-BROD-0745-C43,clinical.project-hcmi-cmdc.2026-01-07,69.3,male,not hispanic or latino,white,165.0,99.0,36.4,1.0,,1,hcmi_tcga
+1b6aad54-f571-4cb0-bce2-a79447b9bb64,HCM-CSHL-0584-C19,clinical.project-hcmi-cmdc.2026-01-07,58.7,female,not hispanic or latino,white,167.6,76.2,27.0,1.0,,1,hcmi_tcga
+1bd5b5e6-3a81-4624-8241-ee006a272e5c,HCM-EXPT-1242-C18,clinical.project-hcmi-cmdc.2026-01-07,88.5,female,,,,,,1.0,,1,hcmi_tcga
+1bfa0189-6e43-4d76-928c-026673ec775e,HCM-CSHL-0818-C56,clinical.project-hcmi-cmdc.2026-01-07,62.2,female,not hispanic or latino,white,160.0,58.1,23.0,1.0,,1,hcmi_tcga
+1c54d889-a752-4025-90ce-af896cdb95d4,HCM-BROD-0643-C43,clinical.project-hcmi-cmdc.2026-01-07,53.6,male,not hispanic or latino,white,170.0,68.0,23.5,1.0,,1,hcmi_tcga
+1c906cee-df63-4348-9354-0a523ab88dfa,HCM-BROD-0758-C43,clinical.project-hcmi-cmdc.2026-01-07,55.3,female,not hispanic or latino,white,168.0,80.0,28.0,1.0,,1,hcmi_tcga
+1cbdddb6-af99-4137-9629-2e45e1afb8ca,HCM-EXPT-0928-C50,clinical.project-hcmi-cmdc.2026-01-07,41.9,female,,,,,,,,1,hcmi_tcga
+1cddb064-84ff-4ca1-b980-fb3ec30053eb,HCM-SANG-0300-C15,clinical.project-hcmi-cmdc.2026-01-07,82.5,male,,,,,,1.0,,1,hcmi_tcga
+1d5008c9-5a12-45ce-836b-64cfd1b232c8,HCM-EXPT-0894-C25,clinical.project-hcmi-cmdc.2026-01-07,39.4,male,,,,,,,,1,hcmi_tcga
+1d8a21f2-0671-45ce-ba44-94d3d0d29dd4,HCM-CSHL-0368-D37,clinical.project-hcmi-cmdc.2026-01-07,65.9,male,hispanic or latino,white,177.8,92.0,29.0,1.0,,1,hcmi_tcga
+1da2dae2-d5ed-49c9-9f9e-c12e6e262dc4,HCM-BROD-0121-C41,clinical.project-hcmi-cmdc.2026-01-07,14.2,male,not hispanic or latino,white,,,20.0,1.0,,1,hcmi_tcga
+1deecd23-2a3a-4de3-9b79-26ad4492787f,HCM-SANG-0544-C15,clinical.project-hcmi-cmdc.2026-01-07,52.5,male,,,,,,1.0,,1,hcmi_tcga
+1e4fd897-4fcb-49d4-a431-37467b1b08d3,HCM-EXPT-1019-C50,clinical.project-hcmi-cmdc.2026-01-07,64.1,female,,,,,,,,1,hcmi_tcga
+1e76d41a-9cf7-4114-b48a-84571c929f22,HCM-BROD-0794-C16,clinical.project-hcmi-cmdc.2026-01-07,41.4,female,not hispanic or latino,asian,158.0,38.0,15.0,1.0,,1,hcmi_tcga
+1e93db0d-0b15-4682-80d9-0a29ae04ce68,HCM-BROD-0597-C64,clinical.project-hcmi-cmdc.2026-01-07,1.5,male,,white,,,17.0,1.0,,1,hcmi_tcga
+1ee582bc-c8f2-4c31-836a-e9e3fd8ecd72,HCM-BROD-0954-C34,clinical.project-hcmi-cmdc.2026-01-07,66.3,female,not hispanic or latino,black or african american,163.0,75.0,28.0,1.0,25.0,1,hcmi_tcga
+1ef1165f-72e5-43eb-ba3a-9886aa1f2fc4,HCM-BROD-0783-C71,clinical.project-hcmi-cmdc.2026-01-07,53.9,female,,white,163.0,75.0,28.2,1.0,,1,hcmi_tcga
+1ef761af-e22d-44ac-8718-c09cbe588a0b,HCM-CSHL-0837-D01,clinical.project-hcmi-cmdc.2026-01-07,67.7,male,not hispanic or latino,white,170.2,64.0,22.0,1.0,,1,hcmi_tcga
+1f080fcb-15c8-452a-a083-05ed83098a52,HCM-BROD-0116-C16,clinical.project-hcmi-cmdc.2026-01-07,56.7,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+1f2a2c24-fc96-4e6a-9e32-668aba3146da,HCM-EXPT-1245-C15,clinical.project-hcmi-cmdc.2026-01-07,52.5,male,,,,,,1.0,,1,hcmi_tcga
+1f49f9c4-362b-46b6-93a5-f64a526b083e,HCM-EXPT-1024-C50,clinical.project-hcmi-cmdc.2026-01-07,61.2,female,,,,,,,,1,hcmi_tcga
+2085d720-f57e-47a0-9355-c0f64fc363a9,HCM-EXPT-1219-C18,clinical.project-hcmi-cmdc.2026-01-07,77.5,female,,,,,,1.0,,1,hcmi_tcga
+20b6fd08-f99a-47f0-9f41-ff2163490057,HCM-BROD-0577-C15,clinical.project-hcmi-cmdc.2026-01-07,63.0,male,not hispanic or latino,,170.0,84.0,29.0,1.0,,1,hcmi_tcga
+2127626f-247f-4c47-b096-a876f08db1a0,HCM-SANG-0315-C25,clinical.project-hcmi-cmdc.2026-01-07,72.5,female,,,,,,1.0,,1,hcmi_tcga
+219cfe52-363e-424b-b833-717637eab99a,HCM-BROD-0348-C25,clinical.project-hcmi-cmdc.2026-01-07,70.0,male,,white,,,,1.0,,1,hcmi_tcga
+21bba866-e2d8-4256-978e-fbbd2f3dbfaa,HCM-EXPT-1209-C20,clinical.project-hcmi-cmdc.2026-01-07,58.5,female,,,,,,1.0,,1,hcmi_tcga
+220be274-e7e5-4148-9bd2-60c36ae5d688,HCM-SANG-1326-C15,clinical.project-hcmi-cmdc.2026-01-07,65.5,male,,,,,,1.0,,1,hcmi_tcga
+22d416fe-9fc4-40af-a679-b731676bf024,HCM-EXPT-1001-C50,clinical.project-hcmi-cmdc.2026-01-07,41.5,female,,,,,,,,1,hcmi_tcga
+22f26b5c-41b7-4142-9d87-6cf8b7fee3af,HCM-BROD-0229-C25,clinical.project-hcmi-cmdc.2026-01-07,60.6,female,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+23443700-fe39-4fd5-862f-ffb02cda3947,HCM-CSHL-0141-C18,clinical.project-hcmi-cmdc.2026-01-07,67.2,male,,white,180.3,80.73,25.0,1.0,,1,hcmi_tcga
+23cedc54-ef61-48f8-9ea9-fdf20c9d56ca,HCM-EXPT-0933-C50,clinical.project-hcmi-cmdc.2026-01-07,79.8,male,,,,,,,,1,hcmi_tcga
+24d58043-7070-4791-ac86-fdd4af8f2431,HCM-CSHL-0158-C20,clinical.project-hcmi-cmdc.2026-01-07,57.2,male,not hispanic or latino,white,175.2,81.64,27.0,1.0,,1,hcmi_tcga
+24da43ae-b254-4238-9b55-813ccb1e8f35,HCM-EXPT-1221-C18,clinical.project-hcmi-cmdc.2026-01-07,80.5,female,,,,,,1.0,,1,hcmi_tcga
+2539dadb-533b-4aa3-b9b1-475052a93551,HCM-BROD-1186-C64,clinical.project-hcmi-cmdc.2026-01-07,50.0,male,not hispanic or latino,white,180.0,106.0,33.0,1.0,,1,hcmi_tcga
+25455ba4-759e-467d-b880-c938c9f39408,HCM-EXPT-1198-C18,clinical.project-hcmi-cmdc.2026-01-07,82.5,male,,,,,,1.0,,1,hcmi_tcga
+267f7bca-ae79-4066-9657-a42407f570a4,HCM-SANG-1089-C18,clinical.project-hcmi-cmdc.2026-01-07,67.5,male,,,,,,1.0,,1,hcmi_tcga
+272d4173-001c-4a7f-b221-34ea907aba5a,HCM-EXPT-0994-C25,clinical.project-hcmi-cmdc.2026-01-07,63.2,female,,,,,,,,1,hcmi_tcga
+27d256aa-9f73-47e0-8eec-7814c019bb45,HCM-CSHL-0806-C54,clinical.project-hcmi-cmdc.2026-01-07,74.9,female,not hispanic or latino,black or african american,162.5,64.0,24.0,1.0,,1,hcmi_tcga
+27e13777-6ed1-4411-a935-245ba6953cf5,HCM-CSHL-0079-C25,clinical.project-hcmi-cmdc.2026-01-07,75.9,male,,,170.0,64.0,22.0,1.0,,1,hcmi_tcga
+284c98af-cf5d-4f6a-9994-4d99a2ad8aeb,HCM-BROD-0873-C43,clinical.project-hcmi-cmdc.2026-01-07,66.8,male,not hispanic or latino,white,171.0,102.0,34.0,1.0,,1,hcmi_tcga
+288f90bf-43fc-40ef-b3fa-40f35ce0007e,HCM-BROD-0208-C16,clinical.project-hcmi-cmdc.2026-01-07,71.2,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+28dbcedb-a919-4fee-86a3-a3de2f0ce254,HCM-CSHL-0255-C18,clinical.project-hcmi-cmdc.2026-01-07,71.0,female,,,168.0,65.0,23.0,1.0,,1,hcmi_tcga
+28f77d34-e59d-4b80-8885-88d11c2ced74,HCM-CSHL-0727-C18,clinical.project-hcmi-cmdc.2026-01-07,63.1,female,not hispanic or latino,black or african american,180.0,115.0,35.5,1.0,,1,hcmi_tcga
+291bc57c-0163-4dae-8eab-afb756a565e6,HCM-SANG-0286-C20,clinical.project-hcmi-cmdc.2026-01-07,62.5,male,,,,,,1.0,,1,hcmi_tcga
+291dcbe0-c3cb-48ae-a988-b217fc840a5c,HCM-CSHL-0250-C50,clinical.project-hcmi-cmdc.2026-01-07,60.3,female,not hispanic or latino,white,160.0,78.01,31.0,1.0,,1,hcmi_tcga
+29730787-a20b-4957-8b5c-afc8a3e4a7db,HCM-SANG-0551-C18,clinical.project-hcmi-cmdc.2026-01-07,71.5,female,,,,,,1.0,,1,hcmi_tcga
+29df97f4-6e7e-48a0-a320-09df82fc0b81,HCM-SANG-0275-C18,clinical.project-hcmi-cmdc.2026-01-07,73.5,male,,,,,,1.0,,1,hcmi_tcga
+2a12f40c-d79a-4e24-a0f1-bf80a65c62d4,HCM-SANG-0543-C15,clinical.project-hcmi-cmdc.2026-01-07,61.5,male,,,,,,1.0,,1,hcmi_tcga
+2a40e945-95d5-4f4d-9865-b3dc2a27782c,HCM-BROD-0008-C25,clinical.project-hcmi-cmdc.2026-01-07,63.5,female,not hispanic or latino,white,154.3,48.9,20.0,1.0,,1,hcmi_tcga
+2ae5f389-df9b-46d8-8234-193bc40fe742,HCM-BROD-0475-C16,clinical.project-hcmi-cmdc.2026-01-07,35.4,male,,,,64.0,21.0,1.0,,1,hcmi_tcga
+2b1c768d-fbc5-4956-b834-dff3b3559e75,HCM-BROD-0411-C25,clinical.project-hcmi-cmdc.2026-01-07,81.7,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+2b746913-bcba-4374-a6a0-0350ff814041,HCM-BROD-0458-C15,clinical.project-hcmi-cmdc.2026-01-07,57.6,male,not hispanic or latino,white,170.0,69.0,23.9,1.0,,1,hcmi_tcga
+2b7832fe-682f-4bca-97ec-5f7bf6070e5f,HCM-CSHL-1269-C18,clinical.project-hcmi-cmdc.2026-01-07,49.4,female,,,155.0,64.0,27.0,1.0,,1,hcmi_tcga
+2bc89b05-ae9e-4c27-bfd6-e5c4c4845ff9,HCM-EXPT-1248-C15,clinical.project-hcmi-cmdc.2026-01-07,66.5,female,,,,,,1.0,,1,hcmi_tcga
+2bfe9b75-69d3-4794-a622-3e7244a97489,HCM-EXPT-0890-C25,clinical.project-hcmi-cmdc.2026-01-07,64.9,female,,,,,,,,1,hcmi_tcga
+2c0409da-a354-4e40-bb7c-442f454aca8b,HCM-BROD-0649-C49,clinical.project-hcmi-cmdc.2026-01-07,48.5,female,,,,,47.0,1.0,,1,hcmi_tcga
+2c636721-d11e-463e-8f77-a23501dd3d60,HCM-BROD-0209-C71,clinical.project-hcmi-cmdc.2026-01-07,41.8,male,hispanic or latino,white,173.0,70.8,23.7,1.0,,1,hcmi_tcga
+2cd10d26-8dc7-4e0c-a7f8-9cc0dee9543f,HCM-CSHL-0900-C54,clinical.project-hcmi-cmdc.2026-01-07,71.6,female,not hispanic or latino,black or african american,162.6,80.3,46.0,1.0,,1,hcmi_tcga
+2d0b1976-6a09-4623-a32c-eed22e944dbf,HCM-SANG-1307-C25,clinical.project-hcmi-cmdc.2026-01-07,53.5,female,,,,,,1.0,,1,hcmi_tcga
+2df05263-7905-463f-9a78-3ece600174e5,HCM-CSHL-0516-C56,clinical.project-hcmi-cmdc.2026-01-07,73.0,female,,,164.0,72.0,26.8,1.0,,1,hcmi_tcga
+2e54fb22-3161-4495-acf7-2a60ceda8fa5,HCM-SANG-1081-C20,clinical.project-hcmi-cmdc.2026-01-07,53.5,male,,,,,,1.0,,1,hcmi_tcga
+2ecaa554-37da-43ee-96be-66f274789929,HCM-SANG-0529-C18,clinical.project-hcmi-cmdc.2026-01-07,70.5,male,,,,,,1.0,,1,hcmi_tcga
+2f2f82b6-f842-46d6-b381-cd315e34f122,HCM-EXPT-1196-C18,clinical.project-hcmi-cmdc.2026-01-07,68.5,male,,,,,,1.0,,1,hcmi_tcga
+2f4e5472-9156-49ee-b663-baa481b30130,HCM-EXPT-0935-C50,clinical.project-hcmi-cmdc.2026-01-07,55.2,female,,,,,,,,1,hcmi_tcga
+2f644ec3-923d-41b0-8ab2-de0f74fe2bd8,HCM-BROD-0444-C43,clinical.project-hcmi-cmdc.2026-01-07,60.4,female,not hispanic or latino,white,163.0,62.0,23.3,1.0,,1,hcmi_tcga
+2fe77db2-e5c5-49e8-87c0-ba82521c17c5,HCM-BROD-0834-C43,clinical.project-hcmi-cmdc.2026-01-07,78.9,male,not hispanic or latino,white,172.0,78.0,27.0,1.0,,1,hcmi_tcga
+300223b2-7479-4849-8de5-14b30c586c3a,HCM-BROD-0254-C49,clinical.project-hcmi-cmdc.2026-01-07,11.9,male,not hispanic or latino,white,,,17.0,1.0,,1,hcmi_tcga
+3028393c-05be-4b06-a52e-46656a420fd2,HCM-EXPT-1233-C15,clinical.project-hcmi-cmdc.2026-01-07,67.5,female,,,,,,1.0,,1,hcmi_tcga
+307c905f-c276-4501-988a-b083f9462a98,HCM-BROD-0036-C41,clinical.project-hcmi-cmdc.2026-01-07,13.7,male,,white,,,21.0,1.0,,1,hcmi_tcga
+3092d72b-75b1-4ae2-ac38-d4c1cd377e4c,HCM-BROD-0002-C71,clinical.project-hcmi-cmdc.2026-01-07,66.3,male,not hispanic or latino,white,175.0,77.0,25.1,1.0,,1,hcmi_tcga
+30ad857e-34d5-4ae1-8ca1-e962d10d6440,HCM-CSHL-0459-C17,clinical.project-hcmi-cmdc.2026-01-07,57.4,male,not hispanic or latino,white,175.3,97.5,32.0,1.0,,1,hcmi_tcga
+30c7489c-dd72-4d6a-9371-6df76a072282,HCM-SANG-1338-C20,clinical.project-hcmi-cmdc.2026-01-07,64.5,female,,,,,,1.0,,1,hcmi_tcga
+30eb4b39-20c9-4d1c-8d87-ec84971943fc,HCM-BROD-0476-C56,clinical.project-hcmi-cmdc.2026-01-07,43.8,female,not hispanic or latino,white,162.0,54.0,20.6,1.0,,1,hcmi_tcga
+31d3630d-72f3-4cfa-9cd9-c48497075440,HCM-EXPT-0972-C50,clinical.project-hcmi-cmdc.2026-01-07,77.8,female,,,,,,,,1,hcmi_tcga
+31e8c099-f4f0-4736-b8a1-2baf7f8777c8,HCM-BROD-1121-C71,clinical.project-hcmi-cmdc.2026-01-07,69.5,female,not hispanic or latino,white,161.0,68.0,26.0,1.0,,1,hcmi_tcga
+325efd72-eaf4-4e85-80d0-911d360434d1,HCM-BROD-0870-C43,clinical.project-hcmi-cmdc.2026-01-07,50.3,female,not hispanic or latino,white,169.0,106.0,39.0,1.0,,1,hcmi_tcga
+33165ed4-5f38-4566-8d0d-82e2a6d2743f,HCM-BROD-0871-C49,clinical.project-hcmi-cmdc.2026-01-07,60.7,female,not hispanic or latino,white,,,18.0,1.0,,1,hcmi_tcga
+331b37c2-0a17-4078-8364-0df9ae026900,HCM-CSHL-1264-C25,clinical.project-hcmi-cmdc.2026-01-07,77.5,male,,,176.0,82.0,26.0,1.0,,1,hcmi_tcga
+337c0400-baff-494d-a790-03169ed1e547,HCM-STAN-1111-C19,clinical.project-hcmi-cmdc.2026-01-07,36.6,female,,,167.0,50.0,17.9,1.0,,1,hcmi_tcga
+345d11d3-7376-4a47-bcc2-cd6cf5c2ed0f,HCM-CSHL-0429-C06,clinical.project-hcmi-cmdc.2026-01-07,76.9,male,,,171.0,65.0,22.2,1.0,3.0,1,hcmi_tcga
+359ca5c2-0d00-4b88-be2d-476e6b4c02ef,HCM-BROD-0016-C25,clinical.project-hcmi-cmdc.2026-01-07,66.4,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+35a8dada-9a8b-4dd7-8565-e5e2c1e69958,HCM-BROD-0046-C71,clinical.project-hcmi-cmdc.2026-01-07,66.1,male,not hispanic or latino,white,182.5,77.7,23.3,1.0,,1,hcmi_tcga
+35e5f3ec-89ea-4859-914c-5995b7162a0d,HCM-SANG-1339-C18,clinical.project-hcmi-cmdc.2026-01-07,84.5,female,,,,,,1.0,,1,hcmi_tcga
+36a5d5b3-1a24-46ad-aa32-45d9ec0eaf3e,HCM-EXPT-1171-C71,clinical.project-hcmi-cmdc.2026-01-07,47.2,male,not hispanic or latino,white,,,,,,1,hcmi_tcga
+36a9ed92-cc75-4e39-ba21-afe93f3af7c2,HCM-CSHL-0622-C18,clinical.project-hcmi-cmdc.2026-01-07,78.3,female,,,185.0,60.0,18.0,1.0,,1,hcmi_tcga
+373c15fd-f995-419d-beef-951db2706411,HCM-CSHL-0085-C24,clinical.project-hcmi-cmdc.2026-01-07,56.0,male,,,175.0,70.0,23.0,1.0,,1,hcmi_tcga
+3762208b-fe46-400d-bec8-dd0301d5675d,HCM-EXPT-0580-C34,clinical.project-hcmi-cmdc.2026-01-07,72.3,male,not hispanic or latino,black or african american,172.7,68.0,23.0,1.0,80.0,1,hcmi_tcga
+37e1311a-a125-4ea8-9db1-1f1b14f87856,HCM-SANG-1327-C18,clinical.project-hcmi-cmdc.2026-01-07,64.5,female,,,,,,1.0,,1,hcmi_tcga
+38349235-a34c-4ced-a4a0-051090e47332,HCM-CSHL-0151-C50,clinical.project-hcmi-cmdc.2026-01-07,42.3,female,not hispanic or latino,black or african american,175.3,75.74,25.0,1.0,,1,hcmi_tcga
+3839c70c-c250-40af-a96a-4d5df8e3f700,HCM-EXPT-1047-C18,clinical.project-hcmi-cmdc.2026-01-07,63.8,male,,,,,,,,1,hcmi_tcga
+387a6f37-fe35-4ffc-a4b3-dda1af08f6c3,HCM-CSHL-0186-C25,clinical.project-hcmi-cmdc.2026-01-07,74.2,male,,,173.0,92.0,31.0,1.0,,1,hcmi_tcga
+388c484f-639a-448c-882e-2897f29e55b2,HCM-SANG-0288-C18,clinical.project-hcmi-cmdc.2026-01-07,75.5,male,,,,,,1.0,,1,hcmi_tcga
+38c90d30-b777-4ee3-935c-b169a8185c29,HCM-EXPT-1193-C15,clinical.project-hcmi-cmdc.2026-01-07,70.5,male,,,,,,1.0,,1,hcmi_tcga
+39aa41b3-af16-4ac0-aaab-49baf567e77c,HCM-BROD-0614-C71,clinical.project-hcmi-cmdc.2026-01-07,63.3,female,not hispanic or latino,white,174.0,76.0,25.0,1.0,,1,hcmi_tcga
+39ad1462-013d-460c-af44-c0b36ebb07a7,HCM-SANG-0545-C15,clinical.project-hcmi-cmdc.2026-01-07,72.5,female,,,,,,1.0,,1,hcmi_tcga
+3a37b417-9f45-4bd4-a545-f4084e7e68c2,HCM-BROD-0131-C25,clinical.project-hcmi-cmdc.2026-01-07,55.9,female,not hispanic or latino,,158.1,44.8,17.9,1.0,,1,hcmi_tcga
+3b013c00-dfc1-451e-aacc-be734f4b1c00,HCM-CSHL-0058-C34,clinical.project-hcmi-cmdc.2026-01-07,82.8,male,not hispanic or latino,white,180.0,91.6,28.0,1.0,50.0,1,hcmi_tcga
+3b348a82-127f-42ac-bc41-c55fdf8cac7a,HCM-CSHL-0080-C25,clinical.project-hcmi-cmdc.2026-01-07,60.9,female,,,160.0,51.0,20.0,1.0,,1,hcmi_tcga
+3b797720-33ef-45e0-9830-5f6007f1d5a7,HCM-CSHL-0060-C18,clinical.project-hcmi-cmdc.2026-01-07,50.8,male,not hispanic or latino,white,185.4,127.91,37.0,1.0,,1,hcmi_tcga
+3b84c894-91d7-4c3e-8f17-4d6adc8bb468,HCM-BROD-0339-C43,clinical.project-hcmi-cmdc.2026-01-07,36.3,male,not hispanic or latino,white,173.0,105.0,35.0,1.0,,1,hcmi_tcga
+3bf3c1c9-413a-4013-8577-b7338a15c4f4,HCM-BROD-1100-C84,clinical.project-hcmi-cmdc.2026-01-07,75.7,male,,white,181.0,83.0,25.3,1.0,,1,hcmi_tcga
+3d06ca77-a9a1-4e52-9b3d-a6f4f98167d6,HCM-BROD-0052-C49,clinical.project-hcmi-cmdc.2026-01-07,25.9,female,not hispanic or latino,white,,,25.0,1.0,,1,hcmi_tcga
+3d5a921b-fb6c-41fe-84f4-7d9127629e98,HCM-EXPT-1201-C20,clinical.project-hcmi-cmdc.2026-01-07,81.5,female,,,,,,1.0,,1,hcmi_tcga
+3dab73f4-1fd2-440d-a194-4368818ee701,HCM-SANG-0280-C18,clinical.project-hcmi-cmdc.2026-01-07,71.5,male,,,,,,1.0,,1,hcmi_tcga
+3e296517-6c60-4f65-ab54-98b1753ed39c,HCM-CSHL-0803-C54,clinical.project-hcmi-cmdc.2026-01-07,64.2,female,not hispanic or latino,black or african american,167.9,100.2,35.0,1.0,,1,hcmi_tcga
+3f30f072-f7c8-4737-afab-e0e29d6fb093,HCM-EXPT-1049-C50,clinical.project-hcmi-cmdc.2026-01-07,51.2,female,,,,,,,,1,hcmi_tcga
+3faa062f-758e-4c76-91ec-a8566dded5c2,HCM-SANG-0313-C15,clinical.project-hcmi-cmdc.2026-01-07,71.5,male,,,,,,1.0,,1,hcmi_tcga
+40357899-a869-431e-8f60-20a7c69522ae,HCM-EXPT-1212-C25,clinical.project-hcmi-cmdc.2026-01-07,63.5,male,,,,,,1.0,,1,hcmi_tcga
+40520215-88c6-4cab-8f58-af3936a8faba,HCM-SANG-0306-C15,clinical.project-hcmi-cmdc.2026-01-07,68.5,female,,,,,,1.0,,1,hcmi_tcga
+41537847-e29c-446a-b83b-ef0bb5085c75,HCM-BROD-0112-C25,clinical.project-hcmi-cmdc.2026-01-07,76.6,female,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+427b401b-b73a-450d-ad99-028033c6aa54,HCM-BROD-0690-C43,clinical.project-hcmi-cmdc.2026-01-07,33.9,male,not hispanic or latino,white,185.0,73.0,21.3,1.0,,1,hcmi_tcga
+42d1a293-4c3b-496b-92b5-7482c8020751,HCM-BROD-0025-C16,clinical.project-hcmi-cmdc.2026-01-07,73.7,male,,white,,,,1.0,,1,hcmi_tcga
+42f8ece8-70dc-48b8-a9ec-28dc218a735a,HCM-BROD-1104-C85,clinical.project-hcmi-cmdc.2026-01-07,64.7,male,,white,177.0,113.0,36.0,1.0,,1,hcmi_tcga
+4362ae25-19a3-4d5c-b608-af73414f1aa3,HCM-SANG-0528-C25,clinical.project-hcmi-cmdc.2026-01-07,77.5,female,,,,,,1.0,,1,hcmi_tcga
+43c1f1bf-953f-4fe9-9756-f747c55232e5,HCM-EXPT-1005-C25,clinical.project-hcmi-cmdc.2026-01-07,76.5,female,,,,,,,,1,hcmi_tcga
+43cf7159-9c43-4a01-91ef-ca5df26acfca,HCM-SANG-0298-C15,clinical.project-hcmi-cmdc.2026-01-07,77.5,male,,,,,,1.0,,1,hcmi_tcga
+43e0c10d-9f88-4715-b476-9ce8f9f8f421,HCM-CSHL-1267-C22,clinical.project-hcmi-cmdc.2026-01-07,77.3,male,,,170.0,75.0,26.0,1.0,,1,hcmi_tcga
+44025d79-fb5a-4fc5-b5ed-8db867df9893,HCM-EXPT-1056-C50,clinical.project-hcmi-cmdc.2026-01-07,82.2,female,,,,,,,,1,hcmi_tcga
+45ae5a7e-95c8-453c-bd9d-446cd0f3734e,HCM-BROD-0703-C16,clinical.project-hcmi-cmdc.2026-01-07,53.3,female,hispanic or latino,,144.0,58.0,28.0,1.0,,1,hcmi_tcga
+45f60f6f-3ee8-4da5-b3de-bd5e29b25198,HCM-BROD-0138-C25,clinical.project-hcmi-cmdc.2026-01-07,66.5,male,not hispanic or latino,white,168.0,87.0,30.8,1.0,,1,hcmi_tcga
+4677f7c1-8953-4f64-8722-4574f1a8ebef,HCM-EXPT-1011-C50,clinical.project-hcmi-cmdc.2026-01-07,45.1,female,,,,,,,,1,hcmi_tcga
+46b1210c-4042-4c67-9e68-06e960f201f2,HCM-BROD-0051-C64,clinical.project-hcmi-cmdc.2026-01-07,2.6,male,not hispanic or latino,white,,,17.0,1.0,,1,hcmi_tcga
+47322ea3-6bbe-442b-a656-c48469cc99c1,HCM-BROD-0335-C43,clinical.project-hcmi-cmdc.2026-01-07,61.7,male,not hispanic or latino,white,190.0,148.0,41.0,1.0,,1,hcmi_tcga
+4770c370-5846-49af-bafb-e49229ca2319,HCM-CSHL-0318-C18,clinical.project-hcmi-cmdc.2026-01-07,52.0,male,,,187.0,89.0,25.5,1.0,,1,hcmi_tcga
+4776d0d4-489f-4fb4-9ab3-03d6790baa66,HCM-BROD-0683-C43,clinical.project-hcmi-cmdc.2026-01-07,55.0,male,not hispanic or latino,white,174.0,110.0,36.3,1.0,,1,hcmi_tcga
+4829dd8c-5445-41b3-ae37-bbcc333e8c9e,HCM-BROD-0001-C18,clinical.project-hcmi-cmdc.2026-01-07,47.4,female,,white,165.0,79.8,29.3,1.0,,1,hcmi_tcga
+482c0ee1-5046-4fc7-b284-57923228ca23,HCM-WCMC-0751-C54,clinical.project-hcmi-cmdc.2026-01-07,54.6,female,,,160.0,53.1,21.0,1.0,,1,hcmi_tcga
+489ae53c-0c19-433b-b22d-8dc09f2161be,HCM-CSHL-0180-C25,clinical.project-hcmi-cmdc.2026-01-07,64.0,female,,,162.0,70.0,27.0,1.0,,1,hcmi_tcga
+491159e8-4599-4dec-a05c-1d35dc6f3d05,HCM-CSHL-0601-C25,clinical.project-hcmi-cmdc.2026-01-07,61.2,female,,,155.0,42.0,17.0,1.0,,1,hcmi_tcga
+496a0dcf-431a-467a-a150-5c7486d72bee,HCM-CSHL-0155-C50,clinical.project-hcmi-cmdc.2026-01-07,49.0,female,not hispanic or latino,asian,154.9,63.5,26.0,1.0,,1,hcmi_tcga
+49ad0220-8d59-4277-a174-011677a80f69,HCM-CSHL-0810-C54,clinical.project-hcmi-cmdc.2026-01-07,60.3,female,not hispanic or latino,black or african american,172.7,86.2,28.9,1.0,,1,hcmi_tcga
+49c761f2-8804-41ac-ad2f-93ba8a2a6ef5,HCM-SANG-1084-C15,clinical.project-hcmi-cmdc.2026-01-07,61.5,male,,,,,,1.0,,1,hcmi_tcga
+49c7df8f-26db-4e9c-9f9b-8f1a515df3b5,HCM-BROD-0953-C34,clinical.project-hcmi-cmdc.2026-01-07,61.4,male,not hispanic or latino,white,170.0,54.0,18.7,1.0,1.0,1,hcmi_tcga
+4a10a586-64ab-4136-8dba-0545589772cd,HCM-SANG-1090-C18,clinical.project-hcmi-cmdc.2026-01-07,57.5,female,,,,,,1.0,,1,hcmi_tcga
+4a10c499-7f11-49dc-b865-b6cbaf5b1df7,HCM-CSHL-0639-C56,clinical.project-hcmi-cmdc.2026-01-07,75.9,female,,,176.0,78.0,25.2,1.0,,1,hcmi_tcga
+4adcfafe-8330-4064-b0c7-f197d6a2cf99,HCM-EXPT-1170-C43,clinical.project-hcmi-cmdc.2026-01-07,40.6,male,,white,,,,,,1,hcmi_tcga
+4b9b3130-2483-4e5d-8c4d-e225590a5cd2,HCM-BROD-0048-C71,clinical.project-hcmi-cmdc.2026-01-07,66.2,male,,,,80.4,,1.0,,1,hcmi_tcga
+4ba45a91-c521-42cc-b2c5-8c4d04444d22,HCM-BROD-0488-C16,clinical.project-hcmi-cmdc.2026-01-07,65.5,male,,white,,61.0,21.0,1.0,,1,hcmi_tcga
+4c36a726-10fd-4311-b523-27714fd22bf5,HCM-CSHL-0881-C20,clinical.project-hcmi-cmdc.2026-01-07,64.6,female,not hispanic or latino,black or african american,165.0,75.2,28.0,1.0,,1,hcmi_tcga
+4c48e9c9-5f8f-43e2-a972-367b260b40eb,HCM-CSHL-0179-C25,clinical.project-hcmi-cmdc.2026-01-07,60.3,female,,,165.0,80.0,29.0,1.0,,1,hcmi_tcga
+4cc88877-69b3-4f86-9074-3bc6b23d5c94,HCM-EXPT-1017-C34,clinical.project-hcmi-cmdc.2026-01-07,82.5,male,,,,,,,,1,hcmi_tcga
+4d4cc629-2f04-4688-a396-a3c30ca27886,HCM-SANG-0541-C20,clinical.project-hcmi-cmdc.2026-01-07,72.5,male,,,,,,1.0,,1,hcmi_tcga
+4e3d5c85-6a93-4421-8ae6-de4826abdcb5,HCM-BROD-0715-C43,clinical.project-hcmi-cmdc.2026-01-07,35.3,male,not hispanic or latino,white,188.0,121.0,34.2,1.0,,1,hcmi_tcga
+4e727a6a-72b0-447c-9fa4-0f81f0736562,HCM-CSHL-0383-C18,clinical.project-hcmi-cmdc.2026-01-07,51.4,male,not hispanic or latino,white,182.9,72.6,22.0,1.0,,1,hcmi_tcga
+4e828c35-5fc3-40af-a2ee-10b4281c77b8,HCM-BROD-0569-C43,clinical.project-hcmi-cmdc.2026-01-07,78.3,female,not hispanic or latino,white,167.0,82.0,30.0,1.0,,1,hcmi_tcga
+4e99c213-bf46-4b46-a85c-653bae172b0e,HCM-EXPT-1247-C18,clinical.project-hcmi-cmdc.2026-01-07,63.5,female,,,,,,1.0,,1,hcmi_tcga
+4ebd9b62-4c82-412e-b022-c1cea0ff8bd8,HCM-EXPT-1258-C20,clinical.project-hcmi-cmdc.2026-01-07,72.5,female,,,,,,1.0,,1,hcmi_tcga
+4eea6e7d-a49d-49c5-b849-48665b79548b,HCM-CSHL-0462-D05,clinical.project-hcmi-cmdc.2026-01-07,49.1,female,not hispanic or latino,white,165.1,129.3,47.0,1.0,,1,hcmi_tcga
+4f86f0ad-83af-45fb-8579-16cf09f4de2f,HCM-BROD-0140-C16,clinical.project-hcmi-cmdc.2026-01-07,83.5,female,,white,,,,1.0,,1,hcmi_tcga
+4fc3862d-16a0-459b-a0b4-7f9edd6dd087,HCM-CSHL-0189-C25,clinical.project-hcmi-cmdc.2026-01-07,63.9,male,,,186.0,104.0,30.0,1.0,,1,hcmi_tcga
+5029f6b9-2698-47af-b309-929888fe8263,HCM-EXPT-1220-C18,clinical.project-hcmi-cmdc.2026-01-07,82.5,female,,,,,,1.0,,1,hcmi_tcga
+5070731d-6f96-4824-bb25-2f21750c8864,HCM-EXPT-0982-C50,clinical.project-hcmi-cmdc.2026-01-07,62.7,female,,,,,,,,1,hcmi_tcga
+50854c28-2457-4b22-98a9-50d4b7c66701,HCM-SANG-1085-C20,clinical.project-hcmi-cmdc.2026-01-07,70.5,male,,,,,,1.0,,1,hcmi_tcga
+509a9942-11da-479b-b38a-2ca2a30b5134,HCM-BROD-0762-C49,clinical.project-hcmi-cmdc.2026-01-07,15.9,female,,,,,20.0,1.0,,1,hcmi_tcga
+50d40aee-8e5d-4094-81e3-46c1bcb85abf,HCM-CSHL-0800-C67,clinical.project-hcmi-cmdc.2026-01-07,62.0,male,,,176.0,77.0,24.9,1.0,,1,hcmi_tcga
+50d99ee7-b965-4211-9a4e-b857f4775208,HCM-BROD-0685-C71,clinical.project-hcmi-cmdc.2026-01-07,69.8,male,not hispanic or latino,white,162.0,66.0,25.0,1.0,,1,hcmi_tcga
+511b885f-5e6d-4d7c-a08a-8dda5d042b4e,HCM-BROD-1119-C43,clinical.project-hcmi-cmdc.2026-01-07,72.0,male,not hispanic or latino,white,180.0,73.0,23.0,1.0,,1,hcmi_tcga
+51b83c83-b639-424b-a023-fd5fe7c2f4b5,HCM-BROD-0196-C71,clinical.project-hcmi-cmdc.2026-01-07,59.9,male,not hispanic or latino,white,169.7,96.8,33.6,1.0,,1,hcmi_tcga
+520e3648-4760-404e-ab5a-21edcbe07650,HCM-EXPT-1033-C50,clinical.project-hcmi-cmdc.2026-01-07,50.6,female,,,,,,,,1,hcmi_tcga
+5251a533-866b-4056-8082-b88d0915f9c8,HCM-EXPT-0886-C25,clinical.project-hcmi-cmdc.2026-01-07,53.6,male,,,,,,,,1,hcmi_tcga
+5314a3fc-6129-4d68-89f5-1084bfd0442d,HCM-EXPT-1039-C34,clinical.project-hcmi-cmdc.2026-01-07,76.0,male,,,,,,,,1,hcmi_tcga
+53159c56-0604-455c-8efc-db9cdaa7642c,HCM-BROD-0230-C25,clinical.project-hcmi-cmdc.2026-01-07,83.0,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+53ad2260-7dae-45c8-8455-20a48535cd28,HCM-EXPT-0931-C50,clinical.project-hcmi-cmdc.2026-01-07,86.2,female,,,,,,,,1,hcmi_tcga
+5426912c-da56-46dd-b00c-dedb7d5c89cc,HCM-CSHL-0181-C25,clinical.project-hcmi-cmdc.2026-01-07,60.0,female,,,172.0,85.0,29.0,1.0,,1,hcmi_tcga
+54722e41-2feb-4c8a-b29f-3780da916e49,HCM-SANG-0267-D12,clinical.project-hcmi-cmdc.2026-01-07,63.5,male,,,,,,1.0,,1,hcmi_tcga
+547967e5-7452-439b-a60a-a2526f0ac2cb,HCM-EXPT-1064-C18,clinical.project-hcmi-cmdc.2026-01-07,76.6,male,,,,,,,,1,hcmi_tcga
+551f7d70-23b0-4deb-8a8e-b063457fb435,HCM-EXPT-1239-C18,clinical.project-hcmi-cmdc.2026-01-07,84.5,female,,,,,,1.0,,1,hcmi_tcga
+5538445e-03c2-4466-a09a-83d5a527b26e,HCM-WCMC-1074-C56,clinical.project-hcmi-cmdc.2026-01-07,72.9,female,not hispanic or latino,white,153.0,56.7,24.0,1.0,,1,hcmi_tcga
+55c66900-a14d-4bb7-9071-7c0feaecabfe,HCM-EXPT-1054-C50,clinical.project-hcmi-cmdc.2026-01-07,58.6,female,,,,,,,,1,hcmi_tcga
+561a4c46-ca78-444f-8346-c30daa041d27,HCM-CSHL-0861-C25,clinical.project-hcmi-cmdc.2026-01-07,65.8,male,,,165.0,62.0,23.0,1.0,,1,hcmi_tcga
+56a4bd00-b687-4869-9966-25a6caef8ced,HCM-EXPT-1252-C18,clinical.project-hcmi-cmdc.2026-01-07,74.5,male,,,,,,1.0,,1,hcmi_tcga
+56c07b06-c6d3-4c03-9e57-7be636e7cc5c,HCM-BROD-0027-C34,clinical.project-hcmi-cmdc.2026-01-07,65.4,female,not hispanic or latino,white,162.0,77.0,29.3,1.0,50.0,1,hcmi_tcga
+5739bcf8-92f0-406a-b4ee-45b6b989bdb5,HCM-CSHL-0174-C22,clinical.project-hcmi-cmdc.2026-01-07,64.9,female,,,153.0,50.0,21.0,1.0,,1,hcmi_tcga
+575844b7-cfa1-406a-b0dd-d55cf9fff978,HCM-BROD-0791-C43,clinical.project-hcmi-cmdc.2026-01-07,61.0,male,not hispanic or latino,white,176.0,68.0,19.0,1.0,,1,hcmi_tcga
+57c28338-4fbb-47ab-94a0-c9988a650cda,HCM-WCMC-0753-C54,clinical.project-hcmi-cmdc.2026-01-07,53.2,female,,,152.4,78.7,34.0,1.0,,1,hcmi_tcga
+57eaeb64-3172-4f2b-bc38-33d703ded1f6,HCM-EXPT-1205-C18,clinical.project-hcmi-cmdc.2026-01-07,55.5,male,,,,,,1.0,,1,hcmi_tcga
+585787a1-db13-4dbf-bfaa-8268381afa62,HCM-SANG-0548-C25,clinical.project-hcmi-cmdc.2026-01-07,76.5,female,,,,,,1.0,,1,hcmi_tcga
+5868f125-ca3b-4b98-85ea-64f0ea5b45da,HCM-CSHL-0582-C18,clinical.project-hcmi-cmdc.2026-01-07,56.2,male,hispanic or latino,white,173.0,155.0,52.0,1.0,,1,hcmi_tcga
+58c8d6cf-e866-4991-b2c0-04f7bf5f71bd,HCM-CSHL-0808-C55,clinical.project-hcmi-cmdc.2026-01-07,74.0,female,not hispanic or latino,asian,162.6,55.33,20.9,1.0,,1,hcmi_tcga
+58f3fa31-4c91-4fce-9807-afdd200cc194,HCM-SANG-1333-C20,clinical.project-hcmi-cmdc.2026-01-07,57.5,male,,,,,,1.0,,1,hcmi_tcga
+5a4beafc-8663-4456-a999-77721f072f44,HCM-EXPT-0937-C50,clinical.project-hcmi-cmdc.2026-01-07,38.9,female,,,,,,,,1,hcmi_tcga
+5c09c5da-e995-49df-be9e-16ca3388771e,HCM-CSHL-0823-C34,clinical.project-hcmi-cmdc.2026-01-07,62.8,male,not hispanic or latino,asian,162.6,58.0,22.0,1.0,40.0,1,hcmi_tcga
+5c2bff0f-0e8e-4d98-83c5-0d9ab866241a,HCM-BROD-0019-C25,clinical.project-hcmi-cmdc.2026-01-07,80.6,male,not hispanic or latino,white,164.2,80.8,30.0,1.0,,1,hcmi_tcga
+5c4d59f0-c31f-407d-b407-4c075061625a,HCM-EXPT-1213-C20,clinical.project-hcmi-cmdc.2026-01-07,56.5,male,,,,,,1.0,,1,hcmi_tcga
+5c5ef9c4-5896-4553-bbbd-afe4e4b52a6a,HCM-BROD-0214-C71,clinical.project-hcmi-cmdc.2026-01-07,43.4,female,not hispanic or latino,white,163.0,56.0,21.1,1.0,,1,hcmi_tcga
+5d27f395-e77f-46af-baf1-4ac783449f52,HCM-CSHL-0603-C18,clinical.project-hcmi-cmdc.2026-01-07,69.7,male,,,171.0,76.0,26.0,1.0,,1,hcmi_tcga
+5d47d75b-1c71-4864-a2d9-b7f55967c6f4,HCM-BROD-0010-C25,clinical.project-hcmi-cmdc.2026-01-07,53.9,female,not hispanic or latino,white,161.4,77.4,29.0,1.0,,1,hcmi_tcga
+5d62edfc-03c7-4545-91b1-9ad3abfcfeb8,HCM-BROD-0053-C49,clinical.project-hcmi-cmdc.2026-01-07,16.0,female,not hispanic or latino,white,,,22.0,1.0,,1,hcmi_tcga
+5dc3e355-af0d-414e-a612-caa7e75d7614,HCM-SANG-1328-C15,clinical.project-hcmi-cmdc.2026-01-07,79.5,male,,,,,,1.0,,1,hcmi_tcga
+5e2f613c-4a63-44da-b367-329c9245a762,HCM-BROD-1099-C84,clinical.project-hcmi-cmdc.2026-01-07,43.0,female,not hispanic or latino,,160.0,80.0,25.0,1.0,,1,hcmi_tcga
+5e44aad4-b3e9-4007-9983-e41188b749c9,HCM-WCMC-0675-C67,clinical.project-hcmi-cmdc.2026-01-07,76.3,male,not hispanic or latino,white,185.4,93.4,27.0,1.0,,1,hcmi_tcga
+5e5684d2-14b0-4823-9956-d69aea6d6beb,HCM-BROD-0014-C71,clinical.project-hcmi-cmdc.2026-01-07,68.3,male,not hispanic or latino,white,177.8,81.4,25.8,1.0,,1,hcmi_tcga
+5ea6bd70-feef-407b-8b88-55fcb2695e7d,HCM-BROD-0129-C25,clinical.project-hcmi-cmdc.2026-01-07,76.0,female,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+5ec86383-f228-4987-a10a-214a603932f8,HCM-BROD-0611-C71,clinical.project-hcmi-cmdc.2026-01-07,57.5,female,not hispanic or latino,white,,,31.0,1.0,,1,hcmi_tcga
+5f82427a-1859-4a47-b6ca-e377784d99d4,HCM-EXPT-0942-C50,clinical.project-hcmi-cmdc.2026-01-07,74.3,female,,,,,,,,1,hcmi_tcga
+5f93dc35-0917-4206-bc5f-8903db299abc,HCM-SANG-1315-C18,clinical.project-hcmi-cmdc.2026-01-07,61.5,female,,,,,,1.0,,1,hcmi_tcga
+5fd76dd8-87e1-422d-bac2-63e447ca3ba4,HCM-BROD-0958-C56,clinical.project-hcmi-cmdc.2026-01-07,62.8,female,not hispanic or latino,asian,160.0,68.0,27.0,1.0,,1,hcmi_tcga
+603035e9-eef7-490a-a102-af4eb005fb73,HCM-WCMC-0671-C18,clinical.project-hcmi-cmdc.2026-01-07,47.4,female,,white,172.7,59.0,20.0,1.0,,1,hcmi_tcga
+6058fb8d-eb5d-4dbc-b939-7e92c7cd2776,HCM-CSHL-0164-C20,clinical.project-hcmi-cmdc.2026-01-07,51.5,female,not hispanic or latino,black or african american,160.0,68.03,27.0,1.0,,1,hcmi_tcga
+605c869d-61cf-4801-826e-a6149f14be49,HCM-EXPT-1208-C20,clinical.project-hcmi-cmdc.2026-01-07,68.5,male,,,,,,1.0,,1,hcmi_tcga
+6113f817-ab45-4d67-9050-92e24cb69669,HCM-EXPT-1197-C18,clinical.project-hcmi-cmdc.2026-01-07,54.5,female,,,,,,1.0,,1,hcmi_tcga
+612e9381-a24f-49cb-8d48-1f4e1b90f64c,HCM-SANG-1329-C15,clinical.project-hcmi-cmdc.2026-01-07,46.5,male,,,,,,1.0,,1,hcmi_tcga
+6135448b-e32a-4836-8355-b00036503577,HCM-CSHL-0773-C50,clinical.project-hcmi-cmdc.2026-01-07,62.3,female,not hispanic or latino,white,165.1,81.6,30.0,1.0,,1,hcmi_tcga
+6199d20e-91c3-4ebb-9f87-16777ab803d6,HCM-WCMC-1359-C34,clinical.project-hcmi-cmdc.2026-01-07,60.5,male,hispanic or latino,,180.3,90.3,28.0,1.0,40.0,1,hcmi_tcga
+6223b52d-1861-4c93-82ab-db79e117fbbc,HCM-EXPT-1249-C18,clinical.project-hcmi-cmdc.2026-01-07,61.5,female,,,,,,1.0,,1,hcmi_tcga
+623abf17-efbf-4433-86e9-0089601de5c0,HCM-BROD-0478-C16,clinical.project-hcmi-cmdc.2026-01-07,61.8,male,not hispanic or latino,asian,167.0,69.0,24.7,1.0,,1,hcmi_tcga
+63653137-c694-4ad6-83a3-eaaff1df2ca7,HCM-BROD-0004-C64,clinical.project-hcmi-cmdc.2026-01-07,3.6,female,not hispanic or latino,white,,,16.0,1.0,,1,hcmi_tcga
+6375cc59-6cd1-4b1e-8de1-510841c3bebd,HCM-BROD-0028-C71,clinical.project-hcmi-cmdc.2026-01-07,58.9,female,not hispanic or latino,white,175.3,66.7,21.7,1.0,,1,hcmi_tcga
+6380f4ca-f7ca-41ee-90ed-54403bed84f6,HCM-CSHL-0510-D13,clinical.project-hcmi-cmdc.2026-01-07,59.1,female,,,159.0,46.0,18.0,1.0,,1,hcmi_tcga
+6382c82d-dffb-4f43-8fb2-1d0ec187363e,HCM-CSHL-0623-C18,clinical.project-hcmi-cmdc.2026-01-07,47.6,male,,,182.0,75.0,23.0,1.0,,1,hcmi_tcga
+6397deca-2bff-4c0a-a8c1-1b8c14bddabe,HCM-SANG-0270-C20,clinical.project-hcmi-cmdc.2026-01-07,59.5,female,,,,,,1.0,,1,hcmi_tcga
+63bb50c3-9857-4c9b-a765-7227943e070c,HCM-EXPT-1228-C18,clinical.project-hcmi-cmdc.2026-01-07,72.5,female,,,,,,1.0,,1,hcmi_tcga
+63e7cf10-56ac-40c9-90b0-e78a99af789a,HCM-EXPT-1040-C50,clinical.project-hcmi-cmdc.2026-01-07,54.6,female,,,,,,,,1,hcmi_tcga
+64a54aa5-ce7c-4002-87f8-3b61f912104a,HCM-CSHL-0088-C25,clinical.project-hcmi-cmdc.2026-01-07,75.4,male,,,165.0,64.0,24.0,1.0,,1,hcmi_tcga
+64fbbfbe-8749-4b31-8ee6-ef711518fa66,HCM-BROD-0710-C43,clinical.project-hcmi-cmdc.2026-01-07,70.1,female,not hispanic or latino,white,164.0,63.0,23.0,1.0,,1,hcmi_tcga
+653a556f-c127-421d-8118-4bf98929fe53,HCM-CSHL-0078-C25,clinical.project-hcmi-cmdc.2026-01-07,72.6,male,,,171.0,81.0,28.0,1.0,,1,hcmi_tcga
+6548cb23-ee55-47c2-811a-156a090fbaee,HCM-CSHL-0076-C25,clinical.project-hcmi-cmdc.2026-01-07,74.8,female,,,165.0,76.5,28.0,1.0,,1,hcmi_tcga
+662665d0-31b6-4a71-ab27-1190365cf856,HCM-BROD-0101-C15,clinical.project-hcmi-cmdc.2026-01-07,64.0,male,,white,,,,1.0,,1,hcmi_tcga
+66a63a36-0422-4834-ac11-63e8eafed6d9,HCM-EXPT-1059-C50,clinical.project-hcmi-cmdc.2026-01-07,66.6,female,,,,,,,,1,hcmi_tcga
+66f2f8d4-f8e2-4bb6-93e1-3edd7c5a3b48,HCM-CSHL-0655-C50,clinical.project-hcmi-cmdc.2026-01-07,83.4,female,not hispanic or latino,black or african american,157.5,69.4,28.0,1.0,,1,hcmi_tcga
+6767fba3-9c1f-4df7-9f2b-2461d8f99d51,HCM-CSHL-0243-C18,clinical.project-hcmi-cmdc.2026-01-07,71.9,male,not hispanic or latino,white,177.8,95.3,30.0,1.0,,1,hcmi_tcga
+6784de63-5d64-4203-9e17-336202359820,HCM-STAN-1277-C55,clinical.project-hcmi-cmdc.2026-01-07,67.9,female,not hispanic or latino,,168.0,96.0,34.0,1.0,,1,hcmi_tcga
+6796ddd8-0295-4965-911c-d4ad67232d13,HCM-CSHL-0091-C25,clinical.project-hcmi-cmdc.2026-01-07,63.1,female,,,167.0,78.0,28.0,1.0,,1,hcmi_tcga
+67e3c17e-e524-4681-8162-99742c802256,HCM-CSHL-0238-C18,clinical.project-hcmi-cmdc.2026-01-07,71.8,male,hispanic or latino,white,165.1,86.2,32.0,1.0,,1,hcmi_tcga
+6816430e-41fe-4c8b-b56d-125efc074b3a,HCM-EXPT-1041-C18,clinical.project-hcmi-cmdc.2026-01-07,83.1,female,,,,,,,,1,hcmi_tcga
+6837697e-c58e-45f2-8f07-7b3ba9d7a8de,HCM-EXPT-0888-C25,clinical.project-hcmi-cmdc.2026-01-07,70.1,female,,,,,,,,1,hcmi_tcga
+685b40df-128b-406b-b253-baa413fd43eb,HCM-EXPT-1256-C15,clinical.project-hcmi-cmdc.2026-01-07,72.5,male,,,,,,1.0,,1,hcmi_tcga
+68fda2a7-baf4-4bba-90ff-9ebd35b71a4b,HCM-CSHL-0372-C25,clinical.project-hcmi-cmdc.2026-01-07,70.2,female,,,150.0,67.0,30.0,1.0,,1,hcmi_tcga
+692d8c0b-9657-403a-8d93-b0fd6ce8d0f0,HCM-EXPT-1044-C50,clinical.project-hcmi-cmdc.2026-01-07,73.6,female,,,,,,,,1,hcmi_tcga
+69b4a2cd-dc6f-4413-bdb4-b6f44ff8677f,HCM-CSHL-0371-C25,clinical.project-hcmi-cmdc.2026-01-07,75.0,female,,,160.0,54.0,21.0,1.0,,1,hcmi_tcga
+69eced5b-1e76-45c9-bc9c-2aa71a921c57,HCM-BROD-0011-C71,clinical.project-hcmi-cmdc.2026-01-07,54.7,male,not hispanic or latino,white,174.0,91.5,30.2,1.0,,1,hcmi_tcga
+6a5157d6-cdb8-42e1-ab48-6d354be62b44,HCM-SANG-0539-C18,clinical.project-hcmi-cmdc.2026-01-07,63.5,female,,,,,,1.0,,1,hcmi_tcga
+6a8427ec-14cc-4168-a536-12c8ad27ba89,HCM-CSHL-0093-C25,clinical.project-hcmi-cmdc.2026-01-07,71.0,female,,,150.0,65.0,29.0,1.0,,1,hcmi_tcga
+6a9d7152-bc4b-4137-ada9-5b8a50121482,HCM-BROD-0013-C71,clinical.project-hcmi-cmdc.2026-01-07,59.8,female,not hispanic or latino,white,160.0,72.4,28.1,1.0,,1,hcmi_tcga
+6ae8e01b-bcff-44c1-ad03-b354aae0d7d5,HCM-BROD-0236-C34,clinical.project-hcmi-cmdc.2026-01-07,48.4,male,not hispanic or latino,white,180.0,67.0,20.7,1.0,,1,hcmi_tcga
+6b69e46e-41af-4709-a04a-74474f32ba34,HCM-CSHL-0857-C19,clinical.project-hcmi-cmdc.2026-01-07,71.9,male,,,176.0,70.0,23.0,1.0,,1,hcmi_tcga
+6bbc3ea9-7cd3-4526-9d1e-bacab5b50d42,HCM-CSHL-1097-C18,clinical.project-hcmi-cmdc.2026-01-07,58.3,female,not hispanic or latino,white,165.1,71.2,26.0,1.0,,1,hcmi_tcga
+6bcd339d-a1fb-469e-aab7-9621ede29188,HCM-CSHL-0736-C18,clinical.project-hcmi-cmdc.2026-01-07,44.1,female,not hispanic or latino,black or african american,167.6,81.6,29.0,1.0,,1,hcmi_tcga
+6c31694d-800f-4d63-89f5-25e47393836c,HCM-EXPT-0991-C18,clinical.project-hcmi-cmdc.2026-01-07,66.7,male,,,,,,,,1,hcmi_tcga
+6cb73e78-c352-4fed-b206-5eabc02a5045,HCM-CSHL-0657-C25,clinical.project-hcmi-cmdc.2026-01-07,46.5,male,,american indian or alaska native,172.7,86.2,30.0,1.0,,1,hcmi_tcga
+6cf32442-8c7e-4681-a098-2aef3592e33a,HCM-EXPT-0989-C34,clinical.project-hcmi-cmdc.2026-01-07,82.7,male,,,,,,,,1,hcmi_tcga
+6cfb3fbb-7dae-4626-8977-a53b2097c576,HCM-EXPT-1014-C50,clinical.project-hcmi-cmdc.2026-01-07,82.3,female,,,,,,,,1,hcmi_tcga
+6d0825eb-bac2-45be-9f2a-58f6bacba2ef,HCM-SANG-0295-C15,clinical.project-hcmi-cmdc.2026-01-07,51.5,female,,,,,,1.0,,1,hcmi_tcga
+6ded7d89-1235-4b52-90aa-52c57c669301,HCM-BROD-0557-C43,clinical.project-hcmi-cmdc.2026-01-07,31.6,male,not hispanic or latino,white,175.0,132.0,43.0,1.0,,1,hcmi_tcga
+6df83b7c-a2f4-462c-bf4e-91423fda6553,HCM-EXPT-1234-C20,clinical.project-hcmi-cmdc.2026-01-07,73.5,female,,,,,,1.0,,1,hcmi_tcga
+6e3a1f73-d16b-4dc8-acc2-ae452eec1bbd,HCM-CSHL-0405-C25,clinical.project-hcmi-cmdc.2026-01-07,48.3,male,not hispanic or latino,black or african american,182.9,122.5,37.0,1.0,,1,hcmi_tcga
+6e757d59-1eb2-4f38-b662-f3f543ba5844,HCM-WCMC-0491-C16,clinical.project-hcmi-cmdc.2026-01-07,66.0,male,not hispanic or latino,black or african american,,91.6,26.0,1.0,,1,hcmi_tcga
+6ea6550b-389d-416f-ab43-f532c5afcc94,HCM-CSHL-0585-C06,clinical.project-hcmi-cmdc.2026-01-07,53.0,male,,,182.0,97.0,29.3,1.0,,1,hcmi_tcga
+6eb81662-642e-473e-b035-60b69ef223ad,HCM-EXPT-0938-C50,clinical.project-hcmi-cmdc.2026-01-07,60.2,female,,,,,,,,1,hcmi_tcga
+6ecd59ce-a391-4187-87a3-a69a71919585,HCM-CSHL-0509-C24,clinical.project-hcmi-cmdc.2026-01-07,71.8,male,,,179.0,79.0,25.0,1.0,,1,hcmi_tcga
+6f991912-1110-4ba2-9c63-078ee2bd6b59,HCM-BROD-1122-C49,clinical.project-hcmi-cmdc.2026-01-07,34.7,female,not hispanic or latino,white,160.0,89.0,34.8,1.0,,1,hcmi_tcga
+6f9bbecc-fea5-4a66-b311-41dfb8956b8f,HCM-EXPT-1071-C50,clinical.project-hcmi-cmdc.2026-01-07,90.0,female,,,,,,,,1,hcmi_tcga
+6fd2c09d-e1d8-4cb8-bd86-39fa5d1c0cd5,HCM-BROD-0220-C15,clinical.project-hcmi-cmdc.2026-01-07,60.2,male,not hispanic or latino,white,171.0,74.0,25.3,1.0,,1,hcmi_tcga
+6fd57448-daf9-4d8c-9cbc-88e53b246932,HCM-CSHL-0177-C25,clinical.project-hcmi-cmdc.2026-01-07,64.1,female,,,178.0,68.0,21.0,1.0,,1,hcmi_tcga
+6fe93402-3532-42bf-9df9-981213da81f8,HCM-SANG-0525-C18,clinical.project-hcmi-cmdc.2026-01-07,90.0,male,,,,,,1.0,,1,hcmi_tcga
+708cf1d9-3214-469b-9530-715fa4d41352,HCM-SANG-0534-C18,clinical.project-hcmi-cmdc.2026-01-07,70.5,female,,,,,,1.0,,1,hcmi_tcga
+70e98240-6f6d-4d45-bb10-566ea820e5de,HCM-BROD-0096-C15,clinical.project-hcmi-cmdc.2026-01-07,48.6,male,,white,,,,1.0,,1,hcmi_tcga
+711f0482-0800-4f18-962f-1d35f9d30727,HCM-BROD-0781-C71,clinical.project-hcmi-cmdc.2026-01-07,50.0,male,not hispanic or latino,black or african american,189.0,91.0,25.5,1.0,,1,hcmi_tcga
+71dd56c3-0048-4ec9-89cb-53b5e966255a,HCM-BROD-0702-C43,clinical.project-hcmi-cmdc.2026-01-07,69.3,male,not hispanic or latino,white,,,23.0,1.0,,1,hcmi_tcga
+723fd0ed-5223-41ef-8f09-677a1b3ca9d4,HCM-CSHL-0381-C20,clinical.project-hcmi-cmdc.2026-01-07,46.8,female,not hispanic or latino,white,167.6,131.0,47.0,1.0,,1,hcmi_tcga
+72b32ae9-d75d-43d4-a094-04b457ed99a6,HCM-SANG-1321-C18,clinical.project-hcmi-cmdc.2026-01-07,62.5,male,,,,,,1.0,,1,hcmi_tcga
+72ec3906-fc3f-4310-96ad-6032c65220c0,HCM-EXPT-1260-C15,clinical.project-hcmi-cmdc.2026-01-07,65.5,male,,,,,,1.0,,1,hcmi_tcga
+74016d27-4ade-46de-85d9-504e6e840042,HCM-WCMC-0747-C50,clinical.project-hcmi-cmdc.2026-01-07,43.2,female,not hispanic or latino,black or african american,165.1,70.8,26.0,1.0,,1,hcmi_tcga
+741236d1-b662-47a6-b1f4-94dfc004efca,HCM-EXPT-1261-C18,clinical.project-hcmi-cmdc.2026-01-07,66.5,male,,,,,,1.0,,1,hcmi_tcga
+74250d5d-e275-4315-8775-589aa79c7fac,HCM-BROD-0344-C25,clinical.project-hcmi-cmdc.2026-01-07,73.1,male,not hispanic or latino,asian,,,,1.0,,1,hcmi_tcga
+74512b64-70e7-4d12-b9b8-8810d7a3bf34,HCM-SANG-0779-C25,clinical.project-hcmi-cmdc.2026-01-07,62.5,female,,,,,,1.0,,1,hcmi_tcga
+745d26a1-1072-4ac0-b168-03f4287c32b0,HCM-BROD-0644-C25,clinical.project-hcmi-cmdc.2026-01-07,68.7,male,not hispanic or latino,white,,,30.0,1.0,,1,hcmi_tcga
+74862d9d-4f3d-4ba9-a345-2f2fd38e2490,HCM-BROD-0594-C43,clinical.project-hcmi-cmdc.2026-01-07,75.4,male,not hispanic or latino,white,177.0,83.0,26.5,1.0,,1,hcmi_tcga
+74c4156d-f5ee-498c-a3c8-c0e9ac873cab,HCM-EXPT-0996-C18,clinical.project-hcmi-cmdc.2026-01-07,62.3,male,,,,,,,,1,hcmi_tcga
+74dcf5eb-e06f-46bc-88b2-9702ac41b2f2,HCM-SANG-1330-C19,clinical.project-hcmi-cmdc.2026-01-07,69.5,female,,,,,,1.0,,1,hcmi_tcga
+7588a6b5-7c21-4a45-90ba-42a8220e11ac,HCM-STAN-0848-C20,clinical.project-hcmi-cmdc.2026-01-07,66.0,male,not hispanic or latino,white,185.0,77.0,23.0,1.0,,1,hcmi_tcga
+75a0e6f3-8ae3-4fd3-ac81-17eaffacd796,HCM-CSHL-0244-C20,clinical.project-hcmi-cmdc.2026-01-07,61.0,male,not hispanic or latino,asian,165.1,63.5,23.0,1.0,,1,hcmi_tcga
+76190b91-c744-4fc5-8e4d-eba10785d98b,HCM-BROD-0701-C43,clinical.project-hcmi-cmdc.2026-01-07,74.1,male,not hispanic or latino,white,182.0,89.0,26.0,1.0,,1,hcmi_tcga
+76b3a463-5f6a-4f54-ad7c-861b7420ef96,HCM-EXPT-1012-C50,clinical.project-hcmi-cmdc.2026-01-07,73.1,female,,,,,,,,1,hcmi_tcga
+770a4929-73e0-4420-bdc4-94355f5a46bc,HCM-EXPT-1061-C50,clinical.project-hcmi-cmdc.2026-01-07,73.4,female,,,,,,,,1,hcmi_tcga
+77163cf2-4651-475f-9d60-4306c1712ed7,HCM-CSHL-0073-C25,clinical.project-hcmi-cmdc.2026-01-07,55.3,male,,,180.0,70.0,22.0,1.0,,1,hcmi_tcga
+7717ccee-02fc-42aa-9951-e28ecb689ed5,HCM-SANG-0266-C20,clinical.project-hcmi-cmdc.2026-01-07,61.5,female,,,,,,1.0,,1,hcmi_tcga
+77c0c6b9-2d22-404f-91da-3f588a9174ab,HCM-CSHL-0143-C20,clinical.project-hcmi-cmdc.2026-01-07,88.7,female,not hispanic or latino,black or african american,157.4,59.0,24.0,1.0,,1,hcmi_tcga
+77e36a58-fc44-4b8a-a81c-173362967082,HCM-CSHL-0807-C54,clinical.project-hcmi-cmdc.2026-01-07,63.9,female,hispanic or latino,,157.5,76.2,30.7,1.0,,1,hcmi_tcga
+78b05ced-6b5e-44e0-b8e2-07ab9b69e440,HCM-BROD-0716-C43,clinical.project-hcmi-cmdc.2026-01-07,58.7,male,not hispanic or latino,white,177.0,84.0,26.8,1.0,,1,hcmi_tcga
+78b640aa-5327-496a-87bc-8e264cd772f2,HCM-CSHL-0859-C22,clinical.project-hcmi-cmdc.2026-01-07,62.9,male,,,170.0,76.0,26.0,1.0,,1,hcmi_tcga
+78c3e337-c084-4033-9d30-2505060192a3,HCM-SANG-0303-C15,clinical.project-hcmi-cmdc.2026-01-07,71.5,male,,,,,,1.0,,1,hcmi_tcga
+78f0db28-1e72-4fad-9515-5ff0e0d9ddf7,HCM-CSHL-1265-C25,clinical.project-hcmi-cmdc.2026-01-07,71.2,female,,,153.0,60.0,26.0,1.0,,1,hcmi_tcga
+792ea820-f289-49b9-80f7-e746eddc2922,HCM-BROD-0110-C25,clinical.project-hcmi-cmdc.2026-01-07,64.1,female,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+79858538-bc27-4abd-9b42-16659ad5da56,HCM-BROD-0678-C71,clinical.project-hcmi-cmdc.2026-01-07,1.2,male,not hispanic or latino,white,73.0,8.0,15.0,1.0,,1,hcmi_tcga
+799c9373-815b-4031-a495-47858e06908e,HCM-SANG-0302-C15,clinical.project-hcmi-cmdc.2026-01-07,52.5,male,,,,,,1.0,,1,hcmi_tcga
+79bb4e5b-5dc9-4103-9f61-5a43b15c56fa,HCM-SANG-0518-C18,clinical.project-hcmi-cmdc.2026-01-07,75.5,male,,,,,,1.0,,1,hcmi_tcga
+79d5db4e-9b07-4105-a5f7-0831fd99e04e,HCM-EXPT-1202-C15,clinical.project-hcmi-cmdc.2026-01-07,61.5,male,,,,,,1.0,,1,hcmi_tcga
+7a4676bb-3b9f-4e1c-b58f-30f80660df44,HCM-BROD-0453-C16,clinical.project-hcmi-cmdc.2026-01-07,40.2,male,not hispanic or latino,white,,85.0,26.0,1.0,,1,hcmi_tcga
+7ad830fb-890c-4a3e-b1ac-aa59f23a9333,HCM-SANG-0296-C15,clinical.project-hcmi-cmdc.2026-01-07,55.5,male,,,,,,1.0,,1,hcmi_tcga
+7ae084ae-e644-46e1-97f5-52be2ed93538,HCM-SANG-1091-C18,clinical.project-hcmi-cmdc.2026-01-07,64.5,female,,,,,,1.0,,1,hcmi_tcga
+7afe7012-a43f-48b7-a77c-a38ec942f77b,HCM-EXPT-1232-C15,clinical.project-hcmi-cmdc.2026-01-07,77.5,male,,,,,,1.0,,1,hcmi_tcga
+7b9b67c9-28f3-47f3-beb0-1b2e8c0b05d7,HCM-CSHL-0658-C20,clinical.project-hcmi-cmdc.2026-01-07,59.9,male,not hispanic or latino,asian,175.0,84.0,27.0,1.0,,1,hcmi_tcga
+7b9b6956-d4b6-46cd-8ad9-41e9c21a0316,HCM-CSHL-0373-C25,clinical.project-hcmi-cmdc.2026-01-07,71.9,female,,,158.0,71.0,28.0,1.0,,1,hcmi_tcga
+7cdc52da-546a-4318-adb8-00ade0a941db,HCM-BROD-0122-C25,clinical.project-hcmi-cmdc.2026-01-07,69.1,female,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+7d03e209-ad89-461e-b5f9-f7dc88a2684c,HCM-BROD-1098-C91,clinical.project-hcmi-cmdc.2026-01-07,73.2,male,not hispanic or latino,white,174.0,98.0,32.4,1.0,,1,hcmi_tcga
+7d2af728-4620-4ed4-946c-70956f6e6f57,HCM-WCMC-0790-C67,clinical.project-hcmi-cmdc.2026-01-07,62.4,male,not hispanic or latino,white,180.3,93.4,29.0,1.0,,1,hcmi_tcga
+7da47919-73f4-4e05-a5f5-16aa5cd243bf,HCM-BROD-0676-C71,clinical.project-hcmi-cmdc.2026-01-07,62.0,male,not hispanic or latino,white,178.0,67.0,21.0,1.0,,1,hcmi_tcga
+7e4f2097-9694-48de-aa29-2130dd39416b,HCM-BROD-0869-C43,clinical.project-hcmi-cmdc.2026-01-07,45.7,male,not hispanic or latino,white,177.0,97.0,30.0,1.0,,1,hcmi_tcga
+7eb28d9c-d25e-4112-9666-145bf7cee7c5,HCM-CSHL-0460-C50,clinical.project-hcmi-cmdc.2026-01-07,57.1,female,not hispanic or latino,white,160.0,81.6,32.0,1.0,,1,hcmi_tcga
+7ec96446-8a5e-400a-966b-986452c972e4,HCM-BROD-0227-C43,clinical.project-hcmi-cmdc.2026-01-07,40.5,male,not hispanic or latino,white,165.0,102.0,37.0,1.0,,1,hcmi_tcga
+7edcd40e-5a42-42ab-85d7-61a950cf0d2d,HCM-SANG-1318-C20,clinical.project-hcmi-cmdc.2026-01-07,60.5,male,,,,,,1.0,,1,hcmi_tcga
+7ee0c283-701b-47ac-bc3a-30f45e5c4eb2,HCM-CSHL-0382-C19,clinical.project-hcmi-cmdc.2026-01-07,68.0,female,not hispanic or latino,white,157.4,68.3,28.0,1.0,,1,hcmi_tcga
+7efd0ed7-54dd-43a3-adb7-d786d83cb1df,HCM-EXPT-0999-C49,clinical.project-hcmi-cmdc.2026-01-07,49.4,female,,,,,,,,1,hcmi_tcga
+7f1867a9-37cc-4604-8c15-56467c12e193,HCM-SANG-0546-C15,clinical.project-hcmi-cmdc.2026-01-07,72.5,male,,,,,,1.0,,1,hcmi_tcga
+7fa35302-efb7-4ca9-a23a-a5dcb54197c7,HCM-BROD-0874-C43,clinical.project-hcmi-cmdc.2026-01-07,59.5,female,not hispanic or latino,white,168.0,52.0,18.4,1.0,,1,hcmi_tcga
+7fa8bc57-4bc7-48a5-99fe-98ed02fa17e8,HCM-CSHL-0247-C18,clinical.project-hcmi-cmdc.2026-01-07,76.5,female,not hispanic or latino,white,165.1,86.2,32.0,1.0,,1,hcmi_tcga
+80662c9b-a131-4e8e-8622-07eca4e1127b,HCM-CSHL-0863-C18,clinical.project-hcmi-cmdc.2026-01-07,42.2,male,not hispanic or latino,asian,170.2,56.2,19.0,1.0,,1,hcmi_tcga
+80a596d1-04f0-447b-8151-fc74ca6f7c5e,HCM-CSHL-0385-C18,clinical.project-hcmi-cmdc.2026-01-07,82.2,male,not hispanic or latino,asian,167.6,53.5,19.0,1.0,,1,hcmi_tcga
+80bbff05-a62d-49c3-adee-08d992f0ba67,HCM-SANG-0289-C15,clinical.project-hcmi-cmdc.2026-01-07,78.5,male,,,,,,1.0,,1,hcmi_tcga
+80d0b6ea-ae26-4b60-a2b7-68d0095e3fa3,HCM-EXPT-0929-C50,clinical.project-hcmi-cmdc.2026-01-07,42.6,female,,,,,,,,1,hcmi_tcga
+80e571e3-8edf-40ff-883d-bce4e31acac2,HCM-SANG-1314-C18,clinical.project-hcmi-cmdc.2026-01-07,66.5,male,,,,,,1.0,,1,hcmi_tcga
+8169ce16-4ddb-457a-8e87-029f9bc6e02a,HCM-EXPT-1200-C15,clinical.project-hcmi-cmdc.2026-01-07,58.5,male,,,,,,1.0,,1,hcmi_tcga
+816e3eb6-1d9c-4f79-b672-c76b3af02d1c,HCM-BROD-0681-C71,clinical.project-hcmi-cmdc.2026-01-07,50.2,male,not hispanic or latino,white,,,34.0,1.0,,1,hcmi_tcga
+818627f6-9dda-446c-8ea7-d8f6fa707c27,HCM-SANG-0304-C15,clinical.project-hcmi-cmdc.2026-01-07,68.5,male,,,,,,1.0,,1,hcmi_tcga
+819b41c2-1aa4-4a98-959f-096fd3df1446,HCM-BROD-0041-C64,clinical.project-hcmi-cmdc.2026-01-07,7.3,female,,white,,,15.0,1.0,,1,hcmi_tcga
+81d695dd-8c6d-42fc-b169-52996a7d93ad,HCM-CSHL-0878-C18,clinical.project-hcmi-cmdc.2026-01-07,53.1,male,not hispanic or latino,asian,160.0,63.5,25.0,1.0,,1,hcmi_tcga
+81f2ed11-f83b-489a-b9a9-d0c7f99a2022,HCM-BROD-0689-C71,clinical.project-hcmi-cmdc.2026-01-07,63.1,female,not hispanic or latino,white,,,22.0,1.0,,1,hcmi_tcga
+8227df15-0672-42be-8d86-463a2bae8183,HCM-EXPT-0943-C50,clinical.project-hcmi-cmdc.2026-01-07,52.2,female,,,,,,,,1,hcmi_tcga
+82caa0cd-b0ec-4d24-95bb-144b9fcc293e,HCM-CSHL-0731-C19,clinical.project-hcmi-cmdc.2026-01-07,46.5,male,not hispanic or latino,white,175.3,86.2,28.0,1.0,,1,hcmi_tcga
+82ce9f95-f322-4867-8abb-266b5b8289d0,HCM-SANG-1316-C18,clinical.project-hcmi-cmdc.2026-01-07,84.5,male,,,,,,1.0,,1,hcmi_tcga
+83012811-6529-4e25-9a7b-7b1edd544c01,HCM-EXPT-1257-C15,clinical.project-hcmi-cmdc.2026-01-07,78.5,male,,,,,,1.0,,1,hcmi_tcga
+8376d8ee-20ce-41bc-b36d-3fbadd194084,HCM-CSHL-0659-C18,clinical.project-hcmi-cmdc.2026-01-07,48.9,female,not hispanic or latino,black or african american,160.0,66.2,30.0,1.0,,1,hcmi_tcga
+83d72552-6453-4a48-a2a5-68b9c02af103,HCM-EXPT-1194-C18,clinical.project-hcmi-cmdc.2026-01-07,76.5,male,,,,,,1.0,,1,hcmi_tcga
+83eec9f5-8c83-42f1-b77b-1fbaec52afc0,HCM-EXPT-1243-C20,clinical.project-hcmi-cmdc.2026-01-07,64.5,male,,,,,,1.0,,1,hcmi_tcga
+844a5119-2fc7-43c5-be14-6285e6c79474,HCM-BROD-0045-C16,clinical.project-hcmi-cmdc.2026-01-07,58.1,male,not hispanic or latino,white,180.0,111.0,34.0,1.0,,1,hcmi_tcga
+848d6440-7980-449d-9698-52de610ea561,HCM-SANG-1320-C25,clinical.project-hcmi-cmdc.2026-01-07,78.5,female,,,,,,1.0,,1,hcmi_tcga
+854e555d-16d1-4817-a63b-e45cfad8161b,HCM-SANG-0547-C25,clinical.project-hcmi-cmdc.2026-01-07,67.5,male,,,,,,1.0,,1,hcmi_tcga
+855b539a-0bb5-4fc9-a8f6-6ebddc87cbc4,HCM-EXPT-1216-C15,clinical.project-hcmi-cmdc.2026-01-07,73.5,male,,,,,,1.0,,1,hcmi_tcga
+856282a3-fcad-4002-9190-64825ae6d77f,HCM-BROD-1127-C15,clinical.project-hcmi-cmdc.2026-01-07,45.4,male,not hispanic or latino,white,179.0,80.0,22.0,1.0,,1,hcmi_tcga
+858a84e1-002b-451c-a2dc-cf5673f08992,HCM-WCMC-0494-C16,clinical.project-hcmi-cmdc.2026-01-07,64.9,male,,asian,,59.9,,1.0,,1,hcmi_tcga
+85defb91-94b6-4f5e-b4b4-3d857a429ab3,HCM-CSHL-0665-C24,clinical.project-hcmi-cmdc.2026-01-07,73.8,male,,,170.0,90.0,31.0,1.0,,1,hcmi_tcga
+85f48da8-16cc-4e6f-9f1b-2eaed60f93d8,HCM-BROD-0830-C71,clinical.project-hcmi-cmdc.2026-01-07,58.4,female,not hispanic or latino,white,,,44.0,1.0,,1,hcmi_tcga
+861a1852-cd32-42e4-902f-0e3db208e5ba,HCM-EXPT-1016-C18,clinical.project-hcmi-cmdc.2026-01-07,70.6,male,,,,,,,,1,hcmi_tcga
+864de84d-7936-4bfd-89ff-b552a9d470aa,HCM-BROD-0420-C71,clinical.project-hcmi-cmdc.2026-01-07,48.3,male,,white,180.0,96.0,29.0,1.0,,1,hcmi_tcga
+865ea4cc-9245-4d3b-8f22-16ec05632426,HCM-EXPT-1060-C18,clinical.project-hcmi-cmdc.2026-01-07,90.0,female,,,,,,,,1,hcmi_tcga
+8747f56e-c1bf-4c1e-bb1c-02d46ae597db,HCM-SANG-0532-C20,clinical.project-hcmi-cmdc.2026-01-07,80.5,female,,,,,,1.0,,1,hcmi_tcga
+87653787-214f-4c79-af6d-087cb0240521,HCM-CSHL-0821-C19,clinical.project-hcmi-cmdc.2026-01-07,61.0,female,not hispanic or latino,asian,165.1,64.0,24.0,1.0,,1,hcmi_tcga
+87804fe2-1c07-4bcc-80c6-d225e4089ba6,HCM-BROD-0223-C43,clinical.project-hcmi-cmdc.2026-01-07,73.2,male,,white,173.0,74.0,25.0,1.0,,1,hcmi_tcga
+87cd2ae0-d743-4c63-bbb7-694c8d12a21a,HCM-BROD-0595-C43,clinical.project-hcmi-cmdc.2026-01-07,47.2,female,not hispanic or latino,white,,,19.0,1.0,,1,hcmi_tcga
+87d5b9f8-a744-4419-87bf-b68a5e55cf2f,HCM-EXPT-1034-C50,clinical.project-hcmi-cmdc.2026-01-07,78.7,female,,,,,,,,1,hcmi_tcga
+881496db-88ed-4d7c-a5e7-614da6977c10,HCM-BROD-0455-C71,clinical.project-hcmi-cmdc.2026-01-07,90.0,male,not hispanic or latino,white,183.0,84.0,25.1,1.0,,1,hcmi_tcga
+88335768-5a27-4b29-b3bc-72e53b87015b,HCM-BROD-0102-C71,clinical.project-hcmi-cmdc.2026-01-07,69.2,female,not hispanic or latino,white,156.6,52.5,21.4,1.0,,1,hcmi_tcga
+8853968f-f813-40ee-9084-cfd2e4ac854d,HCM-CSHL-0814-C54,clinical.project-hcmi-cmdc.2026-01-07,80.7,female,not hispanic or latino,black or african american,157.5,91.0,36.7,1.0,,1,hcmi_tcga
+886d8079-9a5d-40bd-89ea-6ed14ea504b0,HCM-SANG-0778-C25,clinical.project-hcmi-cmdc.2026-01-07,54.5,female,,,,,,1.0,,1,hcmi_tcga
+88808858-b4db-4ec6-a505-10339b498dcf,HCM-BROD-0926-C16,clinical.project-hcmi-cmdc.2026-01-07,30.9,female,not hispanic or latino,white,167.0,52.0,18.0,1.0,,1,hcmi_tcga
+88aa1634-d51b-4b0e-89bb-086709b24e2b,HCM-CSHL-0802-C67,clinical.project-hcmi-cmdc.2026-01-07,69.0,male,,,180.0,89.0,27.5,1.0,,1,hcmi_tcga
+890b4995-c64f-4d1f-bfd3-131e318e8ac3,HCM-STAN-0840-C49,clinical.project-hcmi-cmdc.2026-01-07,67.4,female,not hispanic or latino,white,155.9,57.2,23.5,1.0,,1,hcmi_tcga
+8a2452ec-72a0-4efb-84ac-d5af5e613e74,HCM-BROD-0120-C15,clinical.project-hcmi-cmdc.2026-01-07,46.6,female,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+8aae6830-a433-49a8-a0e9-2602aa44f353,HCM-EXPT-0895-C25,clinical.project-hcmi-cmdc.2026-01-07,79.4,male,,,,,,,,1,hcmi_tcga
+8b3b1f24-419e-4043-82be-2bd41268bb0e,HCM-CSHL-0062-C18,clinical.project-hcmi-cmdc.2026-01-07,70.6,female,not hispanic or latino,white,154.9,47.6,20.0,1.0,,1,hcmi_tcga
+8badcb2e-30f1-47ad-91f1-d832d6289f6a,HCM-CSHL-0618-C18,clinical.project-hcmi-cmdc.2026-01-07,84.9,male,,,170.0,70.0,24.0,1.0,,1,hcmi_tcga
+8bc7eb06-6875-48b2-9a3f-84514c4022ad,HCM-EXPT-1007-C50,clinical.project-hcmi-cmdc.2026-01-07,67.8,female,,,,,,,,1,hcmi_tcga
+8d169383-a8af-4450-a837-01da35fb72c5,HCM-CSHL-0246-C19,clinical.project-hcmi-cmdc.2026-01-07,55.9,male,not hispanic or latino,white,170.2,72.6,25.0,1.0,,1,hcmi_tcga
+8dcd4d5c-688f-475b-aabb-4a10407a5513,HCM-SANG-0527-C18,clinical.project-hcmi-cmdc.2026-01-07,86.5,male,,,,,,1.0,,1,hcmi_tcga
+8de026f0-1817-4e4a-941b-20b5ee7680ff,HCM-SANG-0533-C20,clinical.project-hcmi-cmdc.2026-01-07,65.5,female,,,,,,1.0,,1,hcmi_tcga
+8ed2333b-d19c-4fa1-9433-f349a91159bf,HCM-BROD-0711-C64,clinical.project-hcmi-cmdc.2026-01-07,63.8,male,not hispanic or latino,white,185.0,86.0,25.0,1.0,,1,hcmi_tcga
+8ee05a9d-2373-4598-afec-a42ed3be4082,HCM-STAN-0777-C25,clinical.project-hcmi-cmdc.2026-01-07,68.0,male,not hispanic or latino,white,177.0,78.0,25.0,1.0,,1,hcmi_tcga
+8f534be9-3e29-4d81-83f4-44d8fe6d662a,HCM-EXPT-1020-C18,clinical.project-hcmi-cmdc.2026-01-07,75.6,male,,,,,,,,1,hcmi_tcga
+8fbd0f97-3cf8-40eb-b55d-416fbaffe82a,HCM-SANG-1312-C20,clinical.project-hcmi-cmdc.2026-01-07,42.5,male,,,,,,1.0,,1,hcmi_tcga
+8ff694fc-0d95-423b-89fa-5e78d759cbe3,HCM-CSHL-0432-C20,clinical.project-hcmi-cmdc.2026-01-07,59.0,male,,,,87.0,,1.0,,1,hcmi_tcga
+90369f31-800e-4a61-b2bd-c70e882cc747,HCM-EXPT-0887-C25,clinical.project-hcmi-cmdc.2026-01-07,68.8,male,,,,,,,,1,hcmi_tcga
+908161cf-4761-41b1-8f37-8100e781d90e,HCM-SANG-1325-C15,clinical.project-hcmi-cmdc.2026-01-07,61.5,female,,,,,,1.0,,1,hcmi_tcga
+9097285b-eeb1-4f36-a0ab-0d0592043792,HCM-BROD-0098-C15,clinical.project-hcmi-cmdc.2026-01-07,77.3,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+9166c115-0c9d-4c72-9c2e-da3a3b94072d,HCM-CSHL-0374-C25,clinical.project-hcmi-cmdc.2026-01-07,74.7,male,,,169.0,75.0,26.0,1.0,,1,hcmi_tcga
+91ebd37e-c8ea-4e03-ae01-35d111678dbd,HCM-CSHL-0666-C24,clinical.project-hcmi-cmdc.2026-01-07,70.6,female,,,156.0,59.0,24.0,1.0,,1,hcmi_tcga
+9239cb75-6ed2-4335-9124-4b760e0d7e50,HCM-BROD-1123-C71,clinical.project-hcmi-cmdc.2026-01-07,49.2,male,not hispanic or latino,white,180.0,90.0,28.0,1.0,,1,hcmi_tcga
+92555ec0-7c74-4974-a243-bcfa2b0d55be,HCM-CSHL-0323-C20,clinical.project-hcmi-cmdc.2026-01-07,54.2,male,not hispanic or latino,white,180.3,153.8,47.0,1.0,,1,hcmi_tcga
+926ed139-205a-4dba-bfa2-9d435adfbb14,HCM-CSHL-0193-C25,clinical.project-hcmi-cmdc.2026-01-07,46.9,female,,,172.0,74.0,25.0,1.0,,1,hcmi_tcga
+92c3a008-dd39-4243-8f29-3d45e73c1d04,HCM-BROD-0206-C25,clinical.project-hcmi-cmdc.2026-01-07,73.2,female,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+92c91aac-b8c9-4f2a-8d45-778691ea6743,HCM-EXPT-1013-C50,clinical.project-hcmi-cmdc.2026-01-07,53.9,female,,,,,,,,1,hcmi_tcga
+9323fd2e-57cb-4149-ba36-274921d70215,HCM-CSHL-0261-C50,clinical.project-hcmi-cmdc.2026-01-07,53.0,female,,,174.0,87.0,28.7,1.0,,1,hcmi_tcga
+937294e7-5aab-4d1e-a8ca-1fbb73b0aae8,HCM-BROD-0561-C43,clinical.project-hcmi-cmdc.2026-01-07,63.4,male,not hispanic or latino,white,161.0,85.0,32.0,1.0,,1,hcmi_tcga
+93d1a30b-21c8-4cf7-9d51-49f6e03ef679,HCM-BROD-0132-C25,clinical.project-hcmi-cmdc.2026-01-07,73.1,female,not hispanic or latino,white,161.6,51.3,19.6,1.0,,1,hcmi_tcga
+93e57b22-1606-47a8-88de-482159a8623d,HCM-CSHL-0653-C18,clinical.project-hcmi-cmdc.2026-01-07,56.9,female,not hispanic or latino,black or african american,155.0,64.4,27.0,1.0,,1,hcmi_tcga
+93eb458f-2b57-498b-a356-9b5540cc545c,HCM-CSHL-0426-C18,clinical.project-hcmi-cmdc.2026-01-07,73.0,male,,,172.0,76.0,25.7,1.0,,1,hcmi_tcga
+943e817d-37f3-4df0-84c5-d572ca3de923,HCM-CSHL-0403-C25,clinical.project-hcmi-cmdc.2026-01-07,63.9,male,not hispanic or latino,white,182.9,74.8,22.0,1.0,,1,hcmi_tcga
+94780bed-98b3-4556-ac0d-7b998921c4c0,HCM-BROD-0959-C18,clinical.project-hcmi-cmdc.2026-01-07,66.3,female,not hispanic or latino,white,166.0,63.0,22.0,1.0,,1,hcmi_tcga
+94b66b8a-d5e9-4e4c-ab44-290c6d12480e,HCM-BROD-0679-C43,clinical.project-hcmi-cmdc.2026-01-07,68.3,female,not hispanic or latino,white,165.0,79.0,29.0,1.0,,1,hcmi_tcga
+94eb0a19-ba87-4ca8-a021-01a2609845b3,HCM-CSHL-1268-C24,clinical.project-hcmi-cmdc.2026-01-07,58.9,male,,,165.0,73.0,27.0,1.0,,1,hcmi_tcga
+95228cfd-9465-486e-8202-b27f834433c2,HCM-BROD-0221-C43,clinical.project-hcmi-cmdc.2026-01-07,77.5,male,not hispanic or latino,white,172.7,60.8,20.4,1.0,,1,hcmi_tcga
+964de890-fe31-4b2d-98ce-a8d8e95a7da2,HCM-SANG-1313-C18,clinical.project-hcmi-cmdc.2026-01-07,51.5,male,,,,,,1.0,,1,hcmi_tcga
+96dea2e6-e29b-4e09-b708-ae3b010a9906,HCM-SANG-0284-C18,clinical.project-hcmi-cmdc.2026-01-07,42.5,female,,,,,,1.0,,1,hcmi_tcga
+96f589bb-36b6-49a9-b461-afd0175ee661,HCM-EXPT-1072-C18,clinical.project-hcmi-cmdc.2026-01-07,63.4,male,,,,,,,,1,hcmi_tcga
+97951f84-798d-451e-8f8e-d208c19d3955,HCM-SANG-1087-C18,clinical.project-hcmi-cmdc.2026-01-07,86.5,male,,,,,,1.0,,1,hcmi_tcga
+97bd888f-4686-4c1d-b663-2920d3bdc7d8,HCM-BROD-0020-C15,clinical.project-hcmi-cmdc.2026-01-07,67.6,male,not hispanic or latino,white,184.1,78.9,23.6,1.0,,1,hcmi_tcga
+9997df42-0549-4ce0-bdf8-991ee54e0701,HCM-BROD-0695-C71,clinical.project-hcmi-cmdc.2026-01-07,59.3,male,not hispanic or latino,white,178.0,104.0,32.8,1.0,,1,hcmi_tcga
+99d9dcaf-3d7b-446f-84ff-c4ac443a140a,HCM-EXPT-0930-C50,clinical.project-hcmi-cmdc.2026-01-07,79.3,female,,,,,,,,1,hcmi_tcga
+9aeb319b-7c05-473f-95bd-f892737b8830,HCM-EXPT-1230-C18,clinical.project-hcmi-cmdc.2026-01-07,57.5,male,,,,,,1.0,,1,hcmi_tcga
+9bf63d26-2156-4556-a56e-7c49148441ce,HCM-CSHL-0725-C02,clinical.project-hcmi-cmdc.2026-01-07,53.0,female,,,172.0,79.0,26.7,1.0,,1,hcmi_tcga
+9bfc8171-9b0a-4636-a230-a0a34ebaaac2,HCM-BROD-0451-C15,clinical.project-hcmi-cmdc.2026-01-07,71.0,male,not hispanic or latino,white,172.0,87.0,29.0,1.0,,1,hcmi_tcga
+9c24da6e-5546-4037-8ef6-61fc5c2c0901,HCM-BROD-0957-C34,clinical.project-hcmi-cmdc.2026-01-07,42.7,female,not hispanic or latino,asian,,,25.0,1.0,,1,hcmi_tcga
+9c439d71-50e3-48d2-82a6-4ff0b4ce284a,HCM-CSHL-0868-C56,clinical.project-hcmi-cmdc.2026-01-07,62.3,female,not hispanic or latino,white,165.1,49.9,18.0,1.0,,1,hcmi_tcga
+9d03a2ac-ff8d-4017-b482-ece0c9eec5ed,HCM-CSHL-0075-C25,clinical.project-hcmi-cmdc.2026-01-07,74.8,female,,,160.0,51.0,20.0,1.0,,1,hcmi_tcga
+9d76f109-f7b0-44c6-9c88-cc21e908dc79,HCM-EXPT-1250-C18,clinical.project-hcmi-cmdc.2026-01-07,76.5,female,,,,,,1.0,,1,hcmi_tcga
+9d868cf7-4c23-45f6-9897-015db647fc6e,HCM-SANG-0536-C18,clinical.project-hcmi-cmdc.2026-01-07,62.5,male,,,,,,1.0,,1,hcmi_tcga
+9daf1b17-1086-497e-875b-f1a86e486e34,HCM-CSHL-0598-C25,clinical.project-hcmi-cmdc.2026-01-07,57.1,male,,,167.0,91.0,33.0,1.0,,1,hcmi_tcga
+9ddacfb1-46c5-4b93-8f96-937ef10e08f2,HCM-SANG-0780-C25,clinical.project-hcmi-cmdc.2026-01-07,51.5,male,,,,,,1.0,,1,hcmi_tcga
+9e0540ab-1888-43f8-9271-1dd040c3e8ea,HCM-WCMC-0948-C67,clinical.project-hcmi-cmdc.2026-01-07,84.0,male,not hispanic or latino,white,175.3,72.6,24.0,1.0,,1,hcmi_tcga
+9e615018-8669-4dd6-8265-25e766a34dd0,HCM-CSHL-0090-C25,clinical.project-hcmi-cmdc.2026-01-07,64.8,female,,,158.0,71.0,28.0,1.0,,1,hcmi_tcga
+9ee323b8-6447-4447-b70f-a7260b3b8f8e,HCM-CSHL-0239-C18,clinical.project-hcmi-cmdc.2026-01-07,55.0,male,not hispanic or latino,white,182.9,80.7,24.0,1.0,,1,hcmi_tcga
+9f4d0076-c4a2-46d4-879f-896946338c09,HCM-BROD-0234-C49,clinical.project-hcmi-cmdc.2026-01-07,76.5,male,not hispanic or latino,white,167.0,63.0,22.6,1.0,,1,hcmi_tcga
+9f4d122a-e88e-433f-85a7-dbc4060ec7b8,HCM-CSHL-0730-C25,clinical.project-hcmi-cmdc.2026-01-07,67.5,female,hispanic or latino,white,156.0,64.2,26.4,1.0,,1,hcmi_tcga
+9ffb2777-3c88-4ee4-bb86-956c7c4fb6c4,HCM-CSHL-0634-C30,clinical.project-hcmi-cmdc.2026-01-07,57.0,male,,,176.0,79.0,25.5,1.0,25.0,1,hcmi_tcga
+a01bee43-90de-498f-89e8-6f083b623fd9,HCM-EXPT-1237-C20,clinical.project-hcmi-cmdc.2026-01-07,46.5,female,,,,,,1.0,,1,hcmi_tcga
+a02b068f-adff-47ca-82fb-2f03a34cd75f,HCM-WCMC-1344-C18,clinical.project-hcmi-cmdc.2026-01-07,46.6,male,not hispanic or latino,white,175.3,95.3,31.0,1.0,,1,hcmi_tcga
+a04ad320-8e35-46b8-b213-9646694c05e4,HCM-EXPT-1051-C50,clinical.project-hcmi-cmdc.2026-01-07,69.3,female,,,,,,,,1,hcmi_tcga
+a06ae06a-7c75-475d-833b-29c43c5a4d67,HCM-SANG-1092-C18,clinical.project-hcmi-cmdc.2026-01-07,83.5,male,,,,,,1.0,,1,hcmi_tcga
+a0a8a68a-c712-4c67-8b83-c4eb5a5c90aa,HCM-EXPT-1036-C34,clinical.project-hcmi-cmdc.2026-01-07,88.6,male,,,,,,,,1,hcmi_tcga
+a0cac428-0e4d-471f-a3a1-9d3ea026b58e,HCM-SANG-0297-C15,clinical.project-hcmi-cmdc.2026-01-07,76.5,male,,,,,,1.0,,1,hcmi_tcga
+a13f7c10-76c8-473a-b87b-8b680706d189,HCM-SANG-0281-C18,clinical.project-hcmi-cmdc.2026-01-07,44.5,female,,,,,,1.0,,1,hcmi_tcga
+a1d1b84f-51e1-49cc-b13d-905292264b92,HCM-CSHL-0586-C32,clinical.project-hcmi-cmdc.2026-01-07,64.0,male,,,178.0,66.0,20.8,1.0,50.0,1,hcmi_tcga
+a21e6302-cc54-4b1d-87a9-c7fa4475beca,HCM-BROD-0445-C15,clinical.project-hcmi-cmdc.2026-01-07,56.0,male,not hispanic or latino,white,176.0,68.0,22.0,1.0,,1,hcmi_tcga
+a276f47b-75eb-4e47-aabf-bf1fcb2e07eb,HCM-EXPT-0883-C25,clinical.project-hcmi-cmdc.2026-01-07,63.6,male,,,,,,,,1,hcmi_tcga
+a2c1fc43-d285-493f-8090-89a3d14d0380,HCM-EXPT-0974-C18,clinical.project-hcmi-cmdc.2026-01-07,60.5,male,,,,,,,,1,hcmi_tcga
+a2e9805f-e36a-46c1-b36c-fc064848501c,HCM-BROD-1102-C85,clinical.project-hcmi-cmdc.2026-01-07,74.0,male,,white,,,,1.0,,1,hcmi_tcga
+a30d5ca4-146c-43d6-b3f3-ca3ec860f777,HCM-WCMC-1294-C18,clinical.project-hcmi-cmdc.2026-01-07,47.1,male,not hispanic or latino,,182.9,107.5,32.0,1.0,,1,hcmi_tcga
+a35ed933-bca3-4fb3-8262-ab1405cdbdbf,HCM-BROD-0050-C49,clinical.project-hcmi-cmdc.2026-01-07,22.4,male,not hispanic or latino,asian,170.0,57.0,19.7,1.0,,1,hcmi_tcga
+a394e01a-d47f-4eb5-aa2d-89e684936271,HCM-EXPT-0882-C25,clinical.project-hcmi-cmdc.2026-01-07,68.0,female,,,,,,,,1,hcmi_tcga
+a3b71c6f-77cc-4e80-8c1c-96cdf836b42e,HCM-BROD-0055-C64,clinical.project-hcmi-cmdc.2026-01-07,0.4,male,not hispanic or latino,white,,,16.0,1.0,,1,hcmi_tcga
+a42da11c-f1c5-4641-98f4-535c675d43d5,HCM-BROD-0415-C71,clinical.project-hcmi-cmdc.2026-01-07,53.3,female,,white,166.0,99.0,35.9,1.0,,1,hcmi_tcga
+a43460d9-c2cd-4656-bc5a-d2ba54bad91d,HCM-BROD-0485-C15,clinical.project-hcmi-cmdc.2026-01-07,46.5,male,not hispanic or latino,white,,,22.0,1.0,,1,hcmi_tcga
+a4f7fe06-4bef-4e32-afce-f3fa80588aa4,HCM-WCMC-1292-C67,clinical.project-hcmi-cmdc.2026-01-07,60.3,male,not hispanic or latino,,187.0,75.0,27.0,1.0,,1,hcmi_tcga
+a54e76e9-7d37-4f9d-9b63-f2fa25f1b1b1,HCM-SANG-1311-C18,clinical.project-hcmi-cmdc.2026-01-07,72.5,male,,,,,,1.0,,1,hcmi_tcga
+a578c191-9220-4d93-a772-9415a5733913,HCM-CSHL-0907-C50,clinical.project-hcmi-cmdc.2026-01-07,74.6,female,not hispanic or latino,black or african american,149.9,100.7,45.0,1.0,,1,hcmi_tcga
+a5d2e190-acdc-4bd9-be42-bd8c17bfa205,HCM-CSHL-0162-C19,clinical.project-hcmi-cmdc.2026-01-07,62.4,male,not hispanic or latino,white,172.7,82.55,28.0,1.0,,1,hcmi_tcga
+a691cd0c-1878-47a6-8a0f-37e4fe12d20a,HCM-CSHL-0393-C18,clinical.project-hcmi-cmdc.2026-01-07,74.9,male,,,182.0,79.0,23.8,1.0,,1,hcmi_tcga
+a699ebed-f444-43cc-861f-3595ac15dda5,HCM-EXPT-1042-C50,clinical.project-hcmi-cmdc.2026-01-07,64.6,female,,,,,,,,1,hcmi_tcga
+a6f4e42f-e2ae-4391-8ea1-5fb7bd267d4e,HCM-EXPT-1223-C15,clinical.project-hcmi-cmdc.2026-01-07,67.5,male,,,,,,1.0,,1,hcmi_tcga
+a7364c7c-cc66-468d-8a6e-11cc58adf3d6,HCM-CSHL-0853-C56,clinical.project-hcmi-cmdc.2026-01-07,53.0,female,,,173.0,108.0,36.0,1.0,,1,hcmi_tcga
+a826f214-8322-443e-b8a9-8495c5d81b2f,HCM-WCMC-0945-C54,clinical.project-hcmi-cmdc.2026-01-07,65.0,female,not hispanic or latino,black or african american,163.3,93.1,34.0,1.0,,1,hcmi_tcga
+a8408536-bd05-4a7d-8792-8390cceca6ae,HCM-SANG-0517-C20,clinical.project-hcmi-cmdc.2026-01-07,68.5,male,,,,,,1.0,,1,hcmi_tcga
+a870c27c-b854-4c7e-81c3-9a3d66d4d778,HCM-CSHL-0698-C06,clinical.project-hcmi-cmdc.2026-01-07,66.0,female,,,172.0,66.0,22.3,1.0,,1,hcmi_tcga
+a881a43e-42ef-48ba-9b10-456792261a3a,HCM-SANG-0311-C15,clinical.project-hcmi-cmdc.2026-01-07,61.5,male,,,,,,1.0,,1,hcmi_tcga
+a8856f5a-594e-4ce6-86f2-4ddc5ec46df5,HCM-BROD-1117-C56,clinical.project-hcmi-cmdc.2026-01-07,66.5,female,not hispanic or latino,white,170.0,73.0,25.3,1.0,,1,hcmi_tcga
+a8b4b97d-a95a-4190-a35d-55a01de18bfe,HCM-EXPT-1115-C43,clinical.project-hcmi-cmdc.2026-01-07,66.8,male,,,,,,,,1,hcmi_tcga
+a936b054-5baa-4582-83d5-4b9e94892981,HCM-EXPT-1057-C50,clinical.project-hcmi-cmdc.2026-01-07,79.2,female,,,,,,,,1,hcmi_tcga
+a947e983-07c7-4bdf-9b3b-e6e72b6c41e5,HCM-CSHL-0852-C76,clinical.project-hcmi-cmdc.2026-01-07,63.0,male,,,180.0,62.0,19.1,1.0,,1,hcmi_tcga
+aa0d437f-845b-43af-98e9-c7e5c3b55d33,HCM-CSHL-0740-C18,clinical.project-hcmi-cmdc.2026-01-07,66.8,female,not hispanic or latino,black or african american,162.6,60.8,23.0,1.0,,1,hcmi_tcga
+aa17554b-2291-4947-9858-eadb82704f9b,HCM-BROD-0416-C71,clinical.project-hcmi-cmdc.2026-01-07,73.1,female,,white,153.0,73.0,31.2,1.0,,1,hcmi_tcga
+aa72adc9-e4ae-4d38-a1ff-5cdac2c3fc06,HCM-CSHL-0809-C54,clinical.project-hcmi-cmdc.2026-01-07,73.2,female,not hispanic or latino,black or african american,165.1,78.0,28.6,1.0,,1,hcmi_tcga
+aa78feca-4396-4e6b-8621-84fafedf29c9,HCM-CSHL-0467-C56,clinical.project-hcmi-cmdc.2026-01-07,65.0,female,,,165.0,56.0,20.6,1.0,,1,hcmi_tcga
+aaa77a52-da6a-4c72-b190-6a5bd6863b62,HCM-EXPT-0987-C50,clinical.project-hcmi-cmdc.2026-01-07,67.5,female,,,,,,,,1,hcmi_tcga
+aaf31083-8293-4e48-92b0-37d294c0cc64,HCM-SANG-0292-C15,clinical.project-hcmi-cmdc.2026-01-07,67.5,male,,,,,,1.0,,1,hcmi_tcga
+ab18b5a1-e3b6-41f5-b0f7-22cd7d5a4e62,HCM-WCMC-1281-C67,clinical.project-hcmi-cmdc.2026-01-07,36.1,male,not hispanic or latino,white,175.3,70.0,23.0,1.0,,1,hcmi_tcga
+ab4f0038-1f79-47cf-a88d-0c8587df3bbe,HCM-SANG-0277-C18,clinical.project-hcmi-cmdc.2026-01-07,78.5,male,,,,,,1.0,,1,hcmi_tcga
+ab76b315-cea9-4e62-8036-a62bcb64d43a,HCM-EXPT-1229-C15,clinical.project-hcmi-cmdc.2026-01-07,76.5,male,,,,,,1.0,,1,hcmi_tcga
+ab92cc58-7772-4b5a-b3fe-c7630b9ec71f,HCM-CSHL-0817-C22,clinical.project-hcmi-cmdc.2026-01-07,75.3,female,,,165.0,60.0,22.0,1.0,,1,hcmi_tcga
+aba4536f-6457-4ec2-90ac-1e0464352d7b,HCM-CSHL-0433-C24,clinical.project-hcmi-cmdc.2026-01-07,52.1,male,,,175.0,81.0,26.0,1.0,,1,hcmi_tcga
+ac2e7c63-300d-4bbe-b479-3de513dc8872,HCM-BROD-0418-C71,clinical.project-hcmi-cmdc.2026-01-07,45.5,male,not hispanic or latino,white,182.0,84.0,25.4,1.0,,1,hcmi_tcga
+ac371bd7-dd43-4784-8b13-8efb9b7a3474,HCM-BROD-0448-C15,clinical.project-hcmi-cmdc.2026-01-07,78.6,male,not hispanic or latino,white,170.0,70.0,24.0,1.0,,1,hcmi_tcga
+ad400773-3306-4e97-bda6-f03fcc471692,HCM-CSHL-0153-C50,clinical.project-hcmi-cmdc.2026-01-07,62.7,female,hispanic or latino,white,165.1,104.32,38.0,1.0,,1,hcmi_tcga
+add1a8ad-6a0a-4945-b1e4-2bbe3f554421,HCM-EXPT-1226-C18,clinical.project-hcmi-cmdc.2026-01-07,70.5,male,,,,,,1.0,,1,hcmi_tcga
+aec335a5-60e4-4754-b631-f496e5e15d01,HCM-STAN-0846-C20,clinical.project-hcmi-cmdc.2026-01-07,65.5,male,hispanic or latino,white,173.0,66.2,22.1,1.0,,1,hcmi_tcga
+af28043e-c85c-48cf-aa29-853fa0407cf0,HCM-EXPT-1227-C18,clinical.project-hcmi-cmdc.2026-01-07,78.5,female,,,,,,1.0,,1,hcmi_tcga
+af344e6d-19b5-494f-8b43-3f0f897bb703,HCM-EXPT-0980-C50,clinical.project-hcmi-cmdc.2026-01-07,58.1,female,,,,,,,,1,hcmi_tcga
+af78a845-bdb6-4245-b3a2-c94dbbf18653,HCM-STAN-1109-D13,clinical.project-hcmi-cmdc.2026-01-07,42.8,male,hispanic or latino,,173.0,104.0,34.7,1.0,,1,hcmi_tcga
+afa149e0-edb7-4f8e-9f56-6e1c0ac78287,HCM-BROD-0106-C71,clinical.project-hcmi-cmdc.2026-01-07,52.7,male,hispanic or latino,white,179.1,81.0,25.3,1.0,,1,hcmi_tcga
+b0362a57-b459-4ece-ab3b-e44f8d1820f3,HCM-BROD-0922-C71,clinical.project-hcmi-cmdc.2026-01-07,49.2,male,not hispanic or latino,white,180.0,81.0,25.0,1.0,,1,hcmi_tcga
+b03d2210-9c3c-44aa-8d73-4ef9588df1a5,HCM-BROD-0457-C71,clinical.project-hcmi-cmdc.2026-01-07,69.6,male,not hispanic or latino,white,164.0,72.0,26.8,1.0,,1,hcmi_tcga
+b0f583f9-177a-4578-ad47-908b8023ff99,HCM-BROD-0755-C43,clinical.project-hcmi-cmdc.2026-01-07,62.5,female,not hispanic or latino,white,162.0,86.0,32.8,1.0,,1,hcmi_tcga
+b1021eee-f5c8-43a7-aab9-79553bca2265,HCM-CSHL-0461-D12,clinical.project-hcmi-cmdc.2026-01-07,54.7,male,not hispanic or latino,black or african american,177.8,70.3,22.0,1.0,,1,hcmi_tcga
+b1cef01b-8b17-46b1-a58a-745b55a2e94f,HCM-EXPT-1004-C50,clinical.project-hcmi-cmdc.2026-01-07,54.7,female,,,,,,,,1,hcmi_tcga
+b1ed6908-e164-4e0f-accd-11605edf4c81,HCM-BROD-0353-C64,clinical.project-hcmi-cmdc.2026-01-07,14.0,female,,,,61.0,,1.0,,1,hcmi_tcga
+b2765761-9c40-4b33-ab6b-e3154e34c644,HCM-EXPT-1069-C18,clinical.project-hcmi-cmdc.2026-01-07,72.9,male,,,,,,,,1,hcmi_tcga
+b2b4474b-63d8-42f8-820f-d572814583c7,HCM-SANG-1310-C15,clinical.project-hcmi-cmdc.2026-01-07,72.5,male,,,,,,1.0,,1,hcmi_tcga
+b2bcc99e-10ea-42e7-a1d9-181f0732d25e,HCM-EXPT-1255-C25,clinical.project-hcmi-cmdc.2026-01-07,77.5,female,,,,,,1.0,,1,hcmi_tcga
+b353e733-cef9-408c-bbde-1c8f5c1ca81c,HCM-EXPT-0897-C25,clinical.project-hcmi-cmdc.2026-01-07,62.4,female,,,,,,,,1,hcmi_tcga
+b35898b6-7e8a-43a9-b6f2-4dfc91255e26,HCM-BROD-0450-C15,clinical.project-hcmi-cmdc.2026-01-07,52.4,male,not hispanic or latino,white,172.0,53.0,18.0,1.0,,1,hcmi_tcga
+b3b23c0b-a9bd-434a-9875-5cfba04cfe7f,HCM-SANG-0273-C18,clinical.project-hcmi-cmdc.2026-01-07,78.5,male,,,,,,1.0,,1,hcmi_tcga
+b3c6f765-beb5-4d1f-938e-9f96b33f4ef1,HCM-EXPT-1235-C18,clinical.project-hcmi-cmdc.2026-01-07,73.5,male,,,,,,1.0,,1,hcmi_tcga
+b3cc0754-6a21-4683-a491-b2fb8b6175a4,HCM-BROD-0613-C71,clinical.project-hcmi-cmdc.2026-01-07,51.0,male,not hispanic or latino,white,,,43.0,1.0,,1,hcmi_tcga
+b3d87033-c8cd-431d-9ada-e3c6407a96bc,HCM-SANG-1305-C15,clinical.project-hcmi-cmdc.2026-01-07,62.5,male,,,,,,1.0,,1,hcmi_tcga
+b41f4663-31fe-405a-8abc-3d09f3d4163a,HCM-SANG-0519-C20,clinical.project-hcmi-cmdc.2026-01-07,60.5,male,,,,,,1.0,,1,hcmi_tcga
+b44ee47e-c360-41bf-8e0d-a95dc6f9f9cc,HCM-BROD-0195-C71,clinical.project-hcmi-cmdc.2026-01-07,50.0,female,not hispanic or latino,white,162.6,54.9,20.8,1.0,,1,hcmi_tcga
+b4c738d2-663f-4b18-ae65-e8397ce9a34e,HCM-EXPT-0984-C34,clinical.project-hcmi-cmdc.2026-01-07,52.1,,,,,,,,,1,hcmi_tcga
+b5160217-33c3-47cd-8540-44ca283c8464,HCM-BROD-0029-C71,clinical.project-hcmi-cmdc.2026-01-07,58.0,male,not hispanic or latino,white,172.3,83.4,28.1,1.0,,1,hcmi_tcga
+b519e4e3-46d7-4ac8-811d-899fd4ee1e9b,HCM-SANG-0526-C15,clinical.project-hcmi-cmdc.2026-01-07,62.5,male,,,,,,1.0,,1,hcmi_tcga
+b55e8368-6a56-4d21-8848-751bf59c4216,HCM-EXPT-1241-C20,clinical.project-hcmi-cmdc.2026-01-07,66.5,male,,,,,,1.0,,1,hcmi_tcga
+b5fe3fa5-0f46-4e63-8e1f-dc3d28734936,HCM-CSHL-0065-C20,clinical.project-hcmi-cmdc.2026-01-07,63.3,male,not hispanic or latino,asian,162.5,61.2,23.0,1.0,,1,hcmi_tcga
+b655b06f-fd1e-4e55-b9e0-d8181ab8f7a5,HCM-WCMC-0785-C67,clinical.project-hcmi-cmdc.2026-01-07,57.3,male,,white,180.3,74.2,23.0,1.0,,1,hcmi_tcga
+b68751b4-ffee-4ab8-93e3-8b38866bffb8,HCM-BROD-0642-C43,clinical.project-hcmi-cmdc.2026-01-07,54.0,female,not hispanic or latino,white,165.0,81.0,30.0,1.0,,1,hcmi_tcga
+b68a5c9e-76f3-47a2-b60f-35c99bb9ffbb,HCM-SANG-1299-C15,clinical.project-hcmi-cmdc.2026-01-07,58.5,male,,,,,,1.0,,1,hcmi_tcga
+b6c440ae-67b1-46e0-a9fc-f08e51f15448,HCM-BROD-0097-C15,clinical.project-hcmi-cmdc.2026-01-07,73.5,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+b7036145-5949-4598-94ef-0e671416892b,HCM-EXPT-1030-C18,clinical.project-hcmi-cmdc.2026-01-07,65.9,male,,,,,,,,1,hcmi_tcga
+b72a905b-4179-4da4-8bfb-e0287d28bab2,HCM-BROD-1078-C49,clinical.project-hcmi-cmdc.2026-01-07,45.9,female,hispanic or latino,white,160.0,55.0,21.0,1.0,,1,hcmi_tcga
+b7affc3b-dec4-48b4-afe8-c7b5d8c4f495,HCM-EXPT-0364-C50,clinical.project-hcmi-cmdc.2026-01-07,86.1,female,,,,,,,,1,hcmi_tcga
+b7db0140-9259-4949-bcff-36ad81db6306,HCM-CSHL-0617-C22,clinical.project-hcmi-cmdc.2026-01-07,86.3,male,,,170.0,75.0,26.0,1.0,,1,hcmi_tcga
+b89e2bf1-21be-4916-9cfc-3e75c52ecfa7,HCM-STAN-0627-C34,clinical.project-hcmi-cmdc.2026-01-07,59.5,male,not hispanic or latino,,177.8,91.7,29.0,1.0,25.0,1,hcmi_tcga
+b9ff4f43-7add-4cf0-a72d-cdfc92cc6b7d,HCM-STAN-0914-C34,clinical.project-hcmi-cmdc.2026-01-07,53.4,male,not hispanic or latino,black or african american,180.0,60.0,18.5,1.0,,1,hcmi_tcga
+ba085153-6dbd-4134-a78d-1be7579f8369,HCM-BROD-0923-C64,clinical.project-hcmi-cmdc.2026-01-07,9.9,female,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+ba455f85-09e8-4da3-8bf1-750848adc52d,HCM-CSHL-0636-C02,clinical.project-hcmi-cmdc.2026-01-07,59.0,male,,,173.0,120.5,40.3,1.0,0.0,1,hcmi_tcga
+babbc3cb-14b7-4894-b91d-c160f4cb48e0,HCM-BROD-0047-C71,clinical.project-hcmi-cmdc.2026-01-07,61.3,male,,asian,166.0,66.4,24.1,1.0,,1,hcmi_tcga
+bae134d5-d971-4fff-9c92-64e399e0d3ce,HCM-BROD-0721-C43,clinical.project-hcmi-cmdc.2026-01-07,57.7,male,not hispanic or latino,white,172.0,99.0,33.0,1.0,,1,hcmi_tcga
+bb71a9ce-2934-40a4-a99a-b8e5b5491a55,HCM-BROD-0225-C43,clinical.project-hcmi-cmdc.2026-01-07,42.8,male,not hispanic or latino,white,193.0,113.0,30.0,1.0,,1,hcmi_tcga
+bc1f75d5-8910-45ee-ae52-0d34ee41ee02,HCM-CSHL-0608-C17,clinical.project-hcmi-cmdc.2026-01-07,39.8,female,,,172.0,75.0,25.0,1.0,,1,hcmi_tcga
+bc9d0b90-993d-4ecd-95cc-4514410e25ea,HCM-CSHL-0378-C18,clinical.project-hcmi-cmdc.2026-01-07,49.6,male,not hispanic or latino,white,175.3,90.71,30.0,1.0,,1,hcmi_tcga
+bd21e38c-bc6a-42f4-b10a-64f009c0d25a,HCM-CSHL-0880-C18,clinical.project-hcmi-cmdc.2026-01-07,61.6,male,not hispanic or latino,white,180.0,68.0,21.0,1.0,,1,hcmi_tcga
+be13c558-9f05-46c5-9dd3-b45050a5bb12,HCM-BROD-1131-C06,clinical.project-hcmi-cmdc.2026-01-07,76.7,male,not hispanic or latino,white,160.0,74.0,29.0,1.0,,1,hcmi_tcga
+be408fe2-5f92-4593-9b1d-190a4d46f9f8,HCM-BROD-0200-C71,clinical.project-hcmi-cmdc.2026-01-07,75.2,male,not hispanic or latino,white,179.0,88.0,27.5,1.0,,1,hcmi_tcga
+bea1726c-ae87-4697-8d35-06c37eee0999,HCM-BROD-0413-C25,clinical.project-hcmi-cmdc.2026-01-07,53.1,male,not hispanic or latino,white,182.0,85.0,25.0,1.0,,1,hcmi_tcga
+bea4ff97-4e53-434e-b260-81d6aa33106d,HCM-BROD-0043-C16,clinical.project-hcmi-cmdc.2026-01-07,68.7,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+bf1dca4b-9176-4390-9ba9-6b0bcf3ccf04,HCM-BROD-0472-C34,clinical.project-hcmi-cmdc.2026-01-07,65.9,male,not hispanic or latino,white,176.0,81.0,26.1,1.0,75.0,1,hcmi_tcga
+bf369dae-eb71-46f7-8e5b-196b1ebcc168,HCM-BROD-0955-C15,clinical.project-hcmi-cmdc.2026-01-07,71.7,male,not hispanic or latino,white,162.0,82.0,31.0,1.0,4.0,1,hcmi_tcga
+bf582b38-0592-4076-bd3e-900d06d7d8a8,HCM-CSHL-0606-C17,clinical.project-hcmi-cmdc.2026-01-07,71.6,male,,,163.0,63.0,24.0,1.0,,1,hcmi_tcga
+bf87fe29-de9d-437b-925f-2da57830070c,HCM-SANG-1083-C16,clinical.project-hcmi-cmdc.2026-01-07,51.5,male,,,,,,1.0,,1,hcmi_tcga
+bfe15f44-e1dd-46ed-b429-908822d0a781,HCM-CSHL-0056-C18,clinical.project-hcmi-cmdc.2026-01-07,75.1,male,not hispanic or latino,white,182.0,116.5,35.0,1.0,,1,hcmi_tcga
+c045ba6f-3078-4dbd-9163-5ccd75cc1259,HCM-CSHL-0820-C34,clinical.project-hcmi-cmdc.2026-01-07,70.8,female,not hispanic or latino,asian,157.5,66.7,27.0,1.0,0.0,1,hcmi_tcga
+c04e722d-67a3-40ad-af5d-858b6eab0f6a,HCM-CSHL-0178-C25,clinical.project-hcmi-cmdc.2026-01-07,71.1,male,,,170.0,66.0,23.0,1.0,,1,hcmi_tcga
+c0d09c37-7571-4ea6-af52-7d17c344172e,HCM-EXPT-1050-C18,clinical.project-hcmi-cmdc.2026-01-07,90.0,female,,,,,,,,1,hcmi_tcga
+c0fcadbc-11f7-4dc9-8cf4-906419ea84e6,HCM-EXPT-1244-C18,clinical.project-hcmi-cmdc.2026-01-07,55.5,female,,,,,,1.0,,1,hcmi_tcga
+c14d7245-1a9c-45cf-b284-8f49c3fe2ec9,HCM-WCMC-0749-C34,clinical.project-hcmi-cmdc.2026-01-07,72.6,male,not hispanic or latino,white,177.8,91.5,29.0,1.0,28.0,1,hcmi_tcga
+c156af60-87f6-496a-b847-33ed9c51ac18,HCM-CSHL-1096-C44,clinical.project-hcmi-cmdc.2026-01-07,86.3,male,not hispanic or latino,white,177.8,89.8,28.0,1.0,,1,hcmi_tcga
+c17e8249-b8d4-4d88-b0f3-d27aeb6a15a4,HCM-BROD-1128-C15,clinical.project-hcmi-cmdc.2026-01-07,56.3,male,not hispanic or latino,white,172.0,55.0,18.0,1.0,15.0,1,hcmi_tcga
+c229960d-31f7-43d2-9bb5-599c1dd88350,HCM-CSHL-0187-C25,clinical.project-hcmi-cmdc.2026-01-07,67.2,male,,,171.0,59.0,20.0,1.0,,1,hcmi_tcga
+c297718c-1d40-439a-a5de-09c5eb5ccea9,HCM-BROD-0118-C16,clinical.project-hcmi-cmdc.2026-01-07,46.0,male,not hispanic or latino,asian,,,,1.0,,1,hcmi_tcga
+c2db7ccf-6c5e-424f-bc0e-a27a319622ab,HCM-SANG-0314-C15,clinical.project-hcmi-cmdc.2026-01-07,72.5,male,,,,,,1.0,,1,hcmi_tcga
+c2e4432f-08a8-46bf-870b-f49cda508c51,HCM-CSHL-0240-C18,clinical.project-hcmi-cmdc.2026-01-07,81.9,female,not hispanic or latino,white,165.1,59.9,22.0,1.0,,1,hcmi_tcga
+c39349d1-2cde-48d8-8a20-4ec319edd0d7,HCM-SANG-0276-C18,clinical.project-hcmi-cmdc.2026-01-07,78.5,female,,,,,,1.0,,1,hcmi_tcga
+c3f76e7e-661c-44fb-b0b6-3635da058fce,HCM-BROD-0423-C71,clinical.project-hcmi-cmdc.2026-01-07,37.9,male,,white,174.0,85.0,28.1,1.0,,1,hcmi_tcga
+c4025241-d423-4daa-b0fc-b27873d4e314,HCM-CSHL-0434-C24,clinical.project-hcmi-cmdc.2026-01-07,61.0,male,,,165.0,80.0,29.0,1.0,,1,hcmi_tcga
+c446e9cd-f5cc-4daa-b573-b261d7ea8f42,HCM-CSHL-0237-C18,clinical.project-hcmi-cmdc.2026-01-07,72.3,female,not hispanic or latino,asian,162.6,69.4,26.0,1.0,,1,hcmi_tcga
+c4e63551-fa43-46d6-935e-652eaf04312b,HCM-EXPT-0940-C50,clinical.project-hcmi-cmdc.2026-01-07,55.2,female,,,,,,,,1,hcmi_tcga
+c527e349-7263-445b-9d57-b6ab0dcbc133,HCM-EXPT-0936-C50,clinical.project-hcmi-cmdc.2026-01-07,83.1,female,,,,,,,,1,hcmi_tcga
+c5d2e21e-6987-4085-8c67-9d41630957b5,HCM-CSHL-0654-C26,clinical.project-hcmi-cmdc.2026-01-07,70.6,male,not hispanic or latino,black or african american,170.2,84.0,29.0,1.0,,1,hcmi_tcga
+c5e8675b-6d0b-485c-9dd7-8bfb59b5c44a,HCM-CSHL-0082-C25,clinical.project-hcmi-cmdc.2026-01-07,77.7,male,,,180.0,78.0,24.0,1.0,,1,hcmi_tcga
+c5e9a845-e0ff-4612-aa8e-c310098503a7,HCM-CSHL-0089-C25,clinical.project-hcmi-cmdc.2026-01-07,62.5,male,,,170.0,65.0,22.0,1.0,,1,hcmi_tcga
+c67a338b-394f-4108-8e78-6dbd5a5eeaec,HCM-CSHL-0242-C18,clinical.project-hcmi-cmdc.2026-01-07,72.1,male,not hispanic or latino,white,185.4,73.9,22.0,1.0,,1,hcmi_tcga
+c7343e5c-95ef-492b-a53d-44ccc9b7d6ee,HCM-SANG-0307-C15,clinical.project-hcmi-cmdc.2026-01-07,62.5,male,,,,,,1.0,,1,hcmi_tcga
+c7a011a7-e72c-4535-8367-43d07d80fb67,HCM-SANG-0274-C18,clinical.project-hcmi-cmdc.2026-01-07,77.5,male,,,,,,1.0,,1,hcmi_tcga
+c7b268b6-2c22-4225-943f-0690b37db259,HCM-SANG-0291-C15,clinical.project-hcmi-cmdc.2026-01-07,60.5,male,,,,,,1.0,,1,hcmi_tcga
+c811d6dd-992f-435a-80ec-b282a2e38aad,HCM-BROD-0003-C71,clinical.project-hcmi-cmdc.2026-01-07,82.1,female,not hispanic or latino,white,153.0,77.5,33.1,1.0,,1,hcmi_tcga
+c8f87337-a6d6-492d-943f-33207c8b40d3,HCM-CSHL-0379-C18,clinical.project-hcmi-cmdc.2026-01-07,72.3,male,not hispanic or latino,white,172.7,61.2,21.0,1.0,,1,hcmi_tcga
+c902d2a4-d473-498e-a235-c66960ffdefe,HCM-BROD-0782-C71,clinical.project-hcmi-cmdc.2026-01-07,51.8,female,,white,161.0,56.0,21.0,1.0,,1,hcmi_tcga
+c95492e0-26ba-4a9c-a99b-f6aee9d33f20,HCM-CSHL-1270-C18,clinical.project-hcmi-cmdc.2026-01-07,61.6,male,,,173.0,73.0,24.0,1.0,,1,hcmi_tcga
+c992b973-299c-49d0-b5b5-3bdabb7ef575,HCM-CSHL-0147-C24,clinical.project-hcmi-cmdc.2026-01-07,71.0,male,hispanic or latino,,182.8,104.32,31.0,1.0,,1,hcmi_tcga
+c996d442-45aa-47e8-9a9c-82727085d22d,HCM-BROD-0482-C34,clinical.project-hcmi-cmdc.2026-01-07,54.5,female,not hispanic or latino,white,,54.0,23.0,1.0,,1,hcmi_tcga
+c9bb8d6f-cd84-4b15-9fa3-a3257726a338,HCM-EXPT-1215-C15,clinical.project-hcmi-cmdc.2026-01-07,67.5,male,,,,,,1.0,,1,hcmi_tcga
+c9bf8ca1-80dd-4b27-9b02-7347de171e12,HCM-SANG-1095-C25,clinical.project-hcmi-cmdc.2026-01-07,57.5,female,,,,,,1.0,,1,hcmi_tcga
+ca0b8e86-7e21-4192-8113-c8d051768365,HCM-CSHL-0858-C25,clinical.project-hcmi-cmdc.2026-01-07,40.0,female,,,174.0,55.0,18.0,1.0,,1,hcmi_tcga
+ca7aecd3-f8a4-4282-8167-f85368bec527,HCM-BROD-0253-C15,clinical.project-hcmi-cmdc.2026-01-07,77.3,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+ca7bc7fd-6ce1-4d63-b935-804ff4d3abc2,HCM-BROD-1129-C56,clinical.project-hcmi-cmdc.2026-01-07,61.4,female,not hispanic or latino,white,156.0,68.0,28.0,1.0,,1,hcmi_tcga
+caa4afe4-b5e1-4427-ae52-9d41c7c8b93f,HCM-CSHL-0192-C25,clinical.project-hcmi-cmdc.2026-01-07,67.7,male,,,175.0,92.0,30.0,1.0,,1,hcmi_tcga
+cad9953c-7293-4699-9c47-3e24bc592f9a,HCM-BROD-0104-C71,clinical.project-hcmi-cmdc.2026-01-07,63.0,female,not hispanic or latino,white,169.5,73.1,25.4,1.0,,1,hcmi_tcga
+caeb19f1-7bd6-4a05-bd33-4b894610fa9d,HCM-EXPT-0893-C25,clinical.project-hcmi-cmdc.2026-01-07,79.8,female,,,,,,,,1,hcmi_tcga
+cb56773d-4a53-4313-8c10-51254698b3bd,HCM-BROD-1130-C06,clinical.project-hcmi-cmdc.2026-01-07,76.9,female,not hispanic or latino,white,170.0,94.0,32.5,1.0,30.0,1,hcmi_tcga
+cba81c26-946c-4581-bb5a-2451fa3912b5,HCM-EXPT-1191-C15,clinical.project-hcmi-cmdc.2026-01-07,77.5,male,,,,,,1.0,,1,hcmi_tcga
+cc3f9ed5-edcc-4a5a-883b-25bfca20b730,HCM-CSHL-1262-C19,clinical.project-hcmi-cmdc.2026-01-07,65.4,male,,,190.0,63.0,17.0,1.0,,1,hcmi_tcga
+cc86271e-34bc-4f3a-bd1b-9200a606a3fa,HCM-WCMC-1280-C54,clinical.project-hcmi-cmdc.2026-01-07,63.1,female,not hispanic or latino,white,152.4,54.0,23.0,1.0,,1,hcmi_tcga
+cd38c16c-c935-47a1-889b-0a48a6cd681c,HCM-STAN-0909-C16,clinical.project-hcmi-cmdc.2026-01-07,86.7,female,not hispanic or latino,,156.0,51.0,21.0,1.0,,1,hcmi_tcga
+cd6f37d5-d192-48b9-a63f-54d8d1e810c6,HCM-CSHL-0064-C18,clinical.project-hcmi-cmdc.2026-01-07,75.4,male,not hispanic or latino,asian,182.0,79.37,24.0,1.0,,1,hcmi_tcga
+ce4c2cc5-ddbb-4870-a879-5b98305a9d2d,HCM-BROD-0574-C71,clinical.project-hcmi-cmdc.2026-01-07,80.3,male,not hispanic or latino,white,,,25.0,1.0,,1,hcmi_tcga
+ce96bebc-8d72-4921-af1e-f9ecb5056f33,HCM-EXPT-0898-C25,clinical.project-hcmi-cmdc.2026-01-07,64.6,male,,,,,,,,1,hcmi_tcga
+ce97cd4b-f81f-4f99-a96d-29ca5f814af5,HCM-SANG-0549-C15,clinical.project-hcmi-cmdc.2026-01-07,64.5,male,,,,,,1.0,,1,hcmi_tcga
+cea2d371-6cd9-454b-a64b-be6c7b217134,HCM-BROD-1181-C73,clinical.project-hcmi-cmdc.2026-01-07,61.3,male,,white,167.0,81.0,28.0,1.0,,1,hcmi_tcga
+cf3e235e-676c-45de-a746-2ea45fd2142f,HCM-SANG-0282-C18,clinical.project-hcmi-cmdc.2026-01-07,85.5,female,,,,,,1.0,,1,hcmi_tcga
+cf4e22e6-18dc-4a1b-a1d3-1c9ceddd232d,HCM-BROD-0015-C25,clinical.project-hcmi-cmdc.2026-01-07,62.6,female,not hispanic or latino,white,148.3,64.4,29.3,1.0,,1,hcmi_tcga
+cf726c27-b74c-4feb-96ef-bd463ae9c179,HCM-CSHL-0320-C02,clinical.project-hcmi-cmdc.2026-01-07,78.9,male,,,169.0,69.0,24.2,1.0,20.0,1,hcmi_tcga
+cf7c73f3-b680-496d-94e5-22951ef84b79,HCM-BROD-0648-C71,clinical.project-hcmi-cmdc.2026-01-07,63.7,male,not hispanic or latino,white,,,24.0,1.0,,1,hcmi_tcga
+d000dcfe-181c-46fe-93ba-5fce8336b52d,HCM-CSHL-0057-C18,clinical.project-hcmi-cmdc.2026-01-07,68.4,male,not hispanic or latino,white,172.0,90.7,30.0,1.0,,1,hcmi_tcga
+d034a12b-4013-4922-9026-b1d8c927e4f8,HCM-EXPT-1217-C25,clinical.project-hcmi-cmdc.2026-01-07,57.5,male,,,,,,1.0,,1,hcmi_tcga
+d0f22766-c584-4e09-a92a-5fdca2cf5472,HCM-EXPT-1225-C25,clinical.project-hcmi-cmdc.2026-01-07,78.5,male,,,,,,1.0,,1,hcmi_tcga
+d15fc66d-22d5-45f5-9d6b-ba268aac35f3,HCM-CSHL-0369-D37,clinical.project-hcmi-cmdc.2026-01-07,62.2,female,not hispanic or latino,black or african american,165.1,95.3,35.0,1.0,,1,hcmi_tcga
+d1cf2815-e9df-410a-a62e-e74883edc960,HCM-SANG-1334-C18,clinical.project-hcmi-cmdc.2026-01-07,60.5,female,,,,,,1.0,,1,hcmi_tcga
+d22d578c-1bdd-4a01-a6dc-731a717b7e2c,HCM-SANG-1301-C20,clinical.project-hcmi-cmdc.2026-01-07,69.5,female,,,,,,1.0,,1,hcmi_tcga
+d230be66-fdb1-463f-90d6-484a6e968277,HCM-BROD-0925-C71,clinical.project-hcmi-cmdc.2026-01-07,59.6,male,not hispanic or latino,white,173.0,80.0,26.0,1.0,,1,hcmi_tcga
+d2a6bc00-8278-40f4-a30a-664a907b7754,HCM-SANG-1093-C18,clinical.project-hcmi-cmdc.2026-01-07,75.5,female,,,,,,1.0,,1,hcmi_tcga
+d2d0522a-bad8-4282-b67d-bed52e7efab4,HCM-CSHL-0765-C56,clinical.project-hcmi-cmdc.2026-01-07,74.9,female,,,166.0,50.5,18.3,1.0,,1,hcmi_tcga
+d2de259e-d8bb-40ae-a155-c288e016fee6,HCM-CSHL-0864-C44,clinical.project-hcmi-cmdc.2026-01-07,77.0,male,not hispanic or latino,white,177.8,65.3,21.0,1.0,,1,hcmi_tcga
+d341953c-f4a1-4c6b-ac1a-50f1b956c696,HCM-CSHL-0768-C56,clinical.project-hcmi-cmdc.2026-01-07,54.0,female,,,173.0,63.0,21.0,1.0,,1,hcmi_tcga
+d36aa50d-b457-4c64-bf02-f5360ceeb0cd,HCM-EXPT-0896-C25,clinical.project-hcmi-cmdc.2026-01-07,69.2,male,,,,,,,,1,hcmi_tcga
+d3a9dd49-6f2b-40aa-8027-e4c24421bf9f,HCM-BROD-0615-C16,clinical.project-hcmi-cmdc.2026-01-07,72.7,female,not hispanic or latino,,162.0,49.0,18.0,1.0,,1,hcmi_tcga
+d420e653-3fb2-432b-9e81-81232a80264d,HCM-BROD-0210-C71,clinical.project-hcmi-cmdc.2026-01-07,53.6,female,not hispanic or latino,white,160.3,53.1,20.7,1.0,,1,hcmi_tcga
+d43f47fd-56fb-45f5-b12c-62ef044ca3f5,HCM-SANG-1302-C15,clinical.project-hcmi-cmdc.2026-01-07,76.5,male,,,,,,1.0,,1,hcmi_tcga
+d4850437-8b6e-4b6f-a636-2c0068a14121,HCM-CSHL-0183-C25,clinical.project-hcmi-cmdc.2026-01-07,64.0,female,,,160.0,85.0,33.0,1.0,,1,hcmi_tcga
+d4e59654-f1b9-40a7-bfef-b57eaf571aef,HCM-STAN-1113-C18,clinical.project-hcmi-cmdc.2026-01-07,68.9,female,not hispanic or latino,white,163.0,60.0,22.6,1.0,,1,hcmi_tcga
+d4f36b88-d98b-4bfb-892e-0c45e740e91f,HCM-CSHL-0380-C18,clinical.project-hcmi-cmdc.2026-01-07,69.1,male,not hispanic or latino,white,175.3,87.4,28.0,1.0,,1,hcmi_tcga
+d58136f6-2e90-40b4-b7fb-3478011efa00,HCM-CSHL-0377-C18,clinical.project-hcmi-cmdc.2026-01-07,69.7,male,not hispanic or latino,white,177.8,69.4,22.0,1.0,,1,hcmi_tcga
+d585a79e-19e2-4829-9e3f-80b74d65b243,HCM-BROD-0194-C15,clinical.project-hcmi-cmdc.2026-01-07,47.8,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+d6164ae2-9071-418f-9682-b2ce941b02c5,HCM-CSHL-0839-C34,clinical.project-hcmi-cmdc.2026-01-07,65.3,female,not hispanic or latino,white,152.4,64.9,28.0,1.0,0.0,1,hcmi_tcga
+d6c76e91-940f-425a-84c0-f742ac783dd8,HCM-EXPT-0970-C18,clinical.project-hcmi-cmdc.2026-01-07,82.4,female,,,,,,,,1,hcmi_tcga
+d73ad293-edf5-4f88-8a06-65695f5f5ff0,HCM-BROD-0226-C43,clinical.project-hcmi-cmdc.2026-01-07,31.1,male,not hispanic or latino,white,173.0,79.0,26.0,1.0,,1,hcmi_tcga
+d7426469-359e-45e4-a58a-f70e4147cd10,HCM-BROD-0483-C16,clinical.project-hcmi-cmdc.2026-01-07,50.1,female,not hispanic or latino,white,157.0,48.0,19.5,1.0,,1,hcmi_tcga
+d77ca75a-491a-4616-9a1c-7b69fdd03585,HCM-CSHL-0258-C18,clinical.project-hcmi-cmdc.2026-01-07,55.2,female,,,157.0,100.0,40.6,1.0,,1,hcmi_tcga
+d7b49708-3dd6-4837-856a-bce8ceb8e76f,HCM-CSHL-0514-C50,clinical.project-hcmi-cmdc.2026-01-07,55.0,female,,,184.0,97.6,28.8,1.0,,1,hcmi_tcga
+d7fc5874-8ae0-4357-9d8d-01af39ee521f,HCM-CSHL-0092-C25,clinical.project-hcmi-cmdc.2026-01-07,69.3,male,,,164.0,71.0,26.0,1.0,,1,hcmi_tcga
+d847f721-5801-4052-b5ed-88845889e7da,HCM-SANG-0535-C20,clinical.project-hcmi-cmdc.2026-01-07,84.5,male,,,,,,1.0,,1,hcmi_tcga
+d8522fe4-e14f-46de-ab9d-f7445099d5a5,HCM-WCMC-0949-C67,clinical.project-hcmi-cmdc.2026-01-07,82.5,female,,,149.9,63.5,28.0,1.0,,1,hcmi_tcga
+d8b5fbeb-3c4c-424c-a1e7-5a7a085b005a,HCM-CSHL-0607-C19,clinical.project-hcmi-cmdc.2026-01-07,75.4,male,,,178.0,80.0,25.0,1.0,,1,hcmi_tcga
+d8f43a06-92ab-4a24-9410-d9121eccd119,HCM-BROD-0578-C15,clinical.project-hcmi-cmdc.2026-01-07,46.7,male,not hispanic or latino,white,,,28.0,1.0,1.0,1,hcmi_tcga
+d9e4acaa-d6b8-4740-a880-e6dc3a9c2332,HCM-EXPT-1002-C50,clinical.project-hcmi-cmdc.2026-01-07,62.4,female,,,,,,,,1,hcmi_tcga
+da09b63f-a076-48b9-9c88-2218db08e313,HCM-BROD-0796-C71,clinical.project-hcmi-cmdc.2026-01-07,86.3,male,not hispanic or latino,white,,,23.0,1.0,,1,hcmi_tcga
+da2509d3-513e-4d0d-b05e-99c4a8817c59,HCM-WCMC-0952-C34,clinical.project-hcmi-cmdc.2026-01-07,74.0,female,not hispanic or latino,white,165.1,56.7,21.0,1.0,110.0,1,hcmi_tcga
+da8c7e2c-9dd3-4df6-a4b5-b6fff01e6da8,HCM-WCMC-0788-C34,clinical.project-hcmi-cmdc.2026-01-07,72.6,male,,,160.0,81.6,32.0,1.0,40.0,1,hcmi_tcga
+dacc7c9f-0a5a-4a20-9415-13a4a8477399,HCM-EXPT-1065-C50,clinical.project-hcmi-cmdc.2026-01-07,89.9,female,,,,,,,,1,hcmi_tcga
+dae81dc4-d6a4-4ce2-8de7-35e1cbf46666,HCM-EXPT-0932-C50,clinical.project-hcmi-cmdc.2026-01-07,70.0,female,,,,,,,,1,hcmi_tcga
+daf1dd34-2188-4cb0-95a5-286e0a0ba5ad,HCM-SANG-0269-C18,clinical.project-hcmi-cmdc.2026-01-07,88.5,male,,,,,,1.0,,1,hcmi_tcga
+dc5a908f-fd2f-4eea-85cb-49b4de137286,HCM-CSHL-0669-C18,clinical.project-hcmi-cmdc.2026-01-07,39.1,male,not hispanic or latino,white,170.0,51.9,18.0,1.0,,1,hcmi_tcga
+dccf1a0b-1e0d-4b46-aea2-db98b998033a,HCM-EXPT-1000-C18,clinical.project-hcmi-cmdc.2026-01-07,75.9,male,,,,,,,,1,hcmi_tcga
+dd73ec51-8600-4f56-8591-92fd11c3cc92,HCM-SANG-0294-C15,clinical.project-hcmi-cmdc.2026-01-07,65.5,male,,,,,,1.0,,1,hcmi_tcga
+dd7c58fc-0765-4d02-9a60-515a721cd369,HCM-BROD-0328-C15,clinical.project-hcmi-cmdc.2026-01-07,62.6,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+dd88a8a4-517b-40ad-a4f3-201e20875cfe,HCM-BROD-0449-C34,clinical.project-hcmi-cmdc.2026-01-07,72.3,male,not hispanic or latino,white,178.0,80.0,25.2,1.0,50.0,1,hcmi_tcga
+dd9f3a2c-2962-4144-b4d1-58ce170d5e6b,HCM-EXPT-0934-C50,clinical.project-hcmi-cmdc.2026-01-07,61.6,female,,,,,,,,1,hcmi_tcga
+ddba0c54-930d-4dc4-b74f-48e29961c945,HCM-CSHL-0728-C25,clinical.project-hcmi-cmdc.2026-01-07,54.8,male,hispanic or latino,,172.0,110.0,37.2,1.0,,1,hcmi_tcga
+de19bdf6-63b3-4e75-bf11-a7b6ebcea466,HCM-CSHL-0317-C18,clinical.project-hcmi-cmdc.2026-01-07,65.0,female,,,168.0,93.0,33.0,1.0,,1,hcmi_tcga
+de431792-364a-4c0a-9ab6-1166816c979a,HCM-BROD-0559-C16,clinical.project-hcmi-cmdc.2026-01-07,24.3,male,not hispanic or latino,white,,,20.0,1.0,,1,hcmi_tcga
+de8fb027-acbe-4edb-8882-ad56778a10b0,HCM-EXPT-0891-C25,clinical.project-hcmi-cmdc.2026-01-07,64.4,female,,,,,,,,1,hcmi_tcga
+df69a9b0-63a6-47f4-b3a7-beb37edf100d,HCM-CSHL-0245-C18,clinical.project-hcmi-cmdc.2026-01-07,72.9,female,not hispanic or latino,white,157.5,47.62,19.0,1.0,,1,hcmi_tcga
+df8d98d5-5c5d-425f-9e12-ecaf49a50b9c,HCM-BROD-1103-C86,clinical.project-hcmi-cmdc.2026-01-07,52.1,male,not hispanic or latino,asian,,85.0,26.0,1.0,,1,hcmi_tcga
+dfa2e46f-43f2-4cbb-ab19-ea1f5e4b00a1,HCM-SANG-0530-C15,clinical.project-hcmi-cmdc.2026-01-07,69.5,male,,,,,,1.0,,1,hcmi_tcga
+dfa988f5-226e-47ca-b4c5-ef950c9efac5,HCM-CSHL-0191-C25,clinical.project-hcmi-cmdc.2026-01-07,75.5,male,,,,75.0,,1.0,,1,hcmi_tcga
+e00914a1-997e-44ba-9c88-a5e8741b4ee1,HCM-BROD-0100-C15,clinical.project-hcmi-cmdc.2026-01-07,64.4,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+e037ecb6-6680-4758-aa56-8daf451bf396,HCM-EXPT-1203-C19,clinical.project-hcmi-cmdc.2026-01-07,43.5,male,,,,,,1.0,,1,hcmi_tcga
+e20192b7-5dd5-45c9-a813-71071fb143be,HCM-SANG-1323-C15,clinical.project-hcmi-cmdc.2026-01-07,61.5,male,,,,,,1.0,,1,hcmi_tcga
+e26c3de9-0334-4117-9348-0ac6c434c397,HCM-EXPT-0889-C25,clinical.project-hcmi-cmdc.2026-01-07,72.6,male,,,,,,,,1,hcmi_tcga
+e36812a9-2637-43aa-87b1-6722019136b4,HCM-BROD-0962-C16,clinical.project-hcmi-cmdc.2026-01-07,62.3,male,not hispanic or latino,white,178.0,68.0,23.0,1.0,,1,hcmi_tcga
+e3b32485-b204-43a7-93a5-601408fcdf96,HCM-CSHL-0074-C25,clinical.project-hcmi-cmdc.2026-01-07,54.2,male,,,169.0,82.0,25.0,1.0,,1,hcmi_tcga
+e3b7a023-92a8-4c61-b1c9-be10f5d03bc9,HCM-BROD-0793-C15,clinical.project-hcmi-cmdc.2026-01-07,55.2,male,not hispanic or latino,white,,,18.0,1.0,,1,hcmi_tcga
+e46ea440-c987-4c4f-8b7e-bacca42d32d8,HCM-BROD-0724-C43,clinical.project-hcmi-cmdc.2026-01-07,74.4,female,not hispanic or latino,white,163.0,65.0,25.0,1.0,,1,hcmi_tcga
+e4b062d4-30a1-4661-b5ec-28c532cbad0d,HCM-CSHL-0801-C56,clinical.project-hcmi-cmdc.2026-01-07,54.0,female,,,162.0,97.0,37.0,1.0,,1,hcmi_tcga
+e4f98856-8ba9-498d-bbd5-443bb1bf4591,HCM-BROD-0134-C25,clinical.project-hcmi-cmdc.2026-01-07,63.0,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+e4ff1639-9acf-43ee-87e7-207066dcd907,HCM-WCMC-1284-C67,clinical.project-hcmi-cmdc.2026-01-07,90.0,male,not hispanic or latino,white,170.2,63.0,22.0,1.0,,1,hcmi_tcga
+e506251d-4072-4479-b2ce-5c75387dc7fc,HCM-BROD-0007-C49,clinical.project-hcmi-cmdc.2026-01-07,12.0,male,hispanic or latino,black or african american,,,27.0,1.0,,1,hcmi_tcga
+e681e4d0-b358-49ad-9ef8-88a32a6acb12,HCM-CSHL-0664-C18,clinical.project-hcmi-cmdc.2026-01-07,61.4,male,,,170.0,100.0,35.0,1.0,,1,hcmi_tcga
+e7448c61-2f2b-49b0-8f10-e7eda3f59444,HCM-SANG-1086-C18,clinical.project-hcmi-cmdc.2026-01-07,57.5,male,,,,,,1.0,,1,hcmi_tcga
+e7d252d1-a6df-4b6d-9e41-1a990db83678,HCM-EXPT-1008-C50,clinical.project-hcmi-cmdc.2026-01-07,51.1,female,,,,,,,,1,hcmi_tcga
+e7ec711b-2d50-44e9-8622-99cb3e4aa4fe,HCM-SANG-1094-C16,clinical.project-hcmi-cmdc.2026-01-07,71.5,male,,,,,,1.0,,1,hcmi_tcga
+e802e579-5293-465c-a867-74e290268299,HCM-CSHL-0063-C18,clinical.project-hcmi-cmdc.2026-01-07,75.1,male,not hispanic or latino,black or african american,170.1,93.44,32.0,1.0,,1,hcmi_tcga
+e89fb71d-dd21-4e48-bb32-0d9435addd84,HCM-BROD-0099-C15,clinical.project-hcmi-cmdc.2026-01-07,57.2,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+e8c47711-aab4-4f33-a3d4-d80cd4a8d821,HCM-BROD-0709-C64,clinical.project-hcmi-cmdc.2026-01-07,47.1,female,not hispanic or latino,white,165.0,67.0,25.0,1.0,,1,hcmi_tcga
+e8feb714-c8fc-4cc7-a139-36267ac147a2,HCM-BROD-0356-C16,clinical.project-hcmi-cmdc.2026-01-07,66.1,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+e9615c7c-0e14-45bc-a58e-ce3afbb6d40d,HCM-BROD-0130-C25,clinical.project-hcmi-cmdc.2026-01-07,57.6,male,not hispanic or latino,white,187.0,77.0,22.0,1.0,,1,hcmi_tcga
+e980e3c5-a9fb-42ad-ad02-b8bedc54ce23,HCM-SANG-0285-C18,clinical.project-hcmi-cmdc.2026-01-07,71.5,male,,,,,,1.0,,1,hcmi_tcga
+e9e4b631-4c65-40d2-9ce9-f6758269f229,HCM-EXPT-0997-C18,clinical.project-hcmi-cmdc.2026-01-07,69.3,male,,,,,,,,1,hcmi_tcga
+ea53b476-afdd-4df7-bfbb-c3fac39319f7,HCM-CSHL-0726-C18,clinical.project-hcmi-cmdc.2026-01-07,62.5,male,not hispanic or latino,white,172.0,75.0,25.4,1.0,,1,hcmi_tcga
+ea983695-b464-44d5-afe7-c5ab4366aad7,HCM-BROD-0038-C41,clinical.project-hcmi-cmdc.2026-01-07,16.2,male,not hispanic or latino,white,,,30.0,1.0,,1,hcmi_tcga
+eab27cd5-9c85-442a-8b4a-7bf161c23d7a,HCM-SANG-1309-C25,clinical.project-hcmi-cmdc.2026-01-07,69.5,male,,,,,,1.0,,1,hcmi_tcga
+eb537fd2-ac06-4f63-8c0a-0ca73dd06a3a,HCM-SANG-0283-C18,clinical.project-hcmi-cmdc.2026-01-07,58.5,male,,,,,,1.0,,1,hcmi_tcga
+eba34bc0-8bf7-4a99-90e8-356dcefdf1e5,HCM-EXPT-1222-C15,clinical.project-hcmi-cmdc.2026-01-07,56.5,male,,,,,,1.0,,1,hcmi_tcga
+ebbca85e-a234-4794-9825-4780144cfe7a,HCM-CSHL-0322-C20,clinical.project-hcmi-cmdc.2026-01-07,69.1,female,not hispanic or latino,white,162.6,89.4,34.0,1.0,,1,hcmi_tcga
+ec45b9c0-f668-43f6-90cb-3d5bc9931b80,HCM-SANG-1306-C25,clinical.project-hcmi-cmdc.2026-01-07,66.5,female,,,,,,1.0,,1,hcmi_tcga
+ecf740ab-ecd5-4a85-94be-e0610463c72f,HCM-CSHL-0077-C25,clinical.project-hcmi-cmdc.2026-01-07,66.3,male,,,167.0,85.0,30.0,1.0,,1,hcmi_tcga
+ed6a9222-9826-415b-8a1b-517fde951b60,HCM-EXPT-1238-C18,clinical.project-hcmi-cmdc.2026-01-07,88.5,male,,,,,,1.0,,1,hcmi_tcga
+eda3273d-5f57-44d9-ac72-7b3eba91689c,HCM-EXPT-1155-C18,clinical.project-hcmi-cmdc.2026-01-07,67.6,male,,,,,,,,1,hcmi_tcga
+ede7bfd3-af7e-4905-b32d-844cbb25e0b5,HCM-SANG-1082-C15,clinical.project-hcmi-cmdc.2026-01-07,80.5,male,,,,,,1.0,,1,hcmi_tcga
+ee0d306f-e708-478b-8bad-6f9f3bedefbf,HCM-BROD-0414-C25,clinical.project-hcmi-cmdc.2026-01-07,53.8,male,,,183.0,71.0,21.0,1.0,,1,hcmi_tcga
+ee35fde8-183f-48d2-b4ea-460c40445daa,HCM-CSHL-0184-C25,clinical.project-hcmi-cmdc.2026-01-07,77.3,female,,,150.0,42.0,19.0,1.0,,1,hcmi_tcga
+efc49baf-1c53-427c-afe1-267d9438ded0,HCM-SANG-1308-C25,clinical.project-hcmi-cmdc.2026-01-07,69.5,male,,,,,,1.0,,1,hcmi_tcga
+efdfc134-112d-4a60-a7ba-df9e1e64b579,HCM-EXPT-1240-C15,clinical.project-hcmi-cmdc.2026-01-07,72.5,male,,,,,,1.0,,1,hcmi_tcga
+f010de34-4d60-4760-b9ea-63850c34caad,HCM-EXPT-1199-C18,clinical.project-hcmi-cmdc.2026-01-07,72.5,female,,,,,,1.0,,1,hcmi_tcga
+f0c1dd21-a156-4284-afda-985cd2656a9f,HCM-BROD-0332-C43,clinical.project-hcmi-cmdc.2026-01-07,45.0,male,not hispanic or latino,white,170.0,83.0,28.0,1.0,,1,hcmi_tcga
+f0c6e5b9-3d64-456e-85ab-9978a91ffd43,HCM-CSHL-0257-C18,clinical.project-hcmi-cmdc.2026-01-07,59.0,male,,,191.0,132.0,36.2,1.0,,1,hcmi_tcga
+f0ee7109-8e30-4789-b071-cd80bec493a3,HCM-BROD-0419-C71,clinical.project-hcmi-cmdc.2026-01-07,72.4,female,not hispanic or latino,white,160.0,56.0,21.9,1.0,,1,hcmi_tcga
+f12fbecd-c941-47c2-b69c-4d07b81e0394,HCM-BROD-0831-C71,clinical.project-hcmi-cmdc.2026-01-07,78.1,female,not hispanic or latino,white,145.0,50.0,24.0,1.0,,1,hcmi_tcga
+f1332ba6-887b-45ec-846b-1180cbfd66b7,HCM-BROD-0693-C71,clinical.project-hcmi-cmdc.2026-01-07,66.3,male,not hispanic or latino,white,,,31.0,1.0,,1,hcmi_tcga
+f21ba837-795e-4032-9c2d-5ff557e4a439,HCM-BROD-0198-C71,clinical.project-hcmi-cmdc.2026-01-07,58.8,male,not hispanic or latino,white,167.4,77.9,27.8,1.0,,1,hcmi_tcga
+f2461357-8aa6-461b-9a13-1f18d44e50e9,HCM-CSHL-0463-C50,clinical.project-hcmi-cmdc.2026-01-07,59.0,female,,,180.0,95.0,29.3,1.0,,1,hcmi_tcga
+f255a5f0-49ad-48e5-aceb-520b066e35e8,HCM-SANG-0310-C15,clinical.project-hcmi-cmdc.2026-01-07,68.5,male,,,,,,1.0,,1,hcmi_tcga
+f25dac3c-3ee1-4a5e-898a-8b4e6b12ebc2,HCM-BROD-0694-C43,clinical.project-hcmi-cmdc.2026-01-07,45.9,female,not hispanic or latino,white,175.0,58.0,18.9,1.0,,1,hcmi_tcga
+f36d1708-d159-4429-a667-57107751c9ca,HCM-EXPT-1218-C18,clinical.project-hcmi-cmdc.2026-01-07,67.5,male,,,,,,1.0,,1,hcmi_tcga
+f394d2fb-970d-4d9f-82b1-3f16abfe2d55,HCM-CSHL-1263-C24,clinical.project-hcmi-cmdc.2026-01-07,76.7,male,,,175.0,90.0,29.0,1.0,,1,hcmi_tcga
+f3cb5924-1ad1-4119-853a-26f77240763b,HCM-CSHL-0668-C18,clinical.project-hcmi-cmdc.2026-01-07,48.4,female,not hispanic or latino,black or african american,162.0,70.2,26.7,1.0,,1,hcmi_tcga
+f3dfe620-ca76-4de3-a91f-f81eeb2e7dfc,HCM-SANG-0542-C18,clinical.project-hcmi-cmdc.2026-01-07,83.5,male,,,,,,1.0,,1,hcmi_tcga
+f404fc66-9398-4c2a-a336-993cd326c3ae,HCM-CSHL-0159-C18,clinical.project-hcmi-cmdc.2026-01-07,61.9,male,,,167.6,111.58,40.0,1.0,,1,hcmi_tcga
+f46b774a-59ce-437a-a8bc-7e6a6a05b45f,HCM-BROD-0044-C15,clinical.project-hcmi-cmdc.2026-01-07,36.1,male,not hispanic or latino,white,176.6,103.0,33.0,1.0,,1,hcmi_tcga
+f49e41f1-ab0a-4e6e-9780-2acdb94fa820,HCM-CSHL-0384-D37,clinical.project-hcmi-cmdc.2026-01-07,51.4,male,not hispanic or latino,black or african american,187.9,111.1,32.0,1.0,,1,hcmi_tcga
+f4a7b060-1b0f-4408-b481-7009df25f1ad,HCM-BROD-0596-C43,clinical.project-hcmi-cmdc.2026-01-07,68.7,female,not hispanic or latino,white,,,33.0,1.0,,1,hcmi_tcga
+f58c43fb-3ed2-4efa-b212-be47475b0717,HCM-CSHL-0699-C56,clinical.project-hcmi-cmdc.2026-01-07,70.0,female,,,168.0,113.0,40.0,1.0,,1,hcmi_tcga
+f59aaafe-c04e-44f3-9937-89bef164494a,HCM-WCMC-1340-C54,clinical.project-hcmi-cmdc.2026-01-07,64.0,female,,,163.0,54.0,20.0,1.0,,1,hcmi_tcga
+f5a13bb2-47f3-499d-b33f-b1caeb5e928b,HCM-CSHL-0838-C18,clinical.project-hcmi-cmdc.2026-01-07,58.6,female,hispanic or latino,white,160.0,64.0,25.0,1.0,,1,hcmi_tcga
+f5dccb7f-c0c5-4990-9092-6f0875a1fe04,HCM-SANG-1300-C18,clinical.project-hcmi-cmdc.2026-01-07,64.5,male,,,,,,1.0,,1,hcmi_tcga
+f6824107-f92f-47fc-930a-cbe3bfe58895,HCM-CSHL-0182-C25,clinical.project-hcmi-cmdc.2026-01-07,74.6,male,,,172.0,80.0,27.0,1.0,,1,hcmi_tcga
+f6a13511-0819-4219-bc4b-6cb146629f0e,HCM-CSHL-0729-C18,clinical.project-hcmi-cmdc.2026-01-07,60.0,female,not hispanic or latino,black or african american,162.0,93.3,35.6,1.0,,1,hcmi_tcga
+f78051ab-be5e-4d77-953f-df15762e9834,HCM-BROD-0481-C43,clinical.project-hcmi-cmdc.2026-01-07,63.5,female,not hispanic or latino,white,165.0,48.0,17.6,1.0,,1,hcmi_tcga
+f78c8d62-a481-4539-8f27-ab681c86b90d,HCM-SANG-1088-C18,clinical.project-hcmi-cmdc.2026-01-07,66.5,male,,,,,,1.0,,1,hcmi_tcga
+f7947194-42ae-4c80-b539-3acf8ca5ca53,HCM-EXPT-0977-C25,clinical.project-hcmi-cmdc.2026-01-07,74.2,male,,,,,,,,1,hcmi_tcga
+f7cabc6b-5cbd-4d90-aa7d-10619f564df4,HCM-EXPT-1018-C50,clinical.project-hcmi-cmdc.2026-01-07,69.2,female,,,,,,,,1,hcmi_tcga
+f82259c2-23e4-4868-9b89-7f56ffbeea05,HCM-EXPT-0995-C50,clinical.project-hcmi-cmdc.2026-01-07,76.3,female,,,,,,,,1,hcmi_tcga
+f8825237-31c7-4b78-8743-efb0bd917688,HCM-SANG-0308-C15,clinical.project-hcmi-cmdc.2026-01-07,65.5,male,,,,,,1.0,,1,hcmi_tcga
+f8a9aab0-6017-483d-b053-9393c6a5af2d,HCM-SANG-0265-C18,clinical.project-hcmi-cmdc.2026-01-07,51.5,female,,,,,,1.0,,1,hcmi_tcga
+f8c9dead-9a29-44a3-9680-794bf660b383,HCM-CSHL-0875-C67,clinical.project-hcmi-cmdc.2026-01-07,71.0,female,,,168.0,65.0,23.0,1.0,,1,hcmi_tcga
+f8e8fead-4979-4c49-9285-02dcbcda974a,HCM-CSHL-0812-C54,clinical.project-hcmi-cmdc.2026-01-07,76.8,female,hispanic or latino,asian,154.9,68.9,28.7,1.0,,1,hcmi_tcga
+f9301129-b7a7-4a42-ba05-27b9a30421fe,HCM-CSHL-0438-C18,clinical.project-hcmi-cmdc.2026-01-07,57.0,male,,,185.0,100.0,29.2,1.0,,1,hcmi_tcga
+f97b6ab3-1169-4856-bd0a-139104b6c5ab,HCM-BROD-0235-C16,clinical.project-hcmi-cmdc.2026-01-07,50.7,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+f9b191c8-60b1-49ee-bd4b-e45be987f59d,HCM-EXPT-1038-C50,clinical.project-hcmi-cmdc.2026-01-07,53.8,female,,,,,,,,1,hcmi_tcga
+f9d5bd26-816b-4aaa-809f-19d4b8d74692,HCM-CSHL-0241-C18,clinical.project-hcmi-cmdc.2026-01-07,89.0,female,not hispanic or latino,white,134.6,55.3,31.0,1.0,,1,hcmi_tcga
+fa30fc7f-90b6-4ca0-93b6-1351eae9dfc8,HCM-BROD-0035-C49,clinical.project-hcmi-cmdc.2026-01-07,9.8,male,,white,137.0,31.0,17.0,1.0,,1,hcmi_tcga
+fa48edba-622f-46e0-ad24-d3da0166abf3,HCM-SANG-0309-C15,clinical.project-hcmi-cmdc.2026-01-07,73.5,male,,,,,,1.0,,1,hcmi_tcga
+fa5791ff-50c5-4344-a9b5-df2db51f4c15,HCM-EXPT-1168-C43,clinical.project-hcmi-cmdc.2026-01-07,68.9,male,,,,,,,,1,hcmi_tcga
+fa7bc307-cfc5-4aea-85ce-27a4d73c9766,HCM-CSHL-0737-C18,clinical.project-hcmi-cmdc.2026-01-07,28.1,female,not hispanic or latino,white,165.1,68.0,25.0,1.0,,1,hcmi_tcga
+faf9731f-8d64-45d6-8bfc-7d5183243904,HCM-BROD-0040-C74,clinical.project-hcmi-cmdc.2026-01-07,2.8,male,not hispanic or latino,white,,,15.0,1.0,,1,hcmi_tcga
+fb3cac25-28e3-4677-868a-0e4ba6703dee,HCM-BROD-0677-C43,clinical.project-hcmi-cmdc.2026-01-07,55.1,female,,white,165.0,97.0,36.0,1.0,,1,hcmi_tcga
+fb50c60e-d191-474b-a5eb-19b922db6688,HCM-CSHL-0094-C25,clinical.project-hcmi-cmdc.2026-01-07,61.5,female,,,162.0,50.0,19.0,1.0,,1,hcmi_tcga
+fb6f7249-7994-4288-8ba8-6b4aeb939f25,HCM-SANG-1336-C15,clinical.project-hcmi-cmdc.2026-01-07,63.5,male,,,,,,1.0,,1,hcmi_tcga
+fc04bbd5-80ec-45a8-9136-6b62f8cca9bf,HCM-BROD-0579-C16,clinical.project-hcmi-cmdc.2026-01-07,36.9,female,not hispanic or latino,white,,44.0,15.0,1.0,,1,hcmi_tcga
+fc122a76-4ca2-4f09-94bb-7d0f024a4dad,HCM-CSHL-0600-C25,clinical.project-hcmi-cmdc.2026-01-07,72.7,male,,,169.0,63.0,22.0,1.0,,1,hcmi_tcga
+fc25bee8-d37a-4bda-9ff3-51fe590e91e8,HCM-CSHL-0464-C50,clinical.project-hcmi-cmdc.2026-01-07,42.0,female,,,171.0,57.0,19.5,1.0,,1,hcmi_tcga
+fd64b6a9-39e8-4e27-bb73-84110ab0d328,HCM-BROD-0125-C25,clinical.project-hcmi-cmdc.2026-01-07,72.9,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+fda02a1d-38f1-4e71-91f9-c58f174605d6,HCM-BROD-0477-C16,clinical.project-hcmi-cmdc.2026-01-07,68.6,male,,,,,28.0,1.0,,1,hcmi_tcga
+fdc29b73-d788-40f4-8f8d-cef36d100e58,HCM-SANG-0278-C20,clinical.project-hcmi-cmdc.2026-01-07,77.5,male,,,,,,1.0,,1,hcmi_tcga
+fdfd5770-4b64-4d35-b472-9c7908210b22,HCM-CSHL-0142-C18,clinical.project-hcmi-cmdc.2026-01-07,61.3,male,not hispanic or latino,black or african american,172.7,86.6,29.0,1.0,,1,hcmi_tcga
+fe72b434-4008-4e02-907d-4f32717666bc,HCM-EXPT-1251-C15,clinical.project-hcmi-cmdc.2026-01-07,72.5,female,,,,,,1.0,,1,hcmi_tcga
+feaef50b-0e38-4a04-b632-81ae538e1c22,HCM-BROD-0115-C16,clinical.project-hcmi-cmdc.2026-01-07,43.5,male,not hispanic or latino,white,,,,1.0,,1,hcmi_tcga
+fed59220-5e35-439c-ae0b-3dcb1fad165e,HCM-CSHL-0059-C25,clinical.project-hcmi-cmdc.2026-01-07,80.1,female,not hispanic or latino,white,152.4,53.9,23.0,1.0,,1,hcmi_tcga
+fffe41a6-c74b-4391-a513-2279f03139e9,HCM-EXPT-0884-C25,clinical.project-hcmi-cmdc.2026-01-07,67.8,male,,,,,,,,1,hcmi_tcga

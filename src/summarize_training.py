@@ -78,14 +78,13 @@ predicción clínica construido en el proyecto.
 
 import json
 from pathlib import Path
-from typing import Dict, Tuple
+from typing import Dict, Optional, Tuple
 
 import joblib
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.metrics import (
-    accuracy_score,
     average_precision_score,
     confusion_matrix,
     mean_absolute_error,
@@ -96,15 +95,20 @@ from sklearn.metrics import (
     roc_curve,
 )
 
+from src.preprocess import infer_columns, load_preprocessor, transform_with_loaded
+from src import metrics as mt
 
 def _load_xy(
     csv_path: Path,
     target: str = "label",
     task: str = "classification",
+    domain_col: Optional[str] = None,
 ) -> Tuple[pd.DataFrame, pd.Series]:
     df = pd.read_csv(csv_path)
     if target not in df.columns:
         raise ValueError(f"No se encuentra la columna {target} en {csv_path}")
+    if domain_col and domain_col in df.columns:
+        df = df.drop(columns=[domain_col])
     if task == "classification":
         y = df[target].astype(int)
         X = df.drop(columns=[target])
@@ -161,34 +165,39 @@ def _plot_roc_pr_confusion(
 ) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    classes = np.unique(y_true)
+    has_both_classes = len(classes) > 1
+
     try:
-        fpr, tpr, _ = roc_curve(y_true, y_proba)
-        auc = roc_auc_score(y_true, y_proba)
-        plt.figure(figsize=(5, 4))
-        plt.plot(fpr, tpr, label=f"AUC={auc:.3f}")
-        plt.plot([0, 1], [0, 1], linestyle="--", color="gray")
-        plt.xlabel("False Positive Rate")
-        plt.ylabel("True Positive Rate")
-        plt.title("ROC (test)")
-        plt.legend()
-        plt.tight_layout()
-        plt.savefig(out_dir / _name_with_target("test_roc.png", target), dpi=150)
-        plt.close()
+        if has_both_classes:
+            fpr, tpr, _ = roc_curve(y_true, y_proba)
+            auc = roc_auc_score(y_true, y_proba)
+            plt.figure(figsize=(5, 4))
+            plt.plot(fpr, tpr, label=f"AUC={auc:.3f}")
+            plt.plot([0, 1], [0, 1], linestyle="--", color="gray")
+            plt.xlabel("False Positive Rate")
+            plt.ylabel("True Positive Rate")
+            plt.title("ROC (test)")
+            plt.legend()
+            plt.tight_layout()
+            plt.savefig(out_dir / _name_with_target("test_roc.png", target), dpi=150)
+            plt.close()
     except Exception:
         pass
 
     try:
-        precision, recall, _ = precision_recall_curve(y_true, y_proba)
-        auprc = average_precision_score(y_true, y_proba)
-        plt.figure(figsize=(5, 4))
-        plt.plot(recall, precision, label=f"AUPRC={auprc:.3f}")
-        plt.xlabel("Recall")
-        plt.ylabel("Precision")
-        plt.title("PR (test)")
-        plt.legend()
-        plt.tight_layout()
-        plt.savefig(out_dir / _name_with_target("test_pr.png", target), dpi=150)
-        plt.close()
+        if has_both_classes and (y_true == 1).any():
+            precision, recall, _ = precision_recall_curve(y_true, y_proba)
+            auprc = average_precision_score(y_true, y_proba)
+            plt.figure(figsize=(5, 4))
+            plt.plot(recall, precision, label=f"AUPRC={auprc:.3f}")
+            plt.xlabel("Recall")
+            plt.ylabel("Precision")
+            plt.title("PR (test)")
+            plt.legend()
+            plt.tight_layout()
+            plt.savefig(out_dir / _name_with_target("test_pr.png", target), dpi=150)
+            plt.close()
     except Exception:
         pass
 
@@ -265,12 +274,90 @@ def _plot_regression_outputs(
     plt.close()
 
 
+def _series_quantiles(s: pd.Series, qs: list[float]) -> Dict[str, float]:
+    out: Dict[str, float] = {}
+    if s.empty:
+        return out
+    for q in qs:
+        out[f"p{int(q * 100)}"] = float(np.nanpercentile(s, q * 100))
+    return out
+
+
+def _risk_concordance_report(
+    raw_df: pd.DataFrame,
+    proba: np.ndarray,
+    domain_col: str,
+    unlabeled_domain: str,
+) -> Dict:
+    if domain_col not in raw_df.columns:
+        return {}
+    df = raw_df.copy()
+    df["proba"] = proba
+    df["domain"] = df[domain_col].astype(str)
+
+    report: Dict[str, Dict] = {"domain_proba_summary": {}}
+    for dom in sorted(df["domain"].dropna().unique()):
+        sub = df[df["domain"] == dom]
+        s = sub["proba"].astype(float)
+        row = {
+            "n": int(len(sub)),
+            "mean": float(np.nanmean(s)) if len(sub) else float("nan"),
+            "median": float(np.nanmedian(s)) if len(sub) else float("nan"),
+        }
+        row.update(_series_quantiles(s, [0.1, 0.25, 0.75, 0.9]))
+        report["domain_proba_summary"][str(dom)] = row
+
+    if unlabeled_domain in report["domain_proba_summary"]:
+        sub = df[df["domain"] == str(unlabeled_domain)].copy()
+        if "age_years" in sub.columns:
+            age = pd.to_numeric(sub["age_years"], errors="coerce")
+            bins = [0, 40, 50, 60, 70, 80, np.inf]
+            labels = ["<40", "40-49", "50-59", "60-69", "70-79", "80+"]
+            sub["age_bin"] = pd.cut(age, bins=bins, labels=labels, right=False)
+            age_stats = (
+                sub.groupby("age_bin")["proba"]
+                .agg(["count", "mean", "median"])
+                .reset_index()
+            )
+            report["unlabeled_age_bin_proba"] = {
+                str(r["age_bin"]): {
+                    "n": int(r["count"]),
+                    "mean": float(r["mean"]),
+                    "median": float(r["median"]),
+                }
+                for _, r in age_stats.iterrows()
+            }
+        if "bmi_last" in sub.columns:
+            bmi = pd.to_numeric(sub["bmi_last"], errors="coerce")
+            bins = [0, 18.5, 25, 30, 35, np.inf]
+            labels = ["<18.5", "18.5-24.9", "25-29.9", "30-34.9", "35+"]
+            sub["bmi_bin"] = pd.cut(bmi, bins=bins, labels=labels, right=False)
+            bmi_stats = (
+                sub.groupby("bmi_bin")["proba"]
+                .agg(["count", "mean", "median"])
+                .reset_index()
+            )
+            report["unlabeled_bmi_bin_proba"] = {
+                str(r["bmi_bin"]): {
+                    "n": int(r["count"]),
+                    "mean": float(r["mean"]),
+                    "median": float(r["median"]),
+                }
+                for _, r in bmi_stats.iterrows()
+            }
+    return report
+
+
 def evaluate_test(
     model_path: str | Path = "results/model.joblib",
     test_csv: str | Path = "data/processed/test.csv",
     out_json: str | Path = "results/test_metrics.json",
     target: str = "label",
     task: str = "classification",
+    data_dir: str | Path | None = None,
+    preprocessor_path: str | Path = "results/preprocessor.joblib",
+    domain_col: str = "domain",
+    unlabeled_domain: str = "nhanes",
 ) -> Dict:
     model_path = Path(model_path)
     test_csv = Path(test_csv)
@@ -282,24 +369,71 @@ def evaluate_test(
         raise FileNotFoundError(f"No encontré el test CSV en {test_csv}")
 
     model = joblib.load(model_path)
-    Xte, yte = _load_xy(test_csv, target=target, task=task)
+    raw_df = pd.read_csv(test_csv)
+    Xte, yte = _load_xy(test_csv, target=target, task=task, domain_col=domain_col)
+
+    pre = None
+    pre_path = Path(preprocessor_path)
+    if pre_path.exists():
+        pre = load_preprocessor(pre_path)
+
+    if pre is not None:
+        if hasattr(pre, "feature_names_in_"):
+            required = list(pre.feature_names_in_)
+            missing = [c for c in required if c not in Xte.columns]
+            if missing:
+                for col in missing:
+                    Xte[col] = np.nan
+            Xte = Xte[required]
+
+        numeric_cols: Optional[list[str]] = None
+        categorical_cols: Optional[list[str]] = None
+        if data_dir:
+            schema_path = Path(data_dir) / "schema.json"
+            if schema_path.exists():
+                schema = json.loads(schema_path.read_text(encoding="utf-8"))
+                numeric_cols = [c for c in schema.get("numeric", []) if c in Xte.columns]
+                categorical_cols = [c for c in schema.get("categorical", []) if c in Xte.columns]
+        if numeric_cols is None or categorical_cols is None:
+            df_tmp = Xte.copy()
+            df_tmp[target] = yte.values
+            numeric_cols, categorical_cols = infer_columns(df_tmp, target=target)
+
+        Xte = transform_with_loaded(pre, Xte, numeric_cols, categorical_cols)
 
     metrics = {}
     if task == "classification":
         proba = model.predict_proba(Xte)[:, 1]
-        y_pred = (proba >= 0.5).astype(int)
-
-        try:
-            metrics["auroc"] = roc_auc_score(yte, proba)
-        except Exception:
-            metrics["auroc"] = float("nan")
-        try:
-            metrics["auprc"] = average_precision_score(yte, proba)
-        except Exception:
-            metrics["auprc"] = float("nan")
-
-        metrics["accuracy"] = accuracy_score(yte, y_pred)
+        threshold = 0.5
+        threshold_path = out_json.parent / "threshold.json"
+        if threshold_path.exists():
+            try:
+                th = json.loads(threshold_path.read_text(encoding="utf-8"))
+                if isinstance(th, dict) and th.get("threshold") is not None:
+                    threshold = float(th["threshold"])
+            except Exception:
+                pass
+        metrics = mt.compute_classification_metrics(yte.values, proba, threshold=threshold)
+        y_pred = (proba >= threshold).astype(int)
         metrics["n_test"] = int(len(yte))
+        metrics["threshold"] = float(threshold)
+        risk_report = _risk_concordance_report(
+            raw_df,
+            proba,
+            domain_col=domain_col,
+            unlabeled_domain=unlabeled_domain,
+        )
+        if risk_report:
+            out_json.parent.mkdir(parents=True, exist_ok=True)
+            with open(out_json.parent / "risk_concordance.json", "w", encoding="utf-8") as f:
+                json.dump(risk_report, f, indent=2)
+            dom_summary = risk_report.get("domain_proba_summary", {})
+            if unlabeled_domain in dom_summary:
+                row = dom_summary[unlabeled_domain]
+                print(
+                    f"NHANES proba summary: mean={row.get('mean')}"
+                    f" median={row.get('median')} n={row.get('n')}"
+                )
     else:
         preds = model.predict(Xte)
         try:
@@ -373,7 +507,6 @@ def print_summary(results_dir: Path) -> None:
 if __name__ == "__main__":
     import argparse
 
-<<<<<<< HEAD
     ap = argparse.ArgumentParser(description="Resumen de entrenamiento y evaluacion")
     ap.add_argument("--model-path", default="results/model.joblib")
     ap.add_argument("--test-csv", default=None)
@@ -383,6 +516,9 @@ if __name__ == "__main__":
     ap.add_argument("--data-dir", default=None, help="Carpeta con aligned_test.csv o test.csv.")
     ap.add_argument("--results-dir", default="results", help="Carpeta con resultados.")
     ap.add_argument("--summary-only", action="store_true", help="Solo imprime resumen y sale.")
+    ap.add_argument("--preprocessor-path", default="results/preprocessor.joblib")
+    ap.add_argument("--domain-col", default="domain", help="Columna de dominio a excluir.")
+    ap.add_argument("--unlabeled-domain", default="nhanes", help="Dominio no etiquetado para resumen de riesgo.")
     args = ap.parse_args()
 
     results_dir = Path(args.results_dir)
@@ -401,20 +537,10 @@ if __name__ == "__main__":
         model_path=Path(args.model_path),
         test_csv=Path(test_csv),
         out_json=Path(args.out_json),
-=======
-    ap = argparse.ArgumentParser(description="Evaluacion en test")
-    ap.add_argument("--model-path", default="results/model.joblib")
-    ap.add_argument("--test-csv", default="data/processed/test.csv")
-    ap.add_argument("--out-json", default="results/test_metrics.json")
-    ap.add_argument("--target", default="label")
-    ap.add_argument("--task", choices=["classification", "regression"], default="classification")
-    args = ap.parse_args()
-
-    evaluate_test(
-        model_path=args.model_path,
-        test_csv=args.test_csv,
-        out_json=args.out_json,
->>>>>>> 56aae0ceea2bf5a2765e2543d64f0e22b032b50e
         target=args.target,
         task=args.task,
+        data_dir=args.data_dir,
+        preprocessor_path=Path(args.preprocessor_path),
+        domain_col=str(args.domain_col),
+        unlabeled_domain=str(args.unlabeled_domain),
     )

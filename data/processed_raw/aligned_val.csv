@@ -1,0 +1,3413 @@
+age_years,height_last,weight_last,bmi_last,sex,ethnicity,race,domain,label
+,,,,female,,,hcmi_tcga,1
+65.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+60.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+66.0,,,,male,not hispanic or latino,asian,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+61.0,165.1,63.5,23.0,male,not hispanic or latino,asian,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+81.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+60.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+61.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+51.0,,,,female,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+76.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+56.0,,,,female,hispanic or latino,,nhanes,0
+64.0,,,,male,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+53.9,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+44.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+79.3,,,,female,,,hcmi_tcga,1
+54.0,,,,male,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+69.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.5,,,,male,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+47.2,,,,male,not hispanic or latino,white,hcmi_tcga,1
+76.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+34.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+71.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+60.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+64.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+76.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+34.7,160.0,89.0,34.8,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+35.0,,,,male,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+47.6,182.0,75.0,23.0,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+28.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+50.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+46.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+45.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+59.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.4,180.3,93.4,29.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+54.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+65.0,,,,female,not hispanic or latino,white,nhanes,0
+21.0,,,,female,not hispanic or latino,white,nhanes,0
+61.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+65.4,190.0,63.0,17.0,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+25.0,,,,male,not hispanic or latino,white,nhanes,0
+66.0,,,,male,not hispanic or latino,black or african american,hcmi_tcga,1
+42.0,167.6,107.956,38.4,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+68.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,165.0,80.0,29.0,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+46.5,,,22.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+56.0,,,,female,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+43.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+64.0,176.0,80.0,25.8,male,not hispanic or latino,white,hcmi_tcga,1
+80.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+42.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+31.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+24.0,,,,male,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+57.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+75.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+74.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+65.0,,,,female,not hispanic or latino,white,nhanes,0
+49.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+37.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+52.0,,,,male,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+46.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+67.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+59.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+36.0,,,,male,not hispanic or latino,white,nhanes,0
+67.2,180.3,80.73,25.0,male,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+51.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+54.8,172.0,110.0,37.2,male,hispanic or latino,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+65.9,176.0,81.0,26.1,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+46.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+60.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+53.0,,,,female,not hispanic or latino,white,nhanes,0
+82.0,157.0,51.5,20.9,female,not hispanic or latino,white,hcmi_tcga,1
+70.0,,,,female,not hispanic or latino,white,nhanes,0
+53.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+46.6,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+65.0,168.0,93.0,33.0,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+80.0,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+24.0,,,,female,not hispanic or latino,asian,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+89.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+65.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+42.8,173.0,104.0,34.7,male,hispanic or latino,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+64.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+78.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+56.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+39.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+51.0,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+56.2,173.0,155.0,52.0,male,hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+58.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+75.0,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+34.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+81.0,155.0,61.4,25.6,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+75.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+38.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.7,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+41.0,,,,male,not hispanic or latino,white,nhanes,0
+73.5,,,,male,,,hcmi_tcga,1
+66.2,,80.4,,male,,,hcmi_tcga,1
+,,,,,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+73.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+47.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+41.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+58.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+75.4,165.0,64.0,24.0,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+56.0,,,,female,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+77.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+46.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+31.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+82.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+65.0,,,,male,hispanic or latino,,nhanes,0
+61.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+58.0,,,,male,,,hcmi_tcga,1
+76.6,,,,female,,,hcmi_tcga,1
+78.0,,,,male,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+74.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+50.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+77.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+39.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+81.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+58.5,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+60.0,,,,male,not hispanic or latino,asian,nhanes,0
+80.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+54.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.5,180.0,87.0,27.0,male,not hispanic or latino,white,hcmi_tcga,1
+36.0,,,,female,,white,hcmi_tcga,1
+50.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+61.0,163.0,68.49,25.8,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+39.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+49.0,,,,female,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+60.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+53.0,,,,female,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+58.0,,,,female,,,hcmi_tcga,1
+44.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+77.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+35.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+59.8,160.0,72.4,28.1,female,not hispanic or latino,white,hcmi_tcga,1
+32.0,,,,male,hispanic or latino,white,hcmi_tcga,1
+66.0,,,,female,,white,hcmi_tcga,1
+62.0,,,,male,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+54.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.6,170.0,69.0,23.9,male,not hispanic or latino,white,hcmi_tcga,1
+58.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+46.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+47.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+55.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+35.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+56.0,,,,female,hispanic or latino,white,hcmi_tcga,1
+39.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,male,,,hcmi_tcga,1
+55.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+,,,,female,,,hcmi_tcga,1
+60.8,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+46.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+37.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+64.5,,,,female,,,hcmi_tcga,1
+62.0,,,,female,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+48.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+37.0,,,,female,not hispanic or latino,asian,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+50.0,,,,female,not hispanic or latino,asian,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+20.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+44.0,,,,female,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+25.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+60.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+71.8,179.0,79.0,25.0,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+82.4,152.4,72.0,31.0,female,not hispanic or latino,white,hcmi_tcga,1
+60.0,,,,female,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+49.0,,,,female,not hispanic or latino,other,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+30.0,,,,female,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+53.0,,,,female,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+71.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+53.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+66.3,167.0,85.0,30.0,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+38.0,,,,female,not hispanic or latino,other,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+42.0,,,,female,not hispanic or latino,white,nhanes,0
+65.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+60.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+68.0,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+39.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.0,,,,male,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+65.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+67.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+33.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+50.7,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+28.0,,,,female,not hispanic or latino,white,nhanes,0
+34.7,178.0,79.0,25.0,male,,,hcmi_tcga,1
+64.0,,,,male,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.7,172.0,99.0,33.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+43.0,,,,male,,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+71.0,,,,female,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+50.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+60.7,,,18.0,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+78.5,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+41.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+67.0,167.64,134.0,47.7,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+65.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+51.0,,,,male,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+52.0,,,,female,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+21.0,,,,female,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.4,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+59.0,185.0,137.6,40.2,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+29.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+82.5,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+59.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+58.5,,,,male,,,hcmi_tcga,1
+48.0,,,,male,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+38.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+80.0,,,,male,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+46.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+58.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+65.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.0,,,,female,,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+53.0,,,,male,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+55.2,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+67.6,184.1,78.9,23.6,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+57.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+42.0,171.0,57.0,19.5,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+42.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+46.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+50.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+55.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+23.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+21.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+25.0,,,,female,hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+78.0,,,,female,not hispanic or latino,white,nhanes,0
+61.0,,,,male,,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+48.3,182.9,122.5,37.0,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+48.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.6,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,,98.0,,male,not hispanic or latino,white,hcmi_tcga,1
+52.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+54.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+75.7,181.0,83.0,25.3,male,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+51.0,,,,male,not hispanic or latino,black or african american,hcmi_tcga,1
+57.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+60.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+56.5,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+73.8,170.0,90.0,31.0,male,,,hcmi_tcga,1
+53.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+69.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+77.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+46.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+68.0,,,,male,hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+65.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+80.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+73.2,165.1,78.0,28.6,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+44.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+63.3,174.0,76.0,25.0,female,not hispanic or latino,white,hcmi_tcga,1
+59.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+50.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+47.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+49.0,167.0,80.0,28.7,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+40.0,,,,female,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+58.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+44.0,,,,male,not hispanic or latino,asian,nhanes,0
+54.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+33.0,,,,female,hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+59.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+70.0,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+44.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+34.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+74.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+59.0,,87.0,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+65.0,,,,female,not hispanic or latino,white,nhanes,0
+30.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+64.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+69.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+65.0,,,,female,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+44.0,,,,female,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+71.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+72.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+55.5,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+83.0,,,,female,,,hcmi_tcga,1
+72.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+53.6,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+21.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+28.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+48.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+79.2,,,,female,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+54.0,166.0,70.0,25.4,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+34.0,,,,female,not hispanic or latino,asian,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+32.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+30.0,,,,female,not hispanic or latino,white,nhanes,0
+82.2,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+64.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+55.0,160.0,66.1,25.8,female,not hispanic or latino,black or african american,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+54.0,,,,female,not hispanic or latino,asian,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+40.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+52.1,,,,,,,hcmi_tcga,1
+52.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+78.5,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+54.0,,,,male,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+69.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+36.3,173.0,105.0,35.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+69.0,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+38.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+41.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+38.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+60.0,,,,male,not hispanic or latino,white,nhanes,0
+66.0,,57.0,,female,not hispanic or latino,white,hcmi_tcga,1
+82.7,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+64.1,178.0,68.0,21.0,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+29.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+76.0,158.5,84.1,33.5,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.4,170.0,54.0,18.7,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+55.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+31.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+73.0,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+32.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+28.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+74.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+62.3,178.0,68.0,23.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+34.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+40.0,175.0,76.0,24.8,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+68.0,,,,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+31.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.0,,,,male,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+56.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+50.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+49.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.6,,,,female,,,hcmi_tcga,1
+29.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+71.0,,,,female,not hispanic or latino,white,nhanes,0
+44.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+74.8,165.0,76.5,28.0,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+36.1,175.3,70.0,23.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+55.0,174.0,110.0,36.3,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+76.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+89.0,,59.0,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+64.5,,,,male,,,hcmi_tcga,1
+55.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+25.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+35.0,187.0,93.9,26.9,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+40.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+46.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+49.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+34.0,,,,female,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+43.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+76.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+69.0,,,,female,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+64.0,,,,male,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+52.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+62.7,165.1,104.32,38.0,female,hispanic or latino,white,hcmi_tcga,1
+71.0,170.0,110.0,38.1,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+24.0,,,,female,not hispanic or latino,asian,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+50.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+32.0,,,,male,not hispanic or latino,other,nhanes,0
+34.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.0,,,,female,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+39.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+77.0,162.0,71.2,27.1,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+24.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+48.2,,,23.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+43.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+51.0,166.0,57.0,20.7,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+37.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+68.0,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+53.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+53.4,167.6,117.5,42.0,female,hispanic or latino,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+77.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+47.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.0,,,,female,,,hcmi_tcga,1
+68.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+26.0,,,,female,not hispanic or latino,white,nhanes,0
+52.0,,,,male,not hispanic or latino,,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+46.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+79.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.8,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+37.0,,,,female,hispanic or latino,white,hcmi_tcga,1
+35.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+64.0,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+46.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+58.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+56.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+72.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+82.0,,,,female,,white,hcmi_tcga,1
+50.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+69.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+24.0,,,,male,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+48.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+53.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+53.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+72.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+49.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+34.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+41.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+62.4,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+72.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+54.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+30.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+47.0,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+71.9,177.8,95.3,30.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+61.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+82.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+20.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+39.0,,,,male,,white,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+57.0,,,,female,,,hcmi_tcga,1
+75.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+63.0,,,,male,not hispanic or latino,black or african american,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+28.0,,,,male,hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+23.0,,,,male,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+43.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+60.0,180.0,60.0,18.5,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+29.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+41.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+55.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+50.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+67.0,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+67.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+74.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+71.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+56.0,,,,female,,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+57.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+79.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+34.0,173.0,84.5,28.2,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+56.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+60.0,183.0,163.0,48.7,male,not hispanic or latino,american indian or alaska native,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.3,163.0,75.0,28.0,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+47.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+48.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+38.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,,,,female,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+45.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+67.0,,,,male,,white,hcmi_tcga,1
+62.0,,,,male,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+40.0,162.0,99.1,37.8,female,hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+43.0,,,,male,not hispanic or latino,white,nhanes,0
+57.0,,,,male,not hispanic or latino,other,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+64.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+88.5,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+65.0,182.0,90.9,27.4,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+31.6,175.0,132.0,43.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.0,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,asian,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+62.0,,,,male,hispanic or latino,,nhanes,0
+21.0,,,,male,not hispanic or latino,white,nhanes,0
+40.0,,,,female,hispanic or latino,,nhanes,0
+89.9,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+42.0,154.0,55.0,23.2,female,not hispanic or latino,asian,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+80.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+78.0,,,,male,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+44.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+76.0,175.0,83.0,27.1,male,not hispanic or latino,white,hcmi_tcga,1
+34.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+48.0,,,,female,not hispanic or latino,other,nhanes,0
+65.0,,,,male,,white,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+76.4,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+69.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+80.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+59.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+34.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+77.0,,,,female,not hispanic or latino,white,nhanes,0
+69.0,,,,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+67.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+86.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+56.0,,,,male,not hispanic or latino,asian,hcmi_tcga,1
+41.8,173.0,70.8,23.7,male,hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+67.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+36.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+75.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+73.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+52.0,,,,male,not hispanic or latino,asian,hcmi_tcga,1
+26.0,,,,female,not hispanic or latino,white,nhanes,0
+49.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+64.7,177.0,113.0,36.0,male,,white,hcmi_tcga,1
+66.0,,,,male,hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+29.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+48.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+72.5,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+69.1,162.6,89.4,34.0,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+49.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.5,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+45.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+64.0,178.0,66.0,20.8,male,,,hcmi_tcga,1
+65.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+77.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+41.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+75.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+26.0,,,,male,not hispanic or latino,asian,nhanes,0
+49.0,,,,female,not hispanic or latino,asian,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+70.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+23.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+58.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+58.3,165.1,71.2,26.0,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+64.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,male,,,hcmi_tcga,1
+60.0,,,,female,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+64.0,173.0,109.226,36.5,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+77.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+82.5,149.9,63.5,28.0,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+57.5,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+65.0,,,,female,not hispanic or latino,white,nhanes,0
+36.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+62.3,165.1,49.9,18.0,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+78.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+70.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+76.9,170.0,94.0,32.5,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+80.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+37.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+78.3,185.0,60.0,18.0,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+59.0,,,,female,not hispanic or latino,white,nhanes,0
+52.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+69.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+60.6,,,,female,not hispanic or latino,white,hcmi_tcga,1
+75.0,174.0,78.0,25.8,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+56.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+65.5,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+36.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.0,,,,female,,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+64.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+53.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+32.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+36.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+48.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+80.0,,,,male,not hispanic or latino,white,nhanes,0
+57.5,,,31.0,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+68.0,,,,male,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+47.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+66.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+88.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+77.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+60.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+60.3,165.0,80.0,29.0,female,,,hcmi_tcga,1
+47.0,,,,female,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+36.0,,,,female,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+56.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+51.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+34.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+57.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+58.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+59.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+29.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,other,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+70.0,,,,male,,,hcmi_tcga,1
+31.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+72.5,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+52.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+30.0,,,,male,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+59.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+71.0,160.0,102.1,39.9,female,not hispanic or latino,white,hcmi_tcga,1
+76.3,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+74.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+48.0,171.0,109.0,37.3,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+53.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+56.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+83.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+43.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+61.0,165.1,88.45,32.0,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+46.0,,,,male,not hispanic or latino,asian,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+41.0,,,,male,not hispanic or latino,other,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+73.0,152.1,63.2,27.3,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+76.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+52.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+49.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+45.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+62.0,,,,female,,asian,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+57.0,,,,male,,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+82.0,180.0,63.9,19.7,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+54.0,,,,male,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+39.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+23.0,,,,male,hispanic or latino,,nhanes,0
+50.0,,,,female,not hispanic or latino,white,nhanes,0
+71.0,,,,female,hispanic or latino,,nhanes,0
+62.0,,,,female,,white,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,asian,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+44.0,,,,female,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+79.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+69.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+70.0,,,,female,not hispanic or latino,white,nhanes,0
+69.0,160.0,55.0,21.5,female,not hispanic or latino,white,hcmi_tcga,1
+37.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+62.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+41.0,,,,female,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+64.0,,,,male,hispanic or latino,,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+58.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+29.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+47.0,,,,female,not hispanic or latino,other,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+56.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+26.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+42.0,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+38.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+63.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+51.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+67.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+70.0,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+78.0,159.0,59.0,23.3,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+25.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+73.0,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+47.0,,,,female,,,hcmi_tcga,1
+66.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+54.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+47.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+56.0,,,,male,not hispanic or latino,asian,hcmi_tcga,1
+59.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+37.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+51.0,,,,male,not hispanic or latino,white,nhanes,0
+72.0,,,,male,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+52.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+47.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+23.0,,,,male,not hispanic or latino,white,nhanes,0
+67.2,171.0,59.0,20.0,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+67.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+46.0,168.0,63.0,22.3,male,not hispanic or latino,asian,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+65.0,167.0,58.0,20.8,male,not hispanic or latino,asian,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+21.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+65.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+72.9,153.0,56.7,24.0,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+45.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+47.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+52.0,,,,female,not hispanic or latino,asian,hcmi_tcga,1
+45.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.0,,,,female,,,hcmi_tcga,1
+65.0,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+73.5,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+52.2,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+38.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+55.0,182.9,80.7,24.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+58.7,177.0,84.0,26.8,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,white,nhanes,0
+40.0,,,,female,not hispanic or latino,,hcmi_tcga,1
+26.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+89.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+55.0,,,,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+74.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+23.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+69.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,asian,hcmi_tcga,1
+49.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+64.9,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+80.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+74.0,,,,female,,,hcmi_tcga,1
+14.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+80.0,,,,female,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+60.0,,,,male,,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+67.0,,,,male,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+27.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+44.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+58.0,,,,male,hispanic or latino,,nhanes,0
+,,,,male,,,hcmi_tcga,1
+62.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+70.3,183.0,55.0,16.0,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+45.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+42.9,175.3,103.4,34.0,male,hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+45.0,,,,female,not hispanic or latino,black or african american,nhanes,0
+,,,,female,,,hcmi_tcga,1
+70.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+61.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+40.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+58.0,162.6,92.0,34.8,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+51.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+49.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+60.0,,,,female,not hispanic or latino,white,nhanes,0
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+89.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+49.4,155.0,64.0,27.0,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+79.4,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+63.0,,,,female,hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+66.0,,,,female,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+61.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+51.0,187.96,125.0,35.4,male,not hispanic or latino,black or african american,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+57.0,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+74.8,170.2,77.1,27.0,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+90.0,183.0,84.0,25.1,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+35.0,,,,male,not hispanic or latino,other,nhanes,0
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,female,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+78.0,,,,male,not hispanic or latino,white,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1
+,,,,male,,,hcmi_tcga,1

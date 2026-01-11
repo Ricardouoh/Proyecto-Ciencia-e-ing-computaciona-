@@ -1,14 +1,14 @@
 from __future__ import annotations
 """
-Definición de modelos:
-- Regresión Logística (baseline)
+Definicion de modelos:
+- Regresion Logistica (baseline)
 - MLPClassifier (red densa con backprop)
-- GradientBoostingRegressor (no lineal, regresion)
-- RandomForestRegressor (no lineal, regresion)
+- GradientBoosting (clasificacion o regresion segun task)
+- RandomForest (clasificacion o regresion segun task)
 Uso:
     from src.model import make_model, default_config
     cfg = default_config(model="mlp")  # o "logreg"
-    model = make_model(cfg)
+    model = make_model(cfg, task="classification")
     model.fit(X_train, y_train)
     y_proba = model.predict_proba(X_val)[:, 1]
 """
@@ -16,7 +16,12 @@ Uso:
 from typing import Any, Dict
 
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
+from sklearn.ensemble import (
+    GradientBoostingClassifier,
+    GradientBoostingRegressor,
+    RandomForestClassifier,
+    RandomForestRegressor,
+)
 from sklearn.neural_network import MLPClassifier
 
 
@@ -82,7 +87,7 @@ def default_config(model: str = "mlp") -> Dict[str, Any]:
     raise ValueError("Modelo no soportado. Usa 'logreg', 'mlp', 'gbr' o 'rf'.")
 
 
-def make_model(cfg: Dict[str, Any]):
+def make_model(cfg: Dict[str, Any], task: str = "classification"):
     """
     Crea el estimador sklearn según cfg.
     cfg ejemplo:
@@ -139,6 +144,8 @@ def make_model(cfg: Dict[str, Any]):
         p.setdefault("max_depth", 3)
         p.setdefault("subsample", 0.9)
         p.setdefault("random_state", 42)
+        if task == "classification":
+            return GradientBoostingClassifier(**p)
         return GradientBoostingRegressor(**p)
 
     if model_name == "rf":
@@ -148,6 +155,8 @@ def make_model(cfg: Dict[str, Any]):
         p.setdefault("min_samples_leaf", 5)
         p.setdefault("random_state", 42)
         p.setdefault("n_jobs", -1)
+        if task == "classification":
+            return RandomForestClassifier(**p)
         return RandomForestRegressor(**p)
 
     raise ValueError("Modelo no soportado. Usa 'logreg', 'mlp', 'gbr' o 'rf'.")
@@ -158,6 +167,6 @@ def get_supported_models() -> Dict[str, str]:
     return {
         "logreg": "LogisticRegression (baseline, lineal)",
         "mlp": "MLPClassifier (red densa con backprop, no lineal)",
-        "gbr": "GradientBoostingRegressor (no lineal, regresion)",
-        "rf": "RandomForestRegressor (no lineal, regresion)",
+        "gbr": "GradientBoosting (no lineal, clasificacion o regresion)",
+        "rf": "RandomForest (no lineal, clasificacion o regresion)",
     }

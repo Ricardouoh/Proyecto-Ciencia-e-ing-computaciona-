@@ -1,0 +1,43 @@
+{
+  "brier_score": 0.03636257804544234,
+  "importance_metric": "brier",
+  "importance_base_score": 0.03636257804544234,
+  "top_features": [
+    {
+      "feature": "ethnicity",
+      "importance_mean": 0.21666288815903786,
+      "importance_std": 0.004656238873564576
+    },
+    {
+      "feature": "age_years",
+      "importance_mean": 0.023992607980122965,
+      "importance_std": 0.0014786200052224704
+    },
+    {
+      "feature": "race",
+      "importance_mean": 0.00860816862744025,
+      "importance_std": 0.0005665363524741111
+    }
+  ],
+  "risk_ratio_age_ge70_over_lt40": 3.319164119051529,
+  "age_ge70_mean_proba": 0.11658700636397616,
+  "age_lt40_mean_proba": 0.035125411754960645,
+  "permutation_importance_csv": "results\\eda\\permutation_importance.csv",
+  "nhanes_age_bmi_grid_csv": "results\\eda\\nhanes_age_bmi_grid.csv",
+  "nhanes_age_decade_ci_csv": "results\\eda\\nhanes_age_decade_ci.csv",
+  "nhanes_age_decade_ci_png": "results\\eda\\nhanes_age_decade_ci.png",
+  "nhanes_high_risk_profile": {
+    "n": 179,
+    "proba_threshold": 0.19188776857224668,
+    "proba_mean": 0.5328090763763328,
+    "proba_median": 0.5837027048349817,
+    "age_mean": 53.55307262569833,
+    "age_median": 54.0,
+    "bmi_mean": 22.2,
+    "bmi_median": 22.2,
+    "bmi_cat_mode": "Normal",
+    "ethnicity_mode": "not hispanic or latino",
+    "race_mode": "white",
+    "sex_mode": "female"
+  }
+}

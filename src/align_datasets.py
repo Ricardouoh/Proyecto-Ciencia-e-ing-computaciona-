@@ -36,6 +36,21 @@ CANONICAL_CATEGORICAL = [
 DOMAIN_COL = "domain"
 LABEL_COL = "label"
 
+MISSING_TOKENS = {
+    "",
+    "nan",
+    "none",
+    "null",
+    "unknown",
+    "unk",
+    "not reported",
+    "not known",
+    "not specified",
+    "not applicable",
+    "n/a",
+    "missing",
+}
+
 
 def _to_snake(name: str) -> str:
     return (
@@ -54,6 +69,28 @@ def _normalize_columns(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df.columns = [_to_snake(str(c)) for c in df.columns]
     return df
+
+
+def _normalize_feature_list(features: Optional[List[str]]) -> List[str]:
+    if not features:
+        return []
+    return [_to_snake(str(f)) for f in features if str(f).strip()]
+
+
+def _apply_feature_blindness(
+    df: pd.DataFrame,
+    drop_features: List[str],
+    mode: str,
+) -> pd.DataFrame:
+    if not drop_features:
+        return df
+    df2 = df.copy()
+    if mode == "mask":
+        for col in drop_features:
+            if col in df2.columns:
+                df2[col] = np.nan
+        return df2
+    return df2.drop(columns=[c for c in drop_features if c in df2.columns], errors="ignore")
 
 
 def _to_numeric(series: pd.Series) -> pd.Series:
@@ -123,8 +160,147 @@ def _smoking_any_from_nhanes(smq020: pd.Series, smq040: pd.Series) -> pd.Series:
 
 def _normalize_category(series: pd.Series) -> pd.Series:
     s = series.astype(str).str.strip().str.lower()
-    s = s.replace({"": np.nan, "nan": np.nan, "none": np.nan})
+    s = s.replace({k: np.nan for k in MISSING_TOKENS})
     return s
+
+
+def _missing_mask(series: pd.Series) -> pd.Series:
+    if pd.api.types.is_numeric_dtype(series):
+        return pd.to_numeric(series, errors="coerce").isna()
+    s = series.astype(str).str.strip().str.lower()
+    return series.isna() | s.isin(MISSING_TOKENS)
+
+
+def _missing_stats(series: pd.Series) -> Tuple[int, float]:
+    mask = _missing_mask(series)
+    missing = int(mask.sum())
+    pct = float(missing / len(series)) if len(series) else 0.0
+    return missing, pct
+
+
+def _diagnostic_rows(
+    raw_df: pd.DataFrame,
+    aligned_df: pd.DataFrame,
+    dataset_name: str,
+    protected_cols: List[str],
+    null_checks: Dict[str, List[str]],
+) -> List[Dict[str, object]]:
+    rows: List[Dict[str, object]] = []
+    raw_rows = len(raw_df)
+    aligned_rows = len(aligned_df)
+
+    rows.append(
+        {
+            "dataset": dataset_name,
+            "stage": "raw_load",
+            "column": "",
+            "rows_total": raw_rows,
+            "rows_after": raw_rows,
+            "rows_lost": 0,
+            "missing_count": "",
+            "missing_pct": "",
+            "reason": "load_csv",
+            "source_column": "",
+        }
+    )
+    rows.append(
+        {
+            "dataset": dataset_name,
+            "stage": "after_align_filter",
+            "column": "",
+            "rows_total": raw_rows,
+            "rows_after": aligned_rows,
+            "rows_lost": int(raw_rows - aligned_rows),
+            "missing_count": "",
+            "missing_pct": "",
+            "reason": "align_and_reindex",
+            "source_column": "",
+        }
+    )
+    rows.append(
+        {
+            "dataset": dataset_name,
+            "stage": "after_normalize_categories",
+            "column": "",
+            "rows_total": aligned_rows,
+            "rows_after": aligned_rows,
+            "rows_lost": 0,
+            "missing_count": "",
+            "missing_pct": "",
+            "reason": "normalize_categories",
+            "source_column": "",
+        }
+    )
+
+    protected_present = [c for c in protected_cols if c in aligned_df.columns]
+    if protected_present:
+        after_dropna = int(len(aligned_df.dropna(subset=protected_present, how="any")))
+    else:
+        after_dropna = aligned_rows
+    rows.append(
+        {
+            "dataset": dataset_name,
+            "stage": "after_dropna_protected",
+            "column": ",".join(protected_present),
+            "rows_total": aligned_rows,
+            "rows_after": after_dropna,
+            "rows_lost": int(aligned_rows - after_dropna),
+            "missing_count": "",
+            "missing_pct": "",
+            "reason": "dropna_any_protected",
+            "source_column": "",
+        }
+    )
+
+    rows.append(
+        {
+            "dataset": dataset_name,
+            "stage": "merge_audit",
+            "column": "",
+            "rows_total": raw_rows,
+            "rows_after": raw_rows,
+            "rows_lost": 0,
+            "missing_count": "",
+            "missing_pct": "",
+            "reason": "no_merge_in_align",
+            "source_column": "",
+        }
+    )
+
+    for logical_name, candidates in null_checks.items():
+        src = _pick_first(raw_df, candidates)
+        if src is None or src not in raw_df.columns:
+            rows.append(
+                {
+                    "dataset": dataset_name,
+                    "stage": "null_analysis",
+                    "column": logical_name,
+                    "rows_total": raw_rows,
+                    "rows_after": "",
+                    "rows_lost": "",
+                    "missing_count": "",
+                    "missing_pct": "",
+                    "reason": "column_missing_in_source",
+                    "source_column": "",
+                }
+            )
+            continue
+        missing_count, missing_pct = _missing_stats(raw_df[src])
+        rows.append(
+            {
+                "dataset": dataset_name,
+                "stage": "null_analysis",
+                "column": logical_name,
+                "rows_total": raw_rows,
+                "rows_after": "",
+                "rows_lost": "",
+                "missing_count": missing_count,
+                "missing_pct": round(missing_pct, 4),
+                "reason": "missing_or_not_reported",
+                "source_column": src,
+            }
+        )
+    return rows
 
 
 def _align_hcmi(df: pd.DataFrame) -> Tuple[pd.DataFrame, Dict[str, List[str]], List[str]]:
@@ -291,16 +467,51 @@ def _split(df: pd.DataFrame, seed: int) -> Tuple[pd.DataFrame, pd.DataFrame, pd.
     return train.reset_index(drop=True), val.reset_index(drop=True), test.reset_index(drop=True)
 
 
-def align_datasets(hcmi_path: Path, nhanes_path: Path, outdir: Path, seed: int) -> None:
+def align_datasets(
+    hcmi_path: Path,
+    nhanes_path: Path,
+    outdir: Path,
+    seed: int,
+    drop_features: Optional[List[str]] = None,
+    blind_mode: str = "drop",
+    report_loss: bool = False,
+    report_path: Optional[Path] = None,
+) -> None:
     hcmi_raw = _normalize_columns(pd.read_csv(hcmi_path))
     nhanes_raw = _normalize_columns(pd.read_csv(nhanes_path))
 
     hcmi_aligned, hcmi_map, hcmi_created = _align_hcmi(hcmi_raw)
     nhanes_aligned, nhanes_map, nhanes_created = _align_nhanes(nhanes_raw)
 
+    drop_features_norm = _normalize_feature_list(drop_features)
+    dropped_for_leakage: List[str] = []
+    masked_for_leakage: List[str] = []
+    if drop_features_norm:
+        if blind_mode == "mask":
+            masked_for_leakage = drop_features_norm
+        else:
+            dropped_for_leakage = drop_features_norm
+
+        for feat in drop_features_norm:
+            if feat in hcmi_map:
+                hcmi_map[feat] = [f"{blind_mode}_for_leakage"]
+            if feat in nhanes_map:
+                nhanes_map[feat] = [f"{blind_mode}_for_leakage"]
+        if blind_mode == "drop":
+            hcmi_created = [c for c in hcmi_created if c not in drop_features_norm]
+            nhanes_created = [c for c in nhanes_created if c not in drop_features_norm]
+
     # Canonical order
-    feature_cols = CANONICAL_NUMERIC + CANONICAL_CATEGORICAL
+    if blind_mode == "mask":
+        canonical_numeric = list(CANONICAL_NUMERIC)
+        canonical_categorical = list(CANONICAL_CATEGORICAL)
+    else:
+        canonical_numeric = [c for c in CANONICAL_NUMERIC if c not in drop_features_norm]
+        canonical_categorical = [c for c in CANONICAL_CATEGORICAL if c not in drop_features_norm]
+    feature_cols = canonical_numeric + canonical_categorical
     ordered_cols = feature_cols + [LABEL_COL, DOMAIN_COL]
+    hcmi_aligned = _apply_feature_blindness(hcmi_aligned, drop_features_norm, blind_mode)
+    nhanes_aligned = _apply_feature_blindness(nhanes_aligned, drop_features_norm, blind_mode)
     hcmi_aligned = hcmi_aligned.reindex(columns=ordered_cols)
     nhanes_aligned = nhanes_aligned.reindex(columns=ordered_cols)
 
@@ -320,10 +531,13 @@ def align_datasets(hcmi_path: Path, nhanes_path: Path, outdir: Path, seed: int) 
 
     schema = {
         "columns": ordered_cols,
-        "numeric": CANONICAL_NUMERIC,
-        "categorical": CANONICAL_CATEGORICAL,
+        "numeric": canonical_numeric,
+        "categorical": canonical_categorical,
         "domain_col": DOMAIN_COL,
         "label_col": LABEL_COL,
+        "dropped_for_leakage": dropped_for_leakage,
+        "masked_for_leakage": masked_for_leakage,
+        "blind_mode": blind_mode,
         "mappings": {
             "hcmi_tcga": hcmi_map,
             "nhanes": nhanes_map,
@@ -349,6 +563,72 @@ def align_datasets(hcmi_path: Path, nhanes_path: Path, outdir: Path, seed: int) 
     print("Columns created (B):", len(schema["created_columns"]["nhanes"]))
     print("Saved schema:", outdir / "schema.json")
 
+    if report_loss:
+        protected_cols = [
+            "age_years",
+            "bmi_last",
+            "height_last",
+            "weight_last",
+            "sex",
+            "race",
+            "ethnicity",
+        ]
+        null_checks = {
+            "age_at_index": [
+                "age_at_index",
+                "dem_age_at_index",
+                "age_years",
+                "dem_days_to_birth",
+                "mean_age_at_dx",
+            ],
+            "tobacco_smoking_status_any": ["tobacco_smoking_status_any", "smq020", "smq040"],
+            "bmi_last": ["bmi_last", "bmxbmi"],
+            "gender": ["gender", "sex", "dem_gender", "dem_sex_at_birth"],
+            "race": ["race", "dem_race"],
+        }
+        report_rows: List[Dict[str, object]] = []
+        report_rows.extend(
+            _diagnostic_rows(
+                hcmi_raw,
+                hcmi_aligned,
+                dataset_name="hcmi_tcga",
+                protected_cols=protected_cols,
+                null_checks=null_checks,
+            )
+        )
+        report_rows.extend(
+            _diagnostic_rows(
+                nhanes_raw,
+                nhanes_aligned,
+                dataset_name="nhanes",
+                protected_cols=protected_cols,
+                null_checks=null_checks,
+            )
+        )
+        report_df = pd.DataFrame(report_rows)
+        out_path = report_path or (outdir / "data_loss_report.csv")
+        report_df.to_csv(out_path, index=False)
+        print("Loss report saved:", out_path)
+
+        def _stage_rows(df: pd.DataFrame, dataset: str, stage: str) -> Optional[int]:
+            sub = df[(df["dataset"] == dataset) & (df["stage"] == stage)]
+            if sub.empty:
+                return None
+            return int(sub["rows_after"].iloc[0])
+
+        for dataset in ("hcmi_tcga", "nhanes"):
+            raw = _stage_rows(report_df, dataset, "raw_load")
+            aligned = _stage_rows(report_df, dataset, "after_align_filter")
+            norm = _stage_rows(report_df, dataset, "after_normalize_categories")
+            dropna = _stage_rows(report_df, dataset, "after_dropna_protected")
+            print(
+                f"LOSS {dataset}:"
+                f" raw={raw}"
+                f" aligned={aligned}"
+                f" normalized={norm}"
+                f" dropna_protected={dropna}"
+            )
+
 
 if __name__ == "__main__":
     import argparse
@@ -358,6 +638,37 @@ if __name__ == "__main__":
     ap.add_argument("--nhanes", required=True, help="Path to NHANES labeled CSV.")
     ap.add_argument("--outdir", default="data/processed", help="Output directory for aligned data.")
     ap.add_argument("--seed", type=int, default=42, help="Random seed for split.")
+    ap.add_argument(
+        "--drop-features",
+        default="",
+        help="Lista separada por coma de features a excluir por fuga (ej: tobacco_smoking_status_any).",
+    )
+    ap.add_argument(
+        "--blind-mode",
+        choices=["drop", "mask"],
+        default="drop",
+        help="Modo de ceguera de variable: drop elimina columnas, mask las pone en NaN.",
+    )
+    ap.add_argument(
+        "--report-loss",
+        action="store_true",
+        help="Genera un reporte de descarte y nulos por columna.",
+    )
+    ap.add_argument(
+        "--report-path",
+        default="",
+        help="Ruta opcional para data_loss_report.csv (por defecto en outdir).",
+    )
     args = ap.parse_args()
 
-    align_datasets(Path(args.hcmi), Path(args.nhanes), Path(args.outdir), seed=int(args.seed))
+    drop_features = [c.strip() for c in args.drop_features.split(",") if c.strip()]
+    align_datasets(
+        Path(args.hcmi),
+        Path(args.nhanes),
+        Path(args.outdir),
+        seed=int(args.seed),
+        drop_features=drop_features,
+        blind_mode=str(args.blind_mode),
+        report_loss=bool(args.report_loss),
+        report_path=Path(args.report_path) if args.report_path else None,
+    )

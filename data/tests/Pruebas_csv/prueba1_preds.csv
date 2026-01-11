@@ -1,171 +1,101 @@
 row_id,age_years,sex,ethnicity,race,height_last,weight_last,bmi_last,tobacco_smoking_status_any,pack_years_smoked_max,proba_cancer,pred_label
-N001,75.0,male,not hispanic or latino,black or african american,173.5,94.9,31.53,1.0,,0.020304804926622535,0
-N002,21.0,female,not hispanic or latino,white,170.5,69.0,23.74,0.0,,0.0002154084564696959,0
-N003,22.0,male,not hispanic or latino,white,176.2,69.7,22.45,0.0,,0.00046950441971049567,0
-N004,26.0,male,not hispanic or latino,white,194.9,99.0,26.06,0.0,,0.00038780344669398355,0
-N005,66.0,female,not hispanic or latino,white,165.1,71.6,26.27,0.0,,0.0030801237733976577,0
-N006,31.0,female,hispanic or latino,other,160.7,58.3,22.58,0.0,,0.00019423241382700906,0
-N007,31.0,female,not hispanic or latino,white,161.9,80.9,30.86,1.0,,0.008476261454428053,0
-N008,36.0,male,not hispanic or latino,white,174.1,78.7,25.96,1.0,,0.019832190820848576,0
-N009,85.0,female,not hispanic or latino,black or african american,167.6,71.2,25.35,0.0,,0.0011896044160677013,0
-N010,59.0,female,not hispanic or latino,white,162.8,83.2,31.39,0.0,,0.001363701735936646,0
-N011,23.0,female,hispanic or latino,other,160.6,58.9,22.84,1.0,,0.04639553558851097,1
-N012,36.0,female,not hispanic or latino,white,161.2,67.9,26.13,0.0,,0.00044329903917280267,0
-N013,64.0,female,not hispanic or latino,white,148.7,86.3,39.03,1.0,,0.01661327022258546,0
-N014,45.0,male,not hispanic or latino,white,177.6,110.7,35.1,0.0,,0.002488707270999462,0
-N015,44.0,male,not hispanic or latino,white,179.6,75.8,23.5,0.0,,0.002490021456044995,0
-N016,44.0,female,not hispanic or latino,white,165.0,89.9,33.02,1.0,,0.023806955053559446,0
-N017,36.0,female,not hispanic or latino,black or african american,166.1,93.4,33.85,0.0,,0.00012501126585305603,0
-N018,25.0,male,hispanic or latino,other,179.4,95.8,29.77,0.0,,2.3579170725223874e-05,0
-N019,37.0,female,not hispanic or latino,other,162.4,57.3,21.73,0.0,,9.577699824598918e-08,0
-N020,36.0,female,not hispanic or latino,white,171.0,81.3,27.8,1.0,,0.012851036016199722,0
-N021,32.0,male,not hispanic or latino,black or african american,170.4,79.4,27.35,0.0,,0.00014599606462880496,0
-N022,47.0,male,not hispanic or latino,white,172.9,188.3,62.99,1.0,,0.00979755274425312,0
-N023,63.0,male,not hispanic or latino,other,160.6,66.7,25.86,0.0,,8.123085102725508e-07,0
-N024,34.0,female,not hispanic or latino,white,172.0,63.0,21.3,0.0,,0.0012521057409957544,0
-N025,51.0,female,not hispanic or latino,white,167.4,101.4,36.18,1.0,,0.033309389431871214,0
-N026,58.0,female,not hispanic or latino,white,168.1,112.6,39.85,1.0,,0.03109914132943862,0
-N027,39.0,female,not hispanic or latino,white,162.1,56.9,21.65,1.0,,0.03173764528997907,0
-N028,59.0,male,not hispanic or latino,white,173.0,86.1,28.77,1.0,,0.07058269866625755,1
-N029,54.0,female,not hispanic or latino,white,161.4,56.2,21.57,0.0,,0.002490005120646983,0
-N030,25.0,female,not hispanic or latino,black or african american,161.0,69.3,26.74,0.0,,5.981750761101125e-05,0
-N031,22.0,female,not hispanic or latino,white,169.3,55.6,19.4,0.0,,0.00042800754772320614,0
-N032,35.0,female,not hispanic or latino,white,160.9,89.9,34.73,0.0,,0.00031501721399083613,0
-N033,73.0,female,not hispanic or latino,white,154.5,67.4,28.24,1.0,,0.07959835037042418,1
-N034,38.0,female,not hispanic or latino,white,159.7,63.8,25.02,1.0,,0.02072866558139706,0
-N035,44.0,female,not hispanic or latino,black or african american,163.6,64.4,24.06,1.0,,0.013478605329778143,0
-N036,27.0,male,not hispanic or latino,white,177.7,132.5,41.96,0.0,,0.0007565460657507678,0
-N037,50.0,female,not hispanic or latino,black or african american,174.9,72.2,23.6,0.0,,0.0005047817997596641,0
-N038,24.0,female,not hispanic or latino,black or african american,173.9,122.1,40.38,0.0,,6.069842974465755e-05,0
-N039,37.0,female,hispanic or latino,other,159.5,72.8,28.62,0.0,,6.949906225663079e-05,0
-N040,51.0,female,not hispanic or latino,white,166.2,81.6,29.54,0.0,,0.0014869720489034707,0
-N041,23.0,female,not hispanic or latino,white,164.1,49.6,18.42,1.0,,0.012553228180231295,0
-N042,52.0,female,not hispanic or latino,white,162.6,59.0,22.32,0.0,,0.0024858955335616824,0
-N043,50.0,male,not hispanic or latino,black or african american,173.4,80.2,26.67,1.0,,0.00675869255356951,0
-N044,74.0,female,hispanic or latino,other,142.8,81.9,40.16,1.0,,0.25734461136318526,1
-N045,54.0,male,not hispanic or latino,white,167.5,74.8,26.66,0.0,,0.0030379043536203996,0
-N046,80.0,male,not hispanic or latino,white,179.8,82.8,25.61,0.0,,0.006208871883062007,0
-N047,45.0,female,hispanic or latino,other,153.7,59.5,25.19,1.0,,0.20535859736046466,1
-N048,59.0,female,not hispanic or latino,white,161.6,129.5,49.59,0.0,,0.0006495515037757679,0
-N049,26.0,female,not hispanic or latino,black or african american,164.5,63.5,23.47,0.0,,7.163653483487774e-05,0
-N050,60.0,female,not hispanic or latino,white,165.4,51.9,18.97,1.0,,0.18703287879153452,1
-N051,32.0,male,hispanic or latino,other,165.3,65.7,24.04,0.0,,9.652329199974334e-05,0
-N052,70.0,female,not hispanic or latino,white,160.9,54.2,20.94,0.0,,0.0037283305165734435,0
-N053,82.0,male,not hispanic or latino,white,168.7,90.3,31.73,1.0,,0.04530413922044232,1
-N054,36.0,male,not hispanic or latino,black or african american,198.4,102.9,26.14,0.0,,0.0004074382257461997,0
-N055,31.0,female,hispanic or latino,other,157.8,85.2,34.22,0.0,,2.1195276636312263e-05,0
-N056,62.0,male,not hispanic or latino,white,176.8,104.2,33.34,1.0,,0.07006971501058279,1
-N057,35.0,male,hispanic or latino,other,176.0,86.1,27.8,1.0,,0.018390450935423013,0
-N058,43.0,male,hispanic or latino,other,173.4,79.9,26.57,1.0,,0.06973094013689984,1
-N059,46.0,female,not hispanic or latino,black or african american,167.0,72.3,25.92,1.0,,0.016797035964786645,0
-N060,85.0,female,not hispanic or latino,white,156.9,75.8,30.79,0.0,,0.0009386180413415598,0
-N061,30.0,male,not hispanic or latino,black or african american,191.7,132.6,36.08,0.0,,0.0006222107396735676,0
-N062,51.0,male,hispanic or latino,other,165.4,80.2,29.32,1.0,,0.12672401583156445,1
-N063,24.0,female,not hispanic or latino,black or african american,168.4,56.6,19.96,0.0,,6.73578766719642e-05,0
-N064,28.0,female,not hispanic or latino,black or african american,176.8,68.1,21.79,0.0,,8.372273346424749e-05,0
-N065,81.0,female,hispanic or latino,other,152.5,63.9,27.48,0.0,,0.004747662972715577,0
-N066,40.0,male,not hispanic or latino,white,196.6,99.6,25.77,0.0,,0.0013166097373269227,0
-N067,79.0,male,not hispanic or latino,black or african american,163.5,56.4,21.1,1.0,,0.02052640965567501,0
-N068,70.0,male,not hispanic or latino,white,165.6,89.4,32.6,1.0,,0.05006000537401035,1
-N069,78.0,female,not hispanic or latino,other,149.0,45.7,20.58,1.0,,9.738534928997973e-05,0
-N070,37.0,female,hispanic or latino,other,156.8,69.2,28.15,0.0,,0.00010486806314939777,0
-N071,24.0,male,hispanic or latino,other,169.1,69.1,24.17,0.0,,2.4720170985829222e-05,0
-N072,48.0,female,not hispanic or latino,white,162.4,78.1,29.61,1.0,,0.0334990016949976,0
-N073,55.0,female,not hispanic or latino,other,157.1,56.3,22.81,0.0,,3.136012892934843e-07,0
-N074,27.0,male,hispanic or latino,other,171.5,78.2,26.59,1.0,,0.007736075261090668,0
-N075,40.0,male,not hispanic or latino,white,173.5,144.7,48.07,0.0,,0.0014523855249180232,0
-N076,53.0,male,not hispanic or latino,white,186.6,95.2,27.34,1.0,,0.06027506117875508,1
-N077,27.0,female,not hispanic or latino,white,170.5,97.4,33.51,1.0,,0.006815644909161092,0
-N078,49.0,male,hispanic or latino,other,174.2,97.9,32.26,0.0,,0.00044355485456290956,0
-N079,50.0,male,not hispanic or latino,white,169.0,80.2,28.08,1.0,,0.060830889809386626,1
-N080,46.0,male,not hispanic or latino,white,180.2,84.8,26.11,0.0,,0.0020115210363264757,0
-N081,46.0,male,not hispanic or latino,white,181.9,79.0,23.88,1.0,,0.06443355308620774,1
-N082,24.0,male,not hispanic or latino,black or african american,180.5,77.0,23.63,0.0,,7.242978896357684e-05,0
-N083,51.0,female,not hispanic or latino,white,158.1,55.6,22.24,0.0,,0.0017211453184703645,0
-N084,41.0,male,not hispanic or latino,white,183.0,97.8,29.2,0.0,,0.0017372991570772222,0
-N085,41.0,female,hispanic or latino,other,149.6,61.3,27.39,0.0,,0.00042642982042747116,0
-N086,64.0,female,not hispanic or latino,black or african american,158.4,78.2,31.17,0.0,,0.000620657321419168,0
-N087,34.0,male,not hispanic or latino,black or african american,180.8,96.0,29.37,1.0,,0.003176663176341356,0
-N088,37.0,male,hispanic or latino,other,172.9,97.7,32.68,1.0,,0.013137967993790836,0
-N089,64.0,male,not hispanic or latino,white,169.5,70.6,24.57,1.0,,0.08920219440518537,1
-N090,53.0,female,not hispanic or latino,white,168.3,65.2,23.02,0.0,,0.003974010690529639,0
-N091,30.0,female,hispanic or latino,other,151.9,62.7,27.17,0.0,,0.0001377659636424736,0
-N092,27.0,female,not hispanic or latino,white,168.2,94.6,33.44,0.0,,0.00021607566035932878,0
-N093,62.0,male,not hispanic or latino,white,171.5,63.3,21.52,1.0,,0.11451746709364238,1
-N094,37.0,male,not hispanic or latino,black or african american,180.3,79.0,24.3,0.0,,0.00028230173041911494,0
-N095,55.0,male,not hispanic or latino,black or african american,183.4,78.6,23.37,1.0,,0.00782324026635464,0
-N096,27.0,female,not hispanic or latino,white,165.0,121.2,44.52,1.0,,0.005008272827654213,0
-N097,47.0,male,hispanic or latino,other,165.5,54.7,19.97,1.0,,0.3701352762325769,1
-N098,41.0,female,hispanic or latino,other,154.0,78.8,33.23,0.0,,6.807632656312111e-05,0
-N099,48.0,female,not hispanic or latino,white,168.2,72.2,25.52,1.0,,0.04140957985501131,1
-N100,70.0,female,not hispanic or latino,black or african american,160.7,90.4,35.01,0.0,,0.0007700932051693793,0
-H001,78.1,female,not hispanic or latino,white,145.0,50.0,24.0,1.0,,0.09780193613053106,1
-H002,71.7,male,not hispanic or latino,white,162.0,82.0,31.0,1.0,4.0,0.9999999999999742,1
-H003,73.1,female,not hispanic or latino,white,161.6,51.3,19.6,1.0,,0.13121069435565516,1
-H004,75.4,male,not hispanic or latino,white,177.0,83.0,26.5,1.0,,0.12232348776683075,1
-H005,78.6,male,not hispanic or latino,white,170.0,70.0,24.0,1.0,,0.08401253836545496,1
-H006,11.8,female,not hispanic or latino,white,152.3,51.2,22.1,1.0,,0.004927681020331971,0
-H007,61.6,male,not hispanic or latino,white,180.0,68.0,21.0,1.0,,0.22296919734792675,1
-H008,71.0,male,not hispanic or latino,white,172.0,87.0,29.0,1.0,,0.06997849005856109,1
-H009,61.0,male,not hispanic or latino,white,176.0,68.0,19.0,1.0,,0.16995885865950938,1
-H010,82.1,female,not hispanic or latino,white,153.0,77.5,33.1,1.0,,0.0702452868993013,1
-H011,66.8,female,not hispanic or latino,black or african american,162.6,60.8,23.0,1.0,,0.06678727370852787,1
-H012,48.3,male,not hispanic or latino,black or african american,182.9,122.5,37.0,1.0,,0.035119559190437584,0
-H013,52.4,male,not hispanic or latino,white,172.0,53.0,18.0,1.0,,0.12830791339133812,1
-H014,56.2,male,hispanic or latino,white,173.0,155.0,52.0,1.0,,0.9895925797302858,1
-H015,90.0,male,not hispanic or latino,white,183.0,84.0,25.1,1.0,,0.20808999135210585,1
-H016,68.9,female,not hispanic or latino,white,154.0,72.0,30.4,1.0,,0.07172127980570688,1
-H017,50.0,female,not hispanic or latino,white,162.6,54.9,20.8,1.0,,0.11259782387647571,1
-H018,63.0,female,not hispanic or latino,white,169.5,73.1,25.4,1.0,,0.10153586302262482,1
-H019,53.6,female,not hispanic or latino,white,160.3,53.1,20.7,1.0,,0.13385240364803283,1
-H020,63.5,female,not hispanic or latino,white,154.3,48.9,20.0,1.0,,0.18124256749677026,1
-H021,43.4,female,not hispanic or latino,white,163.0,56.0,21.1,1.0,,0.06261014180712593,1
-H022,33.9,male,not hispanic or latino,white,185.0,73.0,21.3,1.0,,0.016777082916865464,0
-H023,76.8,male,not hispanic or latino,black or african american,167.6,131.5,44.0,1.0,,0.03864355525586024,0
-H024,68.0,male,not hispanic or latino,white,177.0,78.0,25.0,1.0,,0.14455015202240953,1
-H025,63.3,female,not hispanic or latino,white,174.0,76.0,25.0,1.0,,0.15273945163423877,1
-H026,67.6,male,not hispanic or latino,white,184.1,78.9,23.6,1.0,,0.22503325358339626,1
-H027,56.8,female,not hispanic or latino,white,158.8,80.29,31.8,1.0,,0.054610458679610806,1
-H028,74.1,male,not hispanic or latino,white,182.0,89.0,26.0,1.0,,0.1574089290397202,1
-H029,48.3,male,not hispanic or latino,black or african american,182.9,122.5,37.0,1.0,,0.035119559190437584,0
-H030,65.5,male,hispanic or latino,white,173.0,66.2,22.1,1.0,,0.9970802872751082,1
-H031,41.4,female,not hispanic or latino,asian,158.0,38.0,15.0,1.0,,0.03129251125935861,0
-H032,71.7,male,not hispanic or latino,white,162.0,82.0,31.0,1.0,4.0,0.9999999999999742,1
-H033,53.1,male,not hispanic or latino,white,182.0,85.0,25.0,1.0,,0.08908118339352919,1
-H034,45.5,male,not hispanic or latino,white,182.0,84.0,25.4,1.0,,0.051475947904976734,1
-H035,65.5,male,hispanic or latino,white,173.0,66.2,22.1,1.0,,0.9970802872751082,1
-H036,62.8,female,not hispanic or latino,asian,160.0,68.0,27.0,1.0,,0.15129980003299717,1
-H037,76.8,male,not hispanic or latino,black or african american,167.6,131.5,44.0,1.0,,0.03864355525586024,0
-H038,69.2,female,not hispanic or latino,white,156.6,52.5,21.4,1.0,,0.14104367984780036,1
-H039,42.9,female,not hispanic or latino,white,158.0,48.0,19.0,1.0,,0.10387880497122513,1
-H040,52.7,male,hispanic or latino,white,179.1,81.0,25.3,1.0,,0.9957404525050126,1
-H041,55.3,female,not hispanic or latino,white,168.0,80.0,28.0,1.0,,0.06557170626295211,1
-H042,61.0,male,not hispanic or latino,white,176.0,68.0,19.0,1.0,,0.16995885865950938,1
-H043,76.3,male,not hispanic or latino,white,185.4,93.4,27.0,1.0,,0.15943026027411716,1
-H044,74.1,male,not hispanic or latino,white,182.0,89.0,26.0,1.0,,0.1574089290397202,1
-H045,53.9,female,not hispanic or latino,white,161.4,77.4,29.0,1.0,,0.05222760387908996,1
-H046,43.4,female,not hispanic or latino,white,163.0,56.0,21.1,1.0,,0.06261014180712593,1
-H047,74.8,male,not hispanic or latino,white,170.2,77.1,27.0,1.0,,0.065553926014916,1
-H048,48.4,male,not hispanic or latino,white,180.0,67.0,20.7,1.0,,0.11086208624733654,1
-H049,63.9,male,not hispanic or latino,white,182.9,74.8,22.0,1.0,,0.24148272670817716,1
-H050,63.9,male,not hispanic or latino,white,182.9,74.8,22.0,1.0,,0.24148272670817716,1
-H051,62.6,male,not hispanic or latino,black or african american,162.0,51.0,19.0,1.0,,0.018162457177198776,0
-H052,50.0,male,not hispanic or latino,black or african american,189.0,91.0,25.5,1.0,,0.011130998772685032,0
-H053,66.5,male,not hispanic or latino,white,168.0,87.0,30.8,1.0,,0.060985045153443204,1
-H054,71.8,male,hispanic or latino,white,165.1,86.2,32.0,1.0,,0.9973163876788809,1
-H055,71.0,male,not hispanic or latino,white,172.0,87.0,29.0,1.0,,0.06997849005856109,1
-H056,59.3,male,not hispanic or latino,white,178.0,104.0,32.8,1.0,,0.06577117407544805,1
-H057,56.8,female,not hispanic or latino,white,158.8,80.29,31.8,1.0,,0.054610458679610806,1
-H058,68.3,male,not hispanic or latino,white,177.8,81.4,25.8,1.0,,0.14250244186911118,1
-H059,76.9,female,not hispanic or latino,white,170.0,94.0,32.5,1.0,30.0,0.06850394699150378,1
-H060,50.0,female,not hispanic or latino,white,171.0,105.0,35.9,1.0,,0.03710648993823911,0
-H061,66.1,male,not hispanic or latino,white,182.5,77.7,23.3,1.0,,0.21620217776337894,1
-H062,1.2,male,not hispanic or latino,white,73.0,8.0,15.0,1.0,,0.13264393213578032,1
-H063,78.6,male,not hispanic or latino,white,170.0,70.0,24.0,1.0,,0.08401253836545496,1
-H064,73.2,female,not hispanic or latino,black or african american,165.1,78.0,28.6,1.0,,0.07745014269626893,1
-H065,66.3,male,not hispanic or latino,white,175.0,77.0,25.1,1.0,,0.12157831922880553,1
-H066,74.8,male,not hispanic or latino,white,170.2,77.1,27.0,1.0,,0.065553926014916,1
-H067,55.0,male,not hispanic or latino,white,174.0,110.0,36.3,1.0,,0.05861252651149618,1
-H068,58.9,female,not hispanic or latino,white,175.3,66.7,21.7,1.0,,0.22358775450285864,1
-H069,68.9,female,not hispanic or latino,white,154.0,72.0,30.4,1.0,,0.07172127980570688,1
-H070,66.3,male,not hispanic or latino,white,175.0,77.0,25.1,1.0,,0.12157831922880553,1
+N034,46.0,female,not hispanic or latino,black or african american,161.4,110.6,42.5,0.0,,0.0,0
+N004,36.0,male,not hispanic or latino,black or african american,172.5,104.0,35.0,0.0,,0.0,0
+N021,70.0,female,not hispanic or latino,other,149.0,58.4,26.3,0.0,,0.0,0
+H046,43.4,female,not hispanic or latino,white,163.0,56.0,21.1,1.0,,0.07366071428571429,1
+H045,72.6,male,not hispanic or latino,white,177.8,91.5,29.0,1.0,28.0,0.07366071428571429,1
+H040,76.5,male,not hispanic or latino,white,167.0,63.0,22.6,1.0,,0.0881057268722467,1
+H023,76.8,male,not hispanic or latino,black or african american,167.6,131.5,44.0,1.0,,0.0273972602739726,0
+N031,62.0,male,not hispanic or latino,white,173.2,99.1,33.0,0.0,,0.0,0
+H011,53.9,female,,white,163.0,75.0,28.2,1.0,,1.0,1
+H001,59.5,male,not hispanic or latino,,177.8,91.7,29.0,1.0,25.0,0.0625,1
+H019,65.3,female,not hispanic or latino,white,152.4,64.9,28.0,1.0,0.0,0.05426356589147287,1
+H031,62.4,male,not hispanic or latino,white,172.7,82.55,28.0,1.0,,0.07366071428571429,1
+N024,54.0,female,not hispanic or latino,white,171.6,79.9,27.1,0.0,,0.0,0
+H034,86.7,female,not hispanic or latino,,156.0,51.0,21.0,1.0,,0.05426356589147287,1
+N041,52.0,male,not hispanic or latino,white,175.8,97.2,31.5,0.0,,0.0,0
+H005,74.4,female,not hispanic or latino,white,163.0,65.0,25.0,1.0,,0.0881057268722467,1
+N027,64.0,male,not hispanic or latino,white,186.4,113.8,32.8,1.0,,0.07366071428571429,1
+N028,80.0,female,not hispanic or latino,white,155.6,70.1,29.0,0.0,,0.0,0
+H013,50.0,male,not hispanic or latino,white,180.0,106.0,33.0,1.0,,0.04072398190045249,0
+H032,53.4,male,not hispanic or latino,black or african american,180.0,60.0,18.5,1.0,,0.0,0
+N006,22.0,female,not hispanic or latino,black or african american,165.2,72.2,26.5,0.0,,0.0,0
+N039,20.0,female,not hispanic or latino,white,171.2,69.1,23.6,0.0,,0.0,0
+H027,80.7,female,not hispanic or latino,black or african american,157.5,91.0,36.7,1.0,,0.07366071428571429,1
+H043,53.2,female,,,152.4,78.7,34.0,1.0,,0.4,1
+N020,77.0,female,not hispanic or latino,white,164.5,72.7,26.9,1.0,,0.0881057268722467,1
+H016,74.9,female,not hispanic or latino,black or african american,162.5,64.0,24.0,1.0,,0.0881057268722467,1
+H041,64.0,female,,,160.0,85.0,33.0,1.0,,1.0,1
+N047,44.0,male,not hispanic or latino,black or african american,181.2,140.5,42.8,1.0,,0.0,0
+H010,22.4,male,not hispanic or latino,asian,170.0,57.0,19.7,1.0,,0.0273972602739726,0
+N023,39.0,female,not hispanic or latino,white,177.8,88.2,27.9,0.0,,0.0,0
+H012,73.2,male,not hispanic or latino,white,174.0,98.0,32.4,1.0,,0.0625,1
+H048,76.0,female,,,165.0,88.0,32.0,1.0,,1.0,1
+N036,62.0,male,not hispanic or latino,white,181.2,88.0,26.8,1.0,,0.0881057268722467,1
+H029,74.6,female,not hispanic or latino,black or african american,149.9,100.7,45.0,1.0,,0.07366071428571429,1
+N044,35.0,female,not hispanic or latino,black or african american,150.3,62.7,27.8,0.0,,0.0,0
+H006,53.8,male,,,183.0,71.0,21.0,1.0,,1.0,1
+N017,22.0,female,not hispanic or latino,white,164.5,71.9,26.6,0.0,,0.0,0
+N016,63.0,female,not hispanic or latino,black or african american,162.7,73.1,27.6,1.0,,0.07366071428571429,1
+H036,70.3,male,,,183.0,55.0,16.0,1.0,,0.9,1
+H017,68.9,female,not hispanic or latino,white,154.0,72.0,30.4,1.0,,0.05426356589147287,1
+H050,74.8,female,,,165.0,76.5,28.0,1.0,,1.0,1
+H035,45.9,female,hispanic or latino,white,160.0,55.0,21.0,1.0,,1.0,1
+H008,55.9,male,not hispanic or latino,white,170.2,72.6,25.0,1.0,,0.0881057268722467,1
+N046,36.0,female,not hispanic or latino,asian,153.2,74.5,31.7,1.0,,0.04072398190045249,0
+H028,28.1,female,not hispanic or latino,white,165.1,68.0,25.0,1.0,,0.0881057268722467,1
+H020,11.8,female,not hispanic or latino,white,152.3,51.2,22.1,1.0,,0.2857142857142857,1
+N032,66.0,male,not hispanic or latino,other,166.9,69.9,25.1,1.0,,0.0,0
+H026,70.1,female,not hispanic or latino,white,164.0,63.0,23.0,1.0,,0.0881057268722467,1
+N013,30.0,female,not hispanic or latino,black or african american,164.8,187.5,69.0,0.0,,0.0,0
+H014,73.1,female,not hispanic or latino,white,161.6,51.3,19.6,1.0,,0.07366071428571429,1
+H025,58.8,male,not hispanic or latino,white,167.4,77.9,27.8,1.0,,0.0881057268722467,1
+H004,60.5,male,hispanic or latino,,180.3,90.3,28.0,1.0,40.0,1.0,1
+H018,73.1,female,,white,153.0,73.0,31.2,1.0,,1.0,1
+H039,54.7,male,not hispanic or latino,black or african american,177.8,70.3,22.0,1.0,,0.015384615384615385,0
+H009,57.1,female,not hispanic or latino,white,160.0,81.6,32.0,1.0,,0.0625,1
+N029,40.0,male,not hispanic or latino,white,174.7,76.9,25.2,1.0,,0.07366071428571429,1
+H007,66.3,female,not hispanic or latino,black or african american,163.0,75.0,28.0,1.0,25.0,0.07366071428571429,1
+N015,29.0,male,not hispanic or latino,white,178.1,110.6,34.9,1.0,,0.015384615384615385,0
+H037,75.1,male,not hispanic or latino,black or african american,170.1,93.44,32.0,1.0,,0.05426356589147287,1
+N040,48.0,female,not hispanic or latino,black or african american,159.4,97.8,38.5,1.0,,0.05426356589147287,1
+N007,39.0,female,not hispanic or latino,white,154.5,85.2,35.7,1.0,,0.04072398190045249,0
+N050,70.0,male,not hispanic or latino,black or african american,185.1,82.6,24.1,0.0,,0.0,0
+N005,66.0,male,not hispanic or latino,white,173.5,62.7,20.8,1.0,,0.0881057268722467,1
+H044,71.8,male,hispanic or latino,white,165.1,86.2,32.0,1.0,,0.9,1
+N001,41.0,male,not hispanic or latino,black or african american,177.8,73.7,23.3,1.0,,0.0,0
+N018,61.0,male,not hispanic or latino,black or african american,167.5,79.8,28.4,0.0,,0.0,0
+H047,61.6,male,,,173.0,73.0,24.0,1.0,,1.0,1
+N019,39.0,male,not hispanic or latino,white,184.2,100.9,29.7,0.0,,0.0,0
+N012,64.0,female,not hispanic or latino,black or african american,156.4,48.2,19.7,1.0,,0.0273972602739726,0
+N048,41.0,male,not hispanic or latino,white,171.0,94.3,32.2,1.0,,0.05426356589147287,1
+N030,46.0,female,not hispanic or latino,white,161.2,90.2,34.7,0.0,,0.0,0
+H042,60.3,female,,,165.0,80.0,29.0,1.0,,1.0,1
+N009,70.0,female,not hispanic or latino,white,151.8,58.9,25.6,1.0,,0.07366071428571429,1
+H049,50.3,female,not hispanic or latino,white,169.0,106.0,39.0,1.0,,0.04072398190045249,0
+N049,29.0,female,not hispanic or latino,black or african american,167.7,103.9,36.9,0.0,,0.0,0
+N008,66.0,male,not hispanic or latino,white,186.4,122.6,35.3,1.0,,0.07366071428571429,1
+N026,59.0,female,not hispanic or latino,black or african american,156.6,57.4,23.4,0.0,,0.0,0
+H033,49.1,male,not hispanic or latino,asian,177.0,76.0,24.3,1.0,,0.04072398190045249,0
+N045,75.0,female,not hispanic or latino,white,159.4,66.4,26.1,0.0,,0.0,0
+N010,39.0,male,not hispanic or latino,black or african american,169.7,77.9,27.1,0.0,,0.0,0
+N014,26.0,female,not hispanic or latino,black or african american,159.4,83.9,33.0,0.0,,0.0,0
+N035,37.0,female,not hispanic or latino,white,169.5,145.6,50.7,1.0,,0.0,0
+H038,48.9,female,not hispanic or latino,black or african american,160.0,66.2,30.0,1.0,,0.05426356589147287,1
+H030,39.8,female,,,172.0,75.0,25.0,1.0,,1.0,1
+H002,9.8,male,,white,137.0,31.0,17.0,1.0,,1.0,1
+N003,64.0,male,not hispanic or latino,black or african american,167.7,69.2,24.6,1.0,,0.07366071428571429,1
+H022,75.1,male,not hispanic or latino,black or african american,170.1,93.44,32.0,1.0,,0.05426356589147287,1
+H003,76.9,male,,,171.0,65.0,22.2,1.0,3.0,1.0,1
+H024,82.8,male,not hispanic or latino,white,180.0,91.6,28.0,1.0,50.0,0.0881057268722467,1
+N038,60.0,male,not hispanic or latino,white,175.2,98.4,32.1,1.0,,0.05426356589147287,1
+N042,37.0,female,not hispanic or latino,black or african american,172.0,92.9,31.4,0.0,,0.0,0
+N025,64.0,female,not hispanic or latino,black or african american,162.1,90.7,34.5,0.0,,0.0,0
+N037,25.0,female,not hispanic or latino,white,160.7,57.4,22.2,0.0,,0.0,0
+N033,69.0,female,not hispanic or latino,white,148.5,54.4,24.7,0.0,,0.0,0
+H021,71.6,female,not hispanic or latino,black or african american,162.6,80.3,46.0,1.0,,0.04072398190045249,0
+N011,45.0,female,not hispanic or latino,white,170.9,100.8,34.5,1.0,,0.05426356589147287,1
+N022,49.0,male,not hispanic or latino,black or african american,184.2,133.8,39.4,1.0,,0.015384615384615385,0
+H015,49.4,female,,,155.0,64.0,27.0,1.0,,1.0,1
+N043,24.0,female,not hispanic or latino,white,170.8,77.8,26.7,0.0,,0.0,0
+N002,34.0,female,not hispanic or latino,white,182.3,94.0,28.3,0.0,,0.0,0

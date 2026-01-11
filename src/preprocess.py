@@ -174,6 +174,45 @@ def convert_datetime_columns(
     return df2, converted
 
 
+def normalize_missing_tokens(
+    df: pd.DataFrame,
+    target: str,
+    extra_tokens: Optional[List[str]] = None,
+) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Normaliza tokens tipo "not reported/unknown" a NaN en columnas categoricas.
+    Esto evita fuga por artefactos de dominio.
+    """
+    tokens = {
+        "not reported",
+        "unknown",
+        "unk",
+        "not known",
+        "not specified",
+        "not applicable",
+        "n/a",
+        "nan",
+        "none",
+        "null",
+        "missing",
+        "",
+    }
+    if extra_tokens:
+        tokens.update([t.strip().lower() for t in extra_tokens if t.strip()])
+
+    df2 = df.copy()
+    changed: List[str] = []
+    for c in df2.columns:
+        if c == target or pd.api.types.is_numeric_dtype(df2[c]):
+            continue
+        s = df2[c].astype(str).str.strip().str.lower()
+        mask = s.isin(tokens)
+        if mask.any():
+            df2.loc[mask, c] = pd.NA
+            changed.append(c)
+    return df2, changed
+
+
 def add_age_from_days(df: pd.DataFrame, source_col: str = "mean_age_at_dx") -> Tuple[pd.DataFrame, Optional[str]]:
     """
     Si existe source_col (edad en dias), crea una columna en años y elimina la original.
@@ -292,14 +331,22 @@ def drop_id_like_columns(df: pd.DataFrame, target: str) -> Tuple[pd.DataFrame, L
     return df2, to_drop
 
 
-def drop_high_nan_columns(df: pd.DataFrame, target: str, threshold: float = 0.95) -> Tuple[pd.DataFrame, List[str]]:
+def drop_high_nan_columns(
+    df: pd.DataFrame,
+    target: str,
+    threshold: float = 0.95,
+    keep_cols: Optional[List[str]] = None,
+) -> Tuple[pd.DataFrame, List[str]]:
     """
     Elimina columnas donde la proporción de NaN sea > threshold (por defecto 95%).
     No toca la columna target.
     """
+    keep = set(keep_cols or [])
     to_drop: List[str] = []
     for c in df.columns:
         if c == target:
+            continue
+        if c in keep:
             continue
         if df[c].isna().mean() > threshold:
             to_drop.append(c)
@@ -532,11 +579,16 @@ def load_preprocessor(preprocessor_path: str | Path):
 def transform_with_loaded(
     preprocessor,
     X: pd.DataFrame,
-    numeric_cols: List[str],
-    categorical_cols: List[str],
+    numeric_cols: Optional[List[str]] = None,
+    categorical_cols: Optional[List[str]] = None,
 ) -> pd.DataFrame:
     """Transforma un DataFrame con un preprocesador ya cargado."""
     Xt = preprocessor.transform(X)
+    if hasattr(preprocessor, "get_feature_names_out"):
+        feat_names = list(preprocessor.get_feature_names_out())
+        return pd.DataFrame(Xt, columns=feat_names, index=X.index)
+    if numeric_cols is None or categorical_cols is None:
+        raise ValueError("Se requieren numeric_cols y categorical_cols si el preprocesador no expone nombres.")
     ohe = preprocessor.named_transformers_["cat"]["ohe"]  # type: ignore[index]
     cat_names = list(ohe.get_feature_names_out(categorical_cols))
     num_names = list(numeric_cols)
@@ -642,6 +694,10 @@ if __name__ == "__main__":
     if conv_dates:
         print("OK Columnas de fecha convertidas a dias:", ", ".join(conv_dates))
 
+    df_in, norm_missing_cols = normalize_missing_tokens(df_in, target_col)
+    if norm_missing_cols:
+        print("INFO Tokens de missing normalizados a NaN:", ", ".join(norm_missing_cols))
+
     df_in, dropped_leaks = drop_leakage_columns(df_in, target_col)
     if dropped_leaks:
         print("!! Columnas eliminadas por fuga de target:", ", ".join(dropped_leaks))
@@ -649,7 +705,6 @@ if __name__ == "__main__":
     # Features derivadas: edad en años y etapa AJCC ordinal
     df_in, age_col = add_age_from_days(df_in, source_col="mean_age_at_dx")
     if age_col:
-<<<<<<< HEAD
         print("OK Columna derivada de edad (anios):", age_col)
 
     df_in, birth_age_col = add_age_from_birth_days(df_in, source_col="dem_days_to_birth", new_col="age_years")
@@ -659,17 +714,6 @@ if __name__ == "__main__":
     df_in, dropped_target_features = drop_target_related_features(df_in, target_col)
     if dropped_target_features:
         print("OK Columnas eliminadas por relacion con target:", ", ".join(dropped_target_features))
-=======
-        print("? Columna derivada de edad (anios):", age_col)
-
-    df_in, birth_age_col = add_age_from_birth_days(df_in, source_col="dem_days_to_birth", new_col="age_years")
-    if birth_age_col:
-        print("? Columna derivada de edad (anios):", birth_age_col)
-
-    df_in, dropped_target_features = drop_target_related_features(df_in, target_col)
-    if dropped_target_features:
-        print("? Columnas eliminadas por relacion con target:", ", ".join(dropped_target_features))
->>>>>>> 56aae0ceea2bf5a2765e2543d64f0e22b032b50e
 
     df_in, stage_col = add_ajcc_stage_ordinal(df_in, col="last_ajcc_stage")
     if stage_col:
@@ -686,8 +730,27 @@ if __name__ == "__main__":
     df_in, dropped = drop_id_like_columns(df_in, target_col)
     dropped_ids.extend(dropped)
 
-    # 2) Drop columnas con demasiados NaN
-    df_in, dropped = drop_high_nan_columns(df_in, target_col, threshold=float(args.nan_threshold))
+    # 2) Drop columnas con demasiados NaN (preserva variables clinicas clave)
+    protected_cols = [
+        "age_years",
+        "age_at_index",
+        "height_last",
+        "weight_last",
+        "bmi_last",
+        "tobacco_smoking_status_any",
+        "pack_years_smoked_max",
+        "sex",
+        "gender",
+        "race",
+        "ethnicity",
+        "domain",
+    ]
+    df_in, dropped = drop_high_nan_columns(
+        df_in,
+        target_col,
+        threshold=float(args.nan_threshold),
+        keep_cols=protected_cols,
+    )
     dropped_nan.extend(dropped)
 
     # 3) Drop categóricas con cardinalidad muy alta
