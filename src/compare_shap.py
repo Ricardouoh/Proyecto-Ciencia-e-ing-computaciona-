@@ -9,6 +9,8 @@ import joblib
 import numpy as np
 import pandas as pd
 
+from src.age_prior import apply_age_prior, clip_proba, load_age_prior
+from src.feature_weighting import apply_feature_weights, load_feature_weights
 from src.preprocess import infer_columns, load_preprocessor, transform_with_loaded
 
 try:
@@ -17,16 +19,20 @@ except Exception:  # pragma: no cover - optional dependency
     shap = None
 
 
-def _load_threshold(threshold_path: Path, fallback: float) -> float:
+def _load_threshold_info(threshold_path: Path, fallback: float) -> tuple[float, Optional[float]]:
+    threshold = fallback
+    max_proba: Optional[float] = None
     if not threshold_path.exists():
-        return fallback
+        return threshold, max_proba
     try:
         data = json.loads(threshold_path.read_text(encoding="utf-8"))
         if isinstance(data, dict) and data.get("threshold") is not None:
-            return float(data["threshold"])
+            threshold = float(data["threshold"])
+        if isinstance(data, dict) and data.get("max_proba") is not None:
+            max_proba = float(data["max_proba"])
     except Exception:
         pass
-    return fallback
+    return threshold, max_proba
 
 
 def _pick_id_column(df: pd.DataFrame, preferred: Optional[str]) -> Optional[str]:
@@ -92,6 +98,11 @@ def _prepare_features(
             X[col] = np.nan
         if required:
             X = X[required]
+
+    if "tobacco_smoking_status_any" in X.columns:
+        X["tobacco_smoking_status_any"] = pd.to_numeric(
+            X["tobacco_smoking_status_any"], errors="coerce"
+        ).fillna(0)
 
     Xt = transform_with_loaded(pre, X, numeric_cols, categorical_cols)
     return Xt, missing
@@ -177,6 +188,9 @@ def main() -> None:
     ap.add_argument("--schema", default=None, help="Ruta opcional a schema.json.")
     ap.add_argument("--threshold-json", default="results/threshold.json", help="Ruta a threshold.json.")
     ap.add_argument("--threshold", type=float, default=0.5, help="Umbral manual (si no hay threshold.json).")
+    ap.add_argument("--feature-weights", default="results/feature_weights.json", help="Ruta a feature_weights.json.")
+    ap.add_argument("--age-prior", default="results/age_prior.json", help="Ruta a age_prior.json.")
+    ap.add_argument("--max-proba", type=float, default=None, help="Limite maximo de probabilidad.")
     ap.add_argument("--id-col", default=None, help="Columna ID para buscar pacientes.")
     ap.add_argument("--id-a", default=None, help="ID paciente A.")
     ap.add_argument("--id-b", default=None, help="ID paciente B.")
@@ -232,11 +246,21 @@ def main() -> None:
             schema_numeric, schema_categorical = infer_columns(df.assign(label=0), target="label")
 
     X, missing_cols = _prepare_features(df, pre, schema_numeric, schema_categorical)
+    weights = load_feature_weights(args.feature_weights)
+    if weights:
+        X = apply_feature_weights(X, weights)
     if missing_cols:
         print("WARN Columnas faltantes imputadas:", ", ".join(missing_cols))
 
-    threshold = _load_threshold(Path(args.threshold_json), float(args.threshold))
+    threshold, max_proba = _load_threshold_info(Path(args.threshold_json), float(args.threshold))
+    if args.max_proba is not None:
+        max_proba = float(args.max_proba)
     proba = model.predict_proba(X)[:, 1]
+    age_prior = load_age_prior(args.age_prior)
+    if age_prior and "age_years" in df.columns:
+        proba = apply_age_prior(proba, df["age_years"], age_prior)
+    if max_proba is not None:
+        proba = clip_proba(proba, max_proba)
     preds = (proba >= threshold).astype(int)
 
     explain_model = _unwrap_for_shap(model)

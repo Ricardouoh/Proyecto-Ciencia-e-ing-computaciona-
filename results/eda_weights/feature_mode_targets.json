@@ -1,0 +1,69 @@
+{
+  "base_pos_rate": 0.6430878746186517,
+  "target_prob": 0.7,
+  "features": {
+    "age_years": {
+      "mode": "Q1",
+      "mode_pos_rate": 0.11148355058969583,
+      "mode_or": 0.02910217881333656,
+      "scale_k": null,
+      "reason": "mode_or<=1"
+    },
+    "height_last": {
+      "mode": "Q2",
+      "mode_pos_rate": 0.08638625056535504,
+      "mode_or": 0.044090324473297006,
+      "scale_k": null,
+      "reason": "mode_or<=1"
+    },
+    "weight_last": {
+      "mode": "Q1",
+      "mode_pos_rate": 0.05,
+      "mode_or": 0.02130237695280037,
+      "scale_k": null,
+      "reason": "mode_or<=1"
+    },
+    "bmi_last": {
+      "mode": "Q1",
+      "mode_pos_rate": 0.06692094313453537,
+      "mode_or": 0.031183378458239288,
+      "scale_k": null,
+      "reason": "mode_or<=1"
+    },
+    "pack_years_smoked_max": {
+      "mode": "Q3",
+      "mode_pos_rate": 1.0,
+      "mode_or": 9.438644241282248,
+      "scale_k": 0.11515710252622674,
+      "reason": null
+    },
+    "sex": {
+      "mode": "female",
+      "mode_pos_rate": 0.6593806921675774,
+      "mode_or": 1.1739602555437891,
+      "scale_k": 1.6118061174971132,
+      "reason": null
+    },
+    "race": {
+      "mode": "white",
+      "mode_pos_rate": 0.26556408741878323,
+      "mode_or": 0.10737362526757546,
+      "scale_k": null,
+      "reason": "mode_or<=1"
+    },
+    "ethnicity": {
+      "mode": "not hispanic or latino",
+      "mode_pos_rate": 0.2041968649924153,
+      "mode_or": 0.033500582545085235,
+      "scale_k": null,
+      "reason": "mode_or<=1"
+    },
+    "tobacco_smoking_status_any": {
+      "mode": "1.0",
+      "mode_pos_rate": 0.17773833671399594,
+      "mode_or": 0.09036177689385164,
+      "scale_k": null,
+      "reason": "mode_or<=1"
+    }
+  }
+}

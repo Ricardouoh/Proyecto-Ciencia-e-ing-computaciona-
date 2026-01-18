@@ -1,0 +1,7 @@
+{
+  "mode": "substring",
+  "weights": {
+    "cat__sex_": 0.7,
+    "num__tobacco_smoking_status_any": 0.7
+  }
+}

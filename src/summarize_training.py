@@ -95,6 +95,8 @@ from sklearn.metrics import (
     roc_curve,
 )
 
+from src.age_prior import apply_age_prior, clip_proba, load_age_prior
+from src.feature_weighting import apply_feature_weights, load_feature_weights
 from src.preprocess import infer_columns, load_preprocessor, transform_with_loaded
 from src import metrics as mt
 
@@ -356,6 +358,9 @@ def evaluate_test(
     task: str = "classification",
     data_dir: str | Path | None = None,
     preprocessor_path: str | Path = "results/preprocessor.joblib",
+    feature_weights_path: str | Path = "results/feature_weights.json",
+    age_prior_path: str | Path = "results/age_prior.json",
+    max_proba: Optional[float] = None,
     domain_col: str = "domain",
     unlabeled_domain: str = "nhanes",
 ) -> Dict:
@@ -386,6 +391,11 @@ def evaluate_test(
                     Xte[col] = np.nan
             Xte = Xte[required]
 
+        if "tobacco_smoking_status_any" in Xte.columns:
+            Xte["tobacco_smoking_status_any"] = pd.to_numeric(
+                Xte["tobacco_smoking_status_any"], errors="coerce"
+            ).fillna(0)
+
         numeric_cols: Optional[list[str]] = None
         categorical_cols: Optional[list[str]] = None
         if data_dir:
@@ -400,10 +410,27 @@ def evaluate_test(
             numeric_cols, categorical_cols = infer_columns(df_tmp, target=target)
 
         Xte = transform_with_loaded(pre, Xte, numeric_cols, categorical_cols)
+        weights = load_feature_weights(feature_weights_path)
+        if weights:
+            Xte = apply_feature_weights(Xte, weights)
 
     metrics = {}
     if task == "classification":
         proba = model.predict_proba(Xte)[:, 1]
+        age_prior = load_age_prior(age_prior_path)
+        if age_prior and "age_years" in raw_df.columns:
+            proba = apply_age_prior(proba, raw_df["age_years"], age_prior)
+        if max_proba is None:
+            threshold_path = out_json.parent / "threshold.json"
+            if threshold_path.exists():
+                try:
+                    data = json.loads(threshold_path.read_text(encoding="utf-8"))
+                    if isinstance(data, dict) and data.get("max_proba") is not None:
+                        max_proba = float(data["max_proba"])
+                except Exception:
+                    pass
+        if max_proba is not None:
+            proba = clip_proba(proba, float(max_proba))
         threshold = 0.5
         threshold_path = out_json.parent / "threshold.json"
         if threshold_path.exists():
@@ -517,6 +544,9 @@ if __name__ == "__main__":
     ap.add_argument("--results-dir", default="results", help="Carpeta con resultados.")
     ap.add_argument("--summary-only", action="store_true", help="Solo imprime resumen y sale.")
     ap.add_argument("--preprocessor-path", default="results/preprocessor.joblib")
+    ap.add_argument("--feature-weights-path", default="results/feature_weights.json")
+    ap.add_argument("--age-prior-path", default="results/age_prior.json")
+    ap.add_argument("--max-proba", type=float, default=None, help="Limite maximo de probabilidad.")
     ap.add_argument("--domain-col", default="domain", help="Columna de dominio a excluir.")
     ap.add_argument("--unlabeled-domain", default="nhanes", help="Dominio no etiquetado para resumen de riesgo.")
     args = ap.parse_args()
@@ -541,6 +571,9 @@ if __name__ == "__main__":
         task=args.task,
         data_dir=args.data_dir,
         preprocessor_path=Path(args.preprocessor_path),
+        feature_weights_path=Path(args.feature_weights_path),
+        age_prior_path=Path(args.age_prior_path),
+        max_proba=args.max_proba,
         domain_col=str(args.domain_col),
         unlabeled_domain=str(args.unlabeled_domain),
     )

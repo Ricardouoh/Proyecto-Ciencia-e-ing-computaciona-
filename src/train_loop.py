@@ -67,6 +67,15 @@ from sklearn.metrics import (
 
 from src.model import make_model, default_config
 from src import metrics as mt
+from src.age_prior import (
+    apply_age_prior,
+    build_age_prior,
+    build_age_prior_from_percentiles,
+    clip_proba,
+    parse_anchor_string,
+    save_age_prior,
+)
+from src.feature_weighting import apply_feature_weights, save_feature_weights
 from src.preprocess import infer_columns, make_preprocessor
 
 
@@ -194,6 +203,117 @@ def _duplicate_weights(weights: np.ndarray, mask: np.ndarray) -> np.ndarray:
     return np.concatenate([weights, weights[mask]])
 
 
+def _safe_odds_ratio(
+    pos_in: float,
+    pos_out: float,
+    neg_in: float,
+    neg_out: float,
+    smoothing: float = 0.5,
+) -> float:
+    return ((pos_in + smoothing) / (pos_out + smoothing)) / ((neg_in + smoothing) / (neg_out + smoothing))
+
+
+def _or_to_weight(or_value: float, factor: float) -> float:
+    if not np.isfinite(or_value) or or_value <= 0:
+        return 1.0
+    log_or = float(np.log(or_value))
+    return 1.0 + float(factor) * float(np.tanh(log_or))
+
+
+def _compute_stat_weights(
+    X: pd.DataFrame,
+    y: pd.Series,
+    factor: float,
+    min_count: int,
+    include_unknown: bool,
+    age_col: str = "age_years",
+    eth_col: str = "ethnicity",
+    clip_min: float = 0.5,
+    clip_max: float = 2.0,
+) -> Tuple[np.ndarray, Dict[str, object]]:
+    weights = np.ones(len(X), dtype=float)
+    report: Dict[str, object] = {
+        "method": "odds_ratio",
+        "factor": float(factor),
+        "age_bins": [],
+        "ethnicity": [],
+    }
+
+    if age_col in X.columns:
+        ages = pd.to_numeric(X[age_col], errors="coerce")
+        pos_ages = ages[y.astype(int) == 1].dropna()
+        if len(pos_ages) >= 4:
+            q1, q2, q3 = np.nanpercentile(pos_ages.to_numpy(), [25, 50, 75])
+            bins = [-np.inf, q1, q2, q3, np.inf]
+            labels = ["Q1", "Q2", "Q3", "Q4"]
+            age_bin = pd.cut(ages, bins=bins, labels=labels, include_lowest=True)
+            for label in labels:
+                mask = age_bin == label
+                pos_in = float((y[mask] == 1).sum())
+                neg_in = float((y[mask] == 0).sum())
+                pos_out = float((y == 1).sum() - pos_in)
+                neg_out = float((y == 0).sum() - neg_in)
+                total = pos_in + neg_in
+                if total < float(min_count):
+                    w = 1.0
+                else:
+                    or_val = _safe_odds_ratio(pos_in, pos_out, neg_in, neg_out)
+                    w = _or_to_weight(or_val, factor)
+                    report["age_bins"].append(
+                        {
+                            "bin": str(label),
+                            "range": [float(bins[labels.index(label)]), float(bins[labels.index(label) + 1])],
+                            "count": int(total),
+                            "pos": int(pos_in),
+                            "neg": int(neg_in),
+                            "odds_ratio": float(or_val),
+                            "weight": float(w),
+                        }
+                    )
+                weights[mask.to_numpy()] *= float(w)
+
+    if eth_col in X.columns:
+        series = X[eth_col].astype(str).str.strip().str.lower()
+        if not include_unknown:
+            series = series.replace({"unknown": np.nan, "nan": np.nan, "none": np.nan})
+        categories = series.dropna().unique().tolist()
+        for cat in categories:
+            mask = series == cat
+            pos_in = float((y[mask] == 1).sum())
+            neg_in = float((y[mask] == 0).sum())
+            pos_out = float((y == 1).sum() - pos_in)
+            neg_out = float((y == 0).sum() - neg_in)
+            total = pos_in + neg_in
+            if total < float(min_count):
+                continue
+            or_val = _safe_odds_ratio(pos_in, pos_out, neg_in, neg_out)
+            w = _or_to_weight(or_val, factor)
+            report["ethnicity"].append(
+                {
+                    "category": str(cat),
+                    "count": int(total),
+                    "pos": int(pos_in),
+                    "neg": int(neg_in),
+                    "odds_ratio": float(or_val),
+                    "weight": float(w),
+                }
+            )
+            weights[mask.to_numpy()] *= float(w)
+
+    weights = np.clip(weights, float(clip_min), float(clip_max))
+    return weights, report
+
+
+def _assume_non_smoker(df: pd.DataFrame) -> pd.DataFrame:
+    if "tobacco_smoking_status_any" not in df.columns:
+        return df
+    out = df.copy()
+    out["tobacco_smoking_status_any"] = pd.to_numeric(
+        out["tobacco_smoking_status_any"], errors="coerce"
+    ).fillna(0)
+    return out
+
+
 def _apply_pu_label_smoothing(
     X: pd.DataFrame,
     y: pd.Series,
@@ -273,6 +393,82 @@ def _compute_risk_weights(
         return np.ones(n, dtype=float)
     score = risk / max_score
     return 1.0 + float(weight_factor) * score
+
+
+def _parse_age_band_weights(value: str) -> list[dict]:
+    if not value:
+        return []
+    bands: list[dict] = []
+    for item in value.split(","):
+        item = item.strip()
+        if not item or ":" not in item:
+            continue
+        range_part, weight_part = item.split(":", 1)
+        try:
+            weight = float(weight_part)
+        except ValueError:
+            continue
+        rp = range_part.strip().lower()
+        band = {
+            "raw": range_part.strip(),
+            "min": None,
+            "max": None,
+            "min_inclusive": True,
+            "max_inclusive": False,
+            "weight": weight,
+        }
+        try:
+            if rp.startswith("<="):
+                band["max"] = float(rp[2:])
+                band["max_inclusive"] = True
+            elif rp.startswith("<"):
+                band["max"] = float(rp[1:])
+            elif rp.startswith(">="):
+                band["min"] = float(rp[2:])
+                band["min_inclusive"] = True
+            elif rp.startswith(">"):
+                band["min"] = float(rp[1:])
+                band["min_inclusive"] = True
+            elif "-" in rp:
+                lo_s, hi_s = rp.split("-", 1)
+                band["min"] = float(lo_s)
+                band["max"] = float(hi_s)
+            else:
+                continue
+        except ValueError:
+            continue
+        bands.append(band)
+    return bands
+
+
+def _compute_age_band_weights(
+    X: pd.DataFrame,
+    bands: list[dict],
+    normalize: bool,
+) -> np.ndarray:
+    n = len(X)
+    if n == 0 or not bands or "age_years" not in X.columns:
+        return np.ones(n, dtype=float)
+    age = pd.to_numeric(X["age_years"], errors="coerce")
+    weights = np.ones(n, dtype=float)
+    for band in bands:
+        mask = age.notna()
+        min_age = band.get("min")
+        max_age = band.get("max")
+        if min_age is not None:
+            if band.get("min_inclusive", True):
+                mask &= age >= float(min_age)
+            else:
+                mask &= age > float(min_age)
+        if max_age is not None:
+            if band.get("max_inclusive", False):
+                mask &= age <= float(max_age)
+            else:
+                mask &= age < float(max_age)
+        weights[mask.to_numpy()] = float(band.get("weight", 1.0))
+    if normalize and weights.mean() > 0:
+        weights = weights / weights.mean()
+    return weights
 
 
 def _resolve_split_paths(data_dir: Path) -> Tuple[Path, Path, Path]:
@@ -470,6 +666,25 @@ def train_and_validate(
     pu_target_weight: float = 0.0,
     calibrate: bool = False,
     calibration_method: str = "sigmoid",
+    assume_non_smoker: bool = False,
+    sex_weight: float = 1.0,
+    smoker_weight: float = 1.0,
+    feature_weights_path: Optional[Path] = None,
+    stat_weight: bool = False,
+    stat_weight_factor: float = 0.5,
+    stat_weight_min_count: int = 50,
+    stat_weight_include_unknown: bool = False,
+    stat_weight_min: float = 0.5,
+    stat_weight_max: float = 2.0,
+    age_band_weights: str = "",
+    age_band_normalize: bool = True,
+    age_prior_anchors: str = "",
+    age_prior_percentiles: str = "",
+    age_prior_probs: str = "",
+    age_prior_mode: str = "floor",
+    age_prior_alpha: float = 0.5,
+    age_prior_domain: str = "hcmi_tcga",
+    max_proba: float = 1.0,
 ) -> None:
     if min_threshold > max_threshold:
         raise ValueError("min_threshold no puede ser mayor que max_threshold.")
@@ -479,7 +694,60 @@ def train_and_validate(
     Xva, yva, domain_va = _load_xy(val_path, target=target, task=task, domain_col=domain_col)
     Xte, yte, domain_te = _load_xy(test_path, target=target, task=task, domain_col=domain_col)
 
+    if assume_non_smoker:
+        Xtr = _assume_non_smoker(Xtr)
+        Xva = _assume_non_smoker(Xva)
+        Xte = _assume_non_smoker(Xte)
     Xtr_raw = Xtr.copy()
+    Xva_raw = Xva.copy()
+    Xte_raw = Xte.copy()
+
+    age_prior = {}
+    anchors = parse_anchor_string(age_prior_anchors)
+    if anchors:
+        age_prior = build_age_prior(anchors, mode=age_prior_mode, alpha=age_prior_alpha)
+    elif age_prior_percentiles and age_prior_probs and "age_years" in Xtr_raw.columns:
+        pcts = [p.strip() for p in age_prior_percentiles.split(",") if p.strip()]
+        probs = [p.strip() for p in age_prior_probs.split(",") if p.strip()]
+        if pcts and probs:
+            pcts_f = [float(p) for p in pcts]
+            probs_f = [float(p) for p in probs]
+            mask = ytr.astype(int) == 1
+            if domain_tr is not None and age_prior_domain:
+                mask = mask & (domain_tr.astype(str) == str(age_prior_domain))
+            ages = Xtr_raw.loc[mask, "age_years"]
+            age_prior = build_age_prior_from_percentiles(
+                ages,
+                percentiles=pcts_f,
+                probs=probs_f,
+                mode=age_prior_mode,
+                alpha=age_prior_alpha,
+            )
+    if age_prior:
+        save_age_prior(age_prior, cfg.outdir / "age_prior.json")
+
+    stat_weights = None
+    if stat_weight and task == "classification":
+        stat_weights, stat_report = _compute_stat_weights(
+            Xtr_raw,
+            ytr,
+            factor=stat_weight_factor,
+            min_count=int(stat_weight_min_count),
+            include_unknown=bool(stat_weight_include_unknown),
+            clip_min=float(stat_weight_min),
+            clip_max=float(stat_weight_max),
+        )
+        if len(stat_weights) == len(Xtr_raw):
+            print(
+                "INFO Stat weights enabled:"
+                f" factor={stat_weight_factor}"
+                f" min_count={stat_weight_min_count}"
+                f" clip=[{stat_weight_min},{stat_weight_max}]"
+            )
+            mt.save_json(stat_report, cfg.outdir / "stat_weights.json")
+        else:
+            print("WARN Stat weights size mismatch; disabling stat weights.")
+            stat_weights = None
     risk_weights = None
     if risk_weight:
         risk_weights = _compute_risk_weights(
@@ -504,6 +772,34 @@ def train_and_validate(
         else:
             print("WARN Risk weights size mismatch; disabling risk weights.")
             risk_weights = None
+    age_weights = None
+    if age_band_weights and task == "classification":
+        bands = _parse_age_band_weights(age_band_weights)
+        if bands and "age_years" in Xtr_raw.columns:
+            age_weights = _compute_age_band_weights(Xtr_raw, bands, normalize=age_band_normalize)
+            if len(age_weights) == len(Xtr_raw):
+                print(
+                    "INFO Age band weights enabled:"
+                    f" normalize={bool(age_band_normalize)}"
+                    f" min={age_weights.min():.3f}"
+                    f" max={age_weights.max():.3f}"
+                    f" mean={age_weights.mean():.3f}"
+                )
+                mt.save_json(
+                    {
+                        "normalize": bool(age_band_normalize),
+                        "bands": bands,
+                        "summary": {
+                            "min": float(age_weights.min()),
+                            "max": float(age_weights.max()),
+                            "mean": float(age_weights.mean()),
+                        },
+                    },
+                    cfg.outdir / "age_band_weights.json",
+                )
+            else:
+                print("WARN Age band weights size mismatch; disabling age band weights.")
+                age_weights = None
 
     # Detectar columnas numericas/categoricas
     schema_path = data_dir / "schema.json"
@@ -541,6 +837,10 @@ def train_and_validate(
         )
         if risk_weights is not None and pu_mask is not None:
             risk_weights = _duplicate_weights(risk_weights, pu_mask)
+        if stat_weights is not None and pu_mask is not None:
+            stat_weights = _duplicate_weights(stat_weights, pu_mask)
+        if age_weights is not None and pu_mask is not None:
+            age_weights = _duplicate_weights(age_weights, pu_mask)
 
     # Preprocesador (imputacion + escala + one-hot)
     pre_path = cfg.outdir / "preprocessor.joblib"
@@ -551,6 +851,21 @@ def train_and_validate(
         out_path=pre_path,
         age_weight=age_weight,
     )
+
+    feature_weights: Dict[str, float] = {}
+    if sex_weight != 1.0:
+        feature_weights["cat__sex_"] = float(sex_weight)
+    if smoker_weight != 1.0:
+        feature_weights["num__tobacco_smoking_status_any"] = float(smoker_weight)
+
+    if feature_weights:
+        Xtr = apply_feature_weights(Xtr, feature_weights)
+        Xva = apply_feature_weights(Xva, feature_weights)
+        Xte = apply_feature_weights(Xte, feature_weights)
+        save_feature_weights(
+            feature_weights,
+            feature_weights_path or (cfg.outdir / "feature_weights.json"),
+        )
 
     # Construir modelo
     model = make_model(cfg.model_cfg, task=task)
@@ -584,6 +899,8 @@ def train_and_validate(
         if _get_model_class_weight(model) is None and pu_label_smoothing <= 0.0:
             base_sw = _class_weight_sample_weights(ytr)
         sw = _combine_sample_weights(base_sw, risk_weights)
+        sw = _combine_sample_weights(sw, stat_weights)
+        sw = _combine_sample_weights(sw, age_weights)
         sw = _combine_sample_weights(sw, pu_weights)
         _fit_with_sample_weight(model, Xtr, ytr, sw)
         final_model = model
@@ -599,6 +916,9 @@ def train_and_validate(
                 print(f"WARN Calibration failed: {exc}")
 
         proba_va = final_model.predict_proba(Xva)[:, 1]
+        if age_prior and "age_years" in Xva_raw.columns:
+            proba_va = apply_age_prior(proba_va, Xva_raw["age_years"], age_prior)
+        proba_va = clip_proba(proba_va, max_proba)
 
         metrics = _eval_metrics(yva.values, proba_va)
         log_rows.append({"epoch": 1, **metrics})
@@ -630,6 +950,8 @@ def train_and_validate(
         if pu_label_smoothing <= 0.0:
             base_sw = _class_weight_sample_weights(ytr)
         sw = _combine_sample_weights(base_sw, risk_weights)
+        sw = _combine_sample_weights(sw, stat_weights)
+        sw = _combine_sample_weights(sw, age_weights)
         sw = _combine_sample_weights(sw, pu_weights)
 
         best_auroc = -np.inf
@@ -640,6 +962,9 @@ def train_and_validate(
             _fit_with_sample_weight(model, Xtr, ytr, sw)
 
             proba_va = model.predict_proba(Xva)[:, 1]
+            if age_prior and "age_years" in Xva_raw.columns:
+                proba_va = apply_age_prior(proba_va, Xva_raw["age_years"], age_prior)
+            proba_va = clip_proba(proba_va, max_proba)
             metrics = _eval_metrics(yva.values, proba_va)
             metrics["epoch"] = epoch
             log_rows.append(metrics)
@@ -675,6 +1000,9 @@ def train_and_validate(
         _save_model(final_model, model_path)
 
         proba_va = final_model.predict_proba(Xva)[:, 1]
+        if age_prior and "age_years" in Xva_raw.columns:
+            proba_va = apply_age_prior(proba_va, Xva_raw["age_years"], age_prior)
+        proba_va = clip_proba(proba_va, max_proba)
         final_metrics = mt.compute_classification_metrics(yva.values, proba_va)
         mt.save_json(final_metrics, cfg.outdir / "metrics_val.json")
         mt.plot_roc(yva.values, proba_va, cfg.outdir / "roc_val.png")
@@ -726,11 +1054,17 @@ def train_and_validate(
         "pu_target_weight": pu_target_weight,
         "calibrated": bool(calibrate),
         "calibration_method": calibration_method if calibrate else None,
+        "max_proba": max_proba,
     }
     mt.save_json(threshold_info, cfg.outdir / "threshold.json")
 
     # Evaluacion en test (global + por dominio)
     proba_te = final_model.predict_proba(Xte)[:, 1]
+    if age_prior and "age_years" in Xte_raw.columns:
+        proba_te = apply_age_prior(proba_te, Xte_raw["age_years"], age_prior)
+    proba_te = clip_proba(proba_te, max_proba)
+    if age_prior and "age_years" in Xte_raw.columns:
+        proba_te = apply_age_prior(proba_te, Xte_raw["age_years"], age_prior)
     preds_te = (proba_te >= threshold).astype(int)
     global_metrics = mt.compute_classification_metrics(yte.values, proba_te, threshold=threshold)
     global_metrics.update(mt.confusion_counts(yte.values, preds_te))
@@ -765,7 +1099,7 @@ def train_and_validate(
 # =========================
 
 if __name__ == "__main__":
-    from argparse import ArgumentParser
+    from argparse import ArgumentParser, BooleanOptionalAction
 
     ap = ArgumentParser(description="Entrenamiento de modelos clínicos")
     ap.add_argument("--data-dir", default="data/processed", help="Carpeta con train.csv y val.csv")
@@ -814,6 +1148,111 @@ if __name__ == "__main__":
     ap.add_argument("--missing-seed", type=int, default=42, help="Seed para missingness.")
     ap.add_argument("--domain-col", default="domain", help="Columna de dominio para metricas.")
     ap.add_argument("--age-weight", type=float, default=1.0, help="Peso extra para age_years.")
+    ap.add_argument(
+        "--age-band-weights",
+        default="",
+        help="Rangos de edad:weight (ej <30:0.2,30-45:0.8,45-55:1.5,55-75:3.0,>75:3.0).",
+    )
+    ap.add_argument(
+        "--age-band-normalize",
+        action=BooleanOptionalAction,
+        default=True,
+        help="Normaliza los pesos por edad para mantener media=1 (default=True).",
+    )
+    ap.add_argument(
+        "--age-prior-anchors",
+        default="",
+        help="Anchors edad:prob separados por coma (ej: 0:0.03,40:0.075,50:0.09,60:0.10,70:0.10).",
+    )
+    ap.add_argument(
+        "--age-prior-percentiles",
+        default="",
+        help="Percentiles (coma) para construir anchors desde HCMI positivos (ej: 5,25,50,75,90).",
+    )
+    ap.add_argument(
+        "--age-prior-probs",
+        default="",
+        help="Probabilidades (coma) asociadas a percentiles (ej: 0.03,0.075,0.09,0.10,0.10).",
+    )
+    ap.add_argument(
+        "--age-prior-mode",
+        choices=["floor", "blend", "odds"],
+        default="floor",
+        help="Modo de mezcla del prior de edad (default=floor).",
+    )
+    ap.add_argument(
+        "--age-prior-alpha",
+        type=float,
+        default=0.5,
+        help="Peso del prior si mode=blend/odds (default=0.5).",
+    )
+    ap.add_argument(
+        "--age-prior-domain",
+        default="hcmi_tcga",
+        help="Dominio para percentiles de edad (default=hcmi_tcga).",
+    )
+    ap.add_argument(
+        "--max-proba",
+        type=float,
+        default=1.0,
+        help="Limita la probabilidad maxima (default=1.0).",
+    )
+    ap.add_argument(
+        "--assume-non-smoker",
+        action="store_true",
+        help="Si falta tabaquismo, asume no fumador (0).",
+    )
+    ap.add_argument(
+        "--sex-weight",
+        type=float,
+        default=1.0,
+        help="Peso multiplicador para features de sexo (default=1.0).",
+    )
+    ap.add_argument(
+        "--smoker-weight",
+        type=float,
+        default=1.0,
+        help="Peso multiplicador para tobacco_smoking_status_any (default=1.0).",
+    )
+    ap.add_argument(
+        "--feature-weights-path",
+        default=None,
+        help="Ruta para guardar feature_weights.json (opcional).",
+    )
+    ap.add_argument(
+        "--stat-weight",
+        action="store_true",
+        help="Activa ponderacion estadistica por edad/etnia (odds ratio).",
+    )
+    ap.add_argument(
+        "--stat-weight-factor",
+        type=float,
+        default=0.5,
+        help="Factor de escala para ponderacion estadistica (default=0.5).",
+    )
+    ap.add_argument(
+        "--stat-weight-min-count",
+        type=int,
+        default=50,
+        help="Minimo de filas para aplicar ponderacion por categoria (default=50).",
+    )
+    ap.add_argument(
+        "--stat-weight-include-unknown",
+        action="store_true",
+        help="Incluye 'unknown' en ponderacion estadistica.",
+    )
+    ap.add_argument(
+        "--stat-weight-min",
+        type=float,
+        default=0.5,
+        help="Peso minimo tras ponderacion estadistica (default=0.5).",
+    )
+    ap.add_argument(
+        "--stat-weight-max",
+        type=float,
+        default=2.0,
+        help="Peso maximo tras ponderacion estadistica (default=2.0).",
+    )
     ap.add_argument(
         "--domain-penalty-weight",
         type=float,
@@ -912,4 +1351,23 @@ if __name__ == "__main__":
         pu_target_weight=float(args.pu_target_weight),
         calibrate=bool(args.calibrate),
         calibration_method=str(args.calibration_method),
+        assume_non_smoker=bool(args.assume_non_smoker),
+        sex_weight=float(args.sex_weight),
+        smoker_weight=float(args.smoker_weight),
+        feature_weights_path=Path(args.feature_weights_path) if args.feature_weights_path else None,
+        stat_weight=bool(args.stat_weight),
+        stat_weight_factor=float(args.stat_weight_factor),
+        stat_weight_min_count=int(args.stat_weight_min_count),
+        stat_weight_include_unknown=bool(args.stat_weight_include_unknown),
+        stat_weight_min=float(args.stat_weight_min),
+        stat_weight_max=float(args.stat_weight_max),
+        age_band_weights=str(args.age_band_weights),
+        age_band_normalize=bool(args.age_band_normalize),
+        age_prior_anchors=str(args.age_prior_anchors),
+        age_prior_percentiles=str(args.age_prior_percentiles),
+        age_prior_probs=str(args.age_prior_probs),
+        age_prior_mode=str(args.age_prior_mode),
+        age_prior_alpha=float(args.age_prior_alpha),
+        age_prior_domain=str(args.age_prior_domain),
+        max_proba=float(args.max_proba),
     )

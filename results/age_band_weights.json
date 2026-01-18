@@ -1,0 +1,50 @@
+{
+  "normalize": false,
+  "bands": [
+    {
+      "raw": "<30",
+      "min": null,
+      "max": 30.0,
+      "min_inclusive": true,
+      "max_inclusive": false,
+      "weight": 0.1
+    },
+    {
+      "raw": "30-45",
+      "min": 30.0,
+      "max": 45.0,
+      "min_inclusive": true,
+      "max_inclusive": false,
+      "weight": 0.6
+    },
+    {
+      "raw": "45-55",
+      "min": 45.0,
+      "max": 55.0,
+      "min_inclusive": true,
+      "max_inclusive": false,
+      "weight": 2.0
+    },
+    {
+      "raw": "55-75",
+      "min": 55.0,
+      "max": 75.0,
+      "min_inclusive": true,
+      "max_inclusive": false,
+      "weight": 6.0
+    },
+    {
+      "raw": ">75",
+      "min": 75.0,
+      "max": null,
+      "min_inclusive": true,
+      "max_inclusive": false,
+      "weight": 8.0
+    }
+  ],
+  "summary": {
+    "min": 0.1,
+    "max": 8.0,
+    "mean": 1.913429902149297
+  }
+}

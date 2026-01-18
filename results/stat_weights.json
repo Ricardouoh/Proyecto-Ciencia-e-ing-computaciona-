@@ -1,0 +1,72 @@
+{
+  "method": "odds_ratio",
+  "factor": 0.5,
+  "age_bins": [
+    {
+      "bin": "Q1",
+      "range": [
+        -Infinity,
+        48.0
+      ],
+      "count": 5639,
+      "pos": 612,
+      "neg": 5027,
+      "odds_ratio": 0.02806851680993308,
+      "weight": 0.5007872214300901
+    },
+    {
+      "bin": "Q2",
+      "range": [
+        48.0,
+        59.75
+      ],
+      "count": 1488,
+      "pos": 605,
+      "neg": 883,
+      "odds_ratio": 0.35442527508649935,
+      "weight": 0.6115985675956634
+    },
+    {
+      "bin": "Q3",
+      "range": [
+        59.75,
+        69.5
+      ],
+      "count": 1818,
+      "pos": 609,
+      "neg": 1209,
+      "odds_ratio": 0.24930292457158165,
+      "weight": 0.5585151195224697
+    },
+    {
+      "bin": "Q4",
+      "range": [
+        69.5,
+        Infinity
+      ],
+      "count": 1842,
+      "pos": 608,
+      "neg": 1234,
+      "odds_ratio": 0.2429834009574006,
+      "weight": 0.5557494345055443
+    }
+  ],
+  "ethnicity": [
+    {
+      "category": "not hispanic or latino",
+      "count": 8308,
+      "pos": 1698,
+      "neg": 6610,
+      "odds_ratio": 0.033549851847442864,
+      "weight": 0.5011243270248523
+    },
+    {
+      "category": "hispanic or latino",
+      "count": 1818,
+      "pos": 75,
+      "neg": 1743,
+      "odds_ratio": 0.019115161780779554,
+      "weight": 0.5003652559492496
+    }
+  ]
+}
