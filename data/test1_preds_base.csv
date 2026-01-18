@@ -1,0 +1,4 @@
+patient_id,age_years,gender,sex,race,ethnicity,bmi_last,height_last,weight_last,risk_probability,prediction
+1,25,female,female,white,not hispanic or latino,21.5,165,58.5,0.03623241343581207,Riesgo Bajo
+2,68,female,female,white,not hispanic or latino,24.0,160,61.4,0.07390468825750568,Riesgo Bajo
+3,75,male,male,black or african american,hispanic or latino,28.5,170,82.4,0.2115928039691262,Riesgo Alto
