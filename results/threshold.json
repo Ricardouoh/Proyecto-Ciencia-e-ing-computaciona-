@@ -1,6 +1,6 @@
 {
-  "threshold": 0.33,
-  "metric": "f1",
+  "threshold": 0.5,
+  "metric": "manual",
   "min_precision": null,
   "best_val": {
     "auroc": 0.9925941708890909,

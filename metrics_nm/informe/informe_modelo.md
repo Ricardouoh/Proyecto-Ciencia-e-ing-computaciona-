@@ -2,43 +2,41 @@
 
 ## Resumen ejecutivo
 - Modelo: Gradient Boosting (GBR) con calibracion (sigmoid) y enfoque PU.
-- Umbral operativo: 0.15 (optimizacion F1 con restricciones de recall y control de dominio).
-- Brier score: 0.03636 (calidad de probabilidad).
+- Umbral operativo: 0.50 (manual) para mantener selectividad tras reforzar edad.
+- Peso de edad: `--age-weight 3.0` y bandas de edad sin normalizar.
+- Brier score (val/test): 0.1371 / 0.1374.
 
 ## Datos usados
-- Fuente: `data/processed_raw_full/`
+- Fuente: `data/processed_smoke/`
 - Tamaños:
   - Train: 23403 filas (aligned_train.csv)
   - Val: 5015 filas (aligned_val.csv)
   - Test: 5016 filas (aligned_test.csv)
 
-## Umbral y por que se eligio 0.15
-El umbral se eligio con:
-- metric = F1
-- min_threshold = 0.10, max_threshold = 0.50
-- min_recall = 0.80
-- domain_penalty_weight = 0.3 (reduce diferencias de tasa de positivos entre dominios)
-- PU target: pos_rate NHANES ~0.12 con peso 0.5
-
-El umbral 0.15 obtuvo el mejor F1 en validacion dentro de esas restricciones y mantuvo una tasa de positivos en NHANES cercana al objetivo (0.12). Esto evita soluciones triviales (todo positivo o todo negativo) y mantiene el recall alto.
+## Umbral y por que se eligio 0.50
+El umbral 0.50 se fija manualmente porque:
+- Se aumento el peso de edad (`--age-weight 3.0`) y las bandas de edad con meseta alta.
+- Esto eleva las probabilidades en pacientes mayores, por lo que un umbral mas alto evita falsos positivos excesivos.
+- Se mantiene un recall alto sin perder selectividad global.
 
 ## Metricas resultantes (PU + calibracion)
 Validacion (metrics_val.json):
-- AUROC: 0.9915
-- AUPRC: 0.9957
-- Accuracy: 0.9531
-- Precision: 0.9603
-- Recall: 0.9671
-- F1: 0.9637
+- AUROC: 0.8714
+- AUPRC: 0.8788
+- Accuracy: 0.8435
+- Precision: 0.8125
+- Recall: 0.9836
+- F1: 0.8899
+- Threshold: 0.50 (n_val=5015)
 
 Test (test_metrics.json):
-- AUROC: 0.9907
-- AUPRC: 0.9951
-- Accuracy: 0.9454
-- Precision: 0.9395
-- Recall: 0.9780
-- F1: 0.9584
-- Threshold: 0.15 (n_test=5016)
+- AUROC: 0.8767
+- AUPRC: 0.8845
+- Accuracy: 0.8417
+- Precision: 0.8144
+- Recall: 0.9764
+- F1: 0.8881
+- Threshold: 0.50 (n_test=5016)
 
 Nota: NHANES es dominio no etiquetado. Por eso el recall por dominio en NHANES no es interpretable como clasificacion supervisada; se reporta distribucion de riesgo en `results/risk_concordance.json`.
 
@@ -60,8 +58,9 @@ En este proyecto se usa para:
 Implementacion: `src/predict.py` (explicacion por paciente) y `src/compare_shap.py` (comparacion entre pacientes).
 
 ## Brier score del modelo
-- Brier = 0.03636
-Interpretacion: las probabilidades estan bien calibradas; el error promedio en probabilidades es bajo.
+- Val: 0.1371
+- Test: 0.1374
+Interpretacion: el error promedio de probabilidad es moderado; refleja el refuerzo agresivo de edad y el cap de probabilidad.
 
 ## PU Learning (Positive-Unlabeled)
 NHANES se trata como no etiquetado (no todos son sanos). Para reducir sesgo:

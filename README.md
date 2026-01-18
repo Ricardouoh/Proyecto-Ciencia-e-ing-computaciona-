@@ -32,7 +32,8 @@ data/
       raw/                     # raw_hcmi_tcga.csv
   nhanes/
     nhanes_merged.csv          # NHANES consolidado
-  processed_raw_full/          # aligned_train/val/test.csv (dataset final)
+  processed_raw_full/          # aligned_train/val/test.csv (legacy)
+  processed_smoke/             # aligned_train/val/test.csv (dataset final actual)
 
 src/
   Build dataset/               # scripts de armado de dataset
@@ -73,7 +74,7 @@ metrics_nm/informe/            # informe en texto del modelo
    - Script: `src/Build dataset/align_datasets.py`
    - Normaliza categorias (sex/ethnicity/race), convierte numericos y crea columnas faltantes.
    - Mitiga fuga de dominio eliminando variables de tabaquismo (`--drop-features ...`).
-   - Resultado final: `data/processed_raw_full/aligned_train.csv`, `aligned_val.csv`, `aligned_test.csv`.
+   - Resultado final actual: `data/processed_smoke/aligned_train.csv`, `aligned_val.csv`, `aligned_test.csv`.
 
 5) Split de train/val/test:
    - Se usa estratificacion por label con 70/15/15.
@@ -123,10 +124,14 @@ Salida principal:
 ### 4) Entrenar modelo (PU + calibracion)
 ```bash
 python -m src.train_loop ^
-  --data-dir data/processed_raw_full ^
+  --data-dir data/processed_smoke ^
   --model gbr ^
   --optimize-threshold --metric f1 ^
   --min-threshold 0.1 --max-threshold 0.5 --min-recall 0.8 ^
+  --age-weight 3.0 ^
+  --age-band-weights "<30:0.1,30-45:0.6,45-55:2.0,55-75:6.0,>75:8.0" ^
+  --no-age-band-normalize ^
+  --max-proba 0.70 ^
   --pu-label-smoothing 0.05 --pu-unlabeled-domain nhanes ^
   --pu-target-pos-rate 0.12 --pu-target-weight 0.5 ^
   --calibrate --calibration-method sigmoid ^
@@ -137,7 +142,7 @@ python -m src.train_loop ^
 ### 5) Resumen y metricas
 ```bash
 python -m src.summarize_training ^
-  --data-dir data/processed_raw_full ^
+  --data-dir data/processed_smoke ^
   --results-dir results ^
   --unlabeled-domain nhanes
 ```
@@ -145,7 +150,7 @@ python -m src.summarize_training ^
 ### 6) Reporte final cientifico
 ```bash
 python -m src.final_scientific_report ^
-  --data-dir data/processed_raw_full ^
+  --data-dir data/processed_smoke ^
   --results-dir results ^
   --metric brier --n-repeats 5 ^
   --age-ci-bootstrap 300 --high-risk-quantile 0.9 ^
@@ -156,13 +161,20 @@ python -m src.final_scientific_report ^
 
 ### Prediccion con explicaciones SHAP
 ```bash
-python -m src.predict --input data/test1.csv --id-col patient_id --explain
+python -m src.predict --input data/test1.csv --id-col patient_id
 ```
 
 ### Comparar SHAP entre dos pacientes
 ```bash
 python -m src.compare_shap --input data/test1.csv --id-col patient_id --id-a 2 --id-b 3
 ```
+
+### Nuevo test (prueba1.csv) con umbral 0.5
+```bash
+python -m src.predict --input data/tests/Pruebas_csv/prueba1.csv --id-col row_id --threshold 0.50
+```
+Explicacion: el umbral se sube a 0.50 para mantener selectividad luego de aumentar el peso de edad
+(`--age-weight 3.0` + `--age-band-weights`), evitando que el prior de edad dispare demasiados positivos.
 
 ## Salidas importantes (results/)
 - `results/model.joblib` y `results/preprocessor.joblib`
@@ -173,7 +185,7 @@ python -m src.compare_shap --input data/test1.csv --id-col patient_id --id-a 2 -
 
 ## Notas tecnicas
 - NHANES se trata como dominio no etiquetado (PU learning).
-- El umbral 0.15 se selecciona por F1 con restricciones de recall y control de dominio.
+- Umbral operativo actual: 0.50 (manual) para controlar falsos positivos tras reforzar edad.
 - SHAP se usa para explicar factores que suben o bajan el riesgo por paciente.
 
 ## Informe del modelo
